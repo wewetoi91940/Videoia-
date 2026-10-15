@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Demo typographie cinématique</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Inter Display";
+        src: url("assets/fonts/InterDisplay-ExtraLight.otf") format("opentype");
+        font-weight: 200;
+      }
+      @font-face {
+        font-family: "Inter Display";
+        src: url("assets/fonts/InterDisplay-Medium.otf") format("opentype");
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: "Inter Display";
+        src: url("assets/fonts/InterDisplay-Black.otf") format("opentype");
+        font-weight: 900;
+      }
+      @font-face {
+        font-family: "Inter Display";
+        src: url("assets/fonts/InterDisplay-LightItalic.otf") format("opentype");
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      :root {
+        --ink: #0b0b10;
+        --paper: #f3efe6;
+        --accent: #ff4d2e;
+        --muted: rgba(243, 239, 230, 0.55);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--ink);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: "Inter Display", sans-serif;
+        color: var(--paper);
+        background: var(--ink);
+      }
+
+      /* Fond partagé (hors scènes) : deux halos qui dérivent lentement */
+      .bg {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      .glow {
+        position: absolute;
+        width: 1400px;
+        height: 1400px;
+        border-radius: 50%;
+        filter: blur(140px);
+        opacity: 0.5;
+      }
+      #glow-a {
+        left: -600px;
+        top: -300px;
+        background: radial-gradient(circle, rgba(255, 77, 46, 0.55), transparent 65%);
+      }
+      #glow-b {
+        right: -700px;
+        bottom: -400px;
+        background: radial-gradient(circle, rgba(70, 90, 255, 0.4), transparent 65%);
+      }
+      .vignette {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.65) 100%);
+      }
+      #flash {
+        position: absolute;
+        inset: 0;
+        background: var(--paper);
+        opacity: 0;
+      }
+
+      /* Scènes */
+      .scene {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .stack {
+        width: 920px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .line {
+        display: block;
+        overflow: hidden;
+        padding: 0.14em 0 0.1em;
+        white-space: nowrap;
+      }
+      .ch {
+        display: inline-block;
+        will-change: transform;
+      }
+      .kicker {
+        font-weight: 500;
+        font-size: 30px;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 56px;
+      }
+      .rule {
+        width: 920px;
+        height: 3px;
+        background: var(--accent);
+        transform-origin: left center;
+        margin-bottom: 40px;
+      }
+
+      /* S1 */
+      .t-light {
+        font-weight: 200;
+        font-size: 230px;
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+      }
+      /* S2 */
+      .t-small-italic {
+        font-weight: 300;
+        font-style: italic;
+        font-size: 120px;
+        letter-spacing: -0.02em;
+        color: var(--muted);
+      }
+      .t-black {
+        font-weight: 900;
+        font-size: 178px;
+        line-height: 1;
+        letter-spacing: -0.05em;
+      }
+      .bar {
+        width: 920px;
+        height: 14px;
+        background: var(--accent);
+        transform-origin: left center;
+        margin-top: 24px;
+      }
+      /* S3 */
+      .t-punch {
+        font-weight: 900;
+        font-size: 224px;
+        line-height: 0.92;
+        letter-spacing: -0.06em;
+      }
+      .accent {
+        color: var(--accent);
+      }
+      .punch-wrap {
+        transform-origin: 50% 50%;
+      }
+      /* S4 */
+      .wordmark {
+        font-weight: 500;
+        font-size: 112px;
+        letter-spacing: 0.02em;
+      }
+      .spec {
+        margin-top: 44px;
+        font-weight: 200;
+        font-size: 44px;
+        letter-spacing: 0.18em;
+        color: var(--muted);
+      }
+      .center {
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-umm9"
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="12"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div data-hf-id="hf-m7dd" class="bg">
+        <div data-hf-id="hf-li45" id="glow-a" class="glow" data-layout-allow-overflow></div>
+        <div data-hf-id="hf-pg86" id="glow-b" class="glow" data-layout-allow-overflow></div>
+        <div data-hf-id="hf-q7bi" class="vignette"></div>
+      </div>
+
+      <!-- S1 · Hook -->
+      <section data-hf-id="hf-ewxq" id="s1" class="scene clip" data-start="0" data-duration="3" data-track-index="1">
+        <div data-hf-id="hf-z9a8" id="s1-group" class="stack">
+          <div data-hf-id="hf-1btc" id="s1-kicker" class="kicker" data-spread>HyperFrames · Démo</div>
+          <div data-hf-id="hf-dgpv" id="s1-rule" class="rule"></div>
+          <div data-hf-id="hf-uk4c" id="s1-l1" class="line t-light" data-split>Chaque</div>
+          <div data-hf-id="hf-1rad" id="s1-l2" class="line t-light" data-split>image</div>
+        </div>
+      </section>
+
+      <!-- S2 · Build -->
+      <section data-hf-id="hf-9q1z" id="s2" class="scene clip" data-start="3" data-duration="3.2" data-track-index="2">
+        <div data-hf-id="hf-2inr" id="s2-group" class="stack">
+          <div data-hf-id="hf-mwgy" id="s2-small" class="t-small-italic">est une</div>
+          <div data-hf-id="hf-7d0z" id="s2-l1" class="line t-black" data-split>DÉCISION</div>
+          <div data-hf-id="hf-i4ei" id="s2-bar" class="bar"></div>
+        </div>
+      </section>
+
+      <!-- S3 · Punch -->
+      <section data-hf-id="hf-2fc8" id="s3" class="scene clip" data-start="6.2" data-duration="3.2" data-track-index="3">
+        <div data-hf-id="hf-didb" id="s3-group" class="stack punch-wrap">
+          <div data-hf-id="hf-h1vy" id="s3-a" class="t-punch">PAS UN</div>
+          <div data-hf-id="hf-cwqf" id="s3-b" class="t-punch accent">HASARD.</div>
+        </div>
+      </section>
+
+      <!-- S4 · Resolve -->
+      <section data-hf-id="hf-g9iu" id="s4" class="scene clip" data-start="9.4" data-duration="2.6" data-track-index="4">
+        <div data-hf-id="hf-hc76" id="s4-group" class="stack center">
+          <div data-hf-id="hf-gvbh" id="s4-mark" class="wordmark" data-spread>HyperFrames</div>
+          <div data-hf-id="hf-l84i" id="s4-spec" class="spec">1080 × 1920</div>
+        </div>
+      </section>
+
+      <div data-hf-id="hf-hmg5" id="flash"></div>
+    </div>
+
+    <script>
+      document.fonts.ready.then(() => {
+        // Découpe en caractères (déterministe, sans aléatoire)
+        document.querySelectorAll("[data-split],[data-spread]").forEach((el) => {
+          const text = el.textContent;
+          el.textContent = "";
+          for (const c of text) {
+            const s = document.createElement("span");
+            s.className = "ch";
+            s.textContent = c === " " ? " " : c;
+            el.appendChild(s);
+          }
+        });
+
+        const tl = gsap.timeline({ paused: true });
+
+        // Dérive ambiante du fond sur toute la durée
+        tl.fromTo("#glow-a", { x: 0, y: 0 }, { x: 260, y: 360, duration: 12, ease: "sine.inOut" }, 0);
+        tl.fromTo("#glow-b", { x: 0, y: 0 }, { x: -240, y: -320, duration: 12, ease: "sine.inOut" }, 0);
+
+        /* ---------- S1 · 0.2 → 3.4 : masque vertical, espacement qui se resserre ---------- */
+        tl.fromTo("#s1-kicker .ch", { opacity: 0, x: (i, el, all) => (i - (all.length - 1) / 2) * 26 },
+          { opacity: 1, x: 0, duration: 1.6, ease: "power3.out" }, 0.25);
+        tl.fromTo("#s1-rule", { scaleX: 0 }, { scaleX: 1, duration: 1.1, ease: "expo.out" }, 0.35);
+        tl.fromTo("#s1-l1 .ch", { yPercent: 115 },
+          { yPercent: 0, duration: 0.95, ease: "expo.out", stagger: 0.05 }, 0.55);
+        tl.fromTo("#s1-l2 .ch", { yPercent: 115 },
+          { yPercent: 0, duration: 0.95, ease: "expo.out", stagger: 0.05 }, 0.72);
+        tl.fromTo("#s1-group", { scale: 1 }, { scale: 1.05, duration: 2.8, ease: "none" }, 0.2);
+        // sortie : montée floue
+        tl.to("#s1-group", { opacity: 0, y: -60, filter: "blur(14px)", duration: 0.45, ease: "power2.in" }, 2.55);
+
+        /* ---------- S2 · 3.0 → 6.8 : bascule d'échelle depuis la ligne de base ---------- */
+        tl.fromTo("#s2-small", { opacity: 0, x: -220 },
+          { opacity: 1, x: 0, duration: 0.9, ease: "power4.out" }, 3.15);
+        tl.fromTo("#s2-l1 .ch", { scaleY: 0, opacity: 0, transformOrigin: "50% 100%" },
+          { scaleY: 1, opacity: 1, duration: 0.7, ease: "back.out(1.7)", stagger: { each: 0.05, from: "center" } }, 3.4);
+        tl.fromTo("#s2-bar", { scaleX: 0 }, { scaleX: 1, duration: 0.8, ease: "expo.inOut" }, 4.0);
+        tl.fromTo("#s2-group", { x: 30 }, { x: -30, duration: 2.7, ease: "none" }, 3.1);
+        // sortie : volet horizontal
+        tl.to("#s2-group", { clipPath: "inset(0 0 0 100%)", duration: 0.4, ease: "power3.in" }, 5.8);
+
+        /* ---------- S3 · 6.2 → 9.8 : impact + flash + tremblement ---------- */
+        tl.fromTo("#s3-a", { opacity: 0, scale: 2.4, transformOrigin: "0% 50%" },
+          { opacity: 1, scale: 1, duration: 0.38, ease: "expo.out" }, 6.5);
+        tl.fromTo("#s3-b", { opacity: 0, scale: 2.4, transformOrigin: "0% 50%" },
+          { opacity: 1, scale: 1, duration: 0.38, ease: "expo.out" }, 7.0);
+        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.55, duration: 0.06, ease: "none" }, 7.0);
+        tl.to("#flash", { opacity: 0, duration: 0.5, ease: "power2.out" }, 7.06);
+        tl.to("#s3-group", { x: 14, duration: 0.05, ease: "none" }, 7.38)
+          .to("#s3-group", { x: -12, duration: 0.05, ease: "none" })
+          .to("#s3-group", { x: 8, duration: 0.05, ease: "none" })
+          .to("#s3-group", { x: 0, duration: 0.08, ease: "power2.out" });
+        tl.fromTo("#s3-b", { scale: 1 }, { scale: 1.035, duration: 1.3, ease: "sine.inOut", immediateRender: false }, 7.6);
+        tl.to("#s3-group", { opacity: 0, scale: 0.92, duration: 0.45, ease: "power2.in" }, 8.95);
+
+        /* ---------- S4 · 9.4 → 12 : signature, résolution lente ---------- */
+        tl.fromTo("#s4-mark .ch", { opacity: 0, x: (i, el, all) => (i - (all.length - 1) / 2) * 22 },
+          { opacity: 1, x: 0, duration: 1.6, ease: "power3.out" }, 9.65);
+        tl.fromTo("#s4-spec", { opacity: 0, y: 24 },
+          { opacity: 1, y: 0, duration: 0.9, ease: "power2.out" }, 10.4);
+
+        window.__timelines["main"] = tl;
+        tl.seek(0);
+      });
+    </script>
+  </body>
+</html>
