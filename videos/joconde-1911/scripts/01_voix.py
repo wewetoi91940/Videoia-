@@ -48,6 +48,17 @@ def resample(x: np.ndarray, sr_in: int, sr_out: int) -> np.ndarray:
     return np.frombuffer(p.stdout, dtype=np.float32).copy()
 
 
+def tempo(x: np.ndarray, sr: int, factor: float) -> np.ndarray:
+    """Accélération sans changement de hauteur (ffmpeg atempo) : sert à resserrer l'accroche."""
+    if abs(factor - 1.0) < 1e-3:
+        return x
+    p = subprocess.run(
+        ["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(sr), "-ac", "1", "-i", "pipe:0",
+         "-af", f"atempo={factor}", "-f", "f32le", "pipe:1"],
+        input=x.astype(np.float32).tobytes(), capture_output=True, check=True)
+    return np.frombuffer(p.stdout, dtype=np.float32).copy()
+
+
 def trim(x: np.ndarray, sr: int, thresh_db: float = -45.0, keep: float = 0.02) -> np.ndarray:
     env = np.abs(x)
     th = 10 ** (thresh_db / 20) * max(1e-9, env.max())
@@ -124,24 +135,94 @@ def word_timings(k: Tokenizer, display: str, spoken: str, audio: np.ndarray, sr:
     return [{"mot": w, "debut": round(times[i], 3), "fin": round(times[i + 1], 3)} for i, w in enumerate(words)]
 
 
-def gemini_audio(cfg: dict) -> dict[int, tuple[np.ndarray, int]]:
-    """Synthétise toutes les phrases avec Gemini (cache par phrase) et renvoie {id: (audio, sr)}."""
+def gemini_audio(cfg: dict, tok: Tokenizer) -> dict[int, tuple[np.ndarray, int]]:
+    """Synthétise la voix avec Gemini par blocs de phrases (quota gratuit : quelques requêtes par jour et par modèle),
+    puis redécoupe chaque bloc en phrases sur les silences réels. Renvoie {id: (audio, sr)}."""
     v = cfg["voix"]
-    work = BUILD / "voix_gemini"
+    work = BUILD / "voix_gemini" / "blocs"
     work.mkdir(parents=True, exist_ok=True)
-    jobs = [{"id": ph["id"], "texte": ph["texte"],
-             "style": " ".join(x for x in (v.get("style"), ph.get("style")) if x),
-             "wav": str(work / f"phrase_{ph['id']:02d}.wav")} for ph in cfg["phrases"]]
-    (work / "travaux.json").write_text(json.dumps({"modele": v["modele"], "voix": v["voix"], "jobs": jobs},
-                                                  ensure_ascii=False, indent=1))
-    r = subprocess.run(["node", str(ROOT / "scripts/voix_gemini.mjs"), str(work / "travaux.json")])
+    taille = int(v.get("phrases_par_bloc", 9))
+    phrases = cfg["phrases"]
+    blocs = [phrases[i:i + taille] for i in range(0, len(phrases), taille)]
+    jobs = [{"id": f"bloc{k + 1}", "texte": "\n\n".join(ph["texte"] for ph in bl), "style": v.get("style", ""),
+             "wav": str(work / f"bloc_{k + 1}.wav")} for k, bl in enumerate(blocs)]
+    (BUILD / "voix_gemini" / "travaux.json").write_text(
+        json.dumps({"modele": v["modele"], "voix": v["voix"], "jobs": jobs}, ensure_ascii=False, indent=1))
+    r = subprocess.run(["node", str(ROOT / "scripts/voix_gemini.mjs"), str(BUILD / "voix_gemini" / "travaux.json")])
     if r.returncode != 0:
         sys.exit("Synthèse Gemini incomplète : voir les messages ci-dessus (aucun repli automatique sur une autre voix).")
     out = {}
-    for j in jobs:
+    for j, bl in zip(jobs, blocs):
         a, sr = sf.read(j["wav"], dtype="float32", always_2d=True)
-        out[j["id"]] = (a.mean(axis=1), sr)
+        a = a.mean(axis=1)
+        weights = [max(1, len(re.findall(r"[aeiouyɛɔøœəɑ]", tok.phonemize(ph["texte"], "fr-fr")))) for ph in bl]
+        cuts = split_block(a, sr, weights)
+        if cuts is None:
+            sys.exit(f"{j['id']} : impossible de retrouver les {len(bl)} phrases dans l'audio (silences ambigus). "
+                     "Régénérer ce bloc ou réduire « phrases_par_bloc ».")
+        for ph, (t0, t1) in zip(bl, cuts):
+            out[ph["id"]] = (a[int(t0 * sr):int(t1 * sr)], sr)
     return out
+
+
+def split_block(a: np.ndarray, sr: int, weights: list[int]) -> list[tuple[float, float]] | None:
+    """Coupe un bloc lu d'une traite en len(weights) phrases : on choisit, par programmation dynamique, les silences
+    les plus longs situés près des frontières attendues (durée de chaque phrase ∝ son nombre de syllabes)."""
+    n = len(weights)
+    hop = int(0.01 * sr)
+    frames = len(a) // hop
+    rms = np.array([np.sqrt(np.mean(a[i * hop:(i + 1) * hop] ** 2) + 1e-12) for i in range(frames)])
+    low = rms < rms.max() * 10 ** (-38 / 20)
+    voiced = np.where(~low)[0]
+    s0, s1 = voiced[0], voiced[-1]
+    gaps, start = [], None
+    for i in range(s0, s1 + 1):
+        if low[i] and start is None:
+            start = i
+        if not low[i] and start is not None:
+            if (i - start) * 0.01 >= 0.07:
+                gaps.append(((start + i) / 2 * 0.01, (i - start) * 0.01))
+            start = None
+    if n == 1:
+        return [(s0 * 0.01, (s1 + 1) * 0.01)]
+    if len(gaps) < n - 1:
+        return None
+    T0, T1 = s0 * 0.01, (s1 + 1) * 0.01
+    cum = np.cumsum(weights) / sum(weights)
+    expected = [T0 + (T1 - T0) * c for c in cum[:-1]]
+    sigma = 0.3 * (T1 - T0) / n
+    INF = float("inf")
+    C = len(gaps)
+    cost = [[INF] * C for _ in range(n - 1)]
+    back = [[-1] * C for _ in range(n - 1)]
+
+    def local(k, c):
+        t, g = gaps[c]
+        return ((t - expected[k]) / sigma) ** 2 - 2.5 * min(g, 0.9) / 0.3
+
+    for c in range(C):
+        cost[0][c] = local(0, c)
+    for k in range(1, n - 1):
+        for c in range(C):
+            best = min(((cost[k - 1][p], p) for p in range(c)), default=(INF, -1))
+            if best[0] < INF:
+                cost[k][c], back[k][c] = best[0] + local(k, c), best[1]
+    c = min(range(C), key=lambda x: cost[n - 2][x])
+    if cost[n - 2][c] == INF:
+        return None
+    chosen = [c]
+    for k in range(n - 2, 0, -1):
+        c = back[k][c]
+        chosen.append(c)
+    if min(gaps[c][1] for c in chosen) < 0.18:      # une frontière de phrase doit être un vrai silence, pas une virgule
+        return None
+    bounds = [T0] + [gaps[c][0] for c in reversed(chosen)] + [T1]
+    segs = list(zip(bounds, bounds[1:]))
+    for (t0, t1), w in zip(segs, weights):        # validation : chaque phrase a une durée plausible
+        ratio = (t1 - t0) / ((T1 - T0) * w / sum(weights))
+        if not 0.4 <= ratio <= 2.2 + 8 / w:            # une phrase très courte (« Fausse piste. ») peut être dite lentement
+            return None
+    return segs
 
 
 def level(x: np.ndarray, sr: int, target_lufs: float = -20.0) -> np.ndarray:
@@ -158,7 +239,7 @@ def main() -> None:
     moteur = "kokoro" if brouillon else vcfg["moteur"]
     tok = Tokenizer()
     if moteur == "gemini":
-        raw = gemini_audio(cfg)
+        raw = gemini_audio(cfg, tok)
         ident = {"moteur": "gemini", "modele": vcfg["modele"], "voix": vcfg["voix"], "brouillon": False}
     elif moteur == "kokoro":
         k, rk = load_kokoro(), vcfg.get("repli_kokoro", vcfg)
@@ -176,7 +257,8 @@ def main() -> None:
     for ph in cfg["phrases"]:
         spoken = ph["texte"]
         a, sr = raw[ph["id"]]
-        audio = level(trim(resample(a, sr, SR_OUT), SR_OUT), SR_OUT)
+        audio = level(tempo(trim(resample(a, sr, SR_OUT), SR_OUT, thresh_db=-40.0, keep=0.05), SR_OUT,
+                            float(ph.get("tempo", 1.0))), SR_OUT)   # -40 dB : souffles d'attaque exclus, consonnes gardées
         sf.write(BUILD / f"voix/phrase_{ph['id']:02d}.wav", audio, SR_OUT, subtype="PCM_24")
         d = len(audio) / SR_OUT
         words = word_timings(tok, ph["texte"], spoken, audio, SR_OUT)

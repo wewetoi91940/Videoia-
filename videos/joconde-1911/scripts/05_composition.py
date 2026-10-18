@@ -26,6 +26,7 @@ SUB_SIZE = 66
 SUB_MAX_CHARS = 27
 SUB_MAX_W = SAFE["x1"] - SAFE["x0"] - 40          # 840 px de texte, marge comprise
 SUB_Y = 1300
+SUB_LEAD = 0.35         # avance maximale d'une première ligne de phrase sur la voix
 SUB_TAIL = 0.4          # la dernière ligne d'une phrase reste 0,4 s après la voix (dans la pause)
 WEAK_END = {"de", "la", "le", "les", "un", "une", "à", "au", "du", "des", "en", "sur", "dans", "par", "pour", "il",
             "qui", "ne", "que", "son", "sa", "ses", "ce", "l'a", "d'une", "d'un", "l'avait", "est", "a", "quatre", "deux",
@@ -103,6 +104,12 @@ def subtitles(tl: dict) -> list[dict]:
             start = ch[0]["debut"]
             end = chunks[i + 1][0]["debut"] if i + 1 < len(chunks) else p["fin"] + SUB_TAIL
             subs.append({"debut": round(start, 3), "fin": round(end, 3), "texte": typo(" ".join(w["mot"] for w in ch)), "phrase": p["id"]})
+    # Première ligne d'une phrase : elle apparaît jusqu'à SUB_LEAD s avant la voix (dans la pause), sans jamais
+    # empiéter sur la parole de la phrase précédente : une ligne dite très vite (« Au Louvre, ») reste lisible.
+    fins = {p["id"]: p["fin"] for p in tl["phrases"]}
+    for i in range(1, len(subs)):
+        if subs[i]["phrase"] != subs[i - 1]["phrase"]:
+            subs[i]["debut"] = round(max(subs[i]["debut"] - SUB_LEAD, fins[subs[i - 1]["phrase"]] + 0.05, subs[i - 1]["debut"] + 0.6), 3)
     for i in range(len(subs) - 1):  # pas de chevauchement
         subs[i]["fin"] = min(subs[i]["fin"], subs[i + 1]["debut"])
     subs[0]["debut"] = 0.0          # premier sous-titre visible dès la première image

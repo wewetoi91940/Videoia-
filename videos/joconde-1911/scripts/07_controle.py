@@ -67,10 +67,16 @@ def frame(path: Path, n: int) -> np.ndarray:
     return np.frombuffer(raw, np.uint8).reshape(H, W, 3).astype(np.int16)
 
 
-def scene_cuts(path: Path) -> list[float]:
-    err = subprocess.run(["ffmpeg", "-nostats", "-i", str(path), "-vf", "scale=270:480,select='gt(scene,0.18)',showinfo",
-                          "-f", "null", "-"], capture_output=True, text=True).stderr
-    return [float(x) for x in re.findall(r"pts_time:([\d.]+)", err)]
+def cut_near(path: Path, t: float, span: int = 6) -> float:
+    """Image exacte de la coupe autour de t : plus forte différence entre images consécutives sur ±span images
+    (fonctionne même quand deux plans voisins se ressemblent, comme les deux plans de l'escalier)."""
+    k0 = max(1, round(t * FPS) - span)
+    # -ss au milieu de l'image précédente : la première image décodée est exactement k0 (un arrondi vers le haut en sauterait une)
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{(k0 - 0.5) / FPS:.4f}", "-i", str(path), "-frames:v", str(2 * span + 1),
+                          "-vf", "scale=135:240", "-f", "rawvideo", "-pix_fmt", "gray", "-"], capture_output=True, check=True).stdout
+    fr = np.frombuffer(raw, np.uint8).reshape(-1, 240, 135).astype(np.int16)
+    d = np.abs(np.diff(fr, axis=0)).mean(axis=(1, 2))
+    return (k0 + 1 + int(np.argmax(d))) / FPS
 
 
 def n_words(text: str) -> int:
@@ -162,7 +168,8 @@ def main() -> None:
           f"saturation moyenne de {min(sat.values()):.2f} ({min(sat, key=sat.get)}) à {max(sat.values()):.2f} ; aucune image grise",
           min(sat.values()) > 0.08)
     check("Visuels", "Pas de faux document d'époque", "fichier de police P07 : fiches vierges ; aucun texte dans les images", True)
-    check("Visuels", "Pas de visage généré d'une personne réelle", "personnes : silhouettes de dos uniquement (P04, P10, P12)", None,
+    dos = [x["id"] for x in plans if "de dos" in x["description"]]
+    check("Visuels", "Pas de visage généré d'une personne réelle", f"personnes : silhouettes de dos uniquement ({', '.join(dos)})", None,
           "Vérifié sur le MP4 final (une image au milieu de chaque plan) ; à revoir image par image avant publication.")
     check("Visuels", "Œuvre réelle : reproduction authentique, « détail » si recadrée",
           "P03 entière, P11 collée après peinture, P13 légende « (détail) »", "(détail)" in html)
@@ -249,12 +256,11 @@ def main() -> None:
     check("Montage", "Le dernier plan s'enchaîne avec le premier (boucle)",
           f"première et dernière image hors sous-titres : écart moyen {diff.mean():.2f}/255, {100 * (diff > 8).mean():.2f} % de pixels > 8",
           diff.mean() < 2)
-    cuts = scene_cuts(MUET)
     ecarts = []
     for x in tl["plans"][1:]:
         if x.get("transition") == "fondu":
             continue
-        c = min(cuts, key=lambda c: abs(c - x["debut"]))
+        c = cut_near(MUET, x["debut"])
         anc = x["ancre"]
         voice = ph[anc["phrase"]]["debut"] if "mot" not in anc else next(
             w["debut"] for w in ph[anc["phrase"]]["mots"] if chrono._norm(w["mot"]) == chrono._norm(anc["mot"]))

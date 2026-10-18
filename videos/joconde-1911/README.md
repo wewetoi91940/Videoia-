@@ -8,9 +8,9 @@ Tout est produit par une chaîne de scripts reproductible, sans générateur pay
 | Version | Contenu | Statut |
 |---|---|---|
 | v1 | 47,5 s, voix Kokoro | **livrée** dans `livrables/` (voix jugée trop robotique) |
-| v2 | environ 80 s, 27 phrases, 25 plans, erreurs de la v1 corrigées (`docs/01_recherche.md` § 6), **voix Google (Gemini TTS)** | chaîne prête et contrôlée sur un brouillon de calage ; **voix Google à générer** (clé requise) |
+| v2 | 84,4 s, 27 phrases, 25 plans, erreurs de la v1 corrigées (`docs/01_recherche.md` § 6), **voix Google (Gemini TTS, voix « Charon »)** | **livrée** dans `livrables/` (remplace la v1, conservée dans l'historique git) |
 
-### Reprise : générer la v2 avec la voix Google
+### Régénérer la voix Google (si le texte change)
 
 1. Créer une clé gratuite sur Google AI Studio (aistudio.google.com/apikey).
 2. L'ajouter aux secrets de l'environnement cloud sous le nom **`GEMINI_API_KEY`** (menu de l'environnement → Edit → *Network secrets*, ou variable d'environnement). Ne jamais la coller dans un fichier ni dans le chat.
@@ -19,11 +19,16 @@ Tout est produit par une chaîne de scripts reproductible, sans générateur pay
    python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
    PY=.venv/bin/python ./make.sh voix audio composition check rendu livrables dossier
    ```
-   La voix est synthétisée phrase par phrase, avec un cache : une phrase inchangée n'est pas régénérée, ce qui ménage le quota gratuit. Les temps des plans, les sous-titres, le mixage et le dossier suivent automatiquement la voix réelle.
+   La voix est synthétisée **par blocs de 9 phrases** (3 requêtes en tout), puis chaque bloc est redécoupé en phrases sur ses silences réels.
+   En effet, le niveau gratuit n'autorise qu'environ **10 requêtes par jour et par modèle** : une requête par phrase épuisait le quota.
+   Le redécoupage est vérifié : une frontière de phrase doit tomber dans un vrai silence (≥ 0,18 s), et la durée de chaque phrase doit rester
+   plausible pour son nombre de syllabes ; sinon la chaîne s'arrête au lieu de produire un faux découpage.
+   Un cache évite de redemander un bloc inchangé (`build/voix_gemini/blocs/`). Les plans, les sous-titres, le mixage et le dossier suivent la voix réelle.
+   Les trois premières phrases sont accélérées de 10 % (`"tempo": 1.1`, hauteur inchangée) pour que la question tombe avant 8 s.
 4. Lire `docs/07_controle_qualite.md` : le point « Voix naturelle livrée » doit être conforme, et la question doit se terminer avant 8 s.
 
-**Voix** (`scripts/script.json` → `voix`) : `Charon` (masculine, grave et posée) avec le modèle `gemini-3.8-flash-tts` et une consigne de narrateur de documentaire.
-Si le modèle est refusé (accès ou quota du niveau gratuit), mettre `"modele": "gemini-2.5-flash-preview-tts"` : les phrases déjà générées restent en cache.
+**Voix** (`scripts/script.json` → `voix`) : `Charon` (masculine, grave et posée), modèle `gemini-3.1-flash-tts-preview`, consigne de narrateur de documentaire au débit soutenu.
+Si un modèle a épuisé son quota du jour, en choisir un autre (`gemini-2.5-flash-preview-tts`, `gemini-3.8-flash-tts`…) pour **toute** la voix : ne jamais mélanger deux modèles dans une même vidéo (timbre différent).
 Autres voix Google à essayer en changeant un seul mot : `Kore` (féminine, ferme), `Orus` (masculine, ferme), `Sadaltager` (posée, savante), `Gacrux` (mûre).
 Sans clé, l'étape `voix` s'arrête : il n'y a aucun repli silencieux sur la voix robotique. `VOIX_BROUILLON=1` ne sert qu'à caler un montage, et `make.sh livrables` refuse d'écraser la vidéo livrée avec un brouillon.
 
@@ -93,7 +98,8 @@ Prérequis : Node ≥ 22, ffmpeg. Le rendu dure environ 4 min sur CPU.
 | Générateur d'images Canva disponible, mais payant en crédits | **Non utilisé**, faute d'accord sur les crédits. Illustrations peintes par code | Rendu plus simple qu'un modèle d'image, mais reproductible et sans visage |
 | Pas de bibliothèque musicale ni de banque de bruitages accessible | Musique et bruitages composés et synthétisés en Python | Aucun droit tiers |
 | Paquet Kokoro absent du système | Environnement Python dédié (`kokoro-onnx` depuis PyPI) | Voix locale de la v1, jugée trop robotique |
-| Voix Google demandée (v2), mais aucune clé Google valide dans l'environnement | Chaîne branchée sur Gemini TTS via le module `media-use` de HyperFrames ; la clé reste à ajouter comme secret | La v2 attend la voix ; tout le reste (script, visuels, montage, son, contrôles) est prêt |
+| Voix Google demandée (v2), mais aucune clé Google valide dans l'environnement | Chaîne branchée sur Gemini TTS via le module `media-use` de HyperFrames ; clé fournie ensuite par l'utilisateur, utilisée en variable d'environnement seulement (jamais écrite dans le dépôt) | — |
+| Quota gratuit Gemini : 10 requêtes par jour pour `gemini-3.8-flash-tts`, atteint après 13 phrases | Synthèse par blocs de 9 phrases avec un autre modèle (`gemini-3.1-flash-tts-preview`), redécoupage vérifié | 3 requêtes au lieu de 27 ; voix d'un seul modèle |
 | Flow (Google) n'a pas d'API de voix | Gemini TTS : même famille de voix génératives Google | — |
 | Kokoro ne donne pas l'horodatage des mots | Synthèse phrase par phrase, puis mots répartis au prorata des phonèmes et recalés sur les silences réels | Sous-titres calés sur la voix (vérifié en image) |
 | CDN jsDelivr bloqué | Données cartographiques récupérées par `npm pack world-atlas@2.0.2` | — |

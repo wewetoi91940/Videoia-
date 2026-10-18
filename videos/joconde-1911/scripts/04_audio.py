@@ -27,7 +27,7 @@ SR = 48000
 TARGET_LUFS = -14.0
 CEILING_DBTP = -1.6          # marge de 0,1 dB sous l'exigence de −1,5 dBFS
 GAP_TARGET_DB = 20.0         # musique ≈ 20 dB sous la voix pendant la parole (minimum exigé : 15 dB)
-FX_GAP_DB = 14.0       # bruitages : ≥ 12 dB sous la voix pendant la parole (cible 14 dB, marge de mesure)
+FX_GAP_DB = 16.0       # bruitages : ≥ 12 dB sous la voix pendant la parole (cible 16 dB : le murmure de foule est continu)
 RISE_DB = 12.0         # remontée de la musique dans les silences
 
 
@@ -397,12 +397,18 @@ def main() -> None:
     mus_d = mus * 10 ** (gcurve / 20)[:, None]
     # Recalage fin : on règle la musique au plus fort possible en respectant les deux critères à la fois —
     # écart intégré ≥ GAP_TARGET_DB et écart ≥ 15,5 dB sur chaque fenêtre de 400 ms de parole.
+    def active_windows(v):
+        """Fenêtres de 400 ms où la voix parle vraiment : les pauses dramatiques à l'intérieur d'une phrase
+        (fréquentes avec la voix Gemini) ne doivent pas fausser l'écart voix / musique."""
+        win = int(0.4 * SR)
+        idx = [i for i in range(0, n - win, win // 2) if mask[i:i + win].mean() > 0.9]
+        lv = {i: db(np.sqrt(np.mean(v[i:i + win] ** 2))) for i in idx}
+        ref = np.median(list(lv.values()))
+        return [i for i in idx if lv[i] > ref - 20], win
+
     def window_min_gap(m):
-        win, worst = int(0.4 * SR), 99.0
-        for i in range(0, n - win, win // 2):
-            if mask[i:i + win].mean() > 0.9:
-                worst = min(worst, db(np.sqrt(np.mean(voice[i:i + win] ** 2))) - db(np.sqrt(np.mean(m[i:i + win] ** 2))))
-        return worst
+        idx, win = active_windows(voice)
+        return min(db(np.sqrt(np.mean(voice[i:i + win] ** 2))) - db(np.sqrt(np.mean(m[i:i + win] ** 2))) for i in idx)
     gap = meter.integrated_loudness(voice[mask]) - meter.integrated_loudness(mus_d[mask])
     wmin = window_min_gap(mus_d)
     print(f"avant recalage : écart intégré {gap:.2f} dB, pire fenêtre {wmin:.2f} dB", file=sys.stderr)
@@ -448,20 +454,21 @@ def main() -> None:
     # Écart à court terme (fenêtres de 400 ms pendant la parole) : on garde le pire cas réaliste (5e centile).
     win = int(0.4 * SR)
     diffs = []
-    for i in range(0, n - win, win // 2):
-        if mask[i:i + win].mean() > 0.9:
-            vv = np.sqrt(np.mean(stems["voix"][i:i + win] ** 2))
-            mm = np.sqrt(np.mean(stems["musique"][i:i + win] ** 2))
-            diffs.append(db(vv) - db(mm))
+    for i in active_windows(stems["voix"])[0]:
+        vv = np.sqrt(np.mean(stems["voix"][i:i + win] ** 2))
+        mm = np.sqrt(np.mean(stems["musique"][i:i + win] ** 2))
+        diffs.append(db(vv) - db(mm))
     diffs = np.array(diffs)
     res["ecart_court_terme_db"] = {"median": round(float(np.median(diffs)), 1), "p5": round(float(np.percentile(diffs, 5)), 1),
                                    "min": round(float(diffs.min()), 1), "fenetres": int(len(diffs)),
                                    "part_fenetres_sous_15db": round(float((diffs < 15).mean()) * 100, 1)}
     fxd = []
+    vref = np.median([db(np.sqrt(np.mean(stems["voix"][i:i + win] ** 2))) for i in range(0, n - win, win) if mask[i:i + win].mean() > 0.9])
     for i in range(0, n - win, win // 4):
         ff = np.sqrt(np.mean(stems["bruitages"][i:i + win] ** 2))
-        if mask[i:i + win].mean() > 0.5 and db(ff) > -60:
-            fxd.append(db(np.sqrt(np.mean(stems["voix"][i:i + win] ** 2))) - db(ff))
+        vv = db(np.sqrt(np.mean(stems["voix"][i:i + win] ** 2)))
+        if mask[i:i + win].mean() > 0.5 and db(ff) > -60 and vv > vref - 20:   # seulement quand la voix parle vraiment
+            fxd.append(vv - db(ff))
     res["ecart_voix_bruitages_db"] = {"median": round(float(np.median(fxd)), 1), "min": round(float(np.min(fxd)), 1),
                                       "fenetres": len(fxd)} if fxd else None
     (BUILD / "audio_mesures.json").write_text(json.dumps(res, ensure_ascii=False, indent=1))

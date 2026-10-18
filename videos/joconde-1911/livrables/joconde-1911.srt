@@ -1,155 +1,267 @@
 1
-00:00:00,000 --> 00:00:02,830
+00:00:00,000 --> 00:00:01,970
 Le 22 août 1911,
 
 2
-00:00:02,830 --> 00:00:03,636
+00:00:01,970 --> 00:00:03,355
 au Louvre, il ne reste
 
 3
-00:00:03,636 --> 00:00:04,618
+00:00:03,355 --> 00:00:04,279
 que quatre crochets.
 
 4
-00:00:04,618 --> 00:00:06,053
+00:00:04,279 --> 00:00:06,178
 La Joconde a disparu.
 
 5
-00:00:06,053 --> 00:00:07,080
+00:00:06,178 --> 00:00:07,362
 Qui a pu la sortir
 
 6
-00:00:07,080 --> 00:00:07,954
+00:00:07,362 --> 00:00:08,076
 du musée ?
 
 7
-00:00:08,154 --> 00:00:09,146
-La police soupçonne
+00:00:08,076 --> 00:00:09,516
+Ce matin-là,
 
 8
-00:00:09,146 --> 00:00:10,645
-même le poète Apollinaire.
+00:00:09,516 --> 00:00:10,508
+le peintre Louis Béroud
 
 9
-00:00:10,645 --> 00:00:11,855
-Il passe près d'une semaine
+00:00:10,508 --> 00:00:11,339
+vient la copier.
 
 10
-00:00:11,855 --> 00:00:12,709
-en prison.
+00:00:11,339 --> 00:00:12,510
+Les gardiens la croient
 
 11
-00:00:12,709 --> 00:00:14,050
-Fausse piste.
+00:00:12,510 --> 00:00:13,376
+chez le photographe.
 
 12
-00:00:14,250 --> 00:00:15,202
-Un indice reste
+00:00:13,376 --> 00:00:15,116
+Mais dans un escalier,
 
 13
-00:00:15,202 --> 00:00:15,980
-sur la vitre :
+00:00:15,116 --> 00:00:16,584
+on retrouve son cadre vide.
 
 14
-00:00:15,980 --> 00:00:17,316
-une empreinte de pouce.
+00:00:16,584 --> 00:00:18,074
+Une semaine plus tard,
 
 15
-00:00:17,316 --> 00:00:18,906
-Le voleur est déjà fiché.
+00:00:18,074 --> 00:00:19,022
+la foule vient
 
 16
-00:00:18,906 --> 00:00:19,619
-Personne ne fait
+00:00:19,022 --> 00:00:20,536
+voir… le mur vide.
 
 17
-00:00:19,619 --> 00:00:20,804
-le rapprochement.
+00:00:20,536 --> 00:00:22,276
+Le 7 septembre,
 
 18
-00:00:21,004 --> 00:00:22,366
-Plus de deux ans passent.
+00:00:22,276 --> 00:00:23,191
+on emprisonne même
 
 19
-00:00:22,366 --> 00:00:23,156
-Le tableau dort
+00:00:23,191 --> 00:00:24,227
+le poète Apollinaire.
 
 20
-00:00:23,156 --> 00:00:23,946
-dans une chambre
+00:00:24,227 --> 00:00:25,492
+Il passe près d’une semaine
 
 21
-00:00:23,946 --> 00:00:24,979
-parisienne.
+00:00:25,492 --> 00:00:26,100
+à la Santé.
 
 22
-00:00:25,029 --> 00:00:27,420
-En décembre 1913, un homme
+00:00:26,100 --> 00:00:27,502
+Fausse piste.
 
 23
-00:00:27,420 --> 00:00:28,773
-le propose à un antiquaire
+00:00:27,502 --> 00:00:29,499
+Pourtant, un indice
 
 24
-00:00:28,773 --> 00:00:29,800
-de Florence.
+00:00:29,499 --> 00:00:30,922
+reste sur la vitre :
 
 25
-00:00:29,800 --> 00:00:30,898
-Il est arrêté.
+00:00:30,922 --> 00:00:32,397
+une empreinte de pouce.
 
 26
-00:00:30,898 --> 00:00:32,398
-C'est Vincenzo Peruggia,
+00:00:32,397 --> 00:00:33,687
+Le voleur est déjà
 
 27
-00:00:32,398 --> 00:00:33,801
-un vitrier italien.
+00:00:33,687 --> 00:00:35,008
+fiché par la police.
 
 28
-00:00:33,801 --> 00:00:34,730
-Il avait travaillé
+00:00:35,008 --> 00:00:35,787
+Personne ne fait
 
 29
-00:00:34,730 --> 00:00:35,582
-sur la vitrine
+00:00:35,787 --> 00:00:36,849
+le rapprochement.
 
 30
-00:00:35,582 --> 00:00:36,656
-de la Joconde.
+00:00:36,849 --> 00:00:38,605
+Plus de deux ans passent.
 
 31
-00:00:36,656 --> 00:00:38,186
-Un lundi de fermeture,
+00:00:38,605 --> 00:00:39,583
+Le tableau dort
 
 32
-00:00:38,186 --> 00:00:39,144
-il l'avait emportée
+00:00:39,583 --> 00:00:40,411
+dans une chambre
 
 33
-00:00:39,144 --> 00:00:40,428
-en blouse d'ouvrier.
+00:00:40,411 --> 00:00:41,174
+parisienne.
 
 34
-00:00:40,628 --> 00:00:41,958
-Pour beaucoup d'historiens,
+00:00:41,174 --> 00:00:43,808
+En décembre 1913, un homme
 
 35
-00:00:41,958 --> 00:00:43,191
-ce vol l'a rendue célèbre
+00:00:43,808 --> 00:00:45,357
+le propose à un antiquaire
 
 36
-00:00:43,191 --> 00:00:44,499
-dans le monde entier.
+00:00:45,357 --> 00:00:46,182
+de Florence.
 
 37
-00:00:44,499 --> 00:00:45,144
-Tout est parti
+00:00:46,182 --> 00:00:47,729
+L’antiquaire fait venir
 
 38
-00:00:45,144 --> 00:00:46,032
-de quatre crochets
+00:00:47,729 --> 00:00:49,112
+le directeur des Offices :
 
 39
-00:00:46,032 --> 00:00:47,533
+00:00:49,112 --> 00:00:50,469
+c’est bien la Joconde.
+
+40
+00:00:50,469 --> 00:00:51,700
+Le vendeur est arrêté.
+
+41
+00:00:51,700 --> 00:00:52,595
+Il s’appelle
+
+42
+00:00:52,595 --> 00:00:54,190
+Vincenzo Peruggia,
+
+43
+00:00:54,190 --> 00:00:55,536
+un vitrier italien.
+
+44
+00:00:55,536 --> 00:00:56,206
+Au Louvre,
+
+45
+00:00:56,206 --> 00:00:57,247
+il avait travaillé
+
+46
+00:00:57,247 --> 00:00:58,202
+sur la vitrine
+
+47
+00:00:58,202 --> 00:00:59,119
+de la Joconde.
+
+48
+00:00:59,119 --> 00:01:00,929
+Un lundi de fermeture,
+
+49
+00:01:00,929 --> 00:01:01,949
+en blouse d’ouvrier,
+
+50
+00:01:01,949 --> 00:01:03,021
+il avait décroché
+
+51
+00:01:03,021 --> 00:01:03,696
+le tableau.
+
+52
+00:01:03,696 --> 00:01:05,158
+Le cadre, il l’avait laissé
+
+53
+00:01:05,158 --> 00:01:05,904
+dans l’escalier.
+
+54
+00:01:05,904 --> 00:01:07,967
+À son procès, il dit avoir
+
+55
+00:01:07,967 --> 00:01:09,401
+voulu la rendre à l’Italie.
+
+56
+00:01:09,401 --> 00:01:10,279
+Elle était pourtant
+
+57
+00:01:10,279 --> 00:01:11,073
+en France depuis
+
+58
+00:01:11,073 --> 00:01:11,983
+le seizième siècle.
+
+59
+00:01:11,983 --> 00:01:14,783
+Le 4 janvier 1914,
+
+60
+00:01:14,783 --> 00:01:16,037
+la Joconde retrouve
+
+61
+00:01:16,037 --> 00:01:16,725
+le Louvre.
+
+62
+00:01:16,725 --> 00:01:18,445
+Pour beaucoup d’historiens,
+
+63
+00:01:18,445 --> 00:01:19,708
+ce vol l’a rendue célèbre
+
+64
+00:01:19,708 --> 00:01:20,740
+dans le monde entier.
+
+65
+00:01:20,740 --> 00:01:21,783
+Tout est parti
+
+66
+00:01:21,783 --> 00:01:22,806
+de quatre crochets
+
+67
+00:01:22,806 --> 00:01:24,433
 sur un mur vide.

@@ -9,3 +9,5 @@ __pycache__/
 # Synthèse Gemini : fichiers de travail régénérés à chaque passage (le cache des phrases, lui, peut être versionné)
 build/voix_gemini/travaux.json
 build/voix_gemini/resultats.json
+# Essais par phrase du modèle gemini-3.8-flash-tts (quota de 10 requêtes/jour atteint) : non utilisés dans la vidéo
+build/voix_gemini/phrase_*
