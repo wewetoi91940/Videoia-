@@ -1,0 +1,390 @@
+{
+ "lignes": [
+  {
+   "section": "Format",
+   "regle": "1080 × 1920",
+   "mesure": "1080 × 1920, h264 High, yuv420p",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Format",
+   "regle": "30 i/s constants",
+   "mesure": "30/1 (1426 images)",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Format",
+   "regle": "35–50 s (cible 45 s)",
+   "mesure": "47.53 s",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Format",
+   "regle": "Audio et vidéo de même durée",
+   "mesure": "vidéo 47.533 s, audio 47.533 s",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Format",
+   "regle": "Version sans son : aucune piste audio, même image",
+   "mesure": "1 flux (video), 1426 images",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Structure",
+   "regle": "Accroche 0–3 s : fait réel dès la 1re image, pas de « bonjour »",
+   "mesure": "1er sous-titre à 0.00 s (« Le 22 août 1911, »), carton P01 visible à 0 s, voix à 0.15 s",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Structure",
+   "regle": "Question avant 8 s",
+   "mesure": "fin de la phrase 3 à 7.55 s",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Structure",
+   "regle": "2 à 4 révélations",
+   "mesure": "3 révélations (fausse piste, empreinte, Florence)",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Structure",
+   "regle": "Réponse avant 80 % de la durée",
+   "mesure": "« Vincenzo » à 31.06 s = 65 %",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Structure",
+   "regle": "Chute qui renvoie à l'accroche",
+   "mesure": "phrase 18 reprend « quatre crochets » ; P14 réutilise l'image de P01",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Structure",
+   "regle": "Pas d'appel à s'abonner",
+   "mesure": "0 occurrence dans la voix off",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Voix off",
+   "regle": "120–135 mots",
+   "mesure": "133 mots",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Voix off",
+   "regle": "Phrases ≤ 15 mots",
+   "mesure": "maximum 12 mots",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Voix off",
+   "regle": "Environ 5 syllabes/s",
+   "mesure": "4.92 syll./s (201 syllabes estimées, 40.8 s de parole)",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Voix off",
+   "regle": "Propos attribués",
+   "mesure": "phrase 17 : « Pour beaucoup d'historiens, … »",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Voix off",
+   "regle": "Chiffres arrondis restés vrais",
+   "mesure": "« près d'une semaine » (6 jours, F5) ; « plus de deux ans » (28 mois, F10)",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Voix off",
+   "regle": "Texte chronométré, coupes de secours",
+   "mesure": "18 phrases chronométrées ; coupes A, B, C",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Voix off",
+   "regle": "Écoute humaine : naturel, noms, liaisons",
+   "mesure": "non faite (aucune écoute possible dans l'environnement de production)",
+   "resultat": "à vérifier par une personne",
+   "note": "Phonèmes vérifiés à l'écrit : « vingt-deux août » [vɛ̃tdøz‿ut], « Peruggia » [peʁudʒa]."
+  },
+  {
+   "section": "Exactitude",
+   "regle": "≥ 1 source par fait, 2 pour dates et chiffres",
+   "mesure": "20 faits sourcés ; dates et chiffres à 2 sources ou plus",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Exactitude",
+   "regle": "Incertitudes reformulées ou supprimées",
+   "mesure": "17 points d'incertitude, chacun avec sa décision",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Exactitude",
+   "regle": "Sources lues seulement en extrait signalées",
+   "mesure": "toutes les sources : lues en extrait (réseau limité)",
+   "resultat": "à vérifier par une personne",
+   "note": "Relire S1, S2, S4 et S9 avant publication."
+  },
+  {
+   "section": "Visuels",
+   "regle": "Étiquette en haut à gauche sur chaque plan",
+   "mesure": "14 étiquettes pour 14 plans : ARCHIVE × 2, CARTE SCHÉMATIQUE × 1, ILLUSTRATION × 11",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Visuels",
+   "regle": "Illustrations peintes, jamais de faux noir et blanc",
+   "mesure": "saturation moyenne de 0.15 (soupcons) à 0.59 ; aucune image grise",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Visuels",
+   "regle": "Pas de faux document d'époque",
+   "mesure": "fichier de police P07 : fiches vierges ; aucun texte dans les images",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Visuels",
+   "regle": "Pas de visage généré d'une personne réelle",
+   "mesure": "personnes : silhouettes de dos uniquement (P04, P10, P12)",
+   "resultat": "à vérifier par une personne",
+   "note": "Vérifié sur le MP4 final (une image au milieu de chaque plan) ; à revoir image par image avant publication."
+  },
+  {
+   "section": "Visuels",
+   "regle": "Œuvre réelle : reproduction authentique, « détail » si recadrée",
+   "mesure": "P03 entière, P11 collée après peinture, P13 légende « (détail) »",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Visuels",
+   "regle": "Changement visuel toutes les 2–4 s",
+   "mesure": "plans de 2.10 à 4.77 s ; au-dessus de 4 s : P09 4.77 s",
+   "resultat": "à vérifier par une personne",
+   "note": "P08 : fondu ; P09 : tracé de route, anneau et libellé animés à l'intérieur du plan."
+  },
+  {
+   "section": "Visuels",
+   "regle": "Mouvements lents",
+   "mesure": "zoom ≤ 2.9 %/s, translation ≤ 7.6 px/s",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Textes",
+   "regle": "Sous-titres : 1 ligne, ≤ 27 caractères",
+   "mesure": "39 lignes, max 27 caractères, `white-space: nowrap`",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Textes",
+   "regle": "Sous-titres dans x 60–940",
+   "mesure": "largeur max 802 px, centrés sur x 500 → de 99 à 901 px",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Textes",
+   "regle": "Taille 64–72 px, vers y = 1300",
+   "mesure": "66 px, centrés sur y 1300",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Textes",
+   "regle": "Groupes de sens, lisibles",
+   "mesure": "aucune fin de ligne sur un mot-outil ; durée min 0.65 s",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Textes",
+   "regle": "Cartons ≤ 6 mots, en haut",
+   "mesure": "10 cartons, max 4 mots, y 340",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Textes",
+   "regle": "Zone x 60–940 / y 200–1440, pas de chevauchement (hyperframes check)",
+   "mesure": "3 tranches : 0 problème de mise en page, 0 erreur d'exécution ou de mouvement",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Textes",
+   "regle": "Contraste lisible (WCAG AA)",
+   "mesure": "37/37 textes conformes",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Son",
+   "regle": "Export −14 LUFS",
+   "mesure": "-14.0 LUFS intégrés (fichier MP4 final, ffmpeg ebur128)",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Son",
+   "regle": "Crête ≤ −1,5 dBFS (crête vraie)",
+   "mesure": "-1.6 dBTP",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Son",
+   "regle": "Musique ≥ 15 dB sous la voix pendant la parole (viser 20)",
+   "mesure": "écart moyen 20.6 dB ; fenêtres de 400 ms : médiane 18.9 dB, min 15.5 dB, 0 % sous 15 dB",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Son",
+   "regle": "La musique remonte dans les silences",
+   "mesure": "-34.2 LUFS pendant la parole → -26.4 LUFS dans les silences (+7.8 dB)",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Son",
+   "regle": "Pistes séparées = master",
+   "mesure": "écart max entre la somme voix + musique + bruitages et le master : -132 dBFS",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Son",
+   "regle": "Voix au premier plan, bruitages discrets",
+   "mesure": "pendant la parole, bruitages sous la voix de 21.6 dB (médiane) et 13.6 dB au minimum (112 fenêtres de 400 ms)",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Son",
+   "regle": "Musique libre de droits",
+   "mesure": "composée et synthétisée par code (scripts/04_audio.py) : aucun échantillon tiers",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Montage",
+   "regle": "Lint HyperFrames sans erreur",
+   "mesure": "0 erreur, 18 avertissements (duplicate_media_discovery_risk, nested_structure_needs_subcomposition, timeline_track_too_dense)",
+   "resultat": "conforme",
+   "note": "Avertissements d'organisation pour Studio ; l'image du mur est réutilisée exprès en P01 et P14 (boucle)."
+  },
+  {
+   "section": "Montage",
+   "regle": "Coupe franche par défaut, fondu seulement pour un saut dans le temps",
+   "mesure": "12 coupes, 1 fondu (P08 : 1911 → 1913)",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Montage",
+   "regle": "Aucun gadget",
+   "mesure": "animations : caméra lente, apparitions en fondu ; courbes utilisées : power1.in, power1.inOut, power2.out, sine.inOut",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Montage",
+   "regle": "Le dernier plan s'enchaîne avec le premier (boucle)",
+   "mesure": "première et dernière image hors sous-titres : écart moyen 1.41/255, 0.12 % de pixels > 8",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Montage",
+   "regle": "Image calée sur la voix réelle",
+   "mesure": "12 coupes mesurées dans la vidéo ; écart max +17 ms (P06)",
+   "resultat": "conforme",
+   "note": ""
+  },
+  {
+   "section": "Livrables",
+   "regle": "Fichiers livrés",
+   "mesure": "8/8 présents",
+   "resultat": "conforme",
+   "note": ""
+  }
+ ],
+ "ecarts_synchro_ms": [
+  [
+   "P02",
+   -7
+  ],
+  [
+   "P03",
+   14
+  ],
+  [
+   "P04",
+   13
+  ],
+  [
+   "P05",
+   -12
+  ],
+  [
+   "P06",
+   17
+  ],
+  [
+   "P07",
+   -16
+  ],
+  [
+   "P09",
+   4
+  ],
+  [
+   "P10",
+   0
+  ],
+  [
+   "P11",
+   -1
+  ],
+  [
+   "P12",
+   11
+  ],
+  [
+   "P13",
+   5
+  ],
+  [
+   "P14",
+   1
+  ]
+ ]
+}

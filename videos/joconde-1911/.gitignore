@@ -1,0 +1,7 @@
+# Régénérables par make.sh (lourds)
+renders/
+.hyperframes/
+build/voix/
+build/stems/
+build/*.wav
+build/land-50m.json
