@@ -1,21 +1,21 @@
 {
- "duree_s": 47.533,
+ "duree_s": 79.967,
  "loudness_integree_lufs": -14.0,
  "crete_vraie_dbtp": -1.6,
- "voix_pendant_parole_lufs": -13.64,
- "musique_pendant_parole_lufs": -34.21,
- "musique_dans_les_silences_lufs": -26.37,
- "ecart_voix_musique_db": 20.57,
+ "voix_pendant_parole_lufs": -13.71,
+ "musique_pendant_parole_lufs": -33.76,
+ "musique_dans_les_silences_lufs": -27.0,
+ "ecart_voix_musique_db": 20.05,
  "ecart_court_terme_db": {
-  "median": 18.9,
-  "p5": 17.6,
+  "median": 18.4,
+  "p5": 17.0,
   "min": 15.5,
-  "fenetres": 174,
+  "fenetres": 307,
   "part_fenetres_sous_15db": 0.0
  },
  "ecart_voix_bruitages_db": {
-  "median": 21.6,
-  "min": 13.6,
-  "fenetres": 112
+  "median": 21.4,
+  "min": 13.4,
+  "fenetres": 191
  }
 }

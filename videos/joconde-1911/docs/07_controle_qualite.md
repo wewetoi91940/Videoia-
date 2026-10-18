@@ -1,5 +1,8 @@
 # Étape 7 — Contrôle qualité (mesuré)
 
+> **Ce rapport porte sur la version 1 livrée (47,5 s, voix Kokoro).** La version 2 (environ 80 s, voix Google) n'est pas encore rendue :
+> il sera régénéré automatiquement par `./make.sh … dossier` après la génération de la voix Gemini.
+
 > Généré par `scripts/07_controle.py` sur les fichiers **livrés** (`livrables/`).
 > « Conforme » signifie mesuré et dans la règle. « À vérifier par une personne » signifie que la machine ne peut pas trancher.
 

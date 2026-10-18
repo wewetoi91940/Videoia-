@@ -36,17 +36,17 @@ style photo-réaliste ou 3D lisse.
 
 ---
 
-### P01 et P14 — Le mur vide (00,00 → 03,13 et 44,50 → 47,53)
+### P01 et P25 — Le mur vide (ouverture et boucle)
 ```
 SUJET — Musée du Louvre, Salon Carré, 22 août 1911 au matin : un pan de mur tendu de tissu rouge sombre,
 au centre un emplacement vide entouré de cadres dorés d'autres tableaux (toiles sombres, sans motif lisible),
 quatre petits crochets de fer plantés dans le mur à l'emplacement vide, éclairage de verrière en haut à gauche.
 Pas de personnage. Mention : illustration historique, reconstitution.
-+ STYLE (voir bloc) + À ÉVITER (voir bloc)
++ STYLE + À ÉVITER
 ```
-Remarque : P14 réutilise **la même image** que P01, pour que la boucle soit exacte. Ne pas la régénérer à part.
+P25 réutilise **la même image** que P01 : la boucle est exacte. Ne pas la régénérer séparément.
 
-### P02 — Les crochets (03,13 → 06,07)
+### P02 — Les crochets
 ```
 SUJET — Gros plan sur deux crochets de fer forgé plantés dans un mur tendu de tissu rouge sombre,
 leurs ombres portées nettes, une trace plus claire sur le tissu à l'emplacement du tableau disparu.
@@ -54,20 +54,53 @@ Pas de personnage, pas de cadre. Mention : illustration historique.
 + STYLE + À ÉVITER
 ```
 
-### P03 — La Joconde (06,07 → 08,17) — **NE PAS GÉNÉRER**
-Œuvre réelle : utiliser **la reproduction authentique** (`assets/oeuvre/joconde-reproduction.jpg`), posée entière sur un fond sombre.
-Étiquette **ARCHIVE**, légende « Léonard de Vinci, La Joconde · Musée du Louvre ». Script : `scripts/02b_oeuvre.py`.
+### P03 et P22 — La Joconde — **NE PAS GÉNÉRER**
+Utiliser la **reproduction authentique** (`assets/oeuvre/joconde-reproduction.jpg`), posée entière sur fond sombre.
+Le bandeau du haut est laissé libre pour l'étiquette **ARCHIVE**, la légende « Léonard de Vinci, La Joconde · Musée du Louvre » et le carton (`scripts/02b_oeuvre.py`).
 
-### P04 — Soupçons (08,17 → 10,63)
+### P04 — Le peintre copiste
 ```
-SUJET — Rue de Paris en 1911, matin brumeux, façades haussmanniennes estompées, pavés mouillés :
-un homme en manteau et chapeau melon, vu de dos, encadré par deux agents de police en pèlerine et képi,
-eux aussi de dos, qui s'éloignent vers le fond. Silhouettes seulement, aucun visage.
-Mention : illustration historique, scène générique (les circonstances exactes de l'arrestation ne sont pas documentées ici).
+SUJET — Le même mur du Salon Carré, emplacement vide et quatre crochets ; au premier plan à gauche, un peintre
+en manteau et chapeau melon, VU DE DOS, en silhouette ; à droite, son chevalet dont on ne voit que le DOS de la toile
+(lin brut et châssis en bois, aucune image peinte visible). Aucun visage.
+Mention : illustration historique, reconstitution.
 + STYLE + À ÉVITER
 ```
 
-### P05 — Prison de la Santé (10,63 → 14,27)
+### P05 — Chez le photographe ?
+```
+SUJET — Atelier photographique vers 1911 : une chambre photographique en bois à soufflet sur un trépied,
+objectif en laiton, voile noir de mise au point, lumière latérale d'une fenêtre, parquet. Pas de personnage, pas de texte.
+Mention : illustration historique.
++ STYLE + À ÉVITER
+```
+
+### P06 et P20 — L'escalier : le cadre vide
+```
+SUJET — Escalier de service en pierre du Louvre, 1911, lumière d'une haute fenêtre : sur les marches au premier plan,
+un cadre doré VIDE et une plaque de verre (la vitre de protection) abandonnés. Pas de personnage.
+Mention : illustration historique, reconstitution.
++ STYLE + À ÉVITER
+```
+
+### P07 — La foule devant le mur vide
+```
+SUJET — Le même mur du Salon Carré, emplacement vide et quatre crochets ; au premier plan, une foule de visiteurs
+de 1911 VUS DE DOS, en silhouettes (chapeaux melon, canotiers, capelines), qui regardent l'emplacement vide.
+Aucun visage. Mention : illustration historique, reconstitution.
++ STYLE + À ÉVITER
+```
+
+### P08 — Le bureau du juge d'instruction
+```
+SUJET — Bureau d'un juge d'instruction à Paris en 1911 : boiseries vert sombre, grand bureau en bois, lampe à
+abat-jour vert, quelques feuilles VIERGES, fauteuil vide ; au premier plan, un homme en manteau et chapeau melon,
+VU DE DOS, en silhouette. Aucun visage, aucun texte.
+Mention : illustration historique, scène générique (le lieu exact de l'audition n'est pas représenté).
++ STYLE + À ÉVITER
+```
+
+### P09 — Prison de la Santé
 ```
 SUJET — Intérieur d'une cellule de prison vers 1911 : mur de pierres appareillées, petite fenêtre haute à barreaux,
 un rai de lumière oblique et l'ombre des barreaux sur le mur, une planche-lit en bois, sol de pierre.
@@ -75,31 +108,39 @@ Pas de personnage. Mention : illustration historique.
 + STYLE + À ÉVITER
 ```
 
-### P06 — L'empreinte (14,27 → 17,30)
+### P10 — L'empreinte
 ```
 SUJET — Une plaque de verre de vitrine de musée en lumière rasante, fond bleu-vert sombre, cadre fin :
-sur le verre, une empreinte de pouce apparaît en reflet clair (motif d'empreinte générique, pas une vraie empreinte).
+sur le verre, une empreinte de pouce apparaît en reflet clair (motif générique, pas une vraie empreinte).
 Pas de personnage, pas de texte. Mention : illustration historique.
 + STYLE + À ÉVITER
 ```
 
-### P07 — Le fichier (17,30 → 21,00)
+### P11 — Le fichier de police
 ```
-SUJET — Un grand meuble-fichier de police en bois vers 1911, des dizaines de petits tiroirs avec porte-étiquettes en laiton
-VIDES, un tiroir ouvert au premier plan rempli de fiches cartonnées vierges, vues de dessus, sans aucune écriture.
+SUJET — Un grand meuble-fichier de police en bois vers 1911, des dizaines de petits tiroirs avec porte-étiquettes
+en laiton VIDES, un tiroir ouvert au premier plan rempli de fiches cartonnées VIERGES, sans aucune écriture.
 Pas de personnage. Mention : illustration historique.
 + STYLE + À ÉVITER
 ```
 
-### P08 — La chambre (21,00 → 25,03, entrée en fondu)
+### P12 — La loupe
 ```
-SUJET — Chambre mansardée parisienne la nuit, entre 1911 et 1913 : fenêtre à petits carreaux, toits de Paris et cheminées
-en silhouette, pleine lune ; un lit simple et une table dans la pénombre bleue. La cachette du tableau n'est PAS montrée.
-Pas de personnage. Mention : illustration historique.
+SUJET — Vue plongeante sur un bureau en bois : la plaque de verre portant l'empreinte (motif générique),
+une loupe à monture de laiton posée dessus qui agrandit les sillons. Lumière de lampe chaude. Pas de texte.
+Mention : illustration historique.
++ STYLE + À ÉVITER
+```
+
+### P13 — La chambre (entrée en fondu)
+```
+SUJET — Chambre mansardée parisienne la nuit, entre 1911 et 1913 : fenêtre à petits carreaux, toits de Paris et
+cheminées en silhouette, pleine lune ; un lit simple et une table dans la pénombre bleue. La cachette du tableau
+n'est PAS montrée. Pas de personnage. Mention : illustration historique.
 + STYLE (palette bleu nuit pour ce plan) + À ÉVITER
 ```
 
-### P09 — Carte schématique (25,03 → 29,80) — **NE PAS GÉNÉRER**
+### P14 — Carte schématique — **NE PAS GÉNÉRER**
 La carte est **construite à partir de données réelles** avec `scripts/03_carte.py` :
 - terres émergées Natural Earth 1:50m (paquet npm `world-atlas@2.0.2`, domaine public), **sans aucune frontière** ;
 - projection Mercator ;
@@ -107,38 +148,68 @@ La carte est **construite à partir de données réelles** avec `scripts/03_cart
 - l'arc Paris → Florence est **schématique** (ce n'est pas l'itinéraire réel) ;
 - étiquette à l'écran : **CARTE SCHÉMATIQUE**.
 
-Si on la refait dans un autre outil, ne tracer **aucune frontière**, ni actuelle ni de 1913. On évite ainsi tout anachronisme.
+### P15 — Chez l'antiquaire, à Florence — **image composite**
+```
+SUJET — Boutique d'antiquaire à Florence en décembre 1913 : étagères de vases anciens, suspension, grande table ;
+au centre, un panneau posé sur un support, laissé VIDE et sombre (il sera rempli par la reproduction authentique) ;
+au premier plan, deux hommes en manteau et chapeau melon, VUS DE DOS. Aucun visage, aucun texte.
+Mention : illustration historique, reconstitution.
++ STYLE + À ÉVITER
+```
+Puis coller la **reproduction authentique** dans l'emplacement, **après** le rendu pictural (`finish(..., protect=...)`).
 
-### P10 — L'arrestation (29,80 → 33,80)
+### P16 — L'arrestation
 ```
 SUJET — Couloir d'un hôtel modeste à Florence en décembre 1913 : papier peint ancien, parquet, une porte entrouverte
-d'où sort une lumière chaude ; deux hommes en manteau et chapeau, vus de dos, se tiennent devant la porte.
-Silhouettes seulement, aucun visage, aucun nom d'hôtel lisible.
+d'où sort une lumière chaude ; deux hommes en manteau et chapeau, VUS DE DOS, devant la porte.
+Aucun visage, aucun nom d'hôtel lisible. Mention : illustration historique, reconstitution générique.
++ STYLE + À ÉVITER
+```
+
+### P17 — Le vitrier
+```
+SUJET — Une salle du Louvre avant le vol : mur rouge et cadres dorés, une vitrine de protection en bois et verre,
+vide, fixée au mur ; une plaque de verre posée contre le mur ; au premier plan, un ouvrier en blouse blanche et
+casquette, VU DE DOS. Aucun visage. Mention : illustration historique, reconstitution.
++ STYLE + À ÉVITER
+```
+
+### P18 — La vitrine — **image composite**
+```
+SUJET — Atelier de vitrier dans un musée vers 1911 : une vitrine de protection en bois et verre posée contre le mur,
+reflet de lumière sur le verre ; sur l'établi au premier plan, une règle, un diamant de vitrier, une plaque de verre.
+L'intérieur de la vitrine est laissé VIDE et sombre. Mention : illustration historique.
++ STYLE + À ÉVITER
+```
+Puis coller la **reproduction authentique** dans la vitrine, après la peinture : l'œuvre n'est jamais repeinte.
+
+### P19 — L'escalier, le lundi 21 août
+```
+SUJET — Escalier de service en pierre du Louvre, 1911, lumière d'une haute fenêtre : un homme en blouse blanche
+d'ouvrier et casquette, VU DE DOS, dans l'escalier ; au premier plan, sur les marches, un cadre doré VIDE abandonné.
+Le tableau n'est pas montré. Aucun visage. Mention : illustration historique, reconstitution.
++ STYLE + À ÉVITER
+```
+
+### P21 — Le procès
+```
+SUJET — Salle d'audience à Florence en juin 1914 : boiseries, grande baie cintrée lumineuse, estrade de la cour
+avec trois hauts dossiers VIDES ; devant la balustrade, l'accusé debout, VU DE DOS, sans chapeau ; au premier plan,
+quelques têtes du public de dos. Aucun visage, aucun texte, aucun emblème.
 Mention : illustration historique, reconstitution générique.
 + STYLE + À ÉVITER
 ```
 
-### P11 — La vitrine (33,80 → 36,67) — **image composite**
+### P23 — Le retour au Louvre — **image composite**
 ```
-SUJET — Atelier de vitrier dans un musée vers 1911 : une vitrine de protection en bois et verre posée contre le mur,
-reflet de lumière sur le verre ; sur l'établi au premier plan, une règle, un diamant de vitrier, une plaque de verre.
-L'intérieur de la vitrine est laissé VIDE et sombre : il sera rempli par la reproduction authentique.
-Mention : illustration historique.
+SUJET — Le mur du Salon Carré le 4 janvier 1914 : au centre, un cadre doré de nouveau accroché, son intérieur laissé
+VIDE (il sera rempli par la reproduction authentique) ; au premier plan, la foule de 1914 VUE DE DOS (chapeaux melon,
+canotiers, capelines). Aucun visage. Mention : illustration historique, reconstitution.
 + STYLE + À ÉVITER
 ```
-Puis **coller la reproduction authentique** de La Joconde dans la vitrine, **après** le rendu pictural : l'œuvre n'est jamais repeinte.
-C'est ce que fait `finish(..., protect=...)` dans `scripts/02_illustrations.py`.
+Puis coller la **reproduction authentique** dans le cadre, après la peinture.
 
-### P12 — L'escalier (36,67 → 40,63)
-```
-SUJET — Escalier de service en pierre du Louvre, 1911, lumière d'une haute fenêtre : un homme en blouse blanche d'ouvrier
-et casquette, VU DE DOS, descend vers la lumière ; au premier plan, sur les marches, un cadre doré VIDE abandonné.
-Silhouette seulement, aucun visage, le tableau n'est pas montré.
-Mention : illustration historique, reconstitution.
-+ STYLE + À ÉVITER
-```
-
-### P13 — La Joconde, détail (40,63 → 44,50) — **NE PAS GÉNÉRER**
+### P24 — La Joconde, détail — **NE PAS GÉNÉRER**
 Recadrage du visage **dans la reproduction authentique**, agrandi par interpolation (aucune génération).
 Étiquette **ARCHIVE**, légende « La Joconde (détail) · Musée du Louvre ».
 
@@ -148,11 +219,13 @@ Recadrage du visage **dans la reproduction authentique**, agrandi par interpolat
 
 | Plan | Archive à chercher | Où chercher |
 |---|---|---|
-| P01 / P14 | Photographie du mur vide du Salon Carré (1911), avec les crochets | Gallica (BnF), Roger-Viollet, Agence Rol |
-| P04 | Photographie d'Apollinaire en 1911 (sans retouche) | Gallica, Archives de Paris |
-| P07 | Fiche anthropométrique de Peruggia (préfecture de police) | Musée de la préfecture de police, publications |
-| P09 / P10 | Une du *Petit Parisien* ou du *Petit Journal* de décembre 1913 | Gallica (presse numérisée, domaine public) |
-| P12 | Photographie de l'escalier de service et du cadre retrouvé | Gallica, Agence Rol |
+| P01 / P07 / P25 | Photographie du mur vide du Salon Carré (1911), avec les crochets ; photographies de la foule à la réouverture | Gallica (BnF), Roger-Viollet, Agence Rol |
+| P08 | Photographie d'Apollinaire en 1911 (sans retouche) | Gallica, Archives de Paris |
+| P11 | Fiche anthropométrique de Peruggia (préfecture de police) | Musée de la préfecture de police, publications |
+| P15 / P16 | Une du *Petit Parisien* ou du *Petit Journal* de décembre 1913 | Gallica (presse numérisée, domaine public) |
+| P06 / P19 / P20 | Photographie de l'escalier de service et du cadre retrouvé | Gallica, Agence Rol |
+| P21 | Photographie de Peruggia au procès de Florence (1914) | Gallica, archives de presse italiennes |
+| P23 | Photographie du retour de la Joconde au Louvre (janvier 1914) | Gallica, Agence Rol |
 
 Si une vraie archive remplace une illustration : passer l'étiquette en **ARCHIVE**, ajouter la légende (source et date),
 et ne **jamais** la coloriser ni l'animer en faux mouvement.

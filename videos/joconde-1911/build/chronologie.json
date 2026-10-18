@@ -1,9 +1,13 @@
 {
- "voix_fin": 46.919,
- "duree_parole": 40.817,
- "mots": 135,
- "syllabes_estimees": 201,
- "debit_syll_par_s": 4.92,
+ "moteur": "kokoro",
+ "modele": "kokoro-v1.0",
+ "voix": "ff_siwis",
+ "brouillon": true,
+ "voix_fin": 79.353,
+ "duree_parole": 70.7,
+ "mots": 232,
+ "syllabes_estimees": 342,
+ "debit_syll_par_s": 4.84,
  "phrases": [
   {
    "id": 1,
@@ -112,769 +116,1353 @@
    "role": "question",
    "texte": "Qui a pu la sortir du musée ?",
    "phonemes": "ki a pˈy la sɔʁtˈiʁ dy myzˈe ?",
-   "debut": 6.053,
-   "fin": 7.554,
+   "debut": 6.003,
+   "fin": 7.504,
    "duree": 1.502,
    "mots": [
     {
      "mot": "Qui",
-     "debut": 6.053,
-     "fin": 6.211
+     "debut": 6.003,
+     "fin": 6.161
     },
     {
      "mot": "a",
-     "debut": 6.211,
-     "fin": 6.29
+     "debut": 6.161,
+     "fin": 6.24
     },
     {
      "mot": "pu",
-     "debut": 6.29,
-     "fin": 6.448
+     "debut": 6.24,
+     "fin": 6.398
     },
     {
      "mot": "la",
-     "debut": 6.448,
-     "fin": 6.606
+     "debut": 6.398,
+     "fin": 6.556
     },
     {
      "mot": "sortir",
-     "debut": 6.606,
-     "fin": 7.08
+     "debut": 6.556,
+     "fin": 7.03
     },
     {
      "mot": "du",
-     "debut": 7.08,
-     "fin": 7.238
+     "debut": 7.03,
+     "fin": 7.188
     },
     {
      "mot": "musée",
-     "debut": 7.238,
-     "fin": 7.555
+     "debut": 7.188,
+     "fin": 7.505
     },
     {
      "mot": "?",
-     "debut": 7.555,
-     "fin": 7.555
+     "debut": 7.505,
+     "fin": 7.505
     }
    ]
   },
   {
    "id": 4,
-   "role": "révélation 1 (fausse piste)",
-   "texte": "La police soupçonne même le poète Apollinaire.",
-   "phonemes": "la polˈis supsˈɔn mˈɛm lə pɔˈɛt apɔlinˈɛʁ.",
-   "debut": 8.154,
-   "fin": 10.445,
-   "duree": 2.29,
+   "role": "découverte",
+   "texte": "Ce matin-là, le peintre Louis Béroud vient la copier.",
+   "phonemes": "sə matˈɛ̃lˈa, lə pˈɛ̃tʁ lwˈi beʁˈu vjˈɛ̃ la kopjˈe.",
+   "debut": 8.054,
+   "fin": 10.714,
+   "duree": 2.66,
    "mots": [
     {
-     "mot": "La",
-     "debut": 8.154,
-     "fin": 8.307
+     "mot": "Ce",
+     "debut": 8.054,
+     "fin": 8.254
     },
     {
-     "mot": "police",
-     "debut": 8.307,
-     "fin": 8.688
-    },
-    {
-     "mot": "soupçonne",
-     "debut": 8.688,
-     "fin": 9.146
-    },
-    {
-     "mot": "même",
-     "debut": 9.146,
-     "fin": 9.375
+     "mot": "matin-là,",
+     "debut": 8.254,
+     "fin": 8.954
     },
     {
      "mot": "le",
-     "debut": 9.375,
-     "fin": 9.528
+     "debut": 8.954,
+     "fin": 9.095
     },
     {
-     "mot": "poète",
-     "debut": 9.528,
-     "fin": 9.834
+     "mot": "peintre",
+     "debut": 9.095,
+     "fin": 9.447
     },
     {
-     "mot": "Apollinaire.",
-     "debut": 9.834,
-     "fin": 10.444
+     "mot": "Louis",
+     "debut": 9.447,
+     "fin": 9.658
+    },
+    {
+     "mot": "Béroud",
+     "debut": 9.658,
+     "fin": 9.94
+    },
+    {
+     "mot": "vient",
+     "debut": 9.94,
+     "fin": 10.221
+    },
+    {
+     "mot": "la",
+     "debut": 10.221,
+     "fin": 10.362
+    },
+    {
+     "mot": "copier.",
+     "debut": 10.362,
+     "fin": 10.714
     }
    ]
   },
   {
    "id": 5,
-   "role": "révélation 1 (fausse piste)",
-   "texte": "Il passe près d'une semaine en prison.",
-   "phonemes": "il pˈas pʁɛ dyn səmˈɛn ɑ̃ pʁizˈɔ̃.",
-   "debut": 10.645,
-   "fin": 12.459,
-   "duree": 1.814,
+   "role": "découverte",
+   "texte": "Les gardiens la croient chez le photographe.",
+   "phonemes": "le ɡaʁdjˈɛ̃ la kʁwˈa ʃe lə fotoɡʁˈaf.",
+   "debut": 10.914,
+   "fin": 12.913,
+   "duree": 1.998,
    "mots": [
     {
-     "mot": "Il",
-     "debut": 10.645,
-     "fin": 10.796
+     "mot": "Les",
+     "debut": 10.914,
+     "fin": 11.062
     },
     {
-     "mot": "passe",
-     "debut": 10.796,
-     "fin": 11.023
+     "mot": "gardiens",
+     "debut": 11.062,
+     "fin": 11.58
     },
     {
-     "mot": "près",
-     "debut": 11.023,
-     "fin": 11.25
+     "mot": "la",
+     "debut": 11.58,
+     "fin": 11.728
     },
     {
-     "mot": "d'une",
-     "debut": 11.25,
-     "fin": 11.477
+     "mot": "croient",
+     "debut": 11.728,
+     "fin": 12.024
     },
     {
-     "mot": "semaine",
-     "debut": 11.477,
-     "fin": 11.855
+     "mot": "chez",
+     "debut": 12.024,
+     "fin": 12.172
     },
     {
-     "mot": "en",
-     "debut": 11.855,
-     "fin": 12.006
+     "mot": "le",
+     "debut": 12.172,
+     "fin": 12.32
     },
     {
-     "mot": "prison.",
-     "debut": 12.006,
-     "fin": 12.459
+     "mot": "photographe.",
+     "debut": 12.32,
+     "fin": 12.912
     }
    ]
   },
   {
    "id": 6,
-   "role": "révélation 1 (fausse piste)",
-   "texte": "Fausse piste.",
-   "phonemes": "fˈos pˈist.",
-   "debut": 12.709,
-   "fin": 13.65,
-   "duree": 0.941,
+   "role": "découverte",
+   "texte": "Mais dans un escalier, on retrouve son cadre vide.",
+   "phonemes": "mɛ dɑ̃z œ̃n ɛskaljˈe, ɔ̃ ʁətʁˈuv sɔ̃ kˈadʁ vˈid.",
+   "debut": 13.113,
+   "fin": 15.81,
+   "duree": 2.697,
    "mots": [
     {
-     "mot": "Fausse",
-     "debut": 12.709,
-     "fin": 13.112
+     "mot": "Mais",
+     "debut": 13.113,
+     "fin": 13.286
     },
     {
-     "mot": "piste.",
-     "debut": 13.112,
-     "fin": 13.65
+     "mot": "dans",
+     "debut": 13.286,
+     "fin": 13.545
+    },
+    {
+     "mot": "un",
+     "debut": 13.545,
+     "fin": 13.718
+    },
+    {
+     "mot": "escalier,",
+     "debut": 13.718,
+     "fin": 14.323
+    },
+    {
+     "mot": "on",
+     "debut": 14.323,
+     "fin": 14.488
+    },
+    {
+     "mot": "retrouve",
+     "debut": 14.488,
+     "fin": 14.984
+    },
+    {
+     "mot": "son",
+     "debut": 14.984,
+     "fin": 15.232
+    },
+    {
+     "mot": "cadre",
+     "debut": 15.232,
+     "fin": 15.562
+    },
+    {
+     "mot": "vide.",
+     "debut": 15.562,
+     "fin": 15.81
     }
    ]
   },
   {
    "id": 7,
-   "role": "révélation 2 (détail inattendu)",
-   "texte": "Un indice reste sur la vitre : une empreinte de pouce.",
-   "phonemes": "œ̃n ɛ̃dˈis ʁˈɛst syʁ la vˈitʁ : yn ɑ̃pʁˈɛ̃t də pˈus.",
-   "debut": 14.25,
-   "fin": 17.066,
-   "duree": 2.816,
+   "role": "découverte",
+   "texte": "Une semaine plus tard, la foule vient voir… le mur vide.",
+   "phonemes": "yn səmˈɛn ply tˈaʁ, la fˈul vjˈɛ̃ vwˈaʁ… lə mˈyʁ vˈid.",
+   "debut": 16.16,
+   "fin": 19.158,
+   "duree": 2.998,
    "mots": [
     {
-     "mot": "Un",
-     "debut": 14.25,
-     "fin": 14.423
+     "mot": "Une",
+     "debut": 16.16,
+     "fin": 16.374
     },
     {
-     "mot": "indice",
-     "debut": 14.423,
-     "fin": 14.855
+     "mot": "semaine",
+     "debut": 16.374,
+     "fin": 16.908
     },
     {
-     "mot": "reste",
-     "debut": 14.855,
-     "fin": 15.202
+     "mot": "plus",
+     "debut": 16.908,
+     "fin": 17.229
     },
     {
-     "mot": "sur",
-     "debut": 15.202,
-     "fin": 15.461
+     "mot": "tard,",
+     "debut": 17.229,
+     "fin": 17.55
     },
     {
      "mot": "la",
-     "debut": 15.461,
-     "fin": 15.634
+     "debut": 17.55,
+     "fin": 17.703
     },
     {
-     "mot": "vitre",
-     "debut": 15.634,
-     "fin": 15.98
+     "mot": "foule",
+     "debut": 17.703,
+     "fin": 17.933
     },
     {
-     "mot": ":",
-     "debut": 15.98,
-     "fin": 15.98
+     "mot": "vient",
+     "debut": 17.933,
+     "fin": 18.239
     },
     {
-     "mot": "une",
-     "debut": 15.98,
-     "fin": 16.135
+     "mot": "voir…",
+     "debut": 18.239,
+     "fin": 18.545
     },
     {
-     "mot": "empreinte",
-     "debut": 16.135,
-     "fin": 16.678
+     "mot": "le",
+     "debut": 18.545,
+     "fin": 18.698
     },
     {
-     "mot": "de",
-     "debut": 16.678,
-     "fin": 16.833
+     "mot": "mur",
+     "debut": 18.698,
+     "fin": 18.928
     },
     {
-     "mot": "pouce.",
-     "debut": 16.833,
-     "fin": 17.066
+     "mot": "vide.",
+     "debut": 18.928,
+     "fin": 19.158
     }
    ]
   },
   {
    "id": 8,
-   "role": "révélation 2 (détail inattendu)",
-   "texte": "Le voleur est déjà fiché.",
-   "phonemes": "lə volˈœʁ ɛ deʒˈa fiʃˈe.",
-   "debut": 17.316,
-   "fin": 18.706,
-   "duree": 1.39,
+   "role": "révélation 1 (fausse piste)",
+   "texte": "Le 7 septembre, on emprisonne même le poète Apollinaire.",
+   "phonemes": "lə sˈɛt sɛptˈɑ̃bʁ, ɔ̃n ɑ̃pʁizˈɔn mˈɛm lə pɔˈɛt apɔlinˈɛʁ.",
+   "debut": 19.658,
+   "fin": 22.895,
+   "duree": 3.237,
    "mots": [
     {
      "mot": "Le",
-     "debut": 17.316,
-     "fin": 17.49
+     "debut": 19.658,
+     "fin": 19.869
     },
     {
-     "mot": "voleur",
-     "debut": 17.49,
-     "fin": 17.924
+     "mot": "7",
+     "debut": 19.869,
+     "fin": 20.185
     },
     {
-     "mot": "est",
-     "debut": 17.924,
-     "fin": 18.011
+     "mot": "septembre,",
+     "debut": 20.185,
+     "fin": 21.028
     },
     {
-     "mot": "déjà",
-     "debut": 18.011,
-     "fin": 18.358
+     "mot": "on",
+     "debut": 21.028,
+     "fin": 21.166
     },
     {
-     "mot": "fiché.",
-     "debut": 18.358,
-     "fin": 18.706
+     "mot": "emprisonne",
+     "debut": 21.166,
+     "fin": 21.72
+    },
+    {
+     "mot": "même",
+     "debut": 21.72,
+     "fin": 21.927
+    },
+    {
+     "mot": "le",
+     "debut": 21.927,
+     "fin": 22.065
+    },
+    {
+     "mot": "poète",
+     "debut": 22.065,
+     "fin": 22.342
+    },
+    {
+     "mot": "Apollinaire.",
+     "debut": 22.342,
+     "fin": 22.895
     }
    ]
   },
   {
    "id": 9,
-   "role": "révélation 2 (détail inattendu)",
-   "texte": "Personne ne fait le rapprochement.",
-   "phonemes": "pɛʁsˈɔn nə fˈɛ lə ʁapʁoʃmˈɑ̃.",
-   "debut": 18.906,
-   "fin": 20.404,
-   "duree": 1.497,
+   "role": "révélation 1 (fausse piste)",
+   "texte": "Il passe près d'une semaine à la Santé.",
+   "phonemes": "il pˈas pʁɛ dyn səmˈɛn a la sɑ̃tˈe.",
+   "debut": 23.095,
+   "fin": 24.961,
+   "duree": 1.866,
    "mots": [
     {
-     "mot": "Personne",
-     "debut": 18.906,
-     "fin": 19.334
+     "mot": "Il",
+     "debut": 23.095,
+     "fin": 23.251
     },
     {
-     "mot": "ne",
-     "debut": 19.334,
-     "fin": 19.476
+     "mot": "passe",
+     "debut": 23.251,
+     "fin": 23.484
     },
     {
-     "mot": "fait",
-     "debut": 19.476,
-     "fin": 19.619
+     "mot": "près",
+     "debut": 23.484,
+     "fin": 23.717
     },
     {
-     "mot": "le",
-     "debut": 19.619,
-     "fin": 19.762
+     "mot": "d'une",
+     "debut": 23.717,
+     "fin": 23.95
     },
     {
-     "mot": "rapprochement.",
-     "debut": 19.762,
-     "fin": 20.403
+     "mot": "semaine",
+     "debut": 23.95,
+     "fin": 24.339
+    },
+    {
+     "mot": "à",
+     "debut": 24.339,
+     "fin": 24.417
+    },
+    {
+     "mot": "la",
+     "debut": 24.417,
+     "fin": 24.572
+    },
+    {
+     "mot": "Santé.",
+     "debut": 24.572,
+     "fin": 24.961
     }
    ]
   },
   {
    "id": 10,
-   "role": "ellipse",
-   "texte": "Plus de deux ans passent.",
-   "phonemes": "ply də dˈøz ˈɑ̃ pˈas.",
-   "debut": 21.004,
-   "fin": 22.166,
-   "duree": 1.163,
+   "role": "révélation 1 (fausse piste)",
+   "texte": "Fausse piste.",
+   "phonemes": "fˈos pˈist.",
+   "debut": 25.161,
+   "fin": 26.102,
+   "duree": 0.941,
    "mots": [
     {
-     "mot": "Plus",
-     "debut": 21.004,
-     "fin": 21.295
+     "mot": "Fausse",
+     "debut": 25.161,
+     "fin": 25.564
     },
     {
-     "mot": "de",
-     "debut": 21.295,
-     "fin": 21.488
-    },
-    {
-     "mot": "deux",
-     "debut": 21.488,
-     "fin": 21.682
-    },
-    {
-     "mot": "ans",
-     "debut": 21.682,
-     "fin": 21.876
-    },
-    {
-     "mot": "passent.",
-     "debut": 21.876,
-     "fin": 22.167
+     "mot": "piste.",
+     "debut": 25.564,
+     "fin": 26.102
     }
    ]
   },
   {
    "id": 11,
-   "role": "ellipse",
-   "texte": "Le tableau dort dans une chambre parisienne.",
-   "phonemes": "lə tablˈo dˈɔʁ dɑ̃z yn ʃˈɑ̃bʁ paʁizjˈɛn.",
-   "debut": 22.366,
-   "fin": 24.579,
-   "duree": 2.212,
+   "role": "révélation 2 (indice)",
+   "texte": "Pourtant, un indice reste sur la vitre : une empreinte de pouce.",
+   "phonemes": "puʁtˈɑ̃, œ̃n ɛ̃dˈis ʁˈɛst syʁ la vˈitʁ : yn ɑ̃pʁˈɛ̃t də pˈus.",
+   "debut": 26.652,
+   "fin": 29.873,
+   "duree": 3.22,
    "mots": [
     {
-     "mot": "Le",
-     "debut": 22.366,
-     "fin": 22.524
+     "mot": "Pourtant,",
+     "debut": 26.652,
+     "fin": 27.144
     },
     {
-     "mot": "tableau",
-     "debut": 22.524,
-     "fin": 22.919
+     "mot": "un",
+     "debut": 27.144,
+     "fin": 27.307
     },
     {
-     "mot": "dort",
-     "debut": 22.919,
-     "fin": 23.156
+     "mot": "indice",
+     "debut": 27.307,
+     "fin": 27.717
     },
     {
-     "mot": "dans",
-     "debut": 23.156,
-     "fin": 23.393
+     "mot": "reste",
+     "debut": 27.717,
+     "fin": 28.045
+    },
+    {
+     "mot": "sur",
+     "debut": 28.045,
+     "fin": 28.29
+    },
+    {
+     "mot": "la",
+     "debut": 28.29,
+     "fin": 28.454
+    },
+    {
+     "mot": "vitre",
+     "debut": 28.454,
+     "fin": 28.782
+    },
+    {
+     "mot": ":",
+     "debut": 28.782,
+     "fin": 28.782
     },
     {
      "mot": "une",
-     "debut": 23.393,
-     "fin": 23.551
+     "debut": 28.782,
+     "fin": 28.938
     },
     {
-     "mot": "chambre",
-     "debut": 23.551,
-     "fin": 23.946
+     "mot": "empreinte",
+     "debut": 28.938,
+     "fin": 29.483
     },
     {
-     "mot": "parisienne.",
-     "debut": 23.946,
-     "fin": 24.578
+     "mot": "de",
+     "debut": 29.483,
+     "fin": 29.639
+    },
+    {
+     "mot": "pouce.",
+     "debut": 29.639,
+     "fin": 29.872
     }
    ]
   },
   {
    "id": 12,
-   "role": "révélation 3 (retournement)",
-   "texte": "En décembre 1913, un homme le propose à un antiquaire de Florence.",
-   "phonemes": "ɑ̃ desˈɑ̃bʁ mil nœfsɑ̃ tʁˈɛz, œ̃n ˈɔm lə pʁopˈɔz a œ̃n ɑ̃tikˈɛʁ də floʁˈɑ̃s.",
-   "debut": 25.029,
-   "fin": 29.45,
-   "duree": 4.421,
+   "role": "révélation 2 (indice)",
+   "texte": "Le voleur est déjà fiché par la police.",
+   "phonemes": "lə volˈœʁ ɛ deʒˈa fiʃˈe paʁ la polˈis.",
+   "debut": 30.123,
+   "fin": 32.279,
+   "duree": 2.156,
    "mots": [
     {
-     "mot": "En",
-     "debut": 25.029,
-     "fin": 25.219
+     "mot": "Le",
+     "debut": 30.123,
+     "fin": 30.289
     },
     {
-     "mot": "décembre",
-     "debut": 25.219,
-     "fin": 25.884
+     "mot": "voleur",
+     "debut": 30.289,
+     "fin": 30.704
     },
     {
-     "mot": "1913,",
-     "debut": 25.884,
-     "fin": 27.119
+     "mot": "est",
+     "debut": 30.704,
+     "fin": 30.786
     },
     {
-     "mot": "un",
-     "debut": 27.119,
-     "fin": 27.269
+     "mot": "déjà",
+     "debut": 30.786,
+     "fin": 31.118
     },
     {
-     "mot": "homme",
-     "debut": 27.269,
-     "fin": 27.42
+     "mot": "fiché",
+     "debut": 31.118,
+     "fin": 31.45
     },
     {
-     "mot": "le",
-     "debut": 27.42,
-     "fin": 27.57
+     "mot": "par",
+     "debut": 31.45,
+     "fin": 31.699
     },
     {
-     "mot": "propose",
-     "debut": 27.57,
-     "fin": 28.021
+     "mot": "la",
+     "debut": 31.699,
+     "fin": 31.865
     },
     {
-     "mot": "à",
-     "debut": 28.021,
-     "fin": 28.097
-    },
-    {
-     "mot": "un",
-     "debut": 28.097,
-     "fin": 28.247
-    },
-    {
-     "mot": "antiquaire",
-     "debut": 28.247,
-     "fin": 28.773
-    },
-    {
-     "mot": "de",
-     "debut": 28.773,
-     "fin": 28.924
-    },
-    {
-     "mot": "Florence.",
-     "debut": 28.924,
-     "fin": 29.45
+     "mot": "police.",
+     "debut": 31.865,
+     "fin": 32.279
     }
    ]
   },
   {
    "id": 13,
-   "role": "réponse",
-   "texte": "Il est arrêté.",
-   "phonemes": "il ɛt aʁɛtˈe.",
-   "debut": 29.8,
-   "fin": 30.698,
-   "duree": 0.898,
+   "role": "révélation 2 (indice)",
+   "texte": "Personne ne fait le rapprochement.",
+   "phonemes": "pɛʁsˈɔn nə fˈɛ lə ʁapʁoʃmˈɑ̃.",
+   "debut": 32.479,
+   "fin": 33.976,
+   "duree": 1.497,
    "mots": [
     {
-     "mot": "Il",
-     "debut": 29.8,
-     "fin": 30.024
+     "mot": "Personne",
+     "debut": 32.479,
+     "fin": 32.907
     },
     {
-     "mot": "est",
-     "debut": 30.024,
-     "fin": 30.137
+     "mot": "ne",
+     "debut": 32.907,
+     "fin": 33.049
     },
     {
-     "mot": "arrêté.",
-     "debut": 30.137,
-     "fin": 30.698
+     "mot": "fait",
+     "debut": 33.049,
+     "fin": 33.192
+    },
+    {
+     "mot": "le",
+     "debut": 33.192,
+     "fin": 33.335
+    },
+    {
+     "mot": "rapprochement.",
+     "debut": 33.335,
+     "fin": 33.976
     }
    ]
   },
   {
    "id": 14,
-   "role": "réponse",
-   "texte": "C'est Vincenzo Peruggia, un vitrier italien.",
-   "phonemes": "sɛ vintʃɛntsˈo peʁudʒˈa, œ̃ vitʁiˈe italjˈɛ̃.",
-   "debut": 30.898,
-   "fin": 33.501,
-   "duree": 2.603,
+   "role": "ellipse",
+   "texte": "Plus de deux ans passent.",
+   "phonemes": "ply də dˈøz ˈɑ̃ pˈas.",
+   "debut": 34.576,
+   "fin": 35.739,
+   "duree": 1.163,
    "mots": [
     {
-     "mot": "C'est",
-     "debut": 30.898,
-     "fin": 31.056
+     "mot": "Plus",
+     "debut": 34.576,
+     "fin": 34.867
     },
     {
-     "mot": "Vincenzo",
-     "debut": 31.056,
-     "fin": 31.845
+     "mot": "de",
+     "debut": 34.867,
+     "fin": 35.06
     },
     {
-     "mot": "Peruggia,",
-     "debut": 31.845,
-     "fin": 32.398
+     "mot": "deux",
+     "debut": 35.06,
+     "fin": 35.254
     },
     {
-     "mot": "un",
-     "debut": 32.398,
-     "fin": 32.545
+     "mot": "ans",
+     "debut": 35.254,
+     "fin": 35.448
     },
     {
-     "mot": "vitrier",
-     "debut": 32.545,
-     "fin": 32.986
-    },
-    {
-     "mot": "italien.",
-     "debut": 32.986,
-     "fin": 33.501
+     "mot": "passent.",
+     "debut": 35.448,
+     "fin": 35.739
     }
    ]
   },
   {
    "id": 15,
-   "role": "réponse (retournement)",
-   "texte": "Il avait travaillé sur la vitrine de la Joconde.",
-   "phonemes": "il avˈɛ tʁavajˈe syʁ la vitʁˈin də la ʒokˈɔ̃d.",
-   "debut": 33.801,
-   "fin": 36.356,
-   "duree": 2.555,
+   "role": "ellipse",
+   "texte": "Le tableau dort dans une chambre parisienne.",
+   "phonemes": "lə tablˈo dˈɔʁ dɑ̃z yn ʃˈɑ̃bʁ paʁizjˈɛn.",
+   "debut": 35.939,
+   "fin": 38.151,
+   "duree": 2.212,
    "mots": [
     {
-     "mot": "Il",
-     "debut": 33.801,
-     "fin": 33.956
+     "mot": "Le",
+     "debut": 35.939,
+     "fin": 36.097
     },
     {
-     "mot": "avait",
-     "debut": 33.956,
-     "fin": 34.188
+     "mot": "tableau",
+     "debut": 36.097,
+     "fin": 36.492
     },
     {
-     "mot": "travaillé",
-     "debut": 34.188,
-     "fin": 34.73
+     "mot": "dort",
+     "debut": 36.492,
+     "fin": 36.729
     },
     {
-     "mot": "sur",
-     "debut": 34.73,
-     "fin": 34.962
+     "mot": "dans",
+     "debut": 36.729,
+     "fin": 36.966
     },
     {
-     "mot": "la",
-     "debut": 34.962,
-     "fin": 35.117
+     "mot": "une",
+     "debut": 36.966,
+     "fin": 37.124
     },
     {
-     "mot": "vitrine",
-     "debut": 35.117,
-     "fin": 35.582
+     "mot": "chambre",
+     "debut": 37.124,
+     "fin": 37.519
     },
     {
-     "mot": "de",
-     "debut": 35.582,
-     "fin": 35.737
-    },
-    {
-     "mot": "la",
-     "debut": 35.737,
-     "fin": 35.891
-    },
-    {
-     "mot": "Joconde.",
-     "debut": 35.891,
-     "fin": 36.356
+     "mot": "parisienne.",
+     "debut": 37.519,
+     "fin": 38.151
     }
    ]
   },
   {
    "id": 16,
-   "role": "réponse (comment)",
-   "texte": "Un lundi de fermeture, il l'avait emportée en blouse d'ouvrier.",
-   "phonemes": "œ̃ lœ̃dˈi də fɛʁmətˈyʁ, il lavˈɛt ɑ̃pɔʁtˈe ɑ̃ blˈuz duvʁiˈe.",
-   "debut": 36.656,
-   "fin": 40.028,
-   "duree": 3.372,
+   "role": "révélation 3 (Florence)",
+   "texte": "En décembre 1913, un homme le propose à un antiquaire de Florence.",
+   "phonemes": "ɑ̃ desˈɑ̃bʁ mil nœfsɑ̃ tʁˈɛz, œ̃n ˈɔm lə pʁopˈɔz a œ̃n ɑ̃tikˈɛʁ də floʁˈɑ̃s.",
+   "debut": 38.601,
+   "fin": 43.022,
+   "duree": 4.421,
    "mots": [
     {
-     "mot": "Un",
-     "debut": 36.656,
-     "fin": 36.836
+     "mot": "En",
+     "debut": 38.601,
+     "fin": 38.791
     },
     {
-     "mot": "lundi",
-     "debut": 36.836,
-     "fin": 37.286
+     "mot": "décembre",
+     "debut": 38.791,
+     "fin": 39.456
+    },
+    {
+     "mot": "1913,",
+     "debut": 39.456,
+     "fin": 40.691
+    },
+    {
+     "mot": "un",
+     "debut": 40.691,
+     "fin": 40.841
+    },
+    {
+     "mot": "homme",
+     "debut": 40.841,
+     "fin": 40.992
+    },
+    {
+     "mot": "le",
+     "debut": 40.992,
+     "fin": 41.142
+    },
+    {
+     "mot": "propose",
+     "debut": 41.142,
+     "fin": 41.593
+    },
+    {
+     "mot": "à",
+     "debut": 41.593,
+     "fin": 41.669
+    },
+    {
+     "mot": "un",
+     "debut": 41.669,
+     "fin": 41.819
+    },
+    {
+     "mot": "antiquaire",
+     "debut": 41.819,
+     "fin": 42.345
     },
     {
      "mot": "de",
-     "debut": 37.286,
-     "fin": 37.466
+     "debut": 42.345,
+     "fin": 42.496
     },
     {
-     "mot": "fermeture,",
-     "debut": 37.466,
-     "fin": 38.186
-    },
-    {
-     "mot": "il",
-     "debut": 38.186,
-     "fin": 38.333
-    },
-    {
-     "mot": "l'avait",
-     "debut": 38.333,
-     "fin": 38.628
-    },
-    {
-     "mot": "emportée",
-     "debut": 38.628,
-     "fin": 39.144
-    },
-    {
-     "mot": "en",
-     "debut": 39.144,
-     "fin": 39.291
-    },
-    {
-     "mot": "blouse",
-     "debut": 39.291,
-     "fin": 39.586
-    },
-    {
-     "mot": "d'ouvrier.",
-     "debut": 39.586,
-     "fin": 40.028
+     "mot": "Florence.",
+     "debut": 42.496,
+     "fin": 43.022
     }
    ]
   },
   {
    "id": 17,
-   "role": "chute",
-   "texte": "Pour beaucoup d'historiens, ce vol l'a rendue célèbre dans le monde entier.",
-   "phonemes": "puʁ bokˌu distoʁjˈɛ̃, sə vˈɔl la ʁɑ̃dˈy selˈɛbʁ dɑ̃ lə mˈɔ̃d ɑ̃tjˈe.",
-   "debut": 40.628,
-   "fin": 44.149,
-   "duree": 3.521,
+   "role": "révélation 3 (Florence)",
+   "texte": "L'antiquaire fait venir le directeur des Offices : c'est bien la Joconde.",
+   "phonemes": "lɑ̃tikˈɛʁ fˈɛ vənˈiʁ lə diʁɛktˈœʁ dez ɔfˈis : sɛ bjˈɛ̃ la ʒokˈɔ̃d.",
+   "debut": 43.322,
+   "fin": 47.119,
+   "duree": 3.796,
    "mots": [
     {
-     "mot": "Pour",
-     "debut": 40.628,
-     "fin": 40.877
+     "mot": "L'antiquaire",
+     "debut": 43.322,
+     "fin": 44.001
     },
     {
-     "mot": "beaucoup",
-     "debut": 40.877,
-     "fin": 41.21
+     "mot": "fait",
+     "debut": 44.001,
+     "fin": 44.17
     },
     {
-     "mot": "d'historiens,",
-     "debut": 41.21,
-     "fin": 41.958
-    },
-    {
-     "mot": "ce",
-     "debut": 41.958,
-     "fin": 42.095
-    },
-    {
-     "mot": "vol",
-     "debut": 42.095,
-     "fin": 42.3
-    },
-    {
-     "mot": "l'a",
-     "debut": 42.3,
-     "fin": 42.437
-    },
-    {
-     "mot": "rendue",
-     "debut": 42.437,
-     "fin": 42.78
-    },
-    {
-     "mot": "célèbre",
-     "debut": 42.78,
-     "fin": 43.191
-    },
-    {
-     "mot": "dans",
-     "debut": 43.191,
-     "fin": 43.396
+     "mot": "venir",
+     "debut": 44.17,
+     "fin": 44.595
     },
     {
      "mot": "le",
-     "debut": 43.396,
-     "fin": 43.533
+     "debut": 44.595,
+     "fin": 44.764
     },
     {
-     "mot": "monde",
-     "debut": 43.533,
-     "fin": 43.807
+     "mot": "directeur",
+     "debut": 44.764,
+     "fin": 45.443
     },
     {
-     "mot": "entier.",
-     "debut": 43.807,
-     "fin": 44.149
+     "mot": "des",
+     "debut": 45.443,
+     "fin": 45.613
+    },
+    {
+     "mot": "Offices",
+     "debut": 45.613,
+     "fin": 45.952
+    },
+    {
+     "mot": ":",
+     "debut": 45.952,
+     "fin": 45.952
+    },
+    {
+     "mot": "c'est",
+     "debut": 45.952,
+     "fin": 46.119
+    },
+    {
+     "mot": "bien",
+     "debut": 46.119,
+     "fin": 46.452
+    },
+    {
+     "mot": "la",
+     "debut": 46.452,
+     "fin": 46.618
+    },
+    {
+     "mot": "Joconde.",
+     "debut": 46.618,
+     "fin": 47.118
     }
    ]
   },
   {
    "id": 18,
+   "role": "réponse",
+   "texte": "Le vendeur est arrêté.",
+   "phonemes": "lə vɑ̃dˈœʁ ɛt aʁɛtˈe.",
+   "debut": 47.419,
+   "fin": 48.64,
+   "duree": 1.222,
+   "mots": [
+    {
+     "mot": "Le",
+     "debut": 47.419,
+     "fin": 47.594
+    },
+    {
+     "mot": "vendeur",
+     "debut": 47.594,
+     "fin": 48.117
+    },
+    {
+     "mot": "est",
+     "debut": 48.117,
+     "fin": 48.204
+    },
+    {
+     "mot": "arrêté.",
+     "debut": 48.204,
+     "fin": 48.641
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "role": "réponse",
+   "texte": "Il s'appelle Vincenzo Peruggia, un vitrier italien.",
+   "phonemes": "il sapˈɛl vɛ̃sɑ̃zˈo pəʁyɡjˈa, œ̃ vitʁiˈe italjˈɛ̃.",
+   "debut": 48.84,
+   "fin": 51.905,
+   "duree": 3.064,
+   "mots": [
+    {
+     "mot": "Il",
+     "debut": 48.84,
+     "fin": 49.018
+    },
+    {
+     "mot": "s'appelle",
+     "debut": 49.018,
+     "fin": 49.464
+    },
+    {
+     "mot": "Vincenzo",
+     "debut": 49.464,
+     "fin": 50.176
+    },
+    {
+     "mot": "Peruggia,",
+     "debut": 50.176,
+     "fin": 50.8
+    },
+    {
+     "mot": "un",
+     "debut": 50.8,
+     "fin": 50.947
+    },
+    {
+     "mot": "vitrier",
+     "debut": 50.947,
+     "fin": 51.389
+    },
+    {
+     "mot": "italien.",
+     "debut": 51.389,
+     "fin": 51.904
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "role": "réponse (retournement)",
+   "texte": "Au Louvre, il avait travaillé sur la vitrine de la Joconde.",
+   "phonemes": "o lˈuvʁ, il avˈɛ tʁavajˈe syʁ la vitʁˈin də la ʒokˈɔ̃d.",
+   "debut": 52.205,
+   "fin": 55.257,
+   "duree": 3.052,
+   "mots": [
+    {
+     "mot": "Au",
+     "debut": 52.205,
+     "fin": 52.347
+    },
+    {
+     "mot": "Louvre,",
+     "debut": 52.347,
+     "fin": 52.915
+    },
+    {
+     "mot": "il",
+     "debut": 52.915,
+     "fin": 53.057
+    },
+    {
+     "mot": "avait",
+     "debut": 53.057,
+     "fin": 53.27
+    },
+    {
+     "mot": "travaillé",
+     "debut": 53.27,
+     "fin": 53.767
+    },
+    {
+     "mot": "sur",
+     "debut": 53.767,
+     "fin": 53.98
+    },
+    {
+     "mot": "la",
+     "debut": 53.98,
+     "fin": 54.122
+    },
+    {
+     "mot": "vitrine",
+     "debut": 54.122,
+     "fin": 54.547
+    },
+    {
+     "mot": "de",
+     "debut": 54.547,
+     "fin": 54.689
+    },
+    {
+     "mot": "la",
+     "debut": 54.689,
+     "fin": 54.831
+    },
+    {
+     "mot": "Joconde.",
+     "debut": 54.831,
+     "fin": 55.257
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "role": "réponse (comment)",
+   "texte": "Un lundi de fermeture, en blouse d'ouvrier, il avait décroché le tableau.",
+   "phonemes": "œ̃ lœ̃dˈi də fɛʁmətˈyʁ, ɑ̃ blˈuz duvʁiˈe, il avˈɛ dekʁoʃˈe lə tablˈo.",
+   "debut": 55.657,
+   "fin": 59.525,
+   "duree": 3.869,
+   "mots": [
+    {
+     "mot": "Un",
+     "debut": 55.657,
+     "fin": 55.818
+    },
+    {
+     "mot": "lundi",
+     "debut": 55.818,
+     "fin": 56.221
+    },
+    {
+     "mot": "de",
+     "debut": 56.221,
+     "fin": 56.382
+    },
+    {
+     "mot": "fermeture,",
+     "debut": 56.382,
+     "fin": 57.027
+    },
+    {
+     "mot": "en",
+     "debut": 57.027,
+     "fin": 57.22
+    },
+    {
+     "mot": "blouse",
+     "debut": 57.22,
+     "fin": 57.607
+    },
+    {
+     "mot": "d'ouvrier,",
+     "debut": 57.607,
+     "fin": 58.187
+    },
+    {
+     "mot": "il",
+     "debut": 58.187,
+     "fin": 58.328
+    },
+    {
+     "mot": "avait",
+     "debut": 58.328,
+     "fin": 58.539
+    },
+    {
+     "mot": "décroché",
+     "debut": 58.539,
+     "fin": 59.032
+    },
+    {
+     "mot": "le",
+     "debut": 59.032,
+     "fin": 59.173
+    },
+    {
+     "mot": "tableau.",
+     "debut": 59.173,
+     "fin": 59.526
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "role": "réponse (comment)",
+   "texte": "Le cadre, il l'avait laissé dans l'escalier.",
+   "phonemes": "lə kˈadʁ, il lavˈɛ lɛsˈe dɑ̃ lɛskaljˈe.",
+   "debut": 59.725,
+   "fin": 61.801,
+   "duree": 2.075,
+   "mots": [
+    {
+     "mot": "Le",
+     "debut": 59.725,
+     "fin": 59.968
+    },
+    {
+     "mot": "cadre,",
+     "debut": 59.968,
+     "fin": 60.455
+    },
+    {
+     "mot": "il",
+     "debut": 60.455,
+     "fin": 60.583
+    },
+    {
+     "mot": "l'avait",
+     "debut": 60.583,
+     "fin": 60.839
+    },
+    {
+     "mot": "laissé",
+     "debut": 60.839,
+     "fin": 61.096
+    },
+    {
+     "mot": "dans",
+     "debut": 61.096,
+     "fin": 61.288
+    },
+    {
+     "mot": "l'escalier.",
+     "debut": 61.288,
+     "fin": 61.8
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "role": "mobile",
+   "texte": "À son procès, il dit avoir voulu la rendre à l'Italie.",
+   "phonemes": "a sɔ̃ pʁosˈɛ, il dˈit avwˈaʁ vulˈy la ʁˈɑ̃dʁ a litalˈi.",
+   "debut": 62.301,
+   "fin": 65.169,
+   "duree": 2.868,
+   "mots": [
+    {
+     "mot": "À",
+     "debut": 62.301,
+     "fin": 62.408
+    },
+    {
+     "mot": "son",
+     "debut": 62.408,
+     "fin": 62.728
+    },
+    {
+     "mot": "procès,",
+     "debut": 62.728,
+     "fin": 63.261
+    },
+    {
+     "mot": "il",
+     "debut": 63.261,
+     "fin": 63.402
+    },
+    {
+     "mot": "dit",
+     "debut": 63.402,
+     "fin": 63.544
+    },
+    {
+     "mot": "avoir",
+     "debut": 63.544,
+     "fin": 63.897
+    },
+    {
+     "mot": "voulu",
+     "debut": 63.897,
+     "fin": 64.18
+    },
+    {
+     "mot": "la",
+     "debut": 64.18,
+     "fin": 64.321
+    },
+    {
+     "mot": "rendre",
+     "debut": 64.321,
+     "fin": 64.674
+    },
+    {
+     "mot": "à",
+     "debut": 64.674,
+     "fin": 64.745
+    },
+    {
+     "mot": "l'Italie.",
+     "debut": 64.745,
+     "fin": 65.169
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "role": "mobile",
+   "texte": "Elle était pourtant en France depuis le seizième siècle.",
+   "phonemes": "ɛl etˈɛ puʁtˌɑ̃ ɑ̃ fʁˈɑ̃s dəpyˌi lə sɛzjˈɛm sjˈɛkl.",
+   "debut": 65.369,
+   "fin": 68.15,
+   "duree": 2.782,
+   "mots": [
+    {
+     "mot": "Elle",
+     "debut": 65.369,
+     "fin": 65.524
+    },
+    {
+     "mot": "était",
+     "debut": 65.524,
+     "fin": 65.755
+    },
+    {
+     "mot": "pourtant",
+     "debut": 65.755,
+     "fin": 66.219
+    },
+    {
+     "mot": "en",
+     "debut": 66.219,
+     "fin": 66.373
+    },
+    {
+     "mot": "France",
+     "debut": 66.373,
+     "fin": 66.76
+    },
+    {
+     "mot": "depuis",
+     "debut": 66.76,
+     "fin": 67.146
+    },
+    {
+     "mot": "le",
+     "debut": 67.146,
+     "fin": 67.301
+    },
+    {
+     "mot": "seizième",
+     "debut": 67.301,
+     "fin": 67.764
+    },
+    {
+     "mot": "siècle.",
+     "debut": 67.764,
+     "fin": 68.151
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "role": "retour",
+   "texte": "Le 4 janvier 1914, la Joconde retrouve le Louvre.",
+   "phonemes": "lə kˈatʁ ʒɑ̃vjˈe mil nœfsɑ̃ katˈɔʁz, la ʒokˈɔ̃d ʁətʁˈuv lə lˈuvʁ.",
+   "debut": 68.5,
+   "fin": 72.561,
+   "duree": 4.061,
+   "mots": [
+    {
+     "mot": "Le",
+     "debut": 68.5,
+     "fin": 68.683
+    },
+    {
+     "mot": "4",
+     "debut": 68.683,
+     "fin": 69.049
+    },
+    {
+     "mot": "janvier",
+     "debut": 69.049,
+     "fin": 69.598
+    },
+    {
+     "mot": "1914,",
+     "debut": 69.598,
+     "fin": 70.97
+    },
+    {
+     "mot": "la",
+     "debut": 70.97,
+     "fin": 71.129
+    },
+    {
+     "mot": "Joconde",
+     "debut": 71.129,
+     "fin": 71.606
+    },
+    {
+     "mot": "retrouve",
+     "debut": 71.606,
+     "fin": 72.084
+    },
+    {
+     "mot": "le",
+     "debut": 72.084,
+     "fin": 72.243
+    },
+    {
+     "mot": "Louvre.",
+     "debut": 72.243,
+     "fin": 72.561
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "role": "chute",
+   "texte": "Pour beaucoup d'historiens, ce vol l'a rendue célèbre dans le monde entier.",
+   "phonemes": "puʁ bokˌu distoʁjˈɛ̃, sə vˈɔl la ʁɑ̃dˈy selˈɛbʁ dɑ̃ lə mˈɔ̃d ɑ̃tjˈe.",
+   "debut": 73.061,
+   "fin": 76.583,
+   "duree": 3.521,
+   "mots": [
+    {
+     "mot": "Pour",
+     "debut": 73.061,
+     "fin": 73.31
+    },
+    {
+     "mot": "beaucoup",
+     "debut": 73.31,
+     "fin": 73.643
+    },
+    {
+     "mot": "d'historiens,",
+     "debut": 73.643,
+     "fin": 74.391
+    },
+    {
+     "mot": "ce",
+     "debut": 74.391,
+     "fin": 74.528
+    },
+    {
+     "mot": "vol",
+     "debut": 74.528,
+     "fin": 74.733
+    },
+    {
+     "mot": "l'a",
+     "debut": 74.733,
+     "fin": 74.87
+    },
+    {
+     "mot": "rendue",
+     "debut": 74.87,
+     "fin": 75.213
+    },
+    {
+     "mot": "célèbre",
+     "debut": 75.213,
+     "fin": 75.624
+    },
+    {
+     "mot": "dans",
+     "debut": 75.624,
+     "fin": 75.829
+    },
+    {
+     "mot": "le",
+     "debut": 75.829,
+     "fin": 75.966
+    },
+    {
+     "mot": "monde",
+     "debut": 75.966,
+     "fin": 76.24
+    },
+    {
+     "mot": "entier.",
+     "debut": 76.24,
+     "fin": 76.582
+    }
+   ]
+  },
+  {
+   "id": 27,
    "role": "chute (boucle)",
    "texte": "Tout est parti de quatre crochets sur un mur vide.",
    "phonemes": "tut ɛ paʁtˈi də kˈatʁ kʁoʃˈɛ syʁ œ̃ mˈyʁ vˈid.",
-   "debut": 44.499,
-   "fin": 46.919,
+   "debut": 76.933,
+   "fin": 79.353,
    "duree": 2.42,
    "mots": [
     {
      "mot": "Tout",
-     "debut": 44.499,
-     "fin": 44.66
+     "debut": 76.933,
+     "fin": 77.094
     },
     {
      "mot": "est",
-     "debut": 44.66,
-     "fin": 44.741
+     "debut": 77.094,
+     "fin": 77.175
     },
     {
      "mot": "parti",
-     "debut": 44.741,
-     "fin": 45.144
+     "debut": 77.175,
+     "fin": 77.578
     },
     {
      "mot": "de",
-     "debut": 45.144,
-     "fin": 45.306
+     "debut": 77.578,
+     "fin": 77.74
     },
     {
      "mot": "quatre",
-     "debut": 45.306,
-     "fin": 45.628
+     "debut": 77.74,
+     "fin": 78.062
     },
     {
      "mot": "crochets",
-     "debut": 45.628,
-     "fin": 46.032
+     "debut": 78.062,
+     "fin": 78.466
     },
     {
      "mot": "sur",
-     "debut": 46.032,
-     "fin": 46.274
+     "debut": 78.466,
+     "fin": 78.708
     },
     {
      "mot": "un",
-     "debut": 46.274,
-     "fin": 46.435
+     "debut": 78.708,
+     "fin": 78.869
     },
     {
      "mot": "mur",
-     "debut": 46.435,
-     "fin": 46.677
+     "debut": 78.869,
+     "fin": 79.111
     },
     {
      "mot": "vide.",
-     "debut": 46.677,
-     "fin": 46.919
+     "debut": 79.111,
+     "fin": 79.353
     }
    ]
   }

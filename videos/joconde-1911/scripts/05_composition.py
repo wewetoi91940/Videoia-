@@ -4,7 +4,7 @@
 - plans, durées et ancrages : scripts/plans.json + build/chronologie.json (via chrono.py) ;
 - sous-titres : une ligne, ≤ 27 caractères, découpés par groupes de sens, largeur mesurée dans la police réelle ;
 - zones sûres : tout texte entre x = 60 et 940 px et entre y = 200 et 1 440 px (contrôlé ici, puis par `hyperframes check`).
-Sorties : index.html, build/sous-titres.json, livrables/joconde-1911.srt
+Sorties : index.html, build/sous-titres.json, build/joconde-1911.srt (copié dans livrables/ par make.sh livrables)
 """
 from __future__ import annotations
 
@@ -28,17 +28,14 @@ SUB_MAX_W = SAFE["x1"] - SAFE["x0"] - 40          # 840 px de texte, marge compr
 SUB_Y = 1300
 SUB_TAIL = 0.4          # la dernière ligne d'une phrase reste 0,4 s après la voix (dans la pause)
 WEAK_END = {"de", "la", "le", "les", "un", "une", "à", "au", "du", "des", "en", "sur", "dans", "par", "pour", "il",
-            "qui", "ne", "que", "son", "sa", "ses", "ce", "l'a", "d'une", "d'un", "l'avait", "est", "a", "quatre", "deux"}
+            "qui", "ne", "que", "son", "sa", "ses", "ce", "l'a", "d'une", "d'un", "l'avait", "est", "a", "quatre", "deux",
+            "on", "et", "mais", "avait", "était", "dit", "l'antiquaire", "le", "les"}
 LABEL_COLORS = {"ARCHIVE": "#f2ead8", "ILLUSTRATION": "#e0a84a", "CARTE SCHÉMATIQUE": "#7fc4c0"}
-VISUELS = {
-    "mur_vide": "assets/illustrations/mur_vide.png", "crochets": "assets/illustrations/crochets.png",
-    "joconde": "assets/illustrations/joconde.png", "soupcons": "assets/illustrations/soupcons.png",
-    "prison": "assets/illustrations/prison.png", "empreinte": "assets/illustrations/empreinte.png",
-    "fichier": "assets/illustrations/fichier.png", "chambre": "assets/illustrations/chambre.png",
-    "carte": "assets/cartes/carte_paris_florence.png", "arrestation": "assets/illustrations/arrestation.png",
-    "vitrine": "assets/illustrations/vitrine.png", "escalier": "assets/illustrations/escalier.png",
-    "joconde_detail": "assets/illustrations/joconde_detail.png",
-}
+VISUELS = {"carte": "assets/cartes/carte_paris_florence.png"}   # sinon : assets/illustrations/<visuel>.png
+
+
+def visuel_src(name: str) -> str:
+    return VISUELS.get(name, f"assets/illustrations/{name}.png")
 
 font = ImageFont.truetype(str(SUB_FONT), SUB_SIZE)
 
@@ -86,6 +83,9 @@ def chunk_sentence(words: list[dict], sent_end: float) -> list[list[dict]]:
             if j < n:
                 cost += 0 if re.search(r"[,;:.?!]$", last) else 1.0
                 cost += 50.0 if last.lower().strip(",") in WEAK_END else 0   # quasi interdit
+                nxt = words[j]["mot"]
+                if last[:1].isupper() and nxt[:1].isupper() and j - 1 > 0 and not re.search(r"[,;:.?!]$", last):
+                    cost += 30.0                                        # ne jamais couper un nom propre (Vincenzo | Peruggia)
             if best[i] + cost < best[j]:
                 best[j], back[j] = best[i] + cost, i
     cuts, j = [], n
@@ -102,7 +102,7 @@ def subtitles(tl: dict) -> list[dict]:
         for i, ch in enumerate(chunks):
             start = ch[0]["debut"]
             end = chunks[i + 1][0]["debut"] if i + 1 < len(chunks) else p["fin"] + SUB_TAIL
-            subs.append({"debut": round(start, 3), "fin": round(end, 3), "texte": " ".join(w["mot"] for w in ch), "phrase": p["id"]})
+            subs.append({"debut": round(start, 3), "fin": round(end, 3), "texte": typo(" ".join(w["mot"] for w in ch)), "phrase": p["id"]})
     for i in range(len(subs) - 1):  # pas de chevauchement
         subs[i]["fin"] = min(subs[i]["fin"], subs[i + 1]["debut"])
     subs[0]["debut"] = 0.0          # premier sous-titre visible dès la première image
@@ -126,8 +126,13 @@ def write_srt(subs: list[dict], path: Path) -> None:
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
+def typo(s: str) -> str:
+    """Apostrophe typographique française à l'écran (le texte lu par la voix garde l'apostrophe droite)."""
+    return s.replace("'", "\u2019")
+
+
 def esc(s: str) -> str:
-    return html.escape(s, quote=True)
+    return html.escape(typo(s), quote=True)
 
 
 def build(tl: dict, subs: list[dict]) -> str:
@@ -143,7 +148,7 @@ def build(tl: dict, subs: list[dict]) -> str:
         fade_next = i + 1 < len(plans) and plans[i + 1].get("transition") == "fondu"
         clip_dur = dur + (0.5 if fade_next else 0)
         sid = p["id"].lower()
-        inner = [f'<img id="{sid}-img" class="kb" src="{VISUELS[p["visuel"]]}" alt="">']
+        inner = [f'<img id="{sid}-img" class="kb" src="{visuel_src(p["visuel"])}" alt="">']
         if p["visuel"] == "carte":
             inner.append(
                 f'<svg id="{sid}-svg" class="overlay" viewBox="0 0 1080 1920" width="1080" height="1920">'
@@ -153,8 +158,8 @@ def build(tl: dict, subs: list[dict]) -> str:
                 f'<circle id="florence-ring" cx="{fx}" cy="{fy}" r="13" fill="none" stroke="#e0b04c" stroke-width="5"/>'
                 f'<text x="{px + 26}" y="{py - 26}" class="city">PARIS</text>'
                 f'<text id="florence-label" x="{fx - 26}" y="{fy - 26}" class="city" text-anchor="end">FLORENCE</text></svg>')
-        if p.get("revele") and p["visuel"] in ("empreinte", "vitrine"):
-            inner.append(f'<div id="{sid}-glow" class="glow glow-{p["visuel"]}"></div>')
+        if p.get("lueur"):
+            inner.append(f'<div id="{sid}-glow" class="glow glow-{p["lueur"]}"></div>')
         cam = f'<div id="{sid}-cam" class="cam">{"".join(inner)}</div>'
         label_color = LABEL_COLORS[p["type"]]
         allow = " data-layout-allow-overlap data-layout-allow-occlusion" if p.get("transition") == "fondu" or (i + 1 < len(plans) and plans[i + 1].get("transition") == "fondu") else ""  # même étiquette, même place, pendant le fondu
@@ -192,9 +197,9 @@ def build(tl: dict, subs: list[dict]) -> str:
                          f'{{strokeDashoffset:0, duration:{tf - start - 0.2:.3f}, ease:"power1.inOut"}}, {start + 0.2:.3f});')
             tween.append(f'tl.fromTo("#florence-ring", {{attr:{{r:13}}, opacity:1}}, {{attr:{{r:70}}, opacity:0, duration:1.0, ease:"power2.out"}}, {tf:.3f});')
             tween.append(f'tl.fromTo("#florence-label", {{opacity:0}}, {{opacity:1, duration:0.3, ease:"power2.out"}}, {tf - 0.1:.3f});')
-        if p.get("revele") and p["visuel"] in ("empreinte", "vitrine"):
+        if p.get("lueur"):
             tr = p["revele"]["t"]
-            if p["visuel"] == "empreinte":
+            if p["lueur"] == "empreinte":
                 tween.append(f'tl.fromTo("#{sid}-glow", {{opacity:0}}, {{opacity:1, duration:0.6, ease:"power2.out"}}, {tr:.3f});')
             else:
                 tween.append(f'tl.fromTo("#{sid}-glow", {{xPercent:-120, opacity:1}}, {{xPercent:120, opacity:1, duration:1.1, ease:"sine.inOut"}}, {tr:.3f});')
@@ -233,7 +238,7 @@ TEMPLATE = """<!doctype html>
       .city {{ font-family: "Oswald", sans-serif; font-weight: 700; font-size: 46px; letter-spacing: 0.08em; fill: #f2ead8; }}
       .glow {{ position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen; opacity: 0; }}
       .glow-empreinte {{ background: radial-gradient(circle at 556px 862px, rgba(190, 240, 245, 0.55) 0, rgba(120, 200, 210, 0.18) 260px, rgba(0, 0, 0, 0) 470px); }}
-      .glow-vitrine {{ background: linear-gradient(105deg, rgba(255, 255, 255, 0) 38%, rgba(255, 248, 230, 0.22) 50%, rgba(255, 255, 255, 0) 62%); }}
+      .glow-balayage {{ background: linear-gradient(105deg, rgba(255, 255, 255, 0) 38%, rgba(255, 248, 230, 0.22) 50%, rgba(255, 255, 255, 0) 62%); }}
       .label {{ position: absolute; left: {safe_x0}px; top: 200px; display: flex; align-items: center; gap: 12px;
                font-family: "Oswald", sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.16em; color: #f2ead8;
                background: rgba(10, 9, 8, 0.62); padding: 8px 16px 9px 14px; border-radius: 4px; }}
@@ -280,7 +285,7 @@ def main() -> None:
     (ROOT / "build").mkdir(exist_ok=True)
     (ROOT / "build/sous-titres.json").write_text(json.dumps(subs, ensure_ascii=False, indent=1))
     (ROOT / "livrables").mkdir(exist_ok=True)
-    write_srt(subs, ROOT / "livrables/joconde-1911.srt")
+    write_srt(subs, ROOT / "build/joconde-1911.srt")
     (ROOT / "index.html").write_text(build(tl, subs), encoding="utf-8")
     print(f"composition : {len(tl['plans'])} plans, {len(subs)} sous-titres, durée {tl['duree']} s")
     for s in subs:

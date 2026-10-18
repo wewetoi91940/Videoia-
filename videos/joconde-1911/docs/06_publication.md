@@ -3,7 +3,7 @@
 ## Titres (3 propositions)
 
 1. **Au Louvre, il ne restait que quatre crochets**
-2. **Qui a volé la Joconde en 1911 ?**
+2. **Qui a volé la Joconde en 1911 ? L'enquête complète**
 3. **La Joconde a disparu plus de deux ans : le voleur avait posé sa vitrine**
 
 Le titre 1 reprend l'accroche et la boucle. Le titre 3 dévoile la réponse : à garder pour une republication.
@@ -12,12 +12,13 @@ Le titre 1 reprend l'accroche et la boucle. Le titre 3 dévoile la réponse : à
 
 ```
 22 août 1911 : au Louvre, la Joconde n'est plus au mur. Il ne reste que quatre crochets.
-Le poète Apollinaire est soupçonné, une empreinte reste sur la vitre… et le voleur avait travaillé sur la vitrine du tableau.
+Les gardiens la croient chez le photographe, le poète Apollinaire finit en prison, une empreinte reste sur la vitre…
+Deux ans plus tard, à Florence, le voleur se fait prendre. Il avait travaillé sur la vitrine du tableau.
 
 Sources : Musée du Louvre (« Qui a volé La Joconde ? »), Encyclopaedia Britannica (Vincenzo Peruggia ; Mona Lisa),
 Smithsonian Magazine, Finestre sull'Arte. Liste complète en commentaire et sur demande.
 
-Voix de synthèse. Illustrations générées par ordinateur (signalées « ILLUSTRATION » à l'écran).
+Voix de synthèse (Google Gemini). Illustrations générées par ordinateur (signalées « ILLUSTRATION » à l'écran).
 La Joconde est montrée en reproduction authentique, sans retouche.
 
 #histoire #joconde #louvre #histoiredelart #1911 #faitdivers #paris #apprendresurtiktok
@@ -53,10 +54,10 @@ Sources : Louvre (dossier « Qui a volé La Joconde ? »), Britannica, Smithsoni
 
 ## Mentions obligatoires
 
-- **Dans la description** : « Voix de synthèse. Illustrations générées par ordinateur. » (déjà dans le texte ci-dessus).
+- **Dans la description** : « Voix de synthèse (Google Gemini). Illustrations générées par ordinateur. » (déjà dans le texte ci-dessus).
 - **À l'écran** : chaque plan porte son étiquette (ARCHIVE / ILLUSTRATION / CARTE SCHÉMATIQUE). C'est incrusté dans la vidéo.
 - **Étiquette TikTok** : dans les options de publication, activer **« Contenu généré par l'IA »**. La voix est synthétique et les illustrations sont générées : l'étiquette est requise.
-- **Métadonnées du fichier** : le champ « comment » du MP4 indique déjà « Voix de synthèse (Kokoro, ff_siwis) ; illustrations générées par code ; reproduction authentique de l'œuvre ».
+- **Métadonnées du fichier** : le champ « comment » du MP4 indique le moteur de voix réellement utilisé, les illustrations générées par code et la reproduction authentique de l'œuvre.
 
 ## Réponses prêtes pour les commentaires prévisibles
 
@@ -64,7 +65,9 @@ Sources : Louvre (dossier « Qui a volé La Joconde ? »), Britannica, Smithsoni
 |---|---|
 | « C'était le 21 août, pas le 22 ! » | Les deux sont justes. Le tableau est emporté le lundi 21 août (jour de fermeture), et la disparition n'est remarquée que le mardi 22. |
 | « Picasso aussi a été arrêté ! » | Picasso a été interrogé. Selon les sources françaises, il n'a pas été incarcéré ; certaines sources anglophones parlent d'arrestation. Apollinaire, lui, a passé environ six jours à la Santé. |
-| « Il voulait la rendre à l'Italie, Napoléon l'avait volée » | C'est l'argument de Peruggia, mais le tableau est en France depuis François Iᵉʳ (XVIᵉ siècle), pas depuis Napoléon. |
+| « Il voulait la rendre à l'Italie, Napoléon l'avait volée » | C'est l'argument de Peruggia (la vidéo le dit), mais le tableau est en France depuis le XVIᵉ siècle, dans les collections de François Iᵉʳ, bien avant Napoléon. |
+| « Il l'a cachée sous sa blouse ? » | C'est le récit le plus répandu, mais il est discuté : le tableau est un panneau de bois d'environ 77 × 53 cm. La vidéo dit seulement qu'il portait une blouse d'ouvrier. |
+| « Combien de temps en prison ? » | Condamné à environ un an, il n'en purge que sept à huit mois selon les sources. |
 | « Il avait des complices ? » | Certaines sources évoquent deux complices (frères Lancellotti). Ce n'est pas établi avec certitude, et la vidéo ne tranche pas. |
 | « Pourquoi l'empreinte n'a pas servi ? » | Les explications varient (nom oublié sur la liste, fichier classé par mesures et non par empreintes). On sait seulement que le rapprochement n'a pas été fait. |
 | « Et le vol des bijoux au Louvre ? » | C'est une autre affaire (les joyaux de la Couronne, 2025). Cette vidéo parle uniquement du vol de 1911. |

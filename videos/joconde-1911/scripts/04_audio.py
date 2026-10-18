@@ -27,7 +27,7 @@ SR = 48000
 TARGET_LUFS = -14.0
 CEILING_DBTP = -1.6          # marge de 0,1 dB sous l'exigence de −1,5 dBFS
 GAP_TARGET_DB = 20.0         # musique ≈ 20 dB sous la voix pendant la parole (minimum exigé : 15 dB)
-FX_GAP_DB = 12.0       # bruitages : au moins 12 dB sous la voix pendant la parole
+FX_GAP_DB = 14.0       # bruitages : ≥ 12 dB sous la voix pendant la parole (cible 14 dB, marge de mesure)
 RISE_DB = 12.0         # remontée de la musique dans les silences
 
 
@@ -117,17 +117,20 @@ def sub_hit(dur=1.2) -> np.ndarray:
 
 
 def music(tl: dict) -> np.ndarray:
+    """Musique pilotée par les repères de plans.json (« musique ») : aucun numéro de plan codé en dur."""
     D = tl["duree"]
     n = int(round(D * SR))
     t = np.arange(n) / SR
     P = {p["id"]: p for p in tl["plans"]}
-    rng = np.random.default_rng(42)
+    M = tl["musique"]
+    bt, pz = M["battement"], M["pizzicato"]
+    t_accel = P[bt["accelere"]]["debut"]
     left = np.zeros(n)
     right = np.zeros(n)
 
-    # 1) Bourdon : ré mineur, qui se résout en ré majeur sur la chute (P13), puis revient vers l'ouverture (boucle).
-    t_resolve = P["P13"]["debut"]
-    t_back = P["P14"]["debut"] + 1.2
+    # 1) Bourdon : ré mineur, qui se résout en ré majeur (repère « resolution »), puis revient vers l'ouverture (boucle).
+    t_resolve = P[M["resolution"]]["debut"]
+    t_back = P[M["boucle"]]["debut"] + 1.2
     chord_min = [73.42, 110.0, 146.83, 174.61]   # ré2 la2 ré3 fa3
     chord_maj = [73.42, 110.0, 146.83, 185.00]   # ré2 la2 ré3 fa#3
     pad = np.zeros(n)
@@ -139,16 +142,16 @@ def music(tl: dict) -> np.ndarray:
             voice = voice * (1 - xf) + alt * xf
         pad += voice * (0.9 if i < 2 else 0.6)
     lfo = 0.5 + 0.5 * np.sin(2 * np.pi * 0.09 * t)
-    pad = lp(pad * (0.75 + 0.25 * lfo), 520) + 0.25 * lp(pad, 1400) * np.clip((t - P["P09"]["debut"]) / 6, 0, 1)
-    pad_env = 0.55 + 0.45 * np.clip((t - P["P09"]["debut"]) / (P["P13"]["debut"] - P["P09"]["debut"]), 0, 1)
+    pad = lp(pad * (0.75 + 0.25 * lfo), 520) + 0.25 * lp(pad, 1400) * np.clip((t - t_accel) / 6, 0, 1)
+    pad_env = 0.55 + 0.45 * np.clip((t - t_accel) / max(1.0, t_resolve - t_accel), 0, 1)
     pad_env *= np.clip(t / 0.25, 0, 1)
     left += pad * pad_env * 0.9
     right += np.roll(pad, int(0.011 * SR)) * pad_env * 0.9
 
-    # 2) Battement grave : l'enquête (P04 → P12), qui s'accélère au retournement (P09).
-    beat_t = P["P04"]["debut"]
-    while beat_t < P["P13"]["debut"] - 0.2:
-        period = 1.0 if beat_t < P["P09"]["debut"] else 0.75
+    # 2) Battement grave : l'enquête, qui s'accélère au retournement.
+    beat_t = P[bt["debut"]]["debut"]
+    while beat_t < P[bt["fin"]]["debut"] - 0.2:
+        period = 1.0 if beat_t < t_accel else 0.75
         s = sub_hit(0.6) * 0.55
         place(left, s, beat_t)
         place(right, s, beat_t)
@@ -156,27 +159,26 @@ def music(tl: dict) -> np.ndarray:
 
     # 3) Pizzicato en arpège (ré mineur), très discret, sur l'enquête.
     notes = [146.83, 174.61, 220.0, 293.66, 220.0, 174.61]
-    pt = P["P06"]["debut"]
+    pt = P[pz["debut"]]["debut"]
     k = 0
-    while pt < P["P12"]["fin"] - 0.3:
+    while pt < P[pz["fin"]]["fin"] - 0.3:
         pl = pluck(notes[k % len(notes)], 1.2, seed=k) * 0.22
         pan = 0.35 if k % 2 else -0.35
         place(left, pl * (1 - pan) / 1.2, pt)
         place(right, pl * (1 + pan) / 1.2, pt)
-        pt += 0.375 if pt > P["P09"]["debut"] else 0.5
+        pt += 0.375 if pt > t_accel else 0.5
         k += 1
 
-    # 4) Cloches sur les révélations, coup sourd sur « disparu ».
-    hits = [(P["P02"]["debut"] + 1.75, 293.66), (P["P04"]["debut"], 349.23), (P["P06"]["revele"]["t"], 440.0),
-            (P["P09"]["debut"], 293.66), (P["P10"]["carton_2"]["t"], 587.33), (P["P13"]["debut"], 369.99)]
-    for i, (ht, f) in enumerate(hits):
-        b = bell(f, 3.4) * 0.28
-        place(left, b * 0.9, ht)
-        place(right, b * 1.1, ht + 0.007)
-    s = sub_hit(1.6) * 0.9
-    disparu = next(w["debut"] for w in tl["phrases"][1]["mots"] if w["mot"].startswith("disparu"))
-    place(left, s, disparu)
-    place(right, s, disparu)
+    # 4) Cloches sur les révélations (clé « cloche » des plans), coup sourd (clé « coup »).
+    for p in tl["plans"]:
+        if "cloche" in p:
+            b = bell(p["cloche"]["note"], 3.4) * 0.28
+            place(left, b * 0.9, p["cloche"]["t"])
+            place(right, b * 1.1, p["cloche"]["t"] + 0.007)
+        if "coup" in p:
+            s = sub_hit(1.6) * 0.9
+            place(left, s, p["coup"]["t"])
+            place(right, s, p["coup"]["t"])
 
     st = np.stack([left, right], axis=1)
     st = convolve_st(st.mean(axis=1), reverb_ir(2.6, 5, 3800)) * 0.35 + st
@@ -240,23 +242,61 @@ def room_tone(n: int, seed=8) -> np.ndarray:
     return x * 0.6
 
 
+def shutter(seed=31) -> np.ndarray:
+    """Déclic d'obturateur mécanique : deux claquements brefs."""
+    rng = np.random.default_rng(seed)
+    n = int(0.6 * SR)
+    s = np.zeros(n)
+    for t0, dur, a in [(0.0, 0.006, 1.0), (0.07, 0.012, 0.7)]:
+        m = int(dur * SR)
+        s[int(t0 * SR):int(t0 * SR) + m] += bp(rng.normal(0, 1, m), 1800, 7000) * np.exp(-np.arange(m) / SR * 300) * a
+    return convolve_st(s, reverb_ir(0.5, seed, 6000)) * 0.3 + np.stack([s, s], axis=1) * 0.7
+
+
+def murmur(dur: float, seed=33) -> np.ndarray:
+    """Murmure de foule lointain : voix inintelligibles (bruit filtré, enveloppes syllabiques aléatoires)."""
+    rng = np.random.default_rng(seed)
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    out = np.zeros((n, 2))
+    for v in range(10):
+        f0 = rng.uniform(3.5, 6.0)
+        env = np.clip(np.sin(2 * np.pi * f0 * t + rng.uniform(0, 6)) + rng.uniform(-0.2, 0.4), 0, 1) ** 1.5
+        env *= np.clip(np.sin(2 * np.pi * rng.uniform(0.15, 0.4) * t + rng.uniform(0, 6)) + 0.6, 0, 1)
+        x = bp(rng.normal(0, 1, n), rng.uniform(250, 450), rng.uniform(1800, 2800)) * env
+        pan = rng.uniform(-0.7, 0.7)
+        out[:, 0] += x * (1 - pan)
+        out[:, 1] += x * (1 + pan)
+    fade = np.clip(t / 0.4, 0, 1) * np.clip((dur - t) / 0.5, 0, 1)
+    wet = convolve_st(out.mean(axis=1), reverb_ir(1.8, seed, 3000))[:n]
+    return (out * 0.5 + wet * 0.8) * fade[:, None] * 0.25
+
+
 def sfx(tl: dict) -> np.ndarray:
+    """Bruitages pilotés par la clé « bruitage » de chaque plan (discrets, justifiés par l'image)."""
     D = tl["duree"]
     n = int(round(D * SR))
     out = np.zeros((n, 2))
-    P = {p["id"]: p for p in tl["plans"]}
-    # P01 : salle vide — souffle de salle + trois pas lointains (réverbération longue).
-    p1_end = P["P01"]["fin"]
-    rt = room_tone(int(p1_end * SR) + SR)
-    fade = np.clip(np.arange(len(rt)) / SR / 0.1, 0, 1) * np.clip((p1_end + 0.6 - np.arange(len(rt)) / SR) / 0.6, 0, 1)
-    out[: len(rt)] += (rt * fade[:, None])[:n] * 0.12
-    steps = footsteps([0.35, 0.95, 1.55], 2.4, 11, level=0.18)
-    place(out, steps, 0.0)
-    place(out, door_clank(), P["P05"]["debut"], 0.32)
-    place(out, glass_tink(), P["P06"]["revele"]["t"], 0.22)
-    place(out, drawer(), P["P07"]["debut"] + 0.05, 0.35)
-    st = P["P12"]["debut"] + 0.2
-    place(out, footsteps([0, 0.52, 1.04, 1.56, 2.08, 2.6], 1.4, 21, level=0.32), st)
+    for p in tl["plans"]:
+        kind, t0, t1 = p.get("bruitage"), p["debut"], p["fin"]
+        if kind == "salle":       # salle vide : souffle + trois pas lointains (réverbération longue)
+            rt = room_tone(int((t1 - t0) * SR) + SR)
+            k = np.arange(len(rt)) / SR
+            fade = np.clip(k / 0.1, 0, 1) * np.clip((t1 - t0 + 0.6 - k) / 0.6, 0, 1)
+            place(out, rt * fade[:, None] * 0.12, t0)
+            place(out, footsteps([0.35, 0.95, 1.55], 2.4, 11, level=0.18), t0)
+        elif kind == "porte":
+            place(out, door_clank(), t0, 0.32)
+        elif kind == "verre":
+            place(out, glass_tink(), p.get("revele", {}).get("t", t0), 0.22)
+        elif kind == "tiroir":
+            place(out, drawer(), t0 + 0.05, 0.35)
+        elif kind == "pas":
+            place(out, footsteps([0, 0.52, 1.04, 1.56, 2.08], 1.4, 21, level=0.32), t0 + 0.2)
+        elif kind == "declic":
+            place(out, shutter(), t0 + 0.35, 0.5)
+        elif kind == "murmure":
+            place(out, murmur(t1 - t0 + 0.4), t0)
     return out
 
 

@@ -28,16 +28,16 @@
  },
  {
   "debut": 4.618,
-  "fin": 6.053,
+  "fin": 6.003,
   "texte": "La Joconde a disparu.",
   "phrase": 2,
   "chars": 21,
   "largeur_px": 578.7,
-  "duree": 1.435
+  "duree": 1.385
  },
  {
-  "debut": 6.053,
-  "fin": 7.08,
+  "debut": 6.003,
+  "fin": 7.03,
   "texte": "Qui a pu la sortir",
   "phrase": 3,
   "chars": 18,
@@ -45,8 +45,8 @@
   "duree": 1.027
  },
  {
-  "debut": 7.08,
-  "fin": 7.954,
+  "debut": 7.03,
+  "fin": 7.904,
   "texte": "du musée ?",
   "phrase": 3,
   "chars": 10,
@@ -54,298 +54,550 @@
   "duree": 0.874
  },
  {
-  "debut": 8.154,
-  "fin": 9.146,
-  "texte": "La police soupçonne",
+  "debut": 8.054,
+  "fin": 8.954,
+  "texte": "Ce matin-là,",
   "phrase": 4,
-  "chars": 19,
-  "largeur_px": 548.7,
-  "duree": 0.992
+  "chars": 12,
+  "largeur_px": 328.0,
+  "duree": 0.9
  },
  {
-  "debut": 9.146,
-  "fin": 10.645,
-  "texte": "même le poète Apollinaire.",
+  "debut": 8.954,
+  "fin": 9.94,
+  "texte": "le peintre Louis Béroud",
   "phrase": 4,
-  "chars": 26,
-  "largeur_px": 727.7,
-  "duree": 1.499
+  "chars": 23,
+  "largeur_px": 633.9,
+  "duree": 0.986
  },
  {
-  "debut": 10.645,
-  "fin": 11.855,
-  "texte": "Il passe près d'une semaine",
+  "debut": 9.94,
+  "fin": 10.914,
+  "texte": "vient la copier.",
+  "phrase": 4,
+  "chars": 16,
+  "largeur_px": 398.9,
+  "duree": 0.974
+ },
+ {
+  "debut": 10.914,
+  "fin": 12.024,
+  "texte": "Les gardiens la croient",
   "phrase": 5,
-  "chars": 27,
-  "largeur_px": 744.3,
+  "chars": 23,
+  "largeur_px": 617.7,
+  "duree": 1.11
+ },
+ {
+  "debut": 12.024,
+  "fin": 13.113,
+  "texte": "chez le photographe.",
+  "phrase": 5,
+  "chars": 20,
+  "largeur_px": 565.4,
+  "duree": 1.089
+ },
+ {
+  "debut": 13.113,
+  "fin": 14.323,
+  "texte": "Mais dans un escalier,",
+  "phrase": 6,
+  "chars": 22,
+  "largeur_px": 592.2,
   "duree": 1.21
  },
  {
-  "debut": 11.855,
-  "fin": 12.709,
-  "texte": "en prison.",
-  "phrase": 5,
-  "chars": 10,
-  "largeur_px": 269.6,
-  "duree": 0.854
+  "debut": 14.323,
+  "fin": 16.16,
+  "texte": "on retrouve son cadre vide.",
+  "phrase": 6,
+  "chars": 27,
+  "largeur_px": 738.4,
+  "duree": 1.837
  },
  {
-  "debut": 12.709,
-  "fin": 14.05,
+  "debut": 16.16,
+  "fin": 17.55,
+  "texte": "Une semaine plus tard,",
+  "phrase": 7,
+  "chars": 22,
+  "largeur_px": 621.5,
+  "duree": 1.39
+ },
+ {
+  "debut": 17.55,
+  "fin": 18.545,
+  "texte": "la foule vient voir…",
+  "phrase": 7,
+  "chars": 20,
+  "largeur_px": 519.1,
+  "duree": 0.995
+ },
+ {
+  "debut": 18.545,
+  "fin": 19.558,
+  "texte": "le mur vide.",
+  "phrase": 7,
+  "chars": 12,
+  "largeur_px": 319.9,
+  "duree": 1.013
+ },
+ {
+  "debut": 19.658,
+  "fin": 21.028,
+  "texte": "Le 7 septembre,",
+  "phrase": 8,
+  "chars": 15,
+  "largeur_px": 428.7,
+  "duree": 1.37
+ },
+ {
+  "debut": 21.028,
+  "fin": 21.927,
+  "texte": "on emprisonne même",
+  "phrase": 8,
+  "chars": 18,
+  "largeur_px": 580.9,
+  "duree": 0.899
+ },
+ {
+  "debut": 21.927,
+  "fin": 23.095,
+  "texte": "le poète Apollinaire.",
+  "phrase": 8,
+  "chars": 21,
+  "largeur_px": 547.6,
+  "duree": 1.168
+ },
+ {
+  "debut": 23.095,
+  "fin": 24.339,
+  "texte": "Il passe près d’une semaine",
+  "phrase": 9,
+  "chars": 27,
+  "largeur_px": 746.6,
+  "duree": 1.244
+ },
+ {
+  "debut": 24.339,
+  "fin": 25.161,
+  "texte": "à la Santé.",
+  "phrase": 9,
+  "chars": 11,
+  "largeur_px": 283.4,
+  "duree": 0.822
+ },
+ {
+  "debut": 25.161,
+  "fin": 26.502,
   "texte": "Fausse piste.",
-  "phrase": 6,
+  "phrase": 10,
   "chars": 13,
   "largeur_px": 347.4,
   "duree": 1.341
  },
  {
-  "debut": 14.25,
-  "fin": 15.202,
-  "texte": "Un indice reste",
-  "phrase": 7,
-  "chars": 15,
-  "largeur_px": 412.1,
-  "duree": 0.952
+  "debut": 26.652,
+  "fin": 27.717,
+  "texte": "Pourtant, un indice",
+  "phrase": 11,
+  "chars": 19,
+  "largeur_px": 521.8,
+  "duree": 1.065
  },
  {
-  "debut": 15.202,
-  "fin": 15.98,
-  "texte": "sur la vitre :",
-  "phrase": 7,
-  "chars": 14,
-  "largeur_px": 331.9,
-  "duree": 0.778
+  "debut": 27.717,
+  "fin": 28.782,
+  "texte": "reste sur la vitre :",
+  "phrase": 11,
+  "chars": 20,
+  "largeur_px": 488.8,
+  "duree": 1.065
  },
  {
-  "debut": 15.98,
-  "fin": 17.316,
+  "debut": 28.782,
+  "fin": 30.123,
   "texte": "une empreinte de pouce.",
-  "phrase": 7,
+  "phrase": 11,
   "chars": 23,
   "largeur_px": 671.2,
-  "duree": 1.336
+  "duree": 1.341
  },
  {
-  "debut": 17.316,
-  "fin": 18.906,
-  "texte": "Le voleur est déjà fiché.",
-  "phrase": 8,
-  "chars": 25,
-  "largeur_px": 643.8,
-  "duree": 1.59
+  "debut": 30.123,
+  "fin": 31.118,
+  "texte": "Le voleur est déjà",
+  "phrase": 12,
+  "chars": 18,
+  "largeur_px": 477.3,
+  "duree": 0.995
  },
  {
-  "debut": 18.906,
-  "fin": 19.619,
+  "debut": 31.118,
+  "fin": 32.479,
+  "texte": "fiché par la police.",
+  "phrase": 12,
+  "chars": 20,
+  "largeur_px": 503.7,
+  "duree": 1.361
+ },
+ {
+  "debut": 32.479,
+  "fin": 33.192,
   "texte": "Personne ne fait",
-  "phrase": 9,
+  "phrase": 13,
   "chars": 16,
   "largeur_px": 444.4,
   "duree": 0.713
  },
  {
-  "debut": 19.619,
-  "fin": 20.804,
+  "debut": 33.192,
+  "fin": 34.376,
   "texte": "le rapprochement.",
-  "phrase": 9,
+  "phrase": 13,
   "chars": 17,
   "largeur_px": 498.2,
-  "duree": 1.185
+  "duree": 1.184
  },
  {
-  "debut": 21.004,
-  "fin": 22.366,
+  "debut": 34.576,
+  "fin": 35.939,
   "texte": "Plus de deux ans passent.",
-  "phrase": 10,
+  "phrase": 14,
   "chars": 25,
   "largeur_px": 697.6,
-  "duree": 1.362
+  "duree": 1.363
  },
  {
-  "debut": 22.366,
-  "fin": 23.156,
+  "debut": 35.939,
+  "fin": 36.729,
   "texte": "Le tableau dort",
-  "phrase": 11,
+  "phrase": 15,
   "chars": 15,
   "largeur_px": 411.2,
   "duree": 0.79
  },
  {
-  "debut": 23.156,
-  "fin": 23.946,
+  "debut": 36.729,
+  "fin": 37.519,
   "texte": "dans une chambre",
-  "phrase": 11,
+  "phrase": 15,
   "chars": 16,
   "largeur_px": 495.6,
   "duree": 0.79
  },
  {
-  "debut": 23.946,
-  "fin": 24.979,
+  "debut": 37.519,
+  "fin": 38.551,
   "texte": "parisienne.",
-  "phrase": 11,
+  "phrase": 15,
   "chars": 11,
   "largeur_px": 300.0,
-  "duree": 1.033
+  "duree": 1.032
  },
  {
-  "debut": 25.029,
-  "fin": 27.42,
+  "debut": 38.601,
+  "fin": 40.992,
   "texte": "En décembre 1913, un homme",
-  "phrase": 12,
+  "phrase": 16,
   "chars": 26,
   "largeur_px": 802.5,
   "duree": 2.391
  },
  {
-  "debut": 27.42,
-  "fin": 28.773,
+  "debut": 40.992,
+  "fin": 42.345,
   "texte": "le propose à un antiquaire",
-  "phrase": 12,
+  "phrase": 16,
   "chars": 26,
   "largeur_px": 710.5,
   "duree": 1.353
  },
  {
-  "debut": 28.773,
-  "fin": 29.8,
+  "debut": 42.345,
+  "fin": 43.322,
   "texte": "de Florence.",
-  "phrase": 12,
+  "phrase": 16,
   "chars": 12,
   "largeur_px": 330.7,
-  "duree": 1.027
+  "duree": 0.977
  },
  {
-  "debut": 29.8,
-  "fin": 30.898,
-  "texte": "Il est arrêté.",
-  "phrase": 13,
-  "chars": 14,
-  "largeur_px": 339.4,
-  "duree": 1.098
+  "debut": 43.322,
+  "fin": 44.595,
+  "texte": "L’antiquaire fait venir",
+  "phrase": 17,
+  "chars": 23,
+  "largeur_px": 581.5,
+  "duree": 1.273
  },
  {
-  "debut": 30.898,
-  "fin": 32.398,
-  "texte": "C'est Vincenzo Peruggia,",
-  "phrase": 14,
-  "chars": 24,
-  "largeur_px": 660.8,
-  "duree": 1.5
+  "debut": 44.595,
+  "fin": 45.952,
+  "texte": "le directeur des Offices :",
+  "phrase": 17,
+  "chars": 26,
+  "largeur_px": 665.9,
+  "duree": 1.357
  },
  {
-  "debut": 32.398,
-  "fin": 33.801,
+  "debut": 45.952,
+  "fin": 47.419,
+  "texte": "c’est bien la Joconde.",
+  "phrase": 17,
+  "chars": 22,
+  "largeur_px": 572.4,
+  "duree": 1.467
+ },
+ {
+  "debut": 47.419,
+  "fin": 48.84,
+  "texte": "Le vendeur est arrêté.",
+  "phrase": 18,
+  "chars": 22,
+  "largeur_px": 596.1,
+  "duree": 1.421
+ },
+ {
+  "debut": 48.84,
+  "fin": 49.464,
+  "texte": "Il s’appelle",
+  "phrase": 19,
+  "chars": 12,
+  "largeur_px": 290.9,
+  "duree": 0.624
+ },
+ {
+  "debut": 49.464,
+  "fin": 50.8,
+  "texte": "Vincenzo Peruggia,",
+  "phrase": 19,
+  "chars": 18,
+  "largeur_px": 515.9,
+  "duree": 1.336
+ },
+ {
+  "debut": 50.8,
+  "fin": 52.205,
   "texte": "un vitrier italien.",
-  "phrase": 14,
+  "phrase": 19,
   "chars": 19,
   "largeur_px": 459.7,
-  "duree": 1.403
+  "duree": 1.405
  },
  {
-  "debut": 33.801,
-  "fin": 34.73,
-  "texte": "Il avait travaillé",
-  "phrase": 15,
+  "debut": 52.205,
+  "fin": 52.915,
+  "texte": "Au Louvre,",
+  "phrase": 20,
+  "chars": 10,
+  "largeur_px": 283.4,
+  "duree": 0.71
+ },
+ {
+  "debut": 52.915,
+  "fin": 53.767,
+  "texte": "il avait travaillé",
+  "phrase": 20,
   "chars": 18,
-  "largeur_px": 423.7,
-  "duree": 0.929
- },
- {
-  "debut": 34.73,
-  "fin": 35.582,
-  "texte": "sur la vitrine",
-  "phrase": 15,
-  "chars": 14,
-  "largeur_px": 347.9,
+  "largeur_px": 421.3,
   "duree": 0.852
  },
  {
-  "debut": 35.582,
-  "fin": 36.656,
+  "debut": 53.767,
+  "fin": 54.547,
+  "texte": "sur la vitrine",
+  "phrase": 20,
+  "chars": 14,
+  "largeur_px": 347.9,
+  "duree": 0.78
+ },
+ {
+  "debut": 54.547,
+  "fin": 55.657,
   "texte": "de la Joconde.",
-  "phrase": 15,
+  "phrase": 20,
   "chars": 14,
   "largeur_px": 381.7,
-  "duree": 1.074
+  "duree": 1.11
  },
  {
-  "debut": 36.656,
-  "fin": 38.186,
+  "debut": 55.657,
+  "fin": 57.027,
   "texte": "Un lundi de fermeture,",
-  "phrase": 16,
+  "phrase": 21,
   "chars": 22,
   "largeur_px": 615.6,
-  "duree": 1.53
+  "duree": 1.37
  },
  {
-  "debut": 38.186,
-  "fin": 39.144,
-  "texte": "il l'avait emportée",
-  "phrase": 16,
-  "chars": 19,
-  "largeur_px": 486.9,
-  "duree": 0.958
- },
- {
-  "debut": 39.144,
-  "fin": 40.428,
-  "texte": "en blouse d'ouvrier.",
-  "phrase": 16,
+  "debut": 57.027,
+  "fin": 58.187,
+  "texte": "en blouse d’ouvrier,",
+  "phrase": 21,
   "chars": 20,
-  "largeur_px": 522.5,
-  "duree": 1.284
+  "largeur_px": 524.3,
+  "duree": 1.16
  },
  {
-  "debut": 40.628,
-  "fin": 41.958,
-  "texte": "Pour beaucoup d'historiens,",
-  "phrase": 17,
+  "debut": 58.187,
+  "fin": 59.032,
+  "texte": "il avait décroché",
+  "phrase": 21,
+  "chars": 17,
+  "largeur_px": 449.7,
+  "duree": 0.845
+ },
+ {
+  "debut": 59.032,
+  "fin": 59.725,
+  "texte": "le tableau.",
+  "phrase": 21,
+  "chars": 11,
+  "largeur_px": 284.6,
+  "duree": 0.693
+ },
+ {
+  "debut": 59.725,
+  "fin": 61.096,
+  "texte": "Le cadre, il l’avait laissé",
+  "phrase": 22,
   "chars": 27,
-  "largeur_px": 754.8,
+  "largeur_px": 647.6,
+  "duree": 1.371
+ },
+ {
+  "debut": 61.096,
+  "fin": 62.201,
+  "texte": "dans l’escalier.",
+  "phrase": 22,
+  "chars": 16,
+  "largeur_px": 396.5,
+  "duree": 1.105
+ },
+ {
+  "debut": 62.301,
+  "fin": 63.897,
+  "texte": "À son procès, il dit avoir",
+  "phrase": 23,
+  "chars": 26,
+  "largeur_px": 658.8,
+  "duree": 1.596
+ },
+ {
+  "debut": 63.897,
+  "fin": 65.369,
+  "texte": "voulu la rendre à l’Italie.",
+  "phrase": 23,
+  "chars": 27,
+  "largeur_px": 664.0,
+  "duree": 1.472
+ },
+ {
+  "debut": 65.369,
+  "fin": 66.219,
+  "texte": "Elle était pourtant",
+  "phrase": 24,
+  "chars": 19,
+  "largeur_px": 494.5,
+  "duree": 0.85
+ },
+ {
+  "debut": 66.219,
+  "fin": 67.146,
+  "texte": "en France depuis",
+  "phrase": 24,
+  "chars": 16,
+  "largeur_px": 457.6,
+  "duree": 0.927
+ },
+ {
+  "debut": 67.146,
+  "fin": 68.5,
+  "texte": "le seizième siècle.",
+  "phrase": 24,
+  "chars": 19,
+  "largeur_px": 491.9,
+  "duree": 1.354
+ },
+ {
+  "debut": 68.5,
+  "fin": 70.97,
+  "texte": "Le 4 janvier 1914,",
+  "phrase": 25,
+  "chars": 18,
+  "largeur_px": 469.8,
+  "duree": 2.47
+ },
+ {
+  "debut": 70.97,
+  "fin": 72.084,
+  "texte": "la Joconde retrouve",
+  "phrase": 25,
+  "chars": 19,
+  "largeur_px": 531.4,
+  "duree": 1.114
+ },
+ {
+  "debut": 72.084,
+  "fin": 72.961,
+  "texte": "le Louvre.",
+  "phrase": 25,
+  "chars": 10,
+  "largeur_px": 263.0,
+  "duree": 0.877
+ },
+ {
+  "debut": 73.061,
+  "fin": 74.391,
+  "texte": "Pour beaucoup d’historiens,",
+  "phrase": 26,
+  "chars": 27,
+  "largeur_px": 757.0,
   "duree": 1.33
  },
  {
-  "debut": 41.958,
-  "fin": 43.191,
-  "texte": "ce vol l'a rendue célèbre",
-  "phrase": 17,
+  "debut": 74.391,
+  "fin": 75.624,
+  "texte": "ce vol l’a rendue célèbre",
+  "phrase": 26,
   "chars": 25,
-  "largeur_px": 660.0,
+  "largeur_px": 662.3,
   "duree": 1.233
  },
  {
-  "debut": 43.191,
-  "fin": 44.499,
+  "debut": 75.624,
+  "fin": 76.933,
   "texte": "dans le monde entier.",
-  "phrase": 17,
+  "phrase": 26,
   "chars": 21,
   "largeur_px": 581.1,
-  "duree": 1.308
+  "duree": 1.309
  },
  {
-  "debut": 44.499,
-  "fin": 45.144,
+  "debut": 76.933,
+  "fin": 77.578,
   "texte": "Tout est parti",
-  "phrase": 18,
+  "phrase": 27,
   "chars": 14,
   "largeur_px": 363.4,
   "duree": 0.645
  },
  {
-  "debut": 45.144,
-  "fin": 46.032,
+  "debut": 77.578,
+  "fin": 78.466,
   "texte": "de quatre crochets",
-  "phrase": 18,
+  "phrase": 27,
   "chars": 18,
   "largeur_px": 514.0,
   "duree": 0.888
  },
  {
-  "debut": 46.032,
-  "fin": 47.5333,
+  "debut": 78.466,
+  "fin": 79.9666,
   "texte": "sur un mur vide.",
-  "phrase": 18,
+  "phrase": 27,
   "chars": 16,
   "largeur_px": 442.2,
   "duree": 1.501

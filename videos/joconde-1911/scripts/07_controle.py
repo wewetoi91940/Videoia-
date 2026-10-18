@@ -26,10 +26,12 @@ MUET = LIV / "joconde-1911_sans-son.mp4"
 W, H, FPS = 1080, 1920, 30
 rows: list[dict] = []
 RESTE = [
+    "**Voix Google** : tant que le contrôle « Voix naturelle livrée » est en écart, la vidéo porte la voix de calage. "
+    "Ajouter la clé `GEMINI_API_KEY` (secret de l'environnement), puis lancer `./make.sh voix audio composition check rendu livrables dossier`.",
     "**Écouter la vidéo en entier** (casque et haut-parleur de téléphone) : naturel de la voix de synthèse, « Vincenzo Peruggia », "
     "« vingt-deux août », équilibre voix / musique / bruitages. Rien n'a pu être écouté pendant la production.",
     "**Relire les sources S1, S2, S4 et S9** (`docs/01_recherche.md`) et cocher la colonne « relu ». En particulier, confirmer dans S2 "
-    "la date du 21 août affichée en P12.",
+    "la date du 21 août affichée sur le plan de l'escalier.",
     "**Provenance de la reproduction** : remplacer `assets/oeuvre/joconde-reproduction.jpg` par le fichier C2RMF de Wikimedia Commons "
     "ou par une image du Louvre, puis relancer `./make.sh visuels composition rendu livrables dossier`.",
     "**Contrôle visuel** de la vidéo finale image par image sur P04, P10 et P12 (silhouettes) : aucun visage ne doit être lisible.",
@@ -93,7 +95,9 @@ def main() -> None:
     check("Format", "1080 × 1920", f"{v['width']} × {v['height']}, {v['codec_name']} {v.get('profile', '')}, {v['pix_fmt']}",
           (v["width"], v["height"]) == (W, H))
     check("Format", "30 i/s constants", f"{v['r_frame_rate']} ({v['nb_frames']} images)", v["r_frame_rate"] == "30/1")
-    check("Format", "35–50 s (cible 45 s)", f"{dur:.2f} s", 35 <= dur <= 50)
+    fm = cfg["format"]
+    check("Format", f"{fm['duree_min_s']}–{fm['duree_max_s']} s (au moins 1 minute, demande du 18/10)", f"{dur:.2f} s",
+          fm["duree_min_s"] <= dur <= fm["duree_max_s"])
     check("Format", "Audio et vidéo de même durée", f"vidéo {float(v['duration']):.3f} s, audio {float(a['duration']):.3f} s",
           abs(float(v["duration"]) - float(a["duration"])) < 1 / FPS)
     pm = probe(MUET)
@@ -109,9 +113,10 @@ def main() -> None:
     check("Structure", "Question avant 8 s", f"fin de la phrase 3 à {ph[3]['fin']:.2f} s", ph[3]["fin"] < 8)
     rev = sorted({re.match(r"révélation (\d)", x["role"]).group(1) for x in cfg["phrases"] if x["role"].startswith("révélation")})
     check("Structure", "2 à 4 révélations", f"{len(rev)} révélations (fausse piste, empreinte, Florence)", 2 <= len(rev) <= 4)
-    t_rep = next(w["debut"] for w in ph[14]["mots"] if w["mot"].startswith("Vincenzo"))
+    t_rep = next(w["debut"] for p_ in tl["phrases"] for w in p_["mots"] if w["mot"].startswith("Vincenzo"))
     check("Structure", "Réponse avant 80 % de la durée", f"« Vincenzo » à {t_rep:.2f} s = {100 * t_rep / D:.0f} %", t_rep / D < 0.8)
-    check("Structure", "Chute qui renvoie à l'accroche", "phrase 18 reprend « quatre crochets » ; P14 réutilise l'image de P01",
+    check("Structure", "Chute qui renvoie à l'accroche",
+          f"phrase {cfg['phrases'][-1]['id']} reprend « quatre crochets » ; {plans[-1]['id']} réutilise l'image de {plans[0]['id']}",
           "quatre crochets" in cfg["phrases"][-1]["texte"] and plans[-1]["visuel"] == plans[0]["visuel"])
     cta = re.findall(r"abonn|follow|like|partage|commente", " ".join(x["texte"] for x in cfg["phrases"]).lower())
     check("Structure", "Pas d'appel à s'abonner", f"{len(cta)} occurrence dans la voix off", not cta)
@@ -119,15 +124,20 @@ def main() -> None:
     # ------------------------------------------------------------ 3. voix off
     nm = sum(n_words(x["texte"]) for x in cfg["phrases"])
     longest = max(n_words(x["texte"]) for x in cfg["phrases"])
-    check("Voix off", "120–135 mots", f"{nm} mots", 120 <= nm <= 135)
+    check("Voix off", "Nombre de mots adapté à la durée (≈ 3 mots par seconde de parole)",
+          f"{nm} mots pour {ch['duree_parole']:.1f} s de parole ({nm / ch['duree_parole']:.2f} mots/s)", 2.6 <= nm / ch["duree_parole"] <= 3.6)
     check("Voix off", "Phrases ≤ 15 mots", f"maximum {longest} mots", longest <= 15)
     check("Voix off", "Environ 5 syllabes/s", f"{ch['debit_syll_par_s']:.2f} syll./s ({ch['syllabes_estimees']} syllabes estimées, {ch['duree_parole']:.1f} s de parole)",
           4.5 <= ch["debit_syll_par_s"] <= 5.5)
-    check("Voix off", "Propos attribués", "phrase 17 : « Pour beaucoup d'historiens, … »", "historiens" in cfg["phrases"][16]["texte"])
+    attr = next((x for x in cfg["phrases"] if "historiens" in x["texte"]), None)
+    check("Voix off", "Propos attribués", f"phrase {attr['id'] if attr else '?'} : « Pour beaucoup d'historiens, … »", attr is not None)
     check("Voix off", "Chiffres arrondis restés vrais", "« près d'une semaine » (6 jours, F5) ; « plus de deux ans » (28 mois, F10)", True)
     check("Voix off", "Texte chronométré, coupes de secours", f"{len(cfg['phrases'])} phrases chronométrées ; coupes {', '.join(cfg['coupes_de_secours'])}", True)
+    check("Voix off", "Voix naturelle livrée (Google Gemini), pas la voix de calage",
+          f"moteur {ch.get('moteur')}, voix {ch.get('voix')}, modèle {ch.get('modele')}", not ch.get("brouillon", True),
+          "La voix Kokoro n'est qu'un brouillon de calage : jamais livrée.")
     check("Voix off", "Écoute humaine : naturel, noms, liaisons", "non faite (aucune écoute possible dans l'environnement de production)", None,
-          "Phonèmes vérifiés à l'écrit : « vingt-deux août » [vɛ̃tdøz‿ut], « Peruggia » [peʁudʒa].")
+          "À écouter : « Vincenzo Peruggia », « Louis Béroud », « vingt-deux août », « Offices ».")
 
     # ------------------------------------------------------------ 4. exactitude
     rech = (ROOT / "docs/01_recherche.md").read_text()

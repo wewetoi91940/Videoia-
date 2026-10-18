@@ -111,6 +111,9 @@ SIL = {  # contours de silhouettes vues de dos, moitié droite (x, y) ; hauteur 
                (0.172, 0.215), (0.185, 0.32), (0.192, 0.46), (0.18, 0.53), (0.162, 0.535), (0.165, 0.50), (0.18, 0.60),
                (0.188, 0.64), (0.09, 0.645), (0.076, 0.65), (0.072, 0.84), (0.068, 0.965), (0.094, 0.985), (0.092, 1.0),
                (0.018, 1.0), (0.02, 0.84), (0.016, 0.68), (0, 0.665)],
+    "robe": [(0, 0.05), (0.05, 0.056), (0.062, 0.09), (0.056, 0.125), (0.046, 0.14), (0.085, 0.156), (0.135, 0.176),
+             (0.152, 0.21), (0.158, 0.30), (0.146, 0.36), (0.118, 0.40), (0.132, 0.45), (0.19, 0.68), (0.25, 0.97),
+             (0.25, 1.0), (0, 1.0)],
 }
 
 
@@ -147,6 +150,12 @@ def silhouette(img: Image.Image, cx, ground, height, kind="manteau", hat="bowler
     elif hat == "kepi":
         bd.polygon([(hx - 0.062 * scale, hy + 0.05 * scale), (hx + 0.062 * scale, hy + 0.05 * scale),
                     (hx + 0.056 * scale, hy - 0.025 * scale), (hx - 0.056 * scale, hy - 0.025 * scale)], fill=255)
+    elif hat == "capeline":
+        bd.ellipse([hx - 0.15 * scale, hy + 0.028 * scale, hx + 0.15 * scale, hy + 0.062 * scale], fill=255)
+        bd.chord([hx - 0.062 * scale, hy - 0.02 * scale, hx + 0.062 * scale, hy + 0.09 * scale], 180, 360, fill=255)
+    elif hat == "canotier":
+        bd.rectangle([hx - 0.112 * scale, hy + 0.034 * scale, hx + 0.112 * scale, hy + 0.05 * scale], fill=255)
+        bd.rectangle([hx - 0.06 * scale, hy - 0.004 * scale, hx + 0.06 * scale, hy + 0.04 * scale], fill=255)
     elif hat == "cap":
         bd.chord([hx - 0.07 * scale, hy + 0.0 * scale, hx + 0.07 * scale, hy + 0.09 * scale], 180, 360, fill=255)
         bd.ellipse([hx - 0.07 * scale, hy + 0.035 * scale, hx + 0.075 * scale, hy + 0.055 * scale], fill=255)
@@ -183,7 +192,8 @@ def finish(base: Image.Image, seed: int, protect: tuple | None = None, post=None
 
 # ------------------------------------------------------------------ scènes
 
-def scene_mur_vide(seed=11) -> Image.Image:
+def _mur(seed=11, hooks_on=True) -> Image.Image:
+    """Mur du Salon Carré (non peint) : base commune du mur vide, de Béroud, de la foule et du retour."""
     arr = vgrad("#6e3326", "#2a1310", curve=0.9)
     arr += texture_noise(seed, 9, 10)[..., None]
     xx = np.arange(W, dtype=np.float32)
@@ -202,6 +212,8 @@ def scene_mur_vide(seed=11) -> Image.Image:
     d.rectangle([0, 2030, W, 2042], fill=rgb("#6a4a2c"))
     arr = light(np.asarray(img, np.float32), 621, 1030, 700, "#d89a7a", 0.22, 1.2)
     img = to_img(darken_edges(arr, 0.55))
+    if not hooks_on:
+        return img
     hooks = [(505, 770), (737, 770), (505, 1290), (737, 1290)]
 
     def hook_shapes(dr, o):
@@ -215,7 +227,11 @@ def scene_mur_vide(seed=11) -> Image.Image:
         d.rounded_rectangle([x - 9, y - 18, x + 9, y + 22], 6, fill=rgb("#2a2622"))
         d.polygon([(x - 6, y + 16), (x + 6, y + 16), (x + 14, y + 36), (x + 2, y + 34)], fill=rgb("#2a2622"))
         d.line([(x - 5, y - 14), (x - 5, y + 16)], fill=rgb("#8a8274"), width=3)
-    return finish(img, seed)
+    return img
+
+
+def scene_mur_vide(seed=11) -> Image.Image:
+    return finish(_mur(seed), seed)
 
 
 def scene_crochets(seed=12) -> Image.Image:
@@ -505,7 +521,7 @@ def scene_vitrine(seed=19) -> Image.Image:
     return finish(base, seed, protect=(art_box, art), post=reflections)
 
 
-def scene_escalier(seed=20) -> Image.Image:
+def scene_escalier(seed=20, man=True) -> Image.Image:
     arr = vgrad("#5e5446", "#1e1a16")
     img = to_img(arr)
     d = ImageDraw.Draw(img)
@@ -530,7 +546,12 @@ def scene_escalier(seed=20) -> Image.Image:
     arr = light(arr, 710, 380, 900, "#f6e6c0", 0.45, 1.5)
     arr += texture_noise(seed, 8, 14)[..., None]
     img = to_img(darken_edges(arr, 0.45))
-    img = silhouette(img, 690, 1010, 470, "blouse", "cap", "#1e1a16", rim=("#f6e6c0", 0, -1), rim_amount=0.4)
+    if man:
+        img = silhouette(img, 690, 1010, 470, "blouse", "cap", "#1e1a16", rim=("#f6e6c0", 0, -1), rim_amount=0.4)
+    else:  # la vitre de la boîte de protection, posée contre la marche, à côté du cadre
+        d = ImageDraw.Draw(img)
+        d.polygon([(600, 1640), (1010, 1600), (1050, 2120), (640, 2170)], fill=rgb("#9fb4b0"))
+        d.line([(640, 1660), (690, 2150)], fill=rgb("#e8f0ea"), width=6)
     d = ImageDraw.Draw(img)
     fx0, fy0, fx1, fy1 = 90, 1500, 520, 2140
     for i in range(44):
@@ -538,6 +559,226 @@ def scene_escalier(seed=20) -> Image.Image:
         hi = tuple(int(c) for c in np.array(rgb("#e2c46e")) * (1 - t) + np.array(rgb("#8c6a2c")) * t)
         d.rectangle([fx0 + i, fy0 + i, fx1 - i, fy1 - i], outline=hi, width=1)
     return finish(img, seed)
+
+
+def _paste_art(box) -> Image.Image:
+    """Reproduction authentique recadrée (cover) à la taille de la boîte : jamais repeinte, collée après la peinture."""
+    art = Image.open(REPRO).convert("RGB")
+    aw, ah = box[2] - box[0], box[3] - box[1]
+    sc = max(aw / art.width, ah / art.height)
+    art = art.resize((int(art.width * sc + 0.5), int(art.height * sc + 0.5)), Image.LANCZOS)
+    left, top = (art.width - aw) // 2, (art.height - ah) // 2
+    return art.crop((left, top, left + aw, top + ah))
+
+
+def scene_beroud(seed=21) -> Image.Image:
+    """22 août 1911 : un peintre copiste, de dos, devant l'emplacement vide (on voit le dos de sa toile)."""
+    img = _mur(seed)
+    d = ImageDraw.Draw(img)
+    ex = 930
+    for x_bot in (ex - 190, ex + 190):
+        d.polygon([(ex - 10, 1000), (ex + 10, 1000), (x_bot + 16, 2208), (x_bot - 16, 2208)], fill=rgb("#3e2812"))
+    d.rectangle([ex - 9, 980, ex + 9, 2208], fill=rgb("#33200e"))
+    d.rectangle([ex - 190, 1500, ex + 190, 1530], fill=rgb("#4a3018"))
+    cx0, cy0, cx1, cy1 = ex - 170, 1060, ex + 170, 1500     # dos de la toile : lin brut et châssis, aucune image
+    d.rectangle([cx0, cy0, cx1, cy1], fill=rgb("#b9a78a"))
+    for x in (cx0, cx1 - 26, (cx0 + cx1) // 2 - 12):
+        d.rectangle([x, cy0, x + 26, cy1], fill=rgb("#7a5a34"))
+    d.rectangle([cx0, cy0, cx1, cy0 + 26], fill=rgb("#7a5a34"))
+    d.rectangle([cx0, cy1 - 26, cx1, cy1], fill=rgb("#7a5a34"))
+    d.rectangle([cx0, (cy0 + cy1) // 2 - 12, cx1, (cy0 + cy1) // 2 + 12], fill=rgb("#7a5a34"))
+    img = to_img(light(np.asarray(img, np.float32), 300, 1700, 900, "#1a0c08", 0.35, 1.2))
+    img = silhouette(img, 300, 2260, 960, "manteau", "bowler", "#1c1612", rim=("#f1d9b0", 0.3, -1), rim_amount=0.6)
+    return finish(img, seed)
+
+
+def scene_photographe(seed=22) -> Image.Image:
+    """Les gardiens croient d'abord le tableau parti au service photographique : chambre photographique sur pied."""
+    arr = vgrad("#5c5a50", "#24221e")
+    arr += texture_noise(seed, 10, 12)[..., None]
+    arr = light(arr, 80, 500, 1500, "#f4e6c4", 0.45, 1.4)
+    img = to_img(arr)
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 1760, W, H], fill=rgb("#3a2c20"))
+    for i in range(10):
+        d.line([(0, 1760 + i * 46), (W, 1760 + i * 46)], fill=rgb("#2a2016"), width=3)
+    for x_bot in (380, 640, 900):
+        d.polygon([(632, 1260), (648, 1260), (x_bot + 14, 2050), (x_bot - 14, 2050)], fill=rgb("#4a3420"))
+    d.rectangle([520, 1180, 760, 1270], fill=rgb("#3a2818"))
+    d.rectangle([330, 820, 560, 1190], fill=rgb("#5a3c20"))                    # chambre arrière (verre dépoli)
+    d.rectangle([350, 840, 540, 1170], fill=rgb("#8a8a7c"))
+    folds = 9                                                                    # soufflet
+    for i in range(folds):
+        t0, t1 = i / folds, (i + 1) / folds
+        def edge(t):
+            return 560 + 300 * t, 840 + 70 * t, 1170 - 70 * t
+        x0, a0, b0 = edge(t0)
+        x1, a1, b1 = edge(t1)
+        d.polygon([(x0, a0), (x1, a1), (x1, b1), (x0, b0)], fill=rgb("#1e1a16" if i % 2 else "#2c2620"))
+    d.rectangle([860, 880, 900, 1130], fill=rgb("#5a3c20"))                    # planchette avant
+    d.ellipse([890, 940, 1010, 1070], fill=rgb("#b08a40"))                       # objectif en laiton
+    d.ellipse([918, 968, 982, 1042], fill=rgb("#121212"))
+    d.polygon([(300, 760), (590, 780), (600, 900), (560, 1320), (470, 1380), (300, 1300)], fill=rgb("#141210"))  # voile noir
+    arr = darken_edges(np.asarray(img, np.float32), 0.5)
+    return finish(to_img(arr), seed)
+
+
+def scene_escalier_vide(seed=23) -> Image.Image:
+    return scene_escalier(seed, man=False)
+
+
+def scene_foule(seed=24) -> Image.Image:
+    """À la réouverture, la foule vient voir l'emplacement vide (silhouettes de dos)."""
+    img = _mur(seed)
+    people = [(120, "robe", "capeline", "#2a1e1c"), (330, "manteau", "bowler", "#1a1614"),
+              (560, "manteau", "canotier", "#221c18"), (790, "robe", "capeline", "#2c2220"),
+              (1000, "manteau", "bowler", "#18120e"), (1190, "manteau", "cap", "#201a16")]
+    for i, (x, kind, hat, col) in enumerate(people):
+        h = 1180 + (i % 3) * 50
+        img = silhouette(img, x, 2560 + (i % 2) * 40, h, kind, hat, col, rim=("#f1d9b0", 0, -1), rim_amount=0.55)
+    return finish(img, seed)
+
+
+def scene_juge(seed=25) -> Image.Image:
+    """7 septembre 1911 : bureau d'un juge d'instruction ; un homme en chapeau melon, de dos."""
+    arr = vgrad("#34402f", "#141a12")
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    arr += (((xx % 310) < 8) * -18.0)[..., None]
+    arr += texture_noise(seed, 12, 12)[..., None]
+    img = to_img(arr)
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 1100, W, 1130], fill=rgb("#2a2014"))
+    d.rounded_rectangle([470, 640, 790, 1180], 40, fill=rgb("#1e140c"))          # dossier de fauteuil, vide
+    d.polygon([(60, 1150), (1180, 1150), (1242, 1460), (0, 1460)], fill=rgb("#5a3a20"))   # bureau
+    d.rectangle([0, 1460, W, 1520], fill=rgb("#3a2414"))
+    d.rectangle([0, 1520, W, H], fill=rgb("#2a1a10"))
+    for x0, y0, x1, y1 in [(260, 1230, 470, 1300), (300, 1300, 520, 1370), (560, 1250, 700, 1330)]:
+        d.polygon([(x0, y0), (x1, y0 - 10), (x1 + 20, y1), (x0 + 16, y1 + 8)], fill=rgb("#ddd2b8"))   # feuilles vierges
+    d.rectangle([905, 1060, 921, 1250], fill=rgb("#8a6a2c"))                       # lampe à abat-jour vert
+    d.ellipse([850, 1240, 980, 1270], fill=rgb("#8a6a2c"))
+    d.chord([790, 980, 1040, 1120], 180, 360, fill=rgb("#1f5a3a"))
+    arr = light(np.asarray(img, np.float32), 915, 1260, 560, "#ffe2a0", 0.6, 1.6)
+    img = to_img(darken_edges(arr, 0.55))
+    img = silhouette(img, 400, 2420, 1300, "manteau", "bowler", "#15110e", rim=("#ffd890", 1, -0.6), rim_amount=0.7)
+    return finish(img, seed)
+
+
+def scene_loupe(seed=26) -> Image.Image:
+    """La vitre et son empreinte sous la loupe : l'indice existe, personne ne fait le rapprochement."""
+    arr = vgrad("#4a2e18", "#1e1208")
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    arr += (np.sin(yy / 11 + np.sin(xx / 140) * 2) * 6)[..., None]
+    arr = light(arr, 200, 300, 1500, "#ffd890", 0.4, 1.4)
+    img = to_img(arr)
+    d = ImageDraw.Draw(img)
+    plate = [(170, 560), (1010, 470), (1080, 1560), (240, 1650)]
+    d.polygon(plate, fill=rgb("#3c5652"))
+    d.line(plate + [plate[0]], fill=rgb("#b8d6d2"), width=5)
+    layer = Image.new("L", (W, H), 0)
+    ld = ImageDraw.Draw(layer)
+    cx, cy = 600, 1060
+    for k in range(22):
+        r = 14 + k * 11
+        pts = [(cx + r * math.cos(t) * 0.82 * (1 + 0.06 * math.sin(2 * t + k * 0.3)),
+                cy + r * math.sin(t) * 1.1) for t in np.linspace(0, 2 * math.pi, 160)]
+        ld.line(pts, fill=255, width=4)
+    m = np.asarray(layer.filter(ImageFilter.GaussianBlur(1)), np.float32)[..., None] / 255
+    arr = np.asarray(img, np.float32)
+    lens = (np.hypot(xx - 640, yy - 1000) < 250)[..., None]
+    k_in = np.where(lens, 0.75, 0.28)
+    arr = arr * (1 - m * k_in) + np.array(rgb("#e6f4f2"), np.float32) * m * k_in
+    img = to_img(arr)
+    d = ImageDraw.Draw(img)
+    d.ellipse([640 - 262, 1000 - 262, 640 + 262, 1000 + 262], outline=rgb("#b48a3c"), width=26)
+    d.polygon([(800, 1190), (840, 1160), (1120, 1560), (1070, 1600)], fill=rgb("#2a1a0e"))
+    d.polygon([(1010, 1480), (1060, 1450), (1120, 1560), (1070, 1600)], fill=rgb("#b48a3c"))
+    arr = np.asarray(img, np.float32)
+    sheen = np.clip(1 - np.abs((xx - yy * 0.5) - 120) / 140, 0, 1) * (np.hypot(xx - 640, yy - 1000) < 240)
+    arr = arr + (sheen * 40)[..., None]
+    return finish(to_img(darken_edges(arr, 0.55)), seed, brushes=(40, 22, 11, 5, 3))
+
+
+def scene_antiquaire(seed=27) -> Image.Image:
+    """Florence, décembre 1913 : le tableau examiné chez l'antiquaire (reproduction authentique, collée après peinture)."""
+    arr = vgrad("#4e3620", "#1a1008")
+    arr += texture_noise(seed, 14, 14)[..., None]
+    img = to_img(arr)
+    d = ImageDraw.Draw(img)
+    for y in (420, 760, 1100):                                                    # étagères et objets anciens
+        d.rectangle([0, y, 300, y + 22], fill=rgb("#2e1c0e"))
+        d.rectangle([942, y, W, y + 22], fill=rgb("#2e1c0e"))
+        for x, w_, h_ in [(40, 80, 150), (150, 60, 110), (980, 90, 170), (1110, 70, 120)]:
+            d.ellipse([x, y - h_, x + w_, y], fill=rgb("#6a4a2a"))
+            d.rectangle([x + w_ * 0.3, y - h_ - 30, x + w_ * 0.7, y - h_ + 10], fill=rgb("#5a3e22"))
+    box = (431, 600, 811, 1152)                                                   # 380 × 552 : proportions du panneau
+    d.rectangle([box[0] - 30, box[1] - 30, box[2] + 30, box[3] + 30], fill=rgb("#2a1c10"))
+    d.polygon([(box[0] + 40, box[3] + 30), (box[2] - 40, box[3] + 30), (box[2] + 60, 1420), (box[0] - 60, 1420)], fill=rgb("#3a2614"))
+    d.polygon([(100, 1250), (1142, 1250), (1242, 1700), (0, 1700)], fill=rgb("#5a3a1e"))   # table
+    d.rectangle([0, 1700, W, H], fill=rgb("#24160c"))
+    d.line([(621, 0), (621, 330)], fill=rgb("#1a120a"), width=6)                 # suspension
+    d.chord([500, 300, 742, 470], 180, 360, fill=rgb("#8a6a30"))
+    arr = light(np.asarray(img, np.float32), 621, 700, 760, "#ffd08a", 0.5, 1.4)
+    base = to_img(darken_edges(arr, 0.55))
+    base = silhouette(base, 250, 2560, 1260, "manteau", "bowler", "#18120e", rim=("#ffd08a", 0.4, -1), rim_amount=0.7)
+    base = silhouette(base, 1000, 2600, 1300, "manteau", "bowler", "#1c1612", rim=("#ffd08a", -0.4, -1), rim_amount=0.7)
+    return finish(base, seed, protect=(box, _paste_art(box)))
+
+
+def scene_vitrier(seed=28) -> Image.Image:
+    """Avant le vol : un vitrier en blouse, de dos, devant une vitrine de protection qu'il vient de poser."""
+    img = _mur(seed, hooks_on=False)
+    d = ImageDraw.Draw(img)
+    gx0, gy0, gx1, gy1 = 380, 560, 862, 1260
+    d.rectangle([gx0 - 24, gy0 - 24, gx1 + 24, gy1 + 24], fill=rgb("#5a3c20"))
+    d.rectangle([gx0, gy0, gx1, gy1], fill=rgb("#3a1a14"))
+    d.polygon([(880, 1300), (1150, 1250), (1180, 1980), (900, 2030)], fill=rgb("#8fa8a6"))   # vitre posée contre le mur
+    arr = np.asarray(img, np.float32).copy()
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    inside = (xx > gx0) & (xx < gx1) & (yy > gy0) & (yy < gy1)
+    s1 = np.clip(1 - np.abs((xx + yy * 0.55) - 1300) / 50, 0, 1) * inside
+    arr = arr * (1 - 0.2 * s1[..., None]) + 255 * 0.2 * s1[..., None]
+    img = to_img(arr)
+    img = silhouette(img, 470, 2330, 1180, "blouse", "cap", "#1e1a16", rim=("#f1d9b0", 0.2, -1), rim_amount=0.5)
+    return finish(img, seed)
+
+
+def scene_proces(seed=29) -> Image.Image:
+    """Florence, juin 1914 : salle d'audience ; l'accusé, de dos, devant la cour (sièges vides, aucun visage)."""
+    arr = vgrad("#5a4028", "#22160c")
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    arr += (((xx % 207) < 6) * -16.0 * (yy < 1150))[..., None]
+    img = to_img(arr)
+    d = ImageDraw.Draw(img)
+    d.chord([321, 120, 921, 720], 180, 360, fill=rgb("#e8dcbc"))               # lunette éclairée
+    d.rectangle([321, 420, 921, 440], fill=rgb("#4a3420"))
+    for x in (380, 621, 862):
+        d.rounded_rectangle([x - 90, 700, x + 90, 1050], 30, fill=rgb("#2a1a0e"))   # hauts dossiers vides
+    d.rectangle([40, 980, 1202, 1240], fill=rgb("#4a2e16"))                       # estrade de la cour
+    d.rectangle([40, 960, 1202, 990], fill=rgb("#6a4626"))
+    for x in range(80, 1202, 120):
+        d.rectangle([x, 1020, x + 80, 1210], outline=rgb("#3a220e"), width=6)
+    d.rectangle([0, 1240, W, H], fill=rgb("#2e1e10"))
+    d.rectangle([0, 1520, W, 1550], fill=rgb("#5a3a1c"))                          # balustrade
+    for x in range(20, W, 70):
+        d.rectangle([x, 1550, x + 22, 1760], fill=rgb("#4a2e16"))
+    arr = light(np.asarray(img, np.float32), 621, 420, 900, "#ffe8b8", 0.45, 1.5)
+    img = to_img(darken_edges(arr, 0.5))
+    img = silhouette(img, 621, 1700, 760, "manteau", None, "#16110c", rim=("#ffe2a8", 0, -1), rim_amount=0.65)
+    for x, h_, hat in [(130, 1100, "bowler"), (1110, 1150, "bowler"), (330, 1000, "cap")]:
+        img = silhouette(img, x, 2700, h_, "manteau", hat, "#120e0a", rim=("#ffe2a8", 0, -1), rim_amount=0.35)
+    return finish(img, seed)
+
+
+def scene_retour(seed=30) -> Image.Image:
+    """4 janvier 1914 : la Joconde (reproduction authentique) de retour sur le mur, la foule de dos."""
+    img = _mur(seed, hooks_on=False)
+    frame = (361, 650, 881, 1351)
+    img = gilt_frame(img, frame, border=60, seed=seed)
+    box = (frame[0] + 60, frame[1] + 60, frame[2] - 60, frame[3] - 60)
+    for i, (x, kind, hat, col) in enumerate([(160, "robe", "capeline", "#2a1e1c"), (420, "manteau", "bowler", "#1a1614"),
+                                             (830, "manteau", "canotier", "#221c18"), (1090, "robe", "capeline", "#2c2220")]):
+        img = silhouette(img, x, 2660 + (i % 2) * 40, 1180, kind, hat, col, rim=("#f1d9b0", 0, -1), rim_amount=0.55)
+    return finish(img, seed, protect=(box, _paste_art(box)))
 
 
 SCENES = {
@@ -551,6 +792,16 @@ SCENES = {
     "arrestation": scene_arrestation,
     "vitrine": scene_vitrine,
     "escalier": scene_escalier,
+    "beroud": scene_beroud,
+    "photographe": scene_photographe,
+    "escalier_vide": scene_escalier_vide,
+    "foule": scene_foule,
+    "juge": scene_juge,
+    "loupe": scene_loupe,
+    "antiquaire": scene_antiquaire,
+    "vitrier": scene_vitrier,
+    "proces": scene_proces,
+    "retour": scene_retour,
 }
 
 

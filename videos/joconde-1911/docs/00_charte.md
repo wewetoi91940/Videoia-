@@ -7,7 +7,7 @@ Cette charte vaut pour chaque épisode. La colonne « Contrôle » indique comme
 | Règle | Contrôle |
 |---|---|
 | 1080 × 1920, 30 i/s | ffprobe sur le MP4 livré |
-| 35 à 50 s (cible 45 s) | ffprobe |
+| **60 à 85 s** (au moins 1 minute, demande du 18/10 ; 35–50 s dans la v1) | ffprobe |
 | Une histoire, une question | lecture du script |
 
 ## 2. Structure
@@ -26,7 +26,8 @@ Cette charte vaut pour chaque épisode. La colonne « Contrôle » indique comme
 | Règle | Contrôle |
 |---|---|
 | Français oral, phrases ≤ 15 mots, un fait par phrase | décompte automatique |
-| Environ 5 syllabes/s, 120 à 135 mots | décompte et chronologie réelle |
+| Environ 5 syllabes/s, environ 3 mots par seconde de parole | décompte et chronologie réelle |
+| Voix naturelle : voix Google (Gemini TTS), consigne de narrateur de documentaire ; Kokoro seulement en brouillon de calage, jamais livré | champ `brouillon` de `build/chronologie.json` |
 | Propos attribués (« pour beaucoup d'historiens »…) | lecture |
 | Chiffres arrondis seulement s'ils restent vrais | renvoi au tableau des faits |
 | Texte chronométré, coupes de secours prévues | `scripts/script.json` |
@@ -58,7 +59,8 @@ Cette charte vaut pour chaque épisode. La colonne « Contrôle » indique comme
 | Règle | Contrôle |
 |---|---|
 | Tout dans la zone x 60–940, y 200–1440 | `hyperframes check` (mise en page) + calcul des largeurs |
-| Sous-titres : une ligne, ≤ 27 caractères, groupes de sens, 64–72 px, vers y = 1300 | `scripts/05_composition.py` (découpe optimale, mots-outils jamais en fin de ligne) |
+| Sous-titres : une ligne, ≤ 27 caractères, groupes de sens, 64–72 px, vers y = 1300 ; apostrophe typographique (’) | `scripts/05_composition.py` (découpe optimale, mots-outils jamais en fin de ligne, nom propre jamais coupé) |
+| Aucun texte posé sur une œuvre réelle (hors sous-titres) | instantanés de contrôle |
 | Cartons : ≤ 6 mots, en haut, une ligne | décompte |
 | Contraste lisible | `hyperframes check` (WCAG AA) |
 

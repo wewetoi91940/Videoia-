@@ -28,7 +28,7 @@ def main() -> None:
     bg = background()
     tw = 1000
     full = art.resize((tw, round(art.height * tw / art.width)), Image.LANCZOS)
-    x, y = (W - full.width) // 2, 300
+    x, y = (W - full.width) // 2, 520       # bandeau du haut laissé libre pour l'étiquette, la légende et le carton
     shadow = Image.new("L", (W, H), 0)
     shadow.paste(255, (x + 16, y + 24, x + full.width + 16, y + full.height + 24))
     shadow = shadow.filter(ImageFilter.GaussianBlur(30))

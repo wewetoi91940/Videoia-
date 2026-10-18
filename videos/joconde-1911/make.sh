@@ -2,6 +2,7 @@
 # Chaîne complète « joconde-1911 » : voix → visuels → carte → audio → composition → contrôles → rendu → livrables → dossier.
 # Usage : ./make.sh [étape...]   étapes : voix visuels carte audio composition check rendu livrables dossier (défaut : toutes)
 # Python : PY=/chemin/vers/venv/bin/python ./make.sh   (dépendances : requirements.txt ; ffmpeg et Node ≥ 22 requis)
+# Voix   : GEMINI_API_KEY (ou GOOGLE_API_KEY) dans l'environnement ; sans clé, l'étape « voix » s'arrête (aucun repli silencieux).
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -13,8 +14,9 @@ veut() { [[ " ${ETAPES[*]} " == *" $1 "* ]]; }
 titre() { printf '\n== %s\n' "$1"; }
 
 if veut voix; then
-  titre "Voix off (Kokoro, ff_siwis) → build/voix.wav, build/chronologie.json"
-  "$PY" scripts/01_voix.py
+  # Voix livrée : Google Gemini (clé GEMINI_API_KEY ou GOOGLE_API_KEY). VOIX_BROUILLON=1 : voix de calage Kokoro, jamais livrée.
+  titre "Voix off (Google Gemini) → build/voix.wav, build/chronologie.json"
+  if [ "${VOIX_BROUILLON:-0}" = 1 ]; then "$PY" scripts/01_voix.py --brouillon-kokoro; else "$PY" scripts/01_voix.py; fi
 fi
 if veut visuels; then
   titre "Illustrations peintes par code + plans de l'œuvre (reproduction authentique)"
@@ -37,9 +39,11 @@ if veut check; then
   titre "Contrôles HyperFrames (lint + check par tranches de 16 s, limite de 120 s par appel)"
   $HF lint
   rm -f build/hf_check_*.json
-  D=$("$PY" -c 'import sys; sys.path.insert(0, "scripts"); import chrono; print(chrono.load()["duree"])')
+  RANGES=$("$PY" -c 'import sys; sys.path.insert(0, "scripts"); import chrono
+d = chrono.load()["duree"]; t = [i * 16 for i in range(int(d // 16) + 1)] + [d]
+print(" ".join(f"{a},{b}" for a, b in zip(t, t[1:]) if b - a > 0.5))')
   i=1
-  for r in "0,16" "16,32" "32,$D"; do
+  for r in $RANGES; do
     # Un échec n'arrête pas la chaîne : il est consigné dans le JSON et ressort dans docs/07_controle_qualite.md.
     $HF check --range "$r" --timeout 60000 --samples 6 --json 2>/dev/null \
       | "$PY" -c 'import json,sys; t=sys.stdin.read(); json.dump(json.loads(t[t.index("{"):t.rindex("}")+1]), sys.stdout)' \
@@ -53,17 +57,25 @@ if veut rendu; then
 fi
 if veut livrables; then
   titre "Livrables : MP4 final, version sans son, pistes FLAC, cartes"
+  VOIX_INFO=$("$PY" -c 'import json; c = json.load(open("build/chronologie.json"))
+print(("BROUILLON " if c.get("brouillon", True) else "") + " / ".join(str(c.get(k)) for k in ("moteur", "voix", "modele")))')
+  if [[ "$VOIX_INFO" == BROUILLON* ]]; then
+    echo "Refus : la voix est un brouillon de calage ($VOIX_INFO). Les livrables ne sont pas écrasés." >&2
+    echo "Générer d'abord la voix Google : ./make.sh voix audio composition check rendu livrables dossier" >&2
+    exit 1
+  fi
   mkdir -p livrables/pistes livrables/cartes
   ffmpeg -v error -y -i renders/joconde-1911-video.mp4 -i build/mix_master.wav \
     -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 320k -ar 48000 -ac 2 -movflags +faststart \
     -metadata title="Le vol de la Joconde (1911)" \
-    -metadata comment="Voix de synthèse (Kokoro, ff_siwis) ; illustrations générées par code ; reproduction authentique de l'œuvre." \
+    -metadata comment="Voix de synthèse ($VOIX_INFO) ; illustrations générées par code ; reproduction authentique de l'œuvre." \
     livrables/joconde-1911.mp4
   ffmpeg -v error -y -i renders/joconde-1911-video.mp4 -map 0:v:0 -c:v copy -an -movflags +faststart \
     -metadata title="Le vol de la Joconde (1911) — sans son" livrables/joconde-1911_sans-son.mp4
   for k in voix musique bruitages; do
     ffmpeg -v error -y -i "build/stems/$k.wav" -c:a flac -compression_level 8 "livrables/pistes/$k.flac"
   done
+  cp build/joconde-1911.srt livrables/joconde-1911.srt
   cp assets/cartes/carte_paris_florence.png assets/cartes/carte_paris_florence.svg assets/cartes/carte.json livrables/cartes/
 fi
 if veut dossier; then

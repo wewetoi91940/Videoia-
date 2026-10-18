@@ -7,21 +7,32 @@
 | # | Plan | Entrée (TC) | Sortie (TC) | Images | Visuel | Transition | Ancrage sur la voix |
 |---|---|---|---|---|---|---|---|
 | 1 | P01 | 00:00:00 | 00:03:04 | 94 | mur_vide | coupe | début de la vidéo |
-| 2 | P02 | 00:03:04 | 00:06:02 | 88 | crochets | coupe | phrase 1, mot « il » |
-| 3 | P03 | 00:06:02 | 00:08:05 | 63 | joconde | coupe | début de la phrase 3 |
-| 4 | P04 | 00:08:05 | 00:10:19 | 74 | soupcons | coupe | début de la phrase 4 |
-| 5 | P05 | 00:10:19 | 00:14:08 | 109 | prison | coupe | début de la phrase 5 |
-| 6 | P06 | 00:14:08 | 00:17:09 | 91 | empreinte | coupe | début de la phrase 7 |
-| 7 | P07 | 00:17:09 | 00:21:00 | 111 | fichier | coupe | début de la phrase 8 |
-| 8 | P08 | 00:21:00 | 00:25:01 | 121 | chambre | fondu 0,5 s (le plan précédent est prolongé de 0,5 s dessous) | début de la phrase 10 |
-| 9 | P09 | 00:25:01 | 00:29:24 | 143 | carte | coupe | début de la phrase 12 |
-| 10 | P10 | 00:29:24 | 00:33:24 | 120 | arrestation | coupe | début de la phrase 13 |
-| 11 | P11 | 00:33:24 | 00:36:20 | 86 | vitrine | coupe | début de la phrase 15 |
-| 12 | P12 | 00:36:20 | 00:40:19 | 119 | escalier | coupe | début de la phrase 16 |
-| 13 | P13 | 00:40:19 | 00:44:15 | 116 | joconde_detail | coupe | début de la phrase 17 |
-| 14 | P14 | 00:44:15 | 00:47:16 | 91 | mur_vide | coupe | début de la phrase 18 |
+| 2 | P02 | 00:03:04 | 00:06:00 | 86 | crochets | coupe | phrase 1, mot « il » |
+| 3 | P03 | 00:06:00 | 00:08:02 | 62 | joconde | coupe | début de la phrase 3 |
+| 4 | P04 | 00:08:02 | 00:10:27 | 85 | beroud | coupe | début de la phrase 4 |
+| 5 | P05 | 00:10:27 | 00:13:03 | 66 | photographe | coupe | début de la phrase 5 |
+| 6 | P06 | 00:13:03 | 00:16:05 | 92 | escalier_vide | coupe | début de la phrase 6 |
+| 7 | P07 | 00:16:05 | 00:19:20 | 105 | foule | coupe | début de la phrase 7 |
+| 8 | P08 | 00:19:20 | 00:23:03 | 103 | juge | coupe | début de la phrase 8 |
+| 9 | P09 | 00:23:03 | 00:26:20 | 107 | prison | coupe | début de la phrase 9 |
+| 10 | P10 | 00:26:20 | 00:30:04 | 104 | empreinte | coupe | début de la phrase 11 |
+| 11 | P11 | 00:30:04 | 00:32:14 | 70 | fichier | coupe | début de la phrase 12 |
+| 12 | P12 | 00:32:14 | 00:34:17 | 63 | loupe | coupe | début de la phrase 13 |
+| 13 | P13 | 00:34:17 | 00:38:18 | 121 | chambre | fondu 0,5 s (le plan précédent est prolongé de 0,5 s dessous) | début de la phrase 14 |
+| 14 | P14 | 00:38:18 | 00:43:10 | 142 | carte | coupe | début de la phrase 16 |
+| 15 | P15 | 00:43:10 | 00:47:13 | 123 | antiquaire | coupe | début de la phrase 17 |
+| 16 | P16 | 00:47:13 | 00:50:28 | 105 | arrestation | coupe | début de la phrase 18 |
+| 17 | P17 | 00:50:28 | 00:54:04 | 96 | vitrier | coupe | phrase 19, mot « vitrier » |
+| 18 | P18 | 00:54:04 | 00:57:01 | 87 | vitrine | coupe | phrase 20, mot « vitrine » |
+| 19 | P19 | 00:57:01 | 00:59:22 | 81 | escalier | coupe | phrase 21, mot « en » |
+| 20 | P20 | 00:59:22 | 01:02:09 | 77 | escalier_vide | coupe | début de la phrase 22 |
+| 21 | P21 | 01:02:09 | 01:05:11 | 92 | proces | coupe | début de la phrase 23 |
+| 22 | P22 | 01:05:11 | 01:08:15 | 94 | joconde | coupe | début de la phrase 24 |
+| 23 | P23 | 01:08:15 | 01:13:02 | 137 | retour | coupe | début de la phrase 25 |
+| 24 | P24 | 01:13:02 | 01:16:28 | 116 | joconde_detail | coupe | début de la phrase 26 |
+| 25 | P25 | 01:16:28 | 01:19:29 | 91 | mur_vide | coupe | début de la phrase 27 |
 
-Total : 1426 images, soit 47,533 s. Le dernier plan (P14) finit au cadrage exact du premier (échelle 1,0, x 0, y 0) avec le même carton : la lecture en boucle de TikTok enchaîne sans saut.
+Total : 2399 images, soit 79,967 s. Le dernier plan (P14) finit au cadrage exact du premier (échelle 1,0, x 0, y 0) avec le même carton : la lecture en boucle de TikTok enchaîne sans saut.
 
 ## Placements
 

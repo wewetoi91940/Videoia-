@@ -5,3 +5,7 @@ build/voix/
 build/stems/
 build/*.wav
 build/land-50m.json
+__pycache__/
+# Synthèse Gemini : fichiers de travail régénérés à chaque passage (le cache des phrases, lui, peut être versionné)
+build/voix_gemini/travaux.json
+build/voix_gemini/resultats.json

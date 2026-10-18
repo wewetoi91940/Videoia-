@@ -22,7 +22,7 @@
       .city { font-family: "Oswald", sans-serif; font-weight: 700; font-size: 46px; letter-spacing: 0.08em; fill: #f2ead8; }
       .glow { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen; opacity: 0; }
       .glow-empreinte { background: radial-gradient(circle at 556px 862px, rgba(190, 240, 245, 0.55) 0, rgba(120, 200, 210, 0.18) 260px, rgba(0, 0, 0, 0) 470px); }
-      .glow-vitrine { background: linear-gradient(105deg, rgba(255, 255, 255, 0) 38%, rgba(255, 248, 230, 0.22) 50%, rgba(255, 255, 255, 0) 62%); }
+      .glow-balayage { background: linear-gradient(105deg, rgba(255, 255, 255, 0) 38%, rgba(255, 248, 230, 0.22) 50%, rgba(255, 255, 255, 0) 62%); }
       .label { position: absolute; left: 60px; top: 200px; display: flex; align-items: center; gap: 12px;
                font-family: "Oswald", sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.16em; color: #f2ead8;
                background: rgba(10, 9, 8, 0.62); padding: 8px 16px 9px 14px; border-radius: 4px; }
@@ -43,97 +43,154 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="47.5333" data-fps="30" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="79.9666" data-fps="30" data-width="1080" data-height="1920">
       <section id="p01" class="clip shot" data-start="0.0" data-duration="3.1333" data-track-index="1"><div id="p01-fade" class="fade"><div id="p01-cam" class="cam"><img id="p01-img" class="kb" src="assets/illustrations/mur_vide.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p01-carton" class="carton"><span>LOUVRE · 22 AOÛT 1911</span></div></div></section>
-      <section id="p02" class="clip shot" data-start="3.1333" data-duration="2.9333" data-track-index="2"><div id="p02-fade" class="fade"><div id="p02-cam" class="cam"><img id="p02-img" class="kb" src="assets/illustrations/crochets.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
-      <section id="p03" class="clip shot" data-start="6.0666" data-duration="2.1000" data-track-index="1"><div id="p03-fade" class="fade"><div id="p03-cam" class="cam"><img id="p03-img" class="kb" src="assets/illustrations/joconde.png" alt=""></div><div class="label"><span class="dot" style="background:#f2ead8"></span>ARCHIVE</div><div class="legende">Léonard de Vinci, La Joconde · Musée du Louvre</div><div id="p03-carton" class="carton"><span>QUI L&#x27;A VOLÉE ?</span></div></div></section>
-      <section id="p04" class="clip shot" data-start="8.1666" data-duration="2.4667" data-track-index="2"><div id="p04-fade" class="fade"><div id="p04-cam" class="cam"><img id="p04-img" class="kb" src="assets/illustrations/soupcons.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p04-carton" class="carton"><span>7 SEPTEMBRE 1911</span></div></div></section>
-      <section id="p05" class="clip shot" data-start="10.6333" data-duration="3.6333" data-track-index="1"><div id="p05-fade" class="fade"><div id="p05-cam" class="cam"><img id="p05-img" class="kb" src="assets/illustrations/prison.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p05-carton" class="carton"><span>PRISON DE LA SANTÉ</span></div><div id="p05-carton2" class="carton"><span>FAUSSE PISTE</span></div></div></section>
-      <section id="p06" class="clip shot" data-start="14.2666" data-duration="3.0334" data-track-index="2"><div id="p06-fade" class="fade"><div id="p06-cam" class="cam"><img id="p06-img" class="kb" src="assets/illustrations/empreinte.png" alt=""><div id="p06-glow" class="glow glow-empreinte"></div></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
-      <section id="p07" class="clip shot" data-start="17.3" data-duration="4.2000" data-track-index="1"><div id="p07-fade" class="fade"><div id="p07-cam" class="cam"><img id="p07-img" class="kb" src="assets/illustrations/fichier.png" alt=""></div><div class="label" data-layout-allow-overlap data-layout-allow-occlusion><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
-      <section id="p08" class="clip shot" data-start="21.0" data-duration="4.0333" data-track-index="2"><div id="p08-fade" class="fade"><div id="p08-cam" class="cam"><img id="p08-img" class="kb" src="assets/illustrations/chambre.png" alt=""></div><div class="label" data-layout-allow-overlap data-layout-allow-occlusion><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p08-carton" class="carton"><span>1911 → 1913</span></div></div></section>
-      <section id="p09" class="clip shot" data-start="25.0333" data-duration="4.7667" data-track-index="1"><div id="p09-fade" class="fade"><div id="p09-cam" class="cam"><img id="p09-img" class="kb" src="assets/cartes/carte_paris_florence.png" alt=""><svg id="p09-svg" class="overlay" viewBox="0 0 1080 1920" width="1080" height="1920"><path id="route" d="M230.4,556.5 Q602.9,665.2 855.3,1073.9" fill="none" stroke="#e0b04c" stroke-width="7" stroke-linecap="round" stroke-dasharray="18 16"/><circle cx="230.4" cy="556.5" r="13" fill="#f2ead8"/><circle id="florence-dot" cx="855.3" cy="1073.9" r="13" fill="#f2ead8"/><circle id="florence-ring" cx="855.3" cy="1073.9" r="13" fill="none" stroke="#e0b04c" stroke-width="5"/><text x="256.4" y="530.5" class="city">PARIS</text><text id="florence-label" x="829.3" y="1047.9" class="city" text-anchor="end">FLORENCE</text></svg></div><div class="label"><span class="dot" style="background:#7fc4c0"></span>CARTE SCHÉMATIQUE</div><div id="p09-carton" class="carton"><span>DÉCEMBRE 1913</span></div></div></section>
-      <section id="p10" class="clip shot" data-start="29.8" data-duration="4.0000" data-track-index="2"><div id="p10-fade" class="fade"><div id="p10-cam" class="cam"><img id="p10-img" class="kb" src="assets/illustrations/arrestation.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p10-carton2" class="carton long"><span>VINCENZO PERUGGIA, VITRIER</span></div></div></section>
-      <section id="p11" class="clip shot" data-start="33.8" data-duration="2.8666" data-track-index="1"><div id="p11-fade" class="fade"><div id="p11-cam" class="cam"><img id="p11-img" class="kb" src="assets/illustrations/vitrine.png" alt=""><div id="p11-glow" class="glow glow-vitrine"></div></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
-      <section id="p12" class="clip shot" data-start="36.6666" data-duration="3.9667" data-track-index="2"><div id="p12-fade" class="fade"><div id="p12-cam" class="cam"><img id="p12-img" class="kb" src="assets/illustrations/escalier.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p12-carton" class="carton"><span>LUNDI 21 AOÛT 1911</span></div></div></section>
-      <section id="p13" class="clip shot" data-start="40.6333" data-duration="3.8667" data-track-index="1"><div id="p13-fade" class="fade"><div id="p13-cam" class="cam"><img id="p13-img" class="kb" src="assets/illustrations/joconde_detail.png" alt=""></div><div class="label"><span class="dot" style="background:#f2ead8"></span>ARCHIVE</div><div class="legende">La Joconde (détail) · Musée du Louvre</div></div></section>
-      <section id="p14" class="clip shot" data-start="44.5" data-duration="3.0333" data-track-index="2"><div id="p14-fade" class="fade"><div id="p14-cam" class="cam"><img id="p14-img" class="kb" src="assets/illustrations/mur_vide.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p14-cartonfin" class="carton"><span>LOUVRE · 22 AOÛT 1911</span></div></div></section>
+      <section id="p02" class="clip shot" data-start="3.1333" data-duration="2.8667" data-track-index="2"><div id="p02-fade" class="fade"><div id="p02-cam" class="cam"><img id="p02-img" class="kb" src="assets/illustrations/crochets.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
+      <section id="p03" class="clip shot" data-start="6.0" data-duration="2.0666" data-track-index="1"><div id="p03-fade" class="fade"><div id="p03-cam" class="cam"><img id="p03-img" class="kb" src="assets/illustrations/joconde.png" alt=""></div><div class="label"><span class="dot" style="background:#f2ead8"></span>ARCHIVE</div><div class="legende">Léonard de Vinci, La Joconde · Musée du Louvre</div><div id="p03-carton" class="carton"><span>QUI L’A VOLÉE ?</span></div></div></section>
+      <section id="p04" class="clip shot" data-start="8.0666" data-duration="2.8334" data-track-index="2"><div id="p04-fade" class="fade"><div id="p04-cam" class="cam"><img id="p04-img" class="kb" src="assets/illustrations/beroud.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p04-carton" class="carton long"><span>LOUIS BÉROUD, PEINTRE COPISTE</span></div></div></section>
+      <section id="p05" class="clip shot" data-start="10.9" data-duration="2.2000" data-track-index="1"><div id="p05-fade" class="fade"><div id="p05-cam" class="cam"><img id="p05-img" class="kb" src="assets/illustrations/photographe.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
+      <section id="p06" class="clip shot" data-start="13.1" data-duration="3.0666" data-track-index="2"><div id="p06-fade" class="fade"><div id="p06-cam" class="cam"><img id="p06-img" class="kb" src="assets/illustrations/escalier_vide.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
+      <section id="p07" class="clip shot" data-start="16.1666" data-duration="3.5000" data-track-index="1"><div id="p07-fade" class="fade"><div id="p07-cam" class="cam"><img id="p07-img" class="kb" src="assets/illustrations/foule.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p07-carton" class="carton"><span>RÉOUVERTURE DU LOUVRE</span></div></div></section>
+      <section id="p08" class="clip shot" data-start="19.6666" data-duration="3.4334" data-track-index="2"><div id="p08-fade" class="fade"><div id="p08-cam" class="cam"><img id="p08-img" class="kb" src="assets/illustrations/juge.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p08-carton" class="carton"><span>7 SEPTEMBRE 1911</span></div></div></section>
+      <section id="p09" class="clip shot" data-start="23.1" data-duration="3.5666" data-track-index="1"><div id="p09-fade" class="fade"><div id="p09-cam" class="cam"><img id="p09-img" class="kb" src="assets/illustrations/prison.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p09-carton" class="carton"><span>PRISON DE LA SANTÉ</span></div><div id="p09-carton2" class="carton"><span>FAUSSE PISTE</span></div></div></section>
+      <section id="p10" class="clip shot" data-start="26.6666" data-duration="3.4667" data-track-index="2"><div id="p10-fade" class="fade"><div id="p10-cam" class="cam"><img id="p10-img" class="kb" src="assets/illustrations/empreinte.png" alt=""><div id="p10-glow" class="glow glow-empreinte"></div></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
+      <section id="p11" class="clip shot" data-start="30.1333" data-duration="2.3333" data-track-index="1"><div id="p11-fade" class="fade"><div id="p11-cam" class="cam"><img id="p11-img" class="kb" src="assets/illustrations/fichier.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
+      <section id="p12" class="clip shot" data-start="32.4666" data-duration="2.6000" data-track-index="2"><div id="p12-fade" class="fade"><div id="p12-cam" class="cam"><img id="p12-img" class="kb" src="assets/illustrations/loupe.png" alt=""></div><div class="label" data-layout-allow-overlap data-layout-allow-occlusion><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
+      <section id="p13" class="clip shot" data-start="34.5666" data-duration="4.0334" data-track-index="1"><div id="p13-fade" class="fade"><div id="p13-cam" class="cam"><img id="p13-img" class="kb" src="assets/illustrations/chambre.png" alt=""></div><div class="label" data-layout-allow-overlap data-layout-allow-occlusion><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p13-carton" class="carton"><span>1911 → 1913</span></div></div></section>
+      <section id="p14" class="clip shot" data-start="38.6" data-duration="4.7333" data-track-index="2"><div id="p14-fade" class="fade"><div id="p14-cam" class="cam"><img id="p14-img" class="kb" src="assets/cartes/carte_paris_florence.png" alt=""><svg id="p14-svg" class="overlay" viewBox="0 0 1080 1920" width="1080" height="1920"><path id="route" d="M230.4,556.5 Q602.9,665.2 855.3,1073.9" fill="none" stroke="#e0b04c" stroke-width="7" stroke-linecap="round" stroke-dasharray="18 16"/><circle cx="230.4" cy="556.5" r="13" fill="#f2ead8"/><circle id="florence-dot" cx="855.3" cy="1073.9" r="13" fill="#f2ead8"/><circle id="florence-ring" cx="855.3" cy="1073.9" r="13" fill="none" stroke="#e0b04c" stroke-width="5"/><text x="256.4" y="530.5" class="city">PARIS</text><text id="florence-label" x="829.3" y="1047.9" class="city" text-anchor="end">FLORENCE</text></svg></div><div class="label"><span class="dot" style="background:#7fc4c0"></span>CARTE SCHÉMATIQUE</div><div id="p14-carton" class="carton"><span>DÉCEMBRE 1913</span></div></div></section>
+      <section id="p15" class="clip shot" data-start="43.3333" data-duration="4.1000" data-track-index="1"><div id="p15-fade" class="fade"><div id="p15-cam" class="cam"><img id="p15-img" class="kb" src="assets/illustrations/antiquaire.png" alt=""><div id="p15-glow" class="glow glow-balayage"></div></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
+      <section id="p16" class="clip shot" data-start="47.4333" data-duration="3.5000" data-track-index="2"><div id="p16-fade" class="fade"><div id="p16-cam" class="cam"><img id="p16-img" class="kb" src="assets/illustrations/arrestation.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p16-carton2" class="carton long"><span>VINCENZO PERUGGIA, VITRIER</span></div></div></section>
+      <section id="p17" class="clip shot" data-start="50.9333" data-duration="3.2000" data-track-index="1"><div id="p17-fade" class="fade"><div id="p17-cam" class="cam"><img id="p17-img" class="kb" src="assets/illustrations/vitrier.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
+      <section id="p18" class="clip shot" data-start="54.1333" data-duration="2.9000" data-track-index="2"><div id="p18-fade" class="fade"><div id="p18-cam" class="cam"><img id="p18-img" class="kb" src="assets/illustrations/vitrine.png" alt=""><div id="p18-glow" class="glow glow-balayage"></div></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
+      <section id="p19" class="clip shot" data-start="57.0333" data-duration="2.7000" data-track-index="1"><div id="p19-fade" class="fade"><div id="p19-cam" class="cam"><img id="p19-img" class="kb" src="assets/illustrations/escalier.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p19-carton" class="carton"><span>LUNDI 21 AOÛT 1911</span></div></div></section>
+      <section id="p20" class="clip shot" data-start="59.7333" data-duration="2.5667" data-track-index="2"><div id="p20-fade" class="fade"><div id="p20-cam" class="cam"><img id="p20-img" class="kb" src="assets/illustrations/escalier_vide.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div></div></section>
+      <section id="p21" class="clip shot" data-start="62.3" data-duration="3.0666" data-track-index="1"><div id="p21-fade" class="fade"><div id="p21-cam" class="cam"><img id="p21-img" class="kb" src="assets/illustrations/proces.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p21-carton" class="carton"><span>FLORENCE, JUIN 1914</span></div></div></section>
+      <section id="p22" class="clip shot" data-start="65.3666" data-duration="3.1334" data-track-index="2"><div id="p22-fade" class="fade"><div id="p22-cam" class="cam"><img id="p22-img" class="kb" src="assets/illustrations/joconde.png" alt=""></div><div class="label"><span class="dot" style="background:#f2ead8"></span>ARCHIVE</div><div class="legende">Léonard de Vinci, La Joconde · Musée du Louvre</div><div id="p22-carton" class="carton long"><span>EN FRANCE DEPUIS LE XVIe SIÈCLE</span></div></div></section>
+      <section id="p23" class="clip shot" data-start="68.5" data-duration="4.5666" data-track-index="1"><div id="p23-fade" class="fade"><div id="p23-cam" class="cam"><img id="p23-img" class="kb" src="assets/illustrations/retour.png" alt=""><div id="p23-glow" class="glow glow-balayage"></div></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p23-carton" class="carton"><span>4 JANVIER 1914</span></div></div></section>
+      <section id="p24" class="clip shot" data-start="73.0666" data-duration="3.8667" data-track-index="2"><div id="p24-fade" class="fade"><div id="p24-cam" class="cam"><img id="p24-img" class="kb" src="assets/illustrations/joconde_detail.png" alt=""></div><div class="label"><span class="dot" style="background:#f2ead8"></span>ARCHIVE</div><div class="legende">La Joconde (détail) · Musée du Louvre</div></div></section>
+      <section id="p25" class="clip shot" data-start="76.9333" data-duration="3.0333" data-track-index="1"><div id="p25-fade" class="fade"><div id="p25-cam" class="cam"><img id="p25-img" class="kb" src="assets/illustrations/mur_vide.png" alt=""></div><div class="label"><span class="dot" style="background:#e0a84a"></span>ILLUSTRATION</div><div id="p25-cartonfin" class="carton"><span>LOUVRE · 22 AOÛT 1911</span></div></div></section>
       <div id="vignette"></div>
       <div id="sub0" class="clip sub" data-start="0.000" data-duration="2.830" data-track-index="9"><span>Le 22 août 1911,</span></div>
       <div id="sub1" class="clip sub" data-start="2.830" data-duration="0.806" data-track-index="9"><span>au Louvre, il ne reste</span></div>
       <div id="sub2" class="clip sub" data-start="3.636" data-duration="0.982" data-track-index="9"><span>que quatre crochets.</span></div>
-      <div id="sub3" class="clip sub" data-start="4.618" data-duration="1.435" data-track-index="9"><span>La Joconde a disparu.</span></div>
-      <div id="sub4" class="clip sub" data-start="6.053" data-duration="1.027" data-track-index="9"><span>Qui a pu la sortir</span></div>
-      <div id="sub5" class="clip sub" data-start="7.080" data-duration="0.874" data-track-index="9"><span>du musée ?</span></div>
-      <div id="sub6" class="clip sub" data-start="8.154" data-duration="0.992" data-track-index="9"><span>La police soupçonne</span></div>
-      <div id="sub7" class="clip sub" data-start="9.146" data-duration="1.499" data-track-index="9"><span>même le poète Apollinaire.</span></div>
-      <div id="sub8" class="clip sub" data-start="10.645" data-duration="1.210" data-track-index="9"><span>Il passe près d&#x27;une semaine</span></div>
-      <div id="sub9" class="clip sub" data-start="11.855" data-duration="0.854" data-track-index="9"><span>en prison.</span></div>
-      <div id="sub10" class="clip sub" data-start="12.709" data-duration="1.341" data-track-index="9"><span>Fausse piste.</span></div>
-      <div id="sub11" class="clip sub" data-start="14.250" data-duration="0.952" data-track-index="9"><span>Un indice reste</span></div>
-      <div id="sub12" class="clip sub" data-start="15.202" data-duration="0.778" data-track-index="9"><span>sur la vitre :</span></div>
-      <div id="sub13" class="clip sub" data-start="15.980" data-duration="1.336" data-track-index="9"><span>une empreinte de pouce.</span></div>
-      <div id="sub14" class="clip sub" data-start="17.316" data-duration="1.590" data-track-index="9"><span>Le voleur est déjà fiché.</span></div>
-      <div id="sub15" class="clip sub" data-start="18.906" data-duration="0.713" data-track-index="9"><span>Personne ne fait</span></div>
-      <div id="sub16" class="clip sub" data-start="19.619" data-duration="1.185" data-track-index="9"><span>le rapprochement.</span></div>
-      <div id="sub17" class="clip sub" data-start="21.004" data-duration="1.362" data-track-index="9"><span>Plus de deux ans passent.</span></div>
-      <div id="sub18" class="clip sub" data-start="22.366" data-duration="0.790" data-track-index="9"><span>Le tableau dort</span></div>
-      <div id="sub19" class="clip sub" data-start="23.156" data-duration="0.790" data-track-index="9"><span>dans une chambre</span></div>
-      <div id="sub20" class="clip sub" data-start="23.946" data-duration="1.033" data-track-index="9"><span>parisienne.</span></div>
-      <div id="sub21" class="clip sub" data-start="25.029" data-duration="2.391" data-track-index="9"><span>En décembre 1913, un homme</span></div>
-      <div id="sub22" class="clip sub" data-start="27.420" data-duration="1.353" data-track-index="9"><span>le propose à un antiquaire</span></div>
-      <div id="sub23" class="clip sub" data-start="28.773" data-duration="1.027" data-track-index="9"><span>de Florence.</span></div>
-      <div id="sub24" class="clip sub" data-start="29.800" data-duration="1.098" data-track-index="9"><span>Il est arrêté.</span></div>
-      <div id="sub25" class="clip sub" data-start="30.898" data-duration="1.500" data-track-index="9"><span>C&#x27;est Vincenzo Peruggia,</span></div>
-      <div id="sub26" class="clip sub" data-start="32.398" data-duration="1.403" data-track-index="9"><span>un vitrier italien.</span></div>
-      <div id="sub27" class="clip sub" data-start="33.801" data-duration="0.929" data-track-index="9"><span>Il avait travaillé</span></div>
-      <div id="sub28" class="clip sub" data-start="34.730" data-duration="0.852" data-track-index="9"><span>sur la vitrine</span></div>
-      <div id="sub29" class="clip sub" data-start="35.582" data-duration="1.074" data-track-index="9"><span>de la Joconde.</span></div>
-      <div id="sub30" class="clip sub" data-start="36.656" data-duration="1.530" data-track-index="9"><span>Un lundi de fermeture,</span></div>
-      <div id="sub31" class="clip sub" data-start="38.186" data-duration="0.958" data-track-index="9"><span>il l&#x27;avait emportée</span></div>
-      <div id="sub32" class="clip sub" data-start="39.144" data-duration="1.284" data-track-index="9"><span>en blouse d&#x27;ouvrier.</span></div>
-      <div id="sub33" class="clip sub" data-start="40.628" data-duration="1.330" data-track-index="9"><span>Pour beaucoup d&#x27;historiens,</span></div>
-      <div id="sub34" class="clip sub" data-start="41.958" data-duration="1.233" data-track-index="9"><span>ce vol l&#x27;a rendue célèbre</span></div>
-      <div id="sub35" class="clip sub" data-start="43.191" data-duration="1.308" data-track-index="9"><span>dans le monde entier.</span></div>
-      <div id="sub36" class="clip sub" data-start="44.499" data-duration="0.645" data-track-index="9"><span>Tout est parti</span></div>
-      <div id="sub37" class="clip sub" data-start="45.144" data-duration="0.888" data-track-index="9"><span>de quatre crochets</span></div>
-      <div id="sub38" class="clip sub" data-start="46.032" data-duration="1.501" data-track-index="9"><span>sur un mur vide.</span></div>
-      <audio id="mix" src="build/mix_master.wav" data-start="0" data-duration="47.5333" data-track-index="20"></audio>
+      <div id="sub3" class="clip sub" data-start="4.618" data-duration="1.385" data-track-index="9"><span>La Joconde a disparu.</span></div>
+      <div id="sub4" class="clip sub" data-start="6.003" data-duration="1.027" data-track-index="9"><span>Qui a pu la sortir</span></div>
+      <div id="sub5" class="clip sub" data-start="7.030" data-duration="0.874" data-track-index="9"><span>du musée ?</span></div>
+      <div id="sub6" class="clip sub" data-start="8.054" data-duration="0.900" data-track-index="9"><span>Ce matin-là,</span></div>
+      <div id="sub7" class="clip sub" data-start="8.954" data-duration="0.986" data-track-index="9"><span>le peintre Louis Béroud</span></div>
+      <div id="sub8" class="clip sub" data-start="9.940" data-duration="0.974" data-track-index="9"><span>vient la copier.</span></div>
+      <div id="sub9" class="clip sub" data-start="10.914" data-duration="1.110" data-track-index="9"><span>Les gardiens la croient</span></div>
+      <div id="sub10" class="clip sub" data-start="12.024" data-duration="1.089" data-track-index="9"><span>chez le photographe.</span></div>
+      <div id="sub11" class="clip sub" data-start="13.113" data-duration="1.210" data-track-index="9"><span>Mais dans un escalier,</span></div>
+      <div id="sub12" class="clip sub" data-start="14.323" data-duration="1.837" data-track-index="9"><span>on retrouve son cadre vide.</span></div>
+      <div id="sub13" class="clip sub" data-start="16.160" data-duration="1.390" data-track-index="9"><span>Une semaine plus tard,</span></div>
+      <div id="sub14" class="clip sub" data-start="17.550" data-duration="0.995" data-track-index="9"><span>la foule vient voir…</span></div>
+      <div id="sub15" class="clip sub" data-start="18.545" data-duration="1.013" data-track-index="9"><span>le mur vide.</span></div>
+      <div id="sub16" class="clip sub" data-start="19.658" data-duration="1.370" data-track-index="9"><span>Le 7 septembre,</span></div>
+      <div id="sub17" class="clip sub" data-start="21.028" data-duration="0.899" data-track-index="9"><span>on emprisonne même</span></div>
+      <div id="sub18" class="clip sub" data-start="21.927" data-duration="1.168" data-track-index="9"><span>le poète Apollinaire.</span></div>
+      <div id="sub19" class="clip sub" data-start="23.095" data-duration="1.244" data-track-index="9"><span>Il passe près d’une semaine</span></div>
+      <div id="sub20" class="clip sub" data-start="24.339" data-duration="0.822" data-track-index="9"><span>à la Santé.</span></div>
+      <div id="sub21" class="clip sub" data-start="25.161" data-duration="1.341" data-track-index="9"><span>Fausse piste.</span></div>
+      <div id="sub22" class="clip sub" data-start="26.652" data-duration="1.065" data-track-index="9"><span>Pourtant, un indice</span></div>
+      <div id="sub23" class="clip sub" data-start="27.717" data-duration="1.065" data-track-index="9"><span>reste sur la vitre :</span></div>
+      <div id="sub24" class="clip sub" data-start="28.782" data-duration="1.341" data-track-index="9"><span>une empreinte de pouce.</span></div>
+      <div id="sub25" class="clip sub" data-start="30.123" data-duration="0.995" data-track-index="9"><span>Le voleur est déjà</span></div>
+      <div id="sub26" class="clip sub" data-start="31.118" data-duration="1.361" data-track-index="9"><span>fiché par la police.</span></div>
+      <div id="sub27" class="clip sub" data-start="32.479" data-duration="0.713" data-track-index="9"><span>Personne ne fait</span></div>
+      <div id="sub28" class="clip sub" data-start="33.192" data-duration="1.184" data-track-index="9"><span>le rapprochement.</span></div>
+      <div id="sub29" class="clip sub" data-start="34.576" data-duration="1.363" data-track-index="9"><span>Plus de deux ans passent.</span></div>
+      <div id="sub30" class="clip sub" data-start="35.939" data-duration="0.790" data-track-index="9"><span>Le tableau dort</span></div>
+      <div id="sub31" class="clip sub" data-start="36.729" data-duration="0.790" data-track-index="9"><span>dans une chambre</span></div>
+      <div id="sub32" class="clip sub" data-start="37.519" data-duration="1.032" data-track-index="9"><span>parisienne.</span></div>
+      <div id="sub33" class="clip sub" data-start="38.601" data-duration="2.391" data-track-index="9"><span>En décembre 1913, un homme</span></div>
+      <div id="sub34" class="clip sub" data-start="40.992" data-duration="1.353" data-track-index="9"><span>le propose à un antiquaire</span></div>
+      <div id="sub35" class="clip sub" data-start="42.345" data-duration="0.977" data-track-index="9"><span>de Florence.</span></div>
+      <div id="sub36" class="clip sub" data-start="43.322" data-duration="1.273" data-track-index="9"><span>L’antiquaire fait venir</span></div>
+      <div id="sub37" class="clip sub" data-start="44.595" data-duration="1.357" data-track-index="9"><span>le directeur des Offices :</span></div>
+      <div id="sub38" class="clip sub" data-start="45.952" data-duration="1.467" data-track-index="9"><span>c’est bien la Joconde.</span></div>
+      <div id="sub39" class="clip sub" data-start="47.419" data-duration="1.421" data-track-index="9"><span>Le vendeur est arrêté.</span></div>
+      <div id="sub40" class="clip sub" data-start="48.840" data-duration="0.624" data-track-index="9"><span>Il s’appelle</span></div>
+      <div id="sub41" class="clip sub" data-start="49.464" data-duration="1.336" data-track-index="9"><span>Vincenzo Peruggia,</span></div>
+      <div id="sub42" class="clip sub" data-start="50.800" data-duration="1.405" data-track-index="9"><span>un vitrier italien.</span></div>
+      <div id="sub43" class="clip sub" data-start="52.205" data-duration="0.710" data-track-index="9"><span>Au Louvre,</span></div>
+      <div id="sub44" class="clip sub" data-start="52.915" data-duration="0.852" data-track-index="9"><span>il avait travaillé</span></div>
+      <div id="sub45" class="clip sub" data-start="53.767" data-duration="0.780" data-track-index="9"><span>sur la vitrine</span></div>
+      <div id="sub46" class="clip sub" data-start="54.547" data-duration="1.110" data-track-index="9"><span>de la Joconde.</span></div>
+      <div id="sub47" class="clip sub" data-start="55.657" data-duration="1.370" data-track-index="9"><span>Un lundi de fermeture,</span></div>
+      <div id="sub48" class="clip sub" data-start="57.027" data-duration="1.160" data-track-index="9"><span>en blouse d’ouvrier,</span></div>
+      <div id="sub49" class="clip sub" data-start="58.187" data-duration="0.845" data-track-index="9"><span>il avait décroché</span></div>
+      <div id="sub50" class="clip sub" data-start="59.032" data-duration="0.693" data-track-index="9"><span>le tableau.</span></div>
+      <div id="sub51" class="clip sub" data-start="59.725" data-duration="1.371" data-track-index="9"><span>Le cadre, il l’avait laissé</span></div>
+      <div id="sub52" class="clip sub" data-start="61.096" data-duration="1.105" data-track-index="9"><span>dans l’escalier.</span></div>
+      <div id="sub53" class="clip sub" data-start="62.301" data-duration="1.596" data-track-index="9"><span>À son procès, il dit avoir</span></div>
+      <div id="sub54" class="clip sub" data-start="63.897" data-duration="1.472" data-track-index="9"><span>voulu la rendre à l’Italie.</span></div>
+      <div id="sub55" class="clip sub" data-start="65.369" data-duration="0.850" data-track-index="9"><span>Elle était pourtant</span></div>
+      <div id="sub56" class="clip sub" data-start="66.219" data-duration="0.927" data-track-index="9"><span>en France depuis</span></div>
+      <div id="sub57" class="clip sub" data-start="67.146" data-duration="1.354" data-track-index="9"><span>le seizième siècle.</span></div>
+      <div id="sub58" class="clip sub" data-start="68.500" data-duration="2.470" data-track-index="9"><span>Le 4 janvier 1914,</span></div>
+      <div id="sub59" class="clip sub" data-start="70.970" data-duration="1.114" data-track-index="9"><span>la Joconde retrouve</span></div>
+      <div id="sub60" class="clip sub" data-start="72.084" data-duration="0.877" data-track-index="9"><span>le Louvre.</span></div>
+      <div id="sub61" class="clip sub" data-start="73.061" data-duration="1.330" data-track-index="9"><span>Pour beaucoup d’historiens,</span></div>
+      <div id="sub62" class="clip sub" data-start="74.391" data-duration="1.233" data-track-index="9"><span>ce vol l’a rendue célèbre</span></div>
+      <div id="sub63" class="clip sub" data-start="75.624" data-duration="1.309" data-track-index="9"><span>dans le monde entier.</span></div>
+      <div id="sub64" class="clip sub" data-start="76.933" data-duration="0.645" data-track-index="9"><span>Tout est parti</span></div>
+      <div id="sub65" class="clip sub" data-start="77.578" data-duration="0.888" data-track-index="9"><span>de quatre crochets</span></div>
+      <div id="sub66" class="clip sub" data-start="78.466" data-duration="1.501" data-track-index="9"><span>sur un mur vide.</span></div>
+      <audio id="mix" src="build/mix_master.wav" data-start="0" data-duration="79.9666" data-track-index="20"></audio>
     </div>
     <script>
       (function () {
         const tl = gsap.timeline({ paused: true });
         tl.fromTo("#p01-cam", {scale:1.0, x:0, y:0}, {scale:1.05, x:0, y:-10, duration:3.1333, ease:"sine.inOut"}, 0.0);
         tl.fromTo("#p01-carton", {opacity:1, y:0}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 0.000);
-        tl.fromTo("#p02-cam", {scale:1.0, x:0, y:0}, {scale:1.07, x:-12, y:-18, duration:2.9333, ease:"sine.inOut"}, 3.1333);
-        tl.fromTo("#p03-cam", {scale:1.06, x:0, y:0}, {scale:1.0, x:0, y:0, duration:2.1000, ease:"sine.inOut"}, 6.0666);
-        tl.fromTo("#p03-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 6.167);
-        tl.fromTo("#p04-cam", {scale:1.0, x:0, y:0}, {scale:1.05, x:0, y:-14, duration:2.4667, ease:"sine.inOut"}, 8.1666);
-        tl.fromTo("#p04-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 8.267);
-        tl.fromTo("#p05-cam", {scale:1.04, x:10, y:0}, {scale:1.0, x:0, y:0, duration:3.6333, ease:"sine.inOut"}, 10.6333);
-        tl.fromTo("#p05-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 10.733);
-        tl.to("#p05-carton", {opacity:0, duration:0.15, ease:"power1.in"}, 12.559);
-        tl.fromTo("#p05-carton2", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 12.709);
-        tl.fromTo("#p06-cam", {scale:1.0, x:0, y:0}, {scale:1.08, x:0, y:10, duration:3.0334, ease:"sine.inOut"}, 14.2666);
-        tl.fromTo("#p06-glow", {opacity:0}, {opacity:1, duration:0.6, ease:"power2.out"}, 16.135);
-        tl.fromTo("#p07-cam", {scale:1.06, x:0, y:-10}, {scale:1.0, x:0, y:0, duration:4.2000, ease:"sine.inOut"}, 17.3);
-        tl.fromTo("#p08-cam", {scale:1.0, x:0, y:0}, {scale:1.05, x:8, y:0, duration:4.0333, ease:"sine.inOut"}, 21.0);
-        tl.fromTo("#p08-fade", {opacity:0}, {opacity:1, duration:0.5, ease:"sine.inOut"}, 21.0);
-        tl.fromTo("#p08-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 21.100);
-        tl.fromTo("#p09-cam", {scale:1.0, x:0, y:0}, {scale:1.06, x:-30, y:-20, duration:4.7667, ease:"sine.inOut"}, 25.0333);
-        tl.fromTo("#p09-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 25.133);
-        tl.fromTo("#route", {strokeDashoffset:1400, strokeDasharray:"1400 1400"}, {strokeDashoffset:0, duration:3.691, ease:"power1.inOut"}, 25.233);
-        tl.fromTo("#florence-ring", {attr:{r:13}, opacity:1}, {attr:{r:70}, opacity:0, duration:1.0, ease:"power2.out"}, 28.924);
-        tl.fromTo("#florence-label", {opacity:0}, {opacity:1, duration:0.3, ease:"power2.out"}, 28.824);
-        tl.fromTo("#p10-cam", {scale:1.0, x:0, y:0}, {scale:1.05, x:6, y:-6, duration:4.0000, ease:"sine.inOut"}, 29.8);
-        tl.fromTo("#p10-carton2", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 31.056);
-        tl.fromTo("#p11-cam", {scale:1.06, x:0, y:-16}, {scale:1.0, x:0, y:0, duration:2.8666, ease:"sine.inOut"}, 33.8);
-        tl.fromTo("#p11-glow", {xPercent:-120, opacity:1}, {xPercent:120, opacity:1, duration:1.1, ease:"sine.inOut"}, 35.117);
-        tl.fromTo("#p12-cam", {scale:1.0, x:0, y:0}, {scale:1.06, x:0, y:-16, duration:3.9667, ease:"sine.inOut"}, 36.6666);
-        tl.fromTo("#p12-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 36.767);
-        tl.fromTo("#p13-cam", {scale:1.0, x:0, y:0}, {scale:1.06, x:0, y:8, duration:3.8667, ease:"sine.inOut"}, 40.6333);
-        tl.fromTo("#p14-cam", {scale:1.05, x:0, y:-10}, {scale:1.0, x:0, y:0, duration:3.0333, ease:"sine.inOut"}, 44.5);
-        tl.fromTo("#p14-cartonfin", {opacity:0}, {opacity:1, duration:0.8, ease:"sine.inOut"}, 46.533);
+        tl.fromTo("#p02-cam", {scale:1.0, x:0, y:0}, {scale:1.07, x:-12, y:-18, duration:2.8667, ease:"sine.inOut"}, 3.1333);
+        tl.fromTo("#p03-cam", {scale:1.06, x:0, y:0}, {scale:1.0, x:0, y:0, duration:2.0666, ease:"sine.inOut"}, 6.0);
+        tl.fromTo("#p03-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 6.100);
+        tl.fromTo("#p04-cam", {scale:1.0, x:0, y:0}, {scale:1.05, x:10, y:-10, duration:2.8334, ease:"sine.inOut"}, 8.0666);
+        tl.fromTo("#p04-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 8.167);
+        tl.fromTo("#p05-cam", {scale:1.04, x:0, y:0}, {scale:1.0, x:0, y:0, duration:2.2000, ease:"sine.inOut"}, 10.9);
+        tl.fromTo("#p06-cam", {scale:1.0, x:0, y:0}, {scale:1.06, x:-20, y:10, duration:3.0666, ease:"sine.inOut"}, 13.1);
+        tl.fromTo("#p07-cam", {scale:1.05, x:0, y:-10}, {scale:1.0, x:0, y:0, duration:3.5000, ease:"sine.inOut"}, 16.1666);
+        tl.fromTo("#p07-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 16.267);
+        tl.fromTo("#p08-cam", {scale:1.0, x:0, y:0}, {scale:1.05, x:8, y:-10, duration:3.4334, ease:"sine.inOut"}, 19.6666);
+        tl.fromTo("#p08-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 19.767);
+        tl.fromTo("#p09-cam", {scale:1.04, x:10, y:0}, {scale:1.0, x:0, y:0, duration:3.5666, ease:"sine.inOut"}, 23.1);
+        tl.fromTo("#p09-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 23.200);
+        tl.to("#p09-carton", {opacity:0, duration:0.15, ease:"power1.in"}, 25.011);
+        tl.fromTo("#p09-carton2", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 25.161);
+        tl.fromTo("#p10-cam", {scale:1.0, x:0, y:0}, {scale:1.08, x:0, y:10, duration:3.4667, ease:"sine.inOut"}, 26.6666);
+        tl.fromTo("#p10-glow", {opacity:0}, {opacity:1, duration:0.6, ease:"power2.out"}, 28.938);
+        tl.fromTo("#p11-cam", {scale:1.06, x:0, y:-10}, {scale:1.0, x:0, y:0, duration:2.3333, ease:"sine.inOut"}, 30.1333);
+        tl.fromTo("#p12-cam", {scale:1.0, x:0, y:0}, {scale:1.06, x:10, y:0, duration:2.6000, ease:"sine.inOut"}, 32.4666);
+        tl.fromTo("#p13-cam", {scale:1.0, x:0, y:0}, {scale:1.05, x:8, y:0, duration:4.0334, ease:"sine.inOut"}, 34.5666);
+        tl.fromTo("#p13-fade", {opacity:0}, {opacity:1, duration:0.5, ease:"sine.inOut"}, 34.5666);
+        tl.fromTo("#p13-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 34.667);
+        tl.fromTo("#p14-cam", {scale:1.0, x:0, y:0}, {scale:1.06, x:-30, y:-20, duration:4.7333, ease:"sine.inOut"}, 38.6);
+        tl.fromTo("#p14-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 38.700);
+        tl.fromTo("#route", {strokeDashoffset:1400, strokeDasharray:"1400 1400"}, {strokeDashoffset:0, duration:3.696, ease:"power1.inOut"}, 38.800);
+        tl.fromTo("#florence-ring", {attr:{r:13}, opacity:1}, {attr:{r:70}, opacity:0, duration:1.0, ease:"power2.out"}, 42.496);
+        tl.fromTo("#florence-label", {opacity:0}, {opacity:1, duration:0.3, ease:"power2.out"}, 42.396);
+        tl.fromTo("#p15-cam", {scale:1.05, x:0, y:-20}, {scale:1.0, x:0, y:0, duration:4.1000, ease:"sine.inOut"}, 43.3333);
+        tl.fromTo("#p15-glow", {xPercent:-120, opacity:1}, {xPercent:120, opacity:1, duration:1.1, ease:"sine.inOut"}, 46.618);
+        tl.fromTo("#p16-cam", {scale:1.0, x:0, y:0}, {scale:1.05, x:6, y:-6, duration:3.5000, ease:"sine.inOut"}, 47.4333);
+        tl.fromTo("#p16-carton2", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 49.464);
+        tl.fromTo("#p17-cam", {scale:1.05, x:0, y:-10}, {scale:1.0, x:0, y:0, duration:3.2000, ease:"sine.inOut"}, 50.9333);
+        tl.fromTo("#p18-cam", {scale:1.06, x:0, y:-16}, {scale:1.0, x:0, y:0, duration:2.9000, ease:"sine.inOut"}, 54.1333);
+        tl.fromTo("#p18-glow", {xPercent:-120, opacity:1}, {xPercent:120, opacity:1, duration:1.1, ease:"sine.inOut"}, 54.122);
+        tl.fromTo("#p19-cam", {scale:1.0, x:0, y:0}, {scale:1.06, x:0, y:-16, duration:2.7000, ease:"sine.inOut"}, 57.0333);
+        tl.fromTo("#p19-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 57.133);
+        tl.fromTo("#p20-cam", {scale:1.08, x:40, y:-30}, {scale:1.02, x:0, y:0, duration:2.5667, ease:"sine.inOut"}, 59.7333);
+        tl.fromTo("#p21-cam", {scale:1.0, x:0, y:0}, {scale:1.05, x:0, y:-14, duration:3.0666, ease:"sine.inOut"}, 62.3);
+        tl.fromTo("#p21-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 62.400);
+        tl.fromTo("#p22-cam", {scale:1.0, x:0, y:0}, {scale:1.05, x:0, y:0, duration:3.1334, ease:"sine.inOut"}, 65.3666);
+        tl.fromTo("#p22-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 65.467);
+        tl.fromTo("#p23-cam", {scale:1.06, x:0, y:-10}, {scale:1.0, x:0, y:0, duration:4.5666, ease:"sine.inOut"}, 68.5);
+        tl.fromTo("#p23-carton", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3, ease:"power2.out"}, 68.600);
+        tl.fromTo("#p23-glow", {xPercent:-120, opacity:1}, {xPercent:120, opacity:1, duration:1.1, ease:"sine.inOut"}, 72.243);
+        tl.fromTo("#p24-cam", {scale:1.0, x:0, y:0}, {scale:1.06, x:0, y:8, duration:3.8667, ease:"sine.inOut"}, 73.0666);
+        tl.fromTo("#p25-cam", {scale:1.05, x:0, y:-10}, {scale:1.0, x:0, y:0, duration:3.0333, ease:"sine.inOut"}, 76.9333);
+        tl.fromTo("#p25-cartonfin", {opacity:0}, {opacity:1, duration:0.8, ease:"sine.inOut"}, 78.967);
         window.__timelines["main"] = tl;
         tl.seek(0);
       })();

@@ -43,10 +43,12 @@ def load() -> dict:
     for i, pl in enumerate(out):
         pl["fin"] = out[i + 1]["debut"] if i + 1 < len(out) else duree
         pl["duree"] = round(pl["fin"] - pl["debut"], 4)
-        for key in ("revele", "carton_2"):
-            if key in pl and "phrase" in pl[key]:
-                pl[key]["t"] = round(at(pl[key]), 3)
-    return {"duree": duree, "plans": out, "phrases": chrono["phrases"], "voix_fin": chrono["voix_fin"]}
+        for key in ("revele", "carton_2", "cloche", "coup"):
+            if key in pl:
+                pl[key] = dict(pl[key])
+                pl[key]["t"] = round(at(pl[key]), 3) if "phrase" in pl[key] else pl["debut"]
+    return {"duree": duree, "plans": out, "phrases": chrono["phrases"], "voix_fin": chrono["voix_fin"],
+            "musique": plans.get("musique", {}), "voix": {k: chrono.get(k) for k in ("moteur", "modele", "voix", "brouillon")}}
 
 
 if __name__ == "__main__":
