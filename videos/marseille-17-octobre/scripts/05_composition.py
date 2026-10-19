@@ -292,6 +292,8 @@ def horloge(cfg: dict) -> str:
 FAIBLES = set("le la les l' un une des de du d' et ou à au aux en par pour sur dans que qui ce cette ces son sa ses "
               "leur leurs ne n' se s' il elle ils on y est a avec sans selon".split())
 FERMANTS = {":", ";", "?", "!", "»", "».", "»,"}    # ponctuation détachée qui ne commence jamais un sous-titre
+UNITES = {"h", "heure", "heures", "m", "mètre", "mètres", "km", "kilomètres", "jours", "ans", "%", "euros", "€", "millions",
+          "milliards", "000"}   # jamais séparées du nombre qui les précède
 
 
 def sous_titres(chrono: dict, max_car: int = 84) -> list[dict]:
@@ -315,7 +317,8 @@ def sous_titres(chrono: dict, max_car: int = 84) -> list[dict]:
                 if j < len(mots):
                     k = j
                     while k - 1 > i + 2 and (norm(mots[k - 1]["mot"]) in FAIBLES or mots[k - 1]["mot"] == "«"
-                                             or mots[k]["mot"] in FERMANTS):
+                                             or mots[k]["mot"] in FERMANTS
+                                             or (norm(mots[k]["mot"]) in UNITES and any(c.isdigit() for c in mots[k - 1]["mot"]))):
                         k -= 1
                     j = k
                 txt = typo(" ".join(m["mot"] for m in mots[i:j]))
