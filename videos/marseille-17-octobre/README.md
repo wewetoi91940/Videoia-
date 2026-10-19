@@ -20,6 +20,8 @@ Toute la vidéo est produite par une chaîne de scripts reproductible, sans imag
 | `docs/00_dossier_initial.md` | Premier dossier (extraits de moteur de recherche) : historique, en partie corrigé |
 | `docs/01_verification_sources.md` | **Vérification fait par fait** sur plus de 60 articles lus en entier : sources, verdicts, contradictions, heures publiées |
 | `scripts/script.json` | Texte de la voix off (70 phrases, 12 séquences), avec les sources de chaque phrase |
+| `scripts/01_voix.py` | Voix Google par blocs ; bornes des phrases alignées sur une transcription Whisper (`hyperframes transcribe`) |
+| `scripts/03b_floutage.py` | Floutage automatique des visages sur les photos (YuNet, OpenCV) |
 | `scripts/plans_source.py` → `scripts/plans.json` | Plan de montage : 57 plans ancrés sur des mots de la voix |
 | `docs/06_publication.md` | Titre, description, chapitres, sources, mentions IA |
 | `docs/07_controle_qualite.md` | Contrôle qualité **mesuré** |
@@ -57,10 +59,14 @@ La clé n'est **jamais** écrite dans un fichier ni collée dans une conversatio
 
 | Fichier | Contenu |
 |---|---|
-| `marseille-17-octobre.mp4` | Vidéo finale, H.264 + AAC, −14 LUFS, crête vraie ≤ −1,5 dBTP |
+| `marseille-17-octobre.mp4` | Vidéo finale 1920×1080, 30 i/s, 8 min 29 s, H.264 + AAC, −14 LUFS, crête vraie ≤ −1,5 dBTP (≈ 540 Mo, qualité « master » pour YouTube) |
+| `marseille-17-octobre_telephone-720p.mp4` | Même vidéo en 1280×720, ≈ 85 Mo, pour le partage et le téléphone |
 | `marseille-17-octobre_sans-son.mp4` | Même image, sans son |
 | `marseille-17-octobre.srt` | Sous-titres (2 lignes de 42 caractères au plus) |
 | `pistes/voix.flac` | Voix seule, au niveau du mix |
+
+Les MP4 et la piste FLAC dépassent la limite de GitHub (100 Mo par fichier) : ils ne sont pas versionnés.
+`./make.sh rendu livrables` les régénère à l'identique (le cache de la voix Google est versionné : aucune requête n'est relancée).
 
 ## Outils bloqués et solutions retenues
 

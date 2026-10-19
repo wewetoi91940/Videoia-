@@ -1,15 +1,15 @@
 {
  "Voix Google livrée": {
-  "conforme": false,
-  "detail": "moteur kokoro, voix ff_siwis, modèle kokoro-v1.0 — BROUILLON de calage, à remplacer"
+  "conforme": true,
+  "detail": "moteur gemini, voix Charon, modèle gemini-3.1-flash-tts-preview"
  },
  "Durée 6 à 9 min 30": {
   "conforme": true,
-  "detail": "481.4 s (8 min 01.4 s), voix seule 463.4 s"
+  "detail": "509.3 s (8 min 29.3 s), voix seule 491.3 s"
  },
  "Loudness −14 LUFS ±0,5": {
   "conforme": true,
-  "detail": "-14.03 LUFS"
+  "detail": "-14.17 LUFS"
  },
  "Crête vraie ≤ −1,5 dBTP": {
   "conforme": true,
@@ -17,11 +17,11 @@
  },
  "Musique ≥ 15 dB sous la voix": {
   "conforme": true,
-  "detail": "écart intégré 26.83 dB ; fenêtres de 400 ms : médiane 24.9 dB, 5e centile 22.7 dB, min 15.5 dB"
+  "detail": "écart intégré 31.44 dB ; fenêtres de 400 ms : médiane 29.8 dB, 5e centile 25.3 dB, min 12.2 dB"
  },
  "Plans lisibles (≥ 2 s)": {
   "conforme": true,
-  "detail": "58 plans ; plus court : P14 (2.37 s)"
+  "detail": "58 plans ; plus court : P14b (2.87 s)"
  },
  "Chaque phrase chiffrée ou citée a une source": {
   "conforme": true,
@@ -41,10 +41,10 @@
  },
  "hyperframes check sans erreur": {
   "conforme": true,
-  "detail": "0 erreur(s), 0 avertissement(s) (tranches de 60 s)"
+  "detail": "0 erreur(s), 819 avertissement(s) (tranches de 60 s)"
  },
- "Vidéo livrée": {
-  "conforme": false,
-  "detail": "livrables/marseille-17-octobre.mp4 absent"
+ "Vidéo livrée 1920×1080, 30 i/s, avec son": {
+  "conforme": true,
+  "detail": "1920×1080, 30/1 i/s, 1 piste(s) audio, 509.30 s, 540.8 Mo"
  }
 }
