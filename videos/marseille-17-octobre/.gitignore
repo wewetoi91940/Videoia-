@@ -1,0 +1,14 @@
+# Régénérables par make.sh (lourds)
+.venv/
+renders/
+.hyperframes/
+build/osm/
+build/voix/
+build/stems/
+build/*.wav
+build/pip.log
+__pycache__/
+build/voix_gemini/travaux.json
+build/voix_gemini/resultats.json
+build/snaps*/
+build/photos_*/

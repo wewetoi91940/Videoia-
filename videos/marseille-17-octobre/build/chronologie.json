@@ -1,0 +1,7518 @@
+{
+ "moteur": "kokoro",
+ "modele": "kokoro-v1.0",
+ "voix": "ff_siwis",
+ "brouillon": true,
+ "voix_fin": 463.357,
+ "duree_parole": 419.815,
+ "mots": 1333,
+ "syllabes_estimees": 2018,
+ "debit_syll_par_s": 4.81,
+ "phrases": [
+  {
+   "id": 1,
+   "cle": "s1_date",
+   "seq": 1,
+   "texte": "Samedi 17 octobre 2026, 11 h 28, sur la Canebière, à Marseille.",
+   "phonemes": "samdˈi disˈɛt ɔktˈɔbʁ dø mil vɛ̃tsˈis, ˈɔ̃z ˈœʁ vˈɛ̃tyˈit, syʁ la kanbjˈɛʁ, a maʁsˈɛj.",
+   "debut": 0.6,
+   "fin": 5.599,
+   "duree": 4.999,
+   "mots": [
+    {
+     "mot": "Samedi",
+     "debut": 0.6,
+     "fin": 1.045
+    },
+    {
+     "mot": "17",
+     "debut": 1.045,
+     "fin": 1.489
+    },
+    {
+     "mot": "octobre",
+     "debut": 1.489,
+     "fin": 2.023
+    },
+    {
+     "mot": "2026,",
+     "debut": 2.023,
+     "fin": 3.09
+    },
+    {
+     "mot": "11",
+     "debut": 3.09,
+     "fin": 3.345
+    },
+    {
+     "mot": "h",
+     "debut": 3.345,
+     "fin": 3.515
+    },
+    {
+     "mot": "28,",
+     "debut": 3.515,
+     "fin": 4.11
+    },
+    {
+     "mot": "sur",
+     "debut": 4.11,
+     "fin": 4.345
+    },
+    {
+     "mot": "la",
+     "debut": 4.345,
+     "fin": 4.502
+    },
+    {
+     "mot": "Canebière,",
+     "debut": 4.502,
+     "fin": 5.05
+    },
+    {
+     "mot": "à",
+     "debut": 5.05,
+     "fin": 5.129
+    },
+    {
+     "mot": "Marseille.",
+     "debut": 5.129,
+     "fin": 5.599
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "cle": "s1_poste",
+   "seq": 1,
+   "texte": "Le direct de La Provence signale le poste de police municipale « en cours de destruction ».",
+   "phonemes": "lə diʁˈɛkt də la pʁovˈɑ̃s sinjˈal lə pˈɔst də polˈis mynisipˈal  ɑ̃ kˈuʁ də dɛstʁyksjˈɔ̃ .",
+   "debut": 6.019,
+   "fin": 11.163,
+   "duree": 5.144,
+   "mots": [
+    {
+     "mot": "Le",
+     "debut": 6.019,
+     "fin": 6.177
+    },
+    {
+     "mot": "direct",
+     "debut": 6.177,
+     "fin": 6.652
+    },
+    {
+     "mot": "de",
+     "debut": 6.652,
+     "fin": 6.81
+    },
+    {
+     "mot": "La",
+     "debut": 6.81,
+     "fin": 6.969
+    },
+    {
+     "mot": "Provence",
+     "debut": 6.969,
+     "fin": 7.523
+    },
+    {
+     "mot": "signale",
+     "debut": 7.523,
+     "fin": 7.998
+    },
+    {
+     "mot": "le",
+     "debut": 7.998,
+     "fin": 8.156
+    },
+    {
+     "mot": "poste",
+     "debut": 8.156,
+     "fin": 8.472
+    },
+    {
+     "mot": "de",
+     "debut": 8.472,
+     "fin": 8.631
+    },
+    {
+     "mot": "police",
+     "debut": 8.631,
+     "fin": 9.026
+    },
+    {
+     "mot": "municipale",
+     "debut": 9.026,
+     "fin": 9.739
+    },
+    {
+     "mot": "«",
+     "debut": 9.739,
+     "fin": 9.739
+    },
+    {
+     "mot": "en",
+     "debut": 9.739,
+     "fin": 9.897
+    },
+    {
+     "mot": "cours",
+     "debut": 9.897,
+     "fin": 10.134
+    },
+    {
+     "mot": "de",
+     "debut": 10.134,
+     "fin": 10.293
+    },
+    {
+     "mot": "destruction",
+     "debut": 10.293,
+     "fin": 11.163
+    },
+    {
+     "mot": "».",
+     "debut": 11.163,
+     "fin": 11.163
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "cle": "s1_vitres",
+   "seq": 1,
+   "texte": "Dix-neuf minutes plus tard, ses vitres sont « intégralement brisées ».",
+   "phonemes": "dˈiznˈœf minˈyt ply tˈaʁ, se vˈitʁ sˈɔ̃  ɛ̃teɡʁalmˈɑ̃ bʁizˈe .",
+   "debut": 11.583,
+   "fin": 14.907,
+   "duree": 3.323,
+   "mots": [
+    {
+     "mot": "Dix-neuf",
+     "debut": 11.583,
+     "fin": 12.172
+    },
+    {
+     "mot": "minutes",
+     "debut": 12.172,
+     "fin": 12.664
+    },
+    {
+     "mot": "plus",
+     "debut": 12.664,
+     "fin": 12.958
+    },
+    {
+     "mot": "tard,",
+     "debut": 12.958,
+     "fin": 13.253
+    },
+    {
+     "mot": "ses",
+     "debut": 13.253,
+     "fin": 13.385
+    },
+    {
+     "mot": "vitres",
+     "debut": 13.385,
+     "fin": 13.65
+    },
+    {
+     "mot": "sont",
+     "debut": 13.65,
+     "fin": 13.848
+    },
+    {
+     "mot": "«",
+     "debut": 13.848,
+     "fin": 13.848
+    },
+    {
+     "mot": "intégralement",
+     "debut": 13.848,
+     "fin": 14.576
+    },
+    {
+     "mot": "brisées",
+     "debut": 14.576,
+     "fin": 14.906
+    },
+    {
+     "mot": "».",
+     "debut": 14.906,
+     "fin": 14.906
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "cle": "s1_pref",
+   "seq": 1,
+   "texte": "Selon la préfecture, des fumigènes ont été lancés à l'intérieur, et personne n'est blessé.",
+   "phonemes": "səlˈɔ̃ la pʁefɛktˈyʁ, de fymiʒˈɛnz ˈɔ̃t etˈe lɑ̃sˈez a lɛ̃teʁjˈœʁ, e pɛʁsˈɔn nɛ blɛsˈe.",
+   "debut": 15.327,
+   "fin": 20.297,
+   "duree": 4.97,
+   "mots": [
+    {
+     "mot": "Selon",
+     "debut": 15.327,
+     "fin": 15.774
+    },
+    {
+     "mot": "la",
+     "debut": 15.774,
+     "fin": 15.953
+    },
+    {
+     "mot": "préfecture,",
+     "debut": 15.953,
+     "fin": 16.757
+    },
+    {
+     "mot": "des",
+     "debut": 16.757,
+     "fin": 16.927
+    },
+    {
+     "mot": "fumigènes",
+     "debut": 16.927,
+     "fin": 17.52
+    },
+    {
+     "mot": "ont",
+     "debut": 17.52,
+     "fin": 17.69
+    },
+    {
+     "mot": "été",
+     "debut": 17.69,
+     "fin": 17.945
+    },
+    {
+     "mot": "lancés",
+     "debut": 17.945,
+     "fin": 18.369
+    },
+    {
+     "mot": "à",
+     "debut": 18.369,
+     "fin": 18.454
+    },
+    {
+     "mot": "l'intérieur,",
+     "debut": 18.454,
+     "fin": 19.217
+    },
+    {
+     "mot": "et",
+     "debut": 19.217,
+     "fin": 19.294
+    },
+    {
+     "mot": "personne",
+     "debut": 19.294,
+     "fin": 19.757
+    },
+    {
+     "mot": "n'est",
+     "debut": 19.757,
+     "fin": 19.911
+    },
+    {
+     "mot": "blessé.",
+     "debut": 19.911,
+     "fin": 20.297
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "cle": "s1_ferreol",
+   "seq": 1,
+   "texte": "À quelques rues de là, rue Saint-Ferréol, des magasins fermés sur conseil de la préfecture sont déjà fracturés et pillés.",
+   "phonemes": "a kˌɛlkə ʁˈy də lˈa, ʁˈy sˈɛ̃fɛʁeˈɔl, de maɡazˈɛ̃ fɛʁmˈe syʁ kɔ̃sˈɛj də la pʁefɛktˈyʁ sˈɔ̃ deʒˈa fʁaktyʁˈez e pijˈe.",
+   "debut": 20.717,
+   "fin": 27.455,
+   "duree": 6.738,
+   "mots": [
+    {
+     "mot": "À",
+     "debut": 20.717,
+     "fin": 20.825
+    },
+    {
+     "mot": "quelques",
+     "debut": 20.825,
+     "fin": 21.367
+    },
+    {
+     "mot": "rues",
+     "debut": 21.367,
+     "fin": 21.584
+    },
+    {
+     "mot": "de",
+     "debut": 21.584,
+     "fin": 21.8
+    },
+    {
+     "mot": "là,",
+     "debut": 21.8,
+     "fin": 22.017
+    },
+    {
+     "mot": "rue",
+     "debut": 22.017,
+     "fin": 22.248
+    },
+    {
+     "mot": "Saint-Ferréol,",
+     "debut": 22.248,
+     "fin": 23.287
+    },
+    {
+     "mot": "des",
+     "debut": 23.287,
+     "fin": 23.436
+    },
+    {
+     "mot": "magasins",
+     "debut": 23.436,
+     "fin": 23.957
+    },
+    {
+     "mot": "fermés",
+     "debut": 23.957,
+     "fin": 24.329
+    },
+    {
+     "mot": "sur",
+     "debut": 24.329,
+     "fin": 24.552
+    },
+    {
+     "mot": "conseil",
+     "debut": 24.552,
+     "fin": 24.999
+    },
+    {
+     "mot": "de",
+     "debut": 24.999,
+     "fin": 25.148
+    },
+    {
+     "mot": "la",
+     "debut": 25.148,
+     "fin": 25.297
+    },
+    {
+     "mot": "préfecture",
+     "debut": 25.297,
+     "fin": 25.967
+    },
+    {
+     "mot": "sont",
+     "debut": 25.967,
+     "fin": 26.19
+    },
+    {
+     "mot": "déjà",
+     "debut": 26.19,
+     "fin": 26.488
+    },
+    {
+     "mot": "fracturés",
+     "debut": 26.488,
+     "fin": 27.083
+    },
+    {
+     "mot": "et",
+     "debut": 27.083,
+     "fin": 27.158
+    },
+    {
+     "mot": "pillés.",
+     "debut": 27.158,
+     "fin": 27.455
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "cle": "s1_midi",
+   "seq": 1,
+   "texte": "Il n'est pas encore midi.",
+   "phonemes": "il nɛ paz ɑ̃kˌɔʁ midˈi.",
+   "debut": 27.875,
+   "fin": 29.146,
+   "duree": 1.271,
+   "mots": [
+    {
+     "mot": "Il",
+     "debut": 27.875,
+     "fin": 28.044
+    },
+    {
+     "mot": "n'est",
+     "debut": 28.044,
+     "fin": 28.214
+    },
+    {
+     "mot": "pas",
+     "debut": 28.214,
+     "fin": 28.383
+    },
+    {
+     "mot": "encore",
+     "debut": 28.383,
+     "fin": 28.807
+    },
+    {
+     "mot": "midi.",
+     "debut": 28.807,
+     "fin": 29.146
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "cle": "s1_rdv",
+   "seq": 1,
+   "texte": "Le rassemblement prévu à 14 heures n'a même pas commencé.",
+   "phonemes": "lə ʁasɑ̃bləmˈɑ̃ pʁevˈy a katˈɔʁz ˈœʁ na mˈɛm pa kɔmɑ̃sˈe.",
+   "debut": 29.566,
+   "fin": 32.51,
+   "duree": 2.944,
+   "mots": [
+    {
+     "mot": "Le",
+     "debut": 29.566,
+     "fin": 29.71
+    },
+    {
+     "mot": "rassemblement",
+     "debut": 29.71,
+     "fin": 30.499
+    },
+    {
+     "mot": "prévu",
+     "debut": 30.499,
+     "fin": 30.858
+    },
+    {
+     "mot": "à",
+     "debut": 30.858,
+     "fin": 30.93
+    },
+    {
+     "mot": "14",
+     "debut": 30.93,
+     "fin": 31.361
+    },
+    {
+     "mot": "heures",
+     "debut": 31.361,
+     "fin": 31.505
+    },
+    {
+     "mot": "n'a",
+     "debut": 31.505,
+     "fin": 31.648
+    },
+    {
+     "mot": "même",
+     "debut": 31.648,
+     "fin": 31.864
+    },
+    {
+     "mot": "pas",
+     "debut": 31.864,
+     "fin": 32.007
+    },
+    {
+     "mot": "commencé.",
+     "debut": 32.007,
+     "fin": 32.51
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "cle": "s1_question",
+   "seq": 1,
+   "texte": "Comment une journée de mobilisation contre la vie chère a-t-elle basculé, rue après rue, dans le pillage ?",
+   "phonemes": "kɔmˌɑ̃ yn ʒuʁnˈe də mobilizasjˈɔ̃ kɔ̃tʁ la vˈi ʃˈɛʁ atɛl baskylˈe, ʁˈy apʁˌɛ ʁˈy, dɑ̃ lə pijˈaʒ ?",
+   "debut": 32.93,
+   "fin": 38.398,
+   "duree": 5.469,
+   "mots": [
+    {
+     "mot": "Comment",
+     "debut": 32.93,
+     "fin": 33.317
+    },
+    {
+     "mot": "une",
+     "debut": 33.317,
+     "fin": 33.471
+    },
+    {
+     "mot": "journée",
+     "debut": 33.471,
+     "fin": 33.858
+    },
+    {
+     "mot": "de",
+     "debut": 33.858,
+     "fin": 34.013
+    },
+    {
+     "mot": "mobilisation",
+     "debut": 34.013,
+     "fin": 34.941
+    },
+    {
+     "mot": "contre",
+     "debut": 34.941,
+     "fin": 35.328
+    },
+    {
+     "mot": "la",
+     "debut": 35.328,
+     "fin": 35.482
+    },
+    {
+     "mot": "vie",
+     "debut": 35.482,
+     "fin": 35.637
+    },
+    {
+     "mot": "chère",
+     "debut": 35.637,
+     "fin": 35.869
+    },
+    {
+     "mot": "a-t-elle",
+     "debut": 35.869,
+     "fin": 36.179
+    },
+    {
+     "mot": "basculé,",
+     "debut": 36.179,
+     "fin": 36.72
+    },
+    {
+     "mot": "rue",
+     "debut": 36.72,
+     "fin": 36.907
+    },
+    {
+     "mot": "après",
+     "debut": 36.907,
+     "fin": 37.28
+    },
+    {
+     "mot": "rue,",
+     "debut": 37.28,
+     "fin": 37.466
+    },
+    {
+     "mot": "dans",
+     "debut": 37.466,
+     "fin": 37.746
+    },
+    {
+     "mot": "le",
+     "debut": 37.746,
+     "fin": 37.933
+    },
+    {
+     "mot": "pillage",
+     "debut": 37.933,
+     "fin": 38.399
+    },
+    {
+     "mot": "?",
+     "debut": 38.399,
+     "fin": 38.399
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "cle": "s1_annonce",
+   "seq": 1,
+   "texte": "Voici ce que les sources permettent d'établir, moment par moment, et ce qui reste incertain.",
+   "phonemes": "vwasˌi sə kə le sˈuʁs pɛʁmˈɛt detablˈiʁ, momˈɑ̃ paʁ momˈɑ̃, e sə ki ʁˈɛst ɛ̃sɛʁtˈɛ̃.",
+   "debut": 38.818,
+   "fin": 43.458,
+   "duree": 4.64,
+   "mots": [
+    {
+     "mot": "Voici",
+     "debut": 38.818,
+     "fin": 39.219
+    },
+    {
+     "mot": "ce",
+     "debut": 39.219,
+     "fin": 39.38
+    },
+    {
+     "mot": "que",
+     "debut": 39.38,
+     "fin": 39.54
+    },
+    {
+     "mot": "les",
+     "debut": 39.54,
+     "fin": 39.701
+    },
+    {
+     "mot": "sources",
+     "debut": 39.701,
+     "fin": 40.022
+    },
+    {
+     "mot": "permettent",
+     "debut": 40.022,
+     "fin": 40.503
+    },
+    {
+     "mot": "d'établir,",
+     "debut": 40.503,
+     "fin": 41.145
+    },
+    {
+     "mot": "moment",
+     "debut": 41.145,
+     "fin": 41.546
+    },
+    {
+     "mot": "par",
+     "debut": 41.546,
+     "fin": 41.787
+    },
+    {
+     "mot": "moment,",
+     "debut": 41.787,
+     "fin": 42.188
+    },
+    {
+     "mot": "et",
+     "debut": 42.188,
+     "fin": 42.263
+    },
+    {
+     "mot": "ce",
+     "debut": 42.263,
+     "fin": 42.412
+    },
+    {
+     "mot": "qui",
+     "debut": 42.412,
+     "fin": 42.561
+    },
+    {
+     "mot": "reste",
+     "debut": 42.561,
+     "fin": 42.86
+    },
+    {
+     "mot": "incertain.",
+     "debut": 42.86,
+     "fin": 43.458
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "cle": "s2_journee",
+   "seq": 2,
+   "texte": "Ce samedi est une journée nationale de mobilisation contre la vie chère, lancée par des appels sur les réseaux sociaux.",
+   "phonemes": "sə samdˈi ɛt yn ʒuʁnˈe nasjonˈal də mobilizasjˈɔ̃ kɔ̃tʁ la vˈi ʃˈɛʁ, lɑ̃sˈe paʁ dez apˈɛl syʁ le ʁezˈo sosjˈo.",
+   "debut": 48.658,
+   "fin": 55.249,
+   "duree": 6.591,
+   "mots": [
+    {
+     "mot": "Ce",
+     "debut": 48.658,
+     "fin": 48.835
+    },
+    {
+     "mot": "samedi",
+     "debut": 48.835,
+     "fin": 49.277
+    },
+    {
+     "mot": "est",
+     "debut": 49.277,
+     "fin": 49.365
+    },
+    {
+     "mot": "une",
+     "debut": 49.365,
+     "fin": 49.542
+    },
+    {
+     "mot": "journée",
+     "debut": 49.542,
+     "fin": 49.984
+    },
+    {
+     "mot": "nationale",
+     "debut": 49.984,
+     "fin": 50.69
+    },
+    {
+     "mot": "de",
+     "debut": 50.69,
+     "fin": 50.867
+    },
+    {
+     "mot": "mobilisation",
+     "debut": 50.867,
+     "fin": 51.928
+    },
+    {
+     "mot": "contre",
+     "debut": 51.928,
+     "fin": 52.369
+    },
+    {
+     "mot": "la",
+     "debut": 52.369,
+     "fin": 52.546
+    },
+    {
+     "mot": "vie",
+     "debut": 52.546,
+     "fin": 52.723
+    },
+    {
+     "mot": "chère,",
+     "debut": 52.723,
+     "fin": 52.988
+    },
+    {
+     "mot": "lancée",
+     "debut": 52.988,
+     "fin": 53.392
+    },
+    {
+     "mot": "par",
+     "debut": 53.392,
+     "fin": 53.634
+    },
+    {
+     "mot": "des",
+     "debut": 53.634,
+     "fin": 53.796
+    },
+    {
+     "mot": "appels",
+     "debut": 53.796,
+     "fin": 54.119
+    },
+    {
+     "mot": "sur",
+     "debut": 54.119,
+     "fin": 54.361
+    },
+    {
+     "mot": "les",
+     "debut": 54.361,
+     "fin": 54.522
+    },
+    {
+     "mot": "réseaux",
+     "debut": 54.522,
+     "fin": 54.845
+    },
+    {
+     "mot": "sociaux.",
+     "debut": 54.845,
+     "fin": 55.249
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "cle": "s2_programme",
+   "seq": 2,
+   "texte": "À Marseille, une action est annoncée au rond-point du Prado dès 8 heures, puis un rassemblement à 14 heures, sur le Vieux-Port ou la Canebière selon les sources.",
+   "phonemes": "a maʁsˈɛj, yn aksjˈɔ̃ ɛt anɔ̃sˈe o ʁˈɔ̃pwˌɛ̃ dy pʁadˈo dɛ yˈit ˈœʁ, pyˈiz œ̃ ʁasɑ̃bləmˈɑ̃ a katˈɔʁz ˈœʁ, syʁ lə vjˈøpˈɔʁ u la kanbjˈɛʁ səlˈɔ̃ le sˈuʁs.",
+   "debut": 55.669,
+   "fin": 64.026,
+   "duree": 8.356,
+   "mots": [
+    {
+     "mot": "À",
+     "debut": 55.669,
+     "fin": 55.792
+    },
+    {
+     "mot": "Marseille,",
+     "debut": 55.792,
+     "fin": 56.529
+    },
+    {
+     "mot": "une",
+     "debut": 56.529,
+     "fin": 56.693
+    },
+    {
+     "mot": "action",
+     "debut": 56.693,
+     "fin": 57.184
+    },
+    {
+     "mot": "est",
+     "debut": 57.184,
+     "fin": 57.266
+    },
+    {
+     "mot": "annoncée",
+     "debut": 57.266,
+     "fin": 57.757
+    },
+    {
+     "mot": "au",
+     "debut": 57.757,
+     "fin": 57.839
+    },
+    {
+     "mot": "rond-point",
+     "debut": 57.839,
+     "fin": 58.413
+    },
+    {
+     "mot": "du",
+     "debut": 58.413,
+     "fin": 58.576
+    },
+    {
+     "mot": "Prado",
+     "debut": 58.576,
+     "fin": 58.986
+    },
+    {
+     "mot": "dès",
+     "debut": 58.986,
+     "fin": 59.15
+    },
+    {
+     "mot": "8",
+     "debut": 59.15,
+     "fin": 59.395
+    },
+    {
+     "mot": "heures,",
+     "debut": 59.395,
+     "fin": 59.559
+    },
+    {
+     "mot": "puis",
+     "debut": 59.559,
+     "fin": 59.806
+    },
+    {
+     "mot": "un",
+     "debut": 59.806,
+     "fin": 59.971
+    },
+    {
+     "mot": "rassemblement",
+     "debut": 59.971,
+     "fin": 60.877
+    },
+    {
+     "mot": "à",
+     "debut": 60.877,
+     "fin": 60.96
+    },
+    {
+     "mot": "14",
+     "debut": 60.96,
+     "fin": 61.454
+    },
+    {
+     "mot": "heures,",
+     "debut": 61.454,
+     "fin": 61.619
+    },
+    {
+     "mot": "sur",
+     "debut": 61.619,
+     "fin": 61.845
+    },
+    {
+     "mot": "le",
+     "debut": 61.845,
+     "fin": 61.995
+    },
+    {
+     "mot": "Vieux-Port",
+     "debut": 61.995,
+     "fin": 62.446
+    },
+    {
+     "mot": "ou",
+     "debut": 62.446,
+     "fin": 62.521
+    },
+    {
+     "mot": "la",
+     "debut": 62.521,
+     "fin": 62.672
+    },
+    {
+     "mot": "Canebière",
+     "debut": 62.672,
+     "fin": 63.198
+    },
+    {
+     "mot": "selon",
+     "debut": 63.198,
+     "fin": 63.574
+    },
+    {
+     "mot": "les",
+     "debut": 63.574,
+     "fin": 63.724
+    },
+    {
+     "mot": "sources.",
+     "debut": 63.724,
+     "fin": 64.025
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "cle": "s2_prefet",
+   "seq": 2,
+   "texte": "La veille, le préfet, Jacques Witkowski, avait prévenu : « C'est véritablement à Marseille que nous avons un point de préoccupation. »",
+   "phonemes": "la vˈɛj, lə pʁefˈɛ, ʒˈak (en)wɪtkˈaʊskɪ(fr), avˈɛ pʁevnˈy :  sɛ veʁitabləmˈɑ̃ a maʁsˈɛj kə nuz avˈɔ̃z œ̃ pwˈɛ̃ də pʁeɔkypasjˈɔ̃.",
+   "debut": 64.446,
+   "fin": 71.81,
+   "duree": 7.364,
+   "mots": [
+    {
+     "mot": "La",
+     "debut": 64.446,
+     "fin": 64.73
+    },
+    {
+     "mot": "veille,",
+     "debut": 64.73,
+     "fin": 65.156
+    },
+    {
+     "mot": "le",
+     "debut": 65.156,
+     "fin": 65.34
+    },
+    {
+     "mot": "préfet,",
+     "debut": 65.34,
+     "fin": 65.799
+    },
+    {
+     "mot": "Jacques",
+     "debut": 65.799,
+     "fin": 66.075
+    },
+    {
+     "mot": "Witkowski,",
+     "debut": 66.075,
+     "fin": 67.636
+    },
+    {
+     "mot": "avait",
+     "debut": 67.636,
+     "fin": 67.852
+    },
+    {
+     "mot": "prévenu",
+     "debut": 67.852,
+     "fin": 68.284
+    },
+    {
+     "mot": ":",
+     "debut": 68.284,
+     "fin": 68.284
+    },
+    {
+     "mot": "«",
+     "debut": 68.284,
+     "fin": 68.284
+    },
+    {
+     "mot": "C'est",
+     "debut": 68.284,
+     "fin": 68.428
+    },
+    {
+     "mot": "véritablement",
+     "debut": 68.428,
+     "fin": 69.291
+    },
+    {
+     "mot": "à",
+     "debut": 69.291,
+     "fin": 69.363
+    },
+    {
+     "mot": "Marseille",
+     "debut": 69.363,
+     "fin": 69.795
+    },
+    {
+     "mot": "que",
+     "debut": 69.795,
+     "fin": 69.939
+    },
+    {
+     "mot": "nous",
+     "debut": 69.939,
+     "fin": 70.083
+    },
+    {
+     "mot": "avons",
+     "debut": 70.083,
+     "fin": 70.371
+    },
+    {
+     "mot": "un",
+     "debut": 70.371,
+     "fin": 70.515
+    },
+    {
+     "mot": "point",
+     "debut": 70.515,
+     "fin": 70.802
+    },
+    {
+     "mot": "de",
+     "debut": 70.802,
+     "fin": 70.946
+    },
+    {
+     "mot": "préoccupation.",
+     "debut": 70.946,
+     "fin": 71.81
+    },
+    {
+     "mot": "»",
+     "debut": 71.81,
+     "fin": 71.81
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "cle": "s2_effectifs",
+   "seq": 2,
+   "texte": "Combien de policiers ce matin-là ? Une seule compagnie de CRS, soit 80 policiers, selon le maire.",
+   "phonemes": "kɔ̃bjˈɛ̃ də polisjˈe sə matˈɛ̃lˈa ? yn sˈœl kɔ̃panˈi də sˈe.ˈɛʁ.ˈɛs., swˌa kˈatʁvˈɛ̃ polisjˈe, səlˈɔ̃ lə mˈɛʁ.",
+   "debut": 72.23,
+   "fin": 77.91,
+   "duree": 5.68,
+   "mots": [
+    {
+     "mot": "Combien",
+     "debut": 72.23,
+     "fin": 72.82
+    },
+    {
+     "mot": "de",
+     "debut": 72.82,
+     "fin": 72.988
+    },
+    {
+     "mot": "policiers",
+     "debut": 72.988,
+     "fin": 73.578
+    },
+    {
+     "mot": "ce",
+     "debut": 73.578,
+     "fin": 73.746
+    },
+    {
+     "mot": "matin-là",
+     "debut": 73.746,
+     "fin": 74.336
+    },
+    {
+     "mot": "?",
+     "debut": 74.336,
+     "fin": 74.336
+    },
+    {
+     "mot": "Une",
+     "debut": 74.336,
+     "fin": 74.504
+    },
+    {
+     "mot": "seule",
+     "debut": 74.504,
+     "fin": 74.757
+    },
+    {
+     "mot": "compagnie",
+     "debut": 74.757,
+     "fin": 75.346
+    },
+    {
+     "mot": "de",
+     "debut": 75.346,
+     "fin": 75.515
+    },
+    {
+     "mot": "CRS,",
+     "debut": 75.515,
+     "fin": 76.02
+    },
+    {
+     "mot": "soit",
+     "debut": 76.02,
+     "fin": 76.23
+    },
+    {
+     "mot": "80",
+     "debut": 76.23,
+     "fin": 76.72
+    },
+    {
+     "mot": "policiers,",
+     "debut": 76.72,
+     "fin": 77.21
+    },
+    {
+     "mot": "selon",
+     "debut": 77.21,
+     "fin": 77.56
+    },
+    {
+     "mot": "le",
+     "debut": 77.56,
+     "fin": 77.7
+    },
+    {
+     "mot": "maire.",
+     "debut": 77.7,
+     "fin": 77.91
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "cle": "s2_prefecture",
+   "seq": 2,
+   "texte": "434 policiers et 240 CRS engagés dès 7 heures, répond la préfecture.",
+   "phonemes": "kˈatʁ sˈɑ̃ tʁˈɑ̃tkˈatʁ polisjˈez e dˈø sˈɑ̃ kaʁˈɑ̃t sˈe.ˈɛʁ.ˈɛs. ɑ̃ɡaʒˈe dɛ sˈɛt ˈœʁ, ʁepˈɔ̃ la pʁefɛktˈyʁ.",
+   "debut": 78.33,
+   "fin": 84.224,
+   "duree": 5.894,
+   "mots": [
+    {
+     "mot": "434",
+     "debut": 78.33,
+     "fin": 79.677
+    },
+    {
+     "mot": "policiers",
+     "debut": 79.677,
+     "fin": 80.267
+    },
+    {
+     "mot": "et",
+     "debut": 80.267,
+     "fin": 80.351
+    },
+    {
+     "mot": "240",
+     "debut": 80.351,
+     "fin": 81.277
+    },
+    {
+     "mot": "CRS",
+     "debut": 81.277,
+     "fin": 81.782
+    },
+    {
+     "mot": "engagés",
+     "debut": 81.782,
+     "fin": 82.287
+    },
+    {
+     "mot": "dès",
+     "debut": 82.287,
+     "fin": 82.456
+    },
+    {
+     "mot": "7",
+     "debut": 82.456,
+     "fin": 82.709
+    },
+    {
+     "mot": "heures,",
+     "debut": 82.709,
+     "fin": 82.877
+    },
+    {
+     "mot": "répond",
+     "debut": 82.877,
+     "fin": 83.298
+    },
+    {
+     "mot": "la",
+     "debut": 83.298,
+     "fin": 83.466
+    },
+    {
+     "mot": "préfecture.",
+     "debut": 83.466,
+     "fin": 84.224
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "cle": "s3_methode",
+   "seq": 3,
+   "texte": "Aucune chronologie officielle n'a été publiée : les heures qui suivent sont celles auxquelles les journalistes ont signalé les faits, en direct.",
+   "phonemes": "okˈyn kʁonoloʒˈi ɔfisjˈɛl na etˈe pybliˈe : lez ˈœʁ ki syˈiv sˈɔ̃ sɛlz okˈɛl le ʒuʁnalˈistz ˈɔ̃ sinjalˈe le fˈɛ, ɑ̃ diʁˈɛkt.",
+   "debut": 85.524,
+   "fin": 92.617,
+   "duree": 7.093,
+   "mots": [
+    {
+     "mot": "Aucune",
+     "debut": 85.524,
+     "fin": 85.885
+    },
+    {
+     "mot": "chronologie",
+     "debut": 85.885,
+     "fin": 86.698
+    },
+    {
+     "mot": "officielle",
+     "debut": 86.698,
+     "fin": 87.33
+    },
+    {
+     "mot": "n'a",
+     "debut": 87.33,
+     "fin": 87.511
+    },
+    {
+     "mot": "été",
+     "debut": 87.511,
+     "fin": 87.782
+    },
+    {
+     "mot": "publiée",
+     "debut": 87.782,
+     "fin": 88.324
+    },
+    {
+     "mot": ":",
+     "debut": 88.324,
+     "fin": 88.324
+    },
+    {
+     "mot": "les",
+     "debut": 88.324,
+     "fin": 88.485
+    },
+    {
+     "mot": "heures",
+     "debut": 88.485,
+     "fin": 88.647
+    },
+    {
+     "mot": "qui",
+     "debut": 88.647,
+     "fin": 88.808
+    },
+    {
+     "mot": "suivent",
+     "debut": 88.808,
+     "fin": 89.131
+    },
+    {
+     "mot": "sont",
+     "debut": 89.131,
+     "fin": 89.373
+    },
+    {
+     "mot": "celles",
+     "debut": 89.373,
+     "fin": 89.615
+    },
+    {
+     "mot": "auxquelles",
+     "debut": 89.615,
+     "fin": 89.938
+    },
+    {
+     "mot": "les",
+     "debut": 89.938,
+     "fin": 90.099
+    },
+    {
+     "mot": "journalistes",
+     "debut": 90.099,
+     "fin": 90.825
+    },
+    {
+     "mot": "ont",
+     "debut": 90.825,
+     "fin": 90.987
+    },
+    {
+     "mot": "signalé",
+     "debut": 90.987,
+     "fin": 91.551
+    },
+    {
+     "mot": "les",
+     "debut": 91.551,
+     "fin": 91.713
+    },
+    {
+     "mot": "faits,",
+     "debut": 91.713,
+     "fin": 91.874
+    },
+    {
+     "mot": "en",
+     "debut": 91.874,
+     "fin": 92.06
+    },
+    {
+     "mot": "direct.",
+     "debut": 92.06,
+     "fin": 92.617
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "cle": "s3_prado",
+   "seq": 3,
+   "texte": "Dès 8 heures, selon ICI, le boulevard du Prado est bloqué par des poubelles et des trottinettes, à environ trois kilomètres au sud du Vieux-Port.",
+   "phonemes": "dɛ yˈit ˈœʁ, səlˈɔ̃ ˌisˌeˈi, lə bulvˈaʁ dy pʁadˈo ɛ blokˈe paʁ de pubˈɛlz e de tʁɔtinˈɛt, a ɑ̃viʁˈɔ̃ tʁwˈa kilomˈɛtʁz o sˈyd dy vjˈøpˈɔʁ.",
+   "debut": 93.037,
+   "fin": 100.973,
+   "duree": 7.935,
+   "mots": [
+    {
+     "mot": "Dès",
+     "debut": 93.037,
+     "fin": 93.331
+    },
+    {
+     "mot": "8",
+     "debut": 93.331,
+     "fin": 93.773
+    },
+    {
+     "mot": "heures,",
+     "debut": 93.773,
+     "fin": 94.067
+    },
+    {
+     "mot": "selon",
+     "debut": 94.067,
+     "fin": 94.487
+    },
+    {
+     "mot": "ICI,",
+     "debut": 94.487,
+     "fin": 94.739
+    },
+    {
+     "mot": "le",
+     "debut": 94.739,
+     "fin": 94.907
+    },
+    {
+     "mot": "boulevard",
+     "debut": 94.907,
+     "fin": 95.411
+    },
+    {
+     "mot": "du",
+     "debut": 95.411,
+     "fin": 95.579
+    },
+    {
+     "mot": "Prado",
+     "debut": 95.579,
+     "fin": 95.999
+    },
+    {
+     "mot": "est",
+     "debut": 95.999,
+     "fin": 96.083
+    },
+    {
+     "mot": "bloqué",
+     "debut": 96.083,
+     "fin": 96.503
+    },
+    {
+     "mot": "par",
+     "debut": 96.503,
+     "fin": 96.755
+    },
+    {
+     "mot": "des",
+     "debut": 96.755,
+     "fin": 96.923
+    },
+    {
+     "mot": "poubelles",
+     "debut": 96.923,
+     "fin": 97.343
+    },
+    {
+     "mot": "et",
+     "debut": 97.343,
+     "fin": 97.427
+    },
+    {
+     "mot": "des",
+     "debut": 97.427,
+     "fin": 97.595
+    },
+    {
+     "mot": "trottinettes,",
+     "debut": 97.595,
+     "fin": 98.267
+    },
+    {
+     "mot": "à",
+     "debut": 98.267,
+     "fin": 98.352
+    },
+    {
+     "mot": "environ",
+     "debut": 98.352,
+     "fin": 98.943
+    },
+    {
+     "mot": "trois",
+     "debut": 98.943,
+     "fin": 99.282
+    },
+    {
+     "mot": "kilomètres",
+     "debut": 99.282,
+     "fin": 99.958
+    },
+    {
+     "mot": "au",
+     "debut": 99.958,
+     "fin": 100.042
+    },
+    {
+     "mot": "sud",
+     "debut": 100.042,
+     "fin": 100.296
+    },
+    {
+     "mot": "du",
+     "debut": 100.296,
+     "fin": 100.465
+    },
+    {
+     "mot": "Vieux-Port.",
+     "debut": 100.465,
+     "fin": 100.972
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "cle": "s3_gaz",
+   "seq": 3,
+   "texte": "À 8 h 14, La Provence y compte une vingtaine de jeunes et quelques gilets jaunes ; à 8 h 54, les premiers gaz lacrymogènes dégagent le passage.",
+   "phonemes": "a yˈit ˈœʁ katˈɔʁz, la pʁovˈɑ̃s i kˈɔ̃t yn vɛ̃tˈɛn də ʒˈønz e kˌɛlkə ʒilˈɛ ʒˈon ; a yˈit ˈœʁ sɛ̃kˈɑ̃tkˈatʁ, le pʁəmjˈe ɡˈaz lakʁimoʒˈɛn deɡˈaʒ lə pasˈaʒ.",
+   "debut": 101.393,
+   "fin": 110.754,
+   "duree": 9.362,
+   "mots": [
+    {
+     "mot": "À",
+     "debut": 101.393,
+     "fin": 101.526
+    },
+    {
+     "mot": "8",
+     "debut": 101.526,
+     "fin": 101.926
+    },
+    {
+     "mot": "h",
+     "debut": 101.926,
+     "fin": 102.193
+    },
+    {
+     "mot": "14,",
+     "debut": 102.193,
+     "fin": 102.993
+    },
+    {
+     "mot": "La",
+     "debut": 102.993,
+     "fin": 103.153
+    },
+    {
+     "mot": "Provence",
+     "debut": 103.153,
+     "fin": 103.715
+    },
+    {
+     "mot": "y",
+     "debut": 103.715,
+     "fin": 104.116
+    },
+    {
+     "mot": "compte",
+     "debut": 104.116,
+     "fin": 104.437
+    },
+    {
+     "mot": "une",
+     "debut": 104.437,
+     "fin": 104.598
+    },
+    {
+     "mot": "vingtaine",
+     "debut": 104.598,
+     "fin": 105.079
+    },
+    {
+     "mot": "de",
+     "debut": 105.079,
+     "fin": 105.239
+    },
+    {
+     "mot": "jeunes",
+     "debut": 105.239,
+     "fin": 105.48
+    },
+    {
+     "mot": "et",
+     "debut": 105.48,
+     "fin": 105.56
+    },
+    {
+     "mot": "quelques",
+     "debut": 105.56,
+     "fin": 105.961
+    },
+    {
+     "mot": "gilets",
+     "debut": 105.961,
+     "fin": 106.282
+    },
+    {
+     "mot": "jaunes",
+     "debut": 106.282,
+     "fin": 106.523
+    },
+    {
+     "mot": ";",
+     "debut": 106.523,
+     "fin": 106.523
+    },
+    {
+     "mot": "à",
+     "debut": 106.523,
+     "fin": 106.624
+    },
+    {
+     "mot": "8",
+     "debut": 106.624,
+     "fin": 106.925
+    },
+    {
+     "mot": "h",
+     "debut": 106.925,
+     "fin": 107.127
+    },
+    {
+     "mot": "54,",
+     "debut": 107.127,
+     "fin": 108.233
+    },
+    {
+     "mot": "les",
+     "debut": 108.233,
+     "fin": 108.386
+    },
+    {
+     "mot": "premiers",
+     "debut": 108.386,
+     "fin": 108.844
+    },
+    {
+     "mot": "gaz",
+     "debut": 108.844,
+     "fin": 109.074
+    },
+    {
+     "mot": "lacrymogènes",
+     "debut": 109.074,
+     "fin": 109.838
+    },
+    {
+     "mot": "dégagent",
+     "debut": 109.838,
+     "fin": 110.22
+    },
+    {
+     "mot": "le",
+     "debut": 110.22,
+     "fin": 110.373
+    },
+    {
+     "mot": "passage.",
+     "debut": 110.373,
+     "fin": 110.755
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "cle": "s3_castellane",
+   "seq": 3,
+   "texte": "Les gilets jaunes remontent l'avenue du Prado ; à 9 h 20, ils sont signalés place Castellane.",
+   "phonemes": "le ʒilˈɛ ʒˈon ʁəmˈɔ̃t lavnˈy dy pʁadˈo ; a nˈœv ˈœʁ vˈɛ̃, il sɔ̃ sinjalˈe plˈas kastɛlˈan.",
+   "debut": 111.174,
+   "fin": 116.212,
+   "duree": 5.038,
+   "mots": [
+    {
+     "mot": "Les",
+     "debut": 111.174,
+     "fin": 111.34
+    },
+    {
+     "mot": "gilets",
+     "debut": 111.34,
+     "fin": 111.672
+    },
+    {
+     "mot": "jaunes",
+     "debut": 111.672,
+     "fin": 111.921
+    },
+    {
+     "mot": "remontent",
+     "debut": 111.921,
+     "fin": 112.418
+    },
+    {
+     "mot": "l'avenue",
+     "debut": 112.418,
+     "fin": 112.833
+    },
+    {
+     "mot": "du",
+     "debut": 112.833,
+     "fin": 112.999
+    },
+    {
+     "mot": "Prado",
+     "debut": 112.999,
+     "fin": 113.414
+    },
+    {
+     "mot": ";",
+     "debut": 113.414,
+     "fin": 113.414
+    },
+    {
+     "mot": "à",
+     "debut": 113.414,
+     "fin": 113.525
+    },
+    {
+     "mot": "9",
+     "debut": 113.525,
+     "fin": 113.858
+    },
+    {
+     "mot": "h",
+     "debut": 113.858,
+     "fin": 114.081
+    },
+    {
+     "mot": "20,",
+     "debut": 114.081,
+     "fin": 114.414
+    },
+    {
+     "mot": "ils",
+     "debut": 114.414,
+     "fin": 114.564
+    },
+    {
+     "mot": "sont",
+     "debut": 114.564,
+     "fin": 114.789
+    },
+    {
+     "mot": "signalés",
+     "debut": 114.789,
+     "fin": 115.313
+    },
+    {
+     "mot": "place",
+     "debut": 115.313,
+     "fin": 115.613
+    },
+    {
+     "mot": "Castellane.",
+     "debut": 115.613,
+     "fin": 116.212
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "cle": "s3_reformes",
+   "seq": 3,
+   "texte": "Dans la matinée, des groupes sont signalés devant la préfecture, à la gare Saint-Charles, puis aux Réformés, en haut de la Canebière : « un bon millier de manifestants » à 10 h 43.",
+   "phonemes": "dɑ̃ la matinˈe, de ɡʁˈup sˈɔ̃ sinjalˈe dəvˈɑ̃ la pʁefɛktˈyʁ, a la ɡˈaʁ sˈɛ̃ʃˈaʁl, pyˈiz o ʁefɔʁmˈe, ɑ̃ ˈo də la kanbjˈɛʁ :  œ̃ bˈɔ̃ miljˈe də manifɛstˈɑ̃  a dˈiz ˈœʁ kaʁˈɑ̃ttʁwˈa.",
+   "debut": 116.632,
+   "fin": 126.622,
+   "duree": 9.989,
+   "mots": [
+    {
+     "mot": "Dans",
+     "debut": 116.632,
+     "fin": 116.902
+    },
+    {
+     "mot": "la",
+     "debut": 116.902,
+     "fin": 117.082
+    },
+    {
+     "mot": "matinée,",
+     "debut": 117.082,
+     "fin": 117.622
+    },
+    {
+     "mot": "des",
+     "debut": 117.622,
+     "fin": 117.783
+    },
+    {
+     "mot": "groupes",
+     "debut": 117.783,
+     "fin": 118.106
+    },
+    {
+     "mot": "sont",
+     "debut": 118.106,
+     "fin": 118.348
+    },
+    {
+     "mot": "signalés",
+     "debut": 118.348,
+     "fin": 118.912
+    },
+    {
+     "mot": "devant",
+     "debut": 118.912,
+     "fin": 119.315
+    },
+    {
+     "mot": "la",
+     "debut": 119.315,
+     "fin": 119.476
+    },
+    {
+     "mot": "préfecture,",
+     "debut": 119.476,
+     "fin": 120.202
+    },
+    {
+     "mot": "à",
+     "debut": 120.202,
+     "fin": 120.307
+    },
+    {
+     "mot": "la",
+     "debut": 120.307,
+     "fin": 120.516
+    },
+    {
+     "mot": "gare",
+     "debut": 120.516,
+     "fin": 120.83
+    },
+    {
+     "mot": "Saint-Charles,",
+     "debut": 120.83,
+     "fin": 121.562
+    },
+    {
+     "mot": "puis",
+     "debut": 121.562,
+     "fin": 121.892
+    },
+    {
+     "mot": "aux",
+     "debut": 121.892,
+     "fin": 122.002
+    },
+    {
+     "mot": "Réformés,",
+     "debut": 122.002,
+     "fin": 122.772
+    },
+    {
+     "mot": "en",
+     "debut": 122.772,
+     "fin": 122.951
+    },
+    {
+     "mot": "haut",
+     "debut": 122.951,
+     "fin": 123.04
+    },
+    {
+     "mot": "de",
+     "debut": 123.04,
+     "fin": 123.218
+    },
+    {
+     "mot": "la",
+     "debut": 123.218,
+     "fin": 123.397
+    },
+    {
+     "mot": "Canebière",
+     "debut": 123.397,
+     "fin": 124.022
+    },
+    {
+     "mot": ":",
+     "debut": 124.022,
+     "fin": 124.022
+    },
+    {
+     "mot": "«",
+     "debut": 124.022,
+     "fin": 124.022
+    },
+    {
+     "mot": "un",
+     "debut": 124.022,
+     "fin": 124.159
+    },
+    {
+     "mot": "bon",
+     "debut": 124.159,
+     "fin": 124.364
+    },
+    {
+     "mot": "millier",
+     "debut": 124.364,
+     "fin": 124.706
+    },
+    {
+     "mot": "de",
+     "debut": 124.706,
+     "fin": 124.843
+    },
+    {
+     "mot": "manifestants",
+     "debut": 124.843,
+     "fin": 125.527
+    },
+    {
+     "mot": "»",
+     "debut": 125.527,
+     "fin": 125.527
+    },
+    {
+     "mot": "à",
+     "debut": 125.527,
+     "fin": 125.595
+    },
+    {
+     "mot": "10",
+     "debut": 125.595,
+     "fin": 125.8
+    },
+    {
+     "mot": "h",
+     "debut": 125.8,
+     "fin": 125.937
+    },
+    {
+     "mot": "43.",
+     "debut": 125.937,
+     "fin": 126.621
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "cle": "s4_poste",
+   "seq": 4,
+   "texte": "La tension descend ensuite la Canebière. Le poste de police municipale, au 42 selon le maire, est attaqué ; la veille au soir, Benoît Payan dit avoir demandé par écrit qu'il soit sécurisé.",
+   "phonemes": "la tɑ̃sjˈɔ̃ dɛsˈɑ̃t ɑ̃syˈit la kanbjˈɛʁ. lə pˈɔst də polˈis mynisipˈal, o kaʁˈɑ̃tdˈø səlˈɔ̃ lə mˈɛʁ, ɛt atakˈe ; la vˈɛj o swˈaʁ, bənwˈa pɛjˈɑ̃ dˈi avwˈaʁ dəmɑ̃dˈe paʁ ekʁˈi kil swˌa sekyʁizˈe.",
+   "debut": 127.922,
+   "fin": 139.219,
+   "duree": 11.298,
+   "mots": [
+    {
+     "mot": "La",
+     "debut": 127.922,
+     "fin": 128.105
+    },
+    {
+     "mot": "tension",
+     "debut": 128.105,
+     "fin": 128.746
+    },
+    {
+     "mot": "descend",
+     "debut": 128.746,
+     "fin": 129.204
+    },
+    {
+     "mot": "ensuite",
+     "debut": 129.204,
+     "fin": 129.753
+    },
+    {
+     "mot": "la",
+     "debut": 129.753,
+     "fin": 129.937
+    },
+    {
+     "mot": "Canebière.",
+     "debut": 129.937,
+     "fin": 130.577
+    },
+    {
+     "mot": "Le",
+     "debut": 130.577,
+     "fin": 130.761
+    },
+    {
+     "mot": "poste",
+     "debut": 130.761,
+     "fin": 131.127
+    },
+    {
+     "mot": "de",
+     "debut": 131.127,
+     "fin": 131.31
+    },
+    {
+     "mot": "police",
+     "debut": 131.31,
+     "fin": 131.768
+    },
+    {
+     "mot": "municipale,",
+     "debut": 131.768,
+     "fin": 132.592
+    },
+    {
+     "mot": "au",
+     "debut": 132.592,
+     "fin": 132.675
+    },
+    {
+     "mot": "42",
+     "debut": 132.675,
+     "fin": 133.34
+    },
+    {
+     "mot": "selon",
+     "debut": 133.34,
+     "fin": 133.756
+    },
+    {
+     "mot": "le",
+     "debut": 133.756,
+     "fin": 133.923
+    },
+    {
+     "mot": "maire,",
+     "debut": 133.923,
+     "fin": 134.172
+    },
+    {
+     "mot": "est",
+     "debut": 134.172,
+     "fin": 134.304
+    },
+    {
+     "mot": "attaqué",
+     "debut": 134.304,
+     "fin": 134.962
+    },
+    {
+     "mot": ";",
+     "debut": 134.962,
+     "fin": 134.962
+    },
+    {
+     "mot": "la",
+     "debut": 134.962,
+     "fin": 135.117
+    },
+    {
+     "mot": "veille",
+     "debut": 135.117,
+     "fin": 135.349
+    },
+    {
+     "mot": "au",
+     "debut": 135.349,
+     "fin": 135.426
+    },
+    {
+     "mot": "soir,",
+     "debut": 135.426,
+     "fin": 135.736
+    },
+    {
+     "mot": "Benoît",
+     "debut": 135.736,
+     "fin": 136.123
+    },
+    {
+     "mot": "Payan",
+     "debut": 136.123,
+     "fin": 136.51
+    },
+    {
+     "mot": "dit",
+     "debut": 136.51,
+     "fin": 136.665
+    },
+    {
+     "mot": "avoir",
+     "debut": 136.665,
+     "fin": 137.052
+    },
+    {
+     "mot": "demandé",
+     "debut": 137.052,
+     "fin": 137.594
+    },
+    {
+     "mot": "par",
+     "debut": 137.594,
+     "fin": 137.826
+    },
+    {
+     "mot": "écrit",
+     "debut": 137.826,
+     "fin": 138.136
+    },
+    {
+     "mot": "qu'il",
+     "debut": 138.136,
+     "fin": 138.368
+    },
+    {
+     "mot": "soit",
+     "debut": 138.368,
+     "fin": 138.6
+    },
+    {
+     "mot": "sécurisé.",
+     "debut": 138.6,
+     "fin": 139.22
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "cle": "s4_molotov",
+   "seq": 4,
+   "texte": "Des cocktails Molotov ? Ils circulent sur les réseaux sociaux, mais l'AFP, la préfecture et La Provence ne parlent que de fumigènes.",
+   "phonemes": "de kɔktˈaj molotˈɔv ? il siʁkˈyl syʁ le ʁezˈo sosjˈo, mɛ lˈafp, la pʁefɛktˈyʁ e la pʁovˈɑ̃s nə pˈaʁl kə də fymiʒˈɛn.",
+   "debut": 139.639,
+   "fin": 146.795,
+   "duree": 7.155,
+   "mots": [
+    {
+     "mot": "Des",
+     "debut": 139.639,
+     "fin": 139.827
+    },
+    {
+     "mot": "cocktails",
+     "debut": 139.827,
+     "fin": 140.389
+    },
+    {
+     "mot": "Molotov",
+     "debut": 140.389,
+     "fin": 141.046
+    },
+    {
+     "mot": "?",
+     "debut": 141.046,
+     "fin": 141.046
+    },
+    {
+     "mot": "Ils",
+     "debut": 141.046,
+     "fin": 141.233
+    },
+    {
+     "mot": "circulent",
+     "debut": 141.233,
+     "fin": 141.796
+    },
+    {
+     "mot": "sur",
+     "debut": 141.796,
+     "fin": 142.077
+    },
+    {
+     "mot": "les",
+     "debut": 142.077,
+     "fin": 142.265
+    },
+    {
+     "mot": "réseaux",
+     "debut": 142.265,
+     "fin": 142.64
+    },
+    {
+     "mot": "sociaux,",
+     "debut": 142.64,
+     "fin": 143.109
+    },
+    {
+     "mot": "mais",
+     "debut": 143.109,
+     "fin": 143.299
+    },
+    {
+     "mot": "l'AFP,",
+     "debut": 143.299,
+     "fin": 143.679
+    },
+    {
+     "mot": "la",
+     "debut": 143.679,
+     "fin": 143.843
+    },
+    {
+     "mot": "préfecture",
+     "debut": 143.843,
+     "fin": 144.581
+    },
+    {
+     "mot": "et",
+     "debut": 144.581,
+     "fin": 144.663
+    },
+    {
+     "mot": "La",
+     "debut": 144.663,
+     "fin": 144.827
+    },
+    {
+     "mot": "Provence",
+     "debut": 144.827,
+     "fin": 145.401
+    },
+    {
+     "mot": "ne",
+     "debut": 145.401,
+     "fin": 145.565
+    },
+    {
+     "mot": "parlent",
+     "debut": 145.565,
+     "fin": 145.893
+    },
+    {
+     "mot": "que",
+     "debut": 145.893,
+     "fin": 146.057
+    },
+    {
+     "mot": "de",
+     "debut": 146.057,
+     "fin": 146.221
+    },
+    {
+     "mot": "fumigènes.",
+     "debut": 146.221,
+     "fin": 146.794
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "cle": "s4_crs",
+   "seq": 4,
+   "texte": "Une journaliste de Marsactu note que des CRS, postés juste au-dessus sur la Canebière, n'interviennent pas pendant que le poste est pillé.",
+   "phonemes": "yn ʒuʁnalˈist də maʁsaktˈy nˈɔt kə de sˈe.ˈɛʁ.ˈɛs., pɔstˈe ʒˈyst odəsˈy syʁ la kanbjˈɛʁ, nɛ̃tɛʁvjˈɛn pa pɑ̃dˈɑ̃ kə lə pˈɔst ɛ pijˈe.",
+   "debut": 147.215,
+   "fin": 154.971,
+   "duree": 7.756,
+   "mots": [
+    {
+     "mot": "Une",
+     "debut": 147.215,
+     "fin": 147.417
+    },
+    {
+     "mot": "journaliste",
+     "debut": 147.417,
+     "fin": 148.328
+    },
+    {
+     "mot": "de",
+     "debut": 148.328,
+     "fin": 148.53
+    },
+    {
+     "mot": "Marsactu",
+     "debut": 148.53,
+     "fin": 149.34
+    },
+    {
+     "mot": "note",
+     "debut": 149.34,
+     "fin": 149.643
+    },
+    {
+     "mot": "que",
+     "debut": 149.643,
+     "fin": 149.846
+    },
+    {
+     "mot": "des",
+     "debut": 149.846,
+     "fin": 150.048
+    },
+    {
+     "mot": "CRS,",
+     "debut": 150.048,
+     "fin": 150.655
+    },
+    {
+     "mot": "postés",
+     "debut": 150.655,
+     "fin": 151.065
+    },
+    {
+     "mot": "juste",
+     "debut": 151.065,
+     "fin": 151.392
+    },
+    {
+     "mot": "au-dessus",
+     "debut": 151.392,
+     "fin": 151.802
+    },
+    {
+     "mot": "sur",
+     "debut": 151.802,
+     "fin": 152.048
+    },
+    {
+     "mot": "la",
+     "debut": 152.048,
+     "fin": 152.212
+    },
+    {
+     "mot": "Canebière,",
+     "debut": 152.212,
+     "fin": 152.785
+    },
+    {
+     "mot": "n'interviennent",
+     "debut": 152.785,
+     "fin": 153.49
+    },
+    {
+     "mot": "pas",
+     "debut": 153.49,
+     "fin": 153.631
+    },
+    {
+     "mot": "pendant",
+     "debut": 153.631,
+     "fin": 154.054
+    },
+    {
+     "mot": "que",
+     "debut": 154.054,
+     "fin": 154.195
+    },
+    {
+     "mot": "le",
+     "debut": 154.195,
+     "fin": 154.336
+    },
+    {
+     "mot": "poste",
+     "debut": 154.336,
+     "fin": 154.618
+    },
+    {
+     "mot": "est",
+     "debut": 154.618,
+     "fin": 154.689
+    },
+    {
+     "mot": "pillé.",
+     "debut": 154.689,
+     "fin": 154.971
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "cle": "s4_magasins",
+   "seq": 4,
+   "texte": "Au même moment, les premiers commerces tombent : à 11 h 46, la boutique SFR de la Canebière ; à 11 h 54, JD Sports.",
+   "phonemes": "o mˈɛm momˈɑ̃, le pʁəmjˈe kɔmˈɛʁs tˈɔ̃b : a ˈɔ̃z ˈœʁ kaʁˈɑ̃tsˈis, la butˈik ˈɛs.ˈɛf.ˈɛʁ. də la kanbjˈɛʁ ; a ˈɔ̃z ˈœʁ sɛ̃kˈɑ̃tkˈatʁ, ʒˈi.dˈe. spˈɔʁ.",
+   "debut": 155.391,
+   "fin": 163.769,
+   "duree": 8.378,
+   "mots": [
+    {
+     "mot": "Au",
+     "debut": 155.391,
+     "fin": 155.499
+    },
+    {
+     "mot": "même",
+     "debut": 155.499,
+     "fin": 155.822
+    },
+    {
+     "mot": "moment,",
+     "debut": 155.822,
+     "fin": 156.361
+    },
+    {
+     "mot": "les",
+     "debut": 156.361,
+     "fin": 156.522
+    },
+    {
+     "mot": "premiers",
+     "debut": 156.522,
+     "fin": 157.005
+    },
+    {
+     "mot": "commerces",
+     "debut": 157.005,
+     "fin": 157.489
+    },
+    {
+     "mot": "tombent",
+     "debut": 157.489,
+     "fin": 157.811
+    },
+    {
+     "mot": ":",
+     "debut": 157.811,
+     "fin": 157.811
+    },
+    {
+     "mot": "à",
+     "debut": 157.811,
+     "fin": 157.912
+    },
+    {
+     "mot": "11",
+     "debut": 157.912,
+     "fin": 158.214
+    },
+    {
+     "mot": "h",
+     "debut": 158.214,
+     "fin": 158.415
+    },
+    {
+     "mot": "46,",
+     "debut": 158.415,
+     "fin": 159.322
+    },
+    {
+     "mot": "la",
+     "debut": 159.322,
+     "fin": 159.523
+    },
+    {
+     "mot": "boutique",
+     "debut": 159.523,
+     "fin": 160.027
+    },
+    {
+     "mot": "SFR",
+     "debut": 160.027,
+     "fin": 160.631
+    },
+    {
+     "mot": "de",
+     "debut": 160.631,
+     "fin": 160.832
+    },
+    {
+     "mot": "la",
+     "debut": 160.832,
+     "fin": 161.034
+    },
+    {
+     "mot": "Canebière",
+     "debut": 161.034,
+     "fin": 161.739
+    },
+    {
+     "mot": ";",
+     "debut": 161.739,
+     "fin": 161.739
+    },
+    {
+     "mot": "à",
+     "debut": 161.739,
+     "fin": 161.84
+    },
+    {
+     "mot": "11",
+     "debut": 161.84,
+     "fin": 162.142
+    },
+    {
+     "mot": "h",
+     "debut": 162.142,
+     "fin": 162.343
+    },
+    {
+     "mot": "54,",
+     "debut": 162.343,
+     "fin": 163.451
+    },
+    {
+     "mot": "JD",
+     "debut": 163.451,
+     "fin": 163.61
+    },
+    {
+     "mot": "Sports.",
+     "debut": 163.61,
+     "fin": 163.769
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "cle": "s4_prefet",
+   "seq": 4,
+   "texte": "Le préfet le dira plus tard : depuis midi, « nous ne faisons pas face à une manifestation, mais véritablement à des pillages ».",
+   "phonemes": "lə pʁefˈɛ lə diʁˈa ply tˈaʁ : dəpyˌi midˈi,  nu nə fəzˈɔ̃ pa fˈas a yn manifɛstasjˈɔ̃, mɛ veʁitabləmˈɑ̃ a de pijˈaʒ .",
+   "debut": 164.189,
+   "fin": 170.799,
+   "duree": 6.61,
+   "mots": [
+    {
+     "mot": "Le",
+     "debut": 164.189,
+     "fin": 164.376
+    },
+    {
+     "mot": "préfet",
+     "debut": 164.376,
+     "fin": 164.845
+    },
+    {
+     "mot": "le",
+     "debut": 164.845,
+     "fin": 165.032
+    },
+    {
+     "mot": "dira",
+     "debut": 165.032,
+     "fin": 165.407
+    },
+    {
+     "mot": "plus",
+     "debut": 165.407,
+     "fin": 165.688
+    },
+    {
+     "mot": "tard",
+     "debut": 165.688,
+     "fin": 165.969
+    },
+    {
+     "mot": ":",
+     "debut": 165.969,
+     "fin": 165.969
+    },
+    {
+     "mot": "depuis",
+     "debut": 165.969,
+     "fin": 166.463
+    },
+    {
+     "mot": "midi,",
+     "debut": 166.463,
+     "fin": 166.859
+    },
+    {
+     "mot": "«",
+     "debut": 166.859,
+     "fin": 166.859
+    },
+    {
+     "mot": "nous",
+     "debut": 166.859,
+     "fin": 167.01
+    },
+    {
+     "mot": "ne",
+     "debut": 167.01,
+     "fin": 167.162
+    },
+    {
+     "mot": "faisons",
+     "debut": 167.162,
+     "fin": 167.54
+    },
+    {
+     "mot": "pas",
+     "debut": 167.54,
+     "fin": 167.691
+    },
+    {
+     "mot": "face",
+     "debut": 167.691,
+     "fin": 167.918
+    },
+    {
+     "mot": "à",
+     "debut": 167.918,
+     "fin": 167.994
+    },
+    {
+     "mot": "une",
+     "debut": 167.994,
+     "fin": 168.145
+    },
+    {
+     "mot": "manifestation,",
+     "debut": 168.145,
+     "fin": 169.129
+    },
+    {
+     "mot": "mais",
+     "debut": 169.129,
+     "fin": 169.281
+    },
+    {
+     "mot": "véritablement",
+     "debut": 169.281,
+     "fin": 170.191
+    },
+    {
+     "mot": "à",
+     "debut": 170.191,
+     "fin": 170.267
+    },
+    {
+     "mot": "des",
+     "debut": 170.267,
+     "fin": 170.419
+    },
+    {
+     "mot": "pillages",
+     "debut": 170.419,
+     "fin": 170.799
+    },
+    {
+     "mot": "».",
+     "debut": 170.799,
+     "fin": 170.799
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "cle": "s5_mairie",
+   "seq": 5,
+   "texte": "Direction le Vieux-Port. À la mi-journée, l'hôtel de ville, sur le quai du Port, est pris pour cible.",
+   "phonemes": "diʁɛksjˈɔ̃ lə vjˈøpˈɔʁ. a la mˈiʒuʁnˈe, lotˈɛl də vˈil, syʁ lə kˈe dy pˈɔʁ, ɛ pʁˈi puʁ sˈibl.",
+   "debut": 172.099,
+   "fin": 177.2,
+   "duree": 5.101,
+   "mots": [
+    {
+     "mot": "Direction",
+     "debut": 172.099,
+     "fin": 172.859
+    },
+    {
+     "mot": "le",
+     "debut": 172.859,
+     "fin": 173.028
+    },
+    {
+     "mot": "Vieux-Port.",
+     "debut": 173.028,
+     "fin": 173.535
+    },
+    {
+     "mot": "À",
+     "debut": 173.535,
+     "fin": 173.62
+    },
+    {
+     "mot": "la",
+     "debut": 173.62,
+     "fin": 173.789
+    },
+    {
+     "mot": "mi-journée,",
+     "debut": 173.789,
+     "fin": 174.38
+    },
+    {
+     "mot": "l'hôtel",
+     "debut": 174.38,
+     "fin": 174.803
+    },
+    {
+     "mot": "de",
+     "debut": 174.803,
+     "fin": 174.972
+    },
+    {
+     "mot": "ville,",
+     "debut": 174.972,
+     "fin": 175.225
+    },
+    {
+     "mot": "sur",
+     "debut": 175.225,
+     "fin": 175.479
+    },
+    {
+     "mot": "le",
+     "debut": 175.479,
+     "fin": 175.648
+    },
+    {
+     "mot": "quai",
+     "debut": 175.648,
+     "fin": 175.817
+    },
+    {
+     "mot": "du",
+     "debut": 175.817,
+     "fin": 175.986
+    },
+    {
+     "mot": "Port,",
+     "debut": 175.986,
+     "fin": 176.239
+    },
+    {
+     "mot": "est",
+     "debut": 176.239,
+     "fin": 176.326
+    },
+    {
+     "mot": "pris",
+     "debut": 176.326,
+     "fin": 176.589
+    },
+    {
+     "mot": "pour",
+     "debut": 176.589,
+     "fin": 176.851
+    },
+    {
+     "mot": "cible.",
+     "debut": 176.851,
+     "fin": 177.2
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "cle": "s5_porte",
+   "seq": 5,
+   "texte": "Selon un journaliste de l'AFP, des manifestants forcent la double porte en bois avec des barrières de sécurité, en criant : « C'est la Révolution, on prend la Bastille. »",
+   "phonemes": "səlˈɔ̃ œ̃ ʒuʁnalˈist də lˈafp, de manifɛstˈɑ̃ fˈɔʁs la dˈubl pˈɔʁt ɑ̃ bwˈa avˌɛk de baʁjˈɛʁ də sekyʁitˈe, ɑ̃ kʁiˈɑ̃ :  sɛ la ʁevolysjˈɔ̃, ɔ̃ pʁˈɑ̃ la bastˈij.",
+   "debut": 177.62,
+   "fin": 186.465,
+   "duree": 8.845,
+   "mots": [
+    {
+     "mot": "Selon",
+     "debut": 177.62,
+     "fin": 178.031
+    },
+    {
+     "mot": "un",
+     "debut": 178.031,
+     "fin": 178.196
+    },
+    {
+     "mot": "journaliste",
+     "debut": 178.196,
+     "fin": 178.936
+    },
+    {
+     "mot": "de",
+     "debut": 178.936,
+     "fin": 179.101
+    },
+    {
+     "mot": "l'AFP,",
+     "debut": 179.101,
+     "fin": 179.43
+    },
+    {
+     "mot": "des",
+     "debut": 179.43,
+     "fin": 179.589
+    },
+    {
+     "mot": "manifestants",
+     "debut": 179.589,
+     "fin": 180.383
+    },
+    {
+     "mot": "forcent",
+     "debut": 180.383,
+     "fin": 180.701
+    },
+    {
+     "mot": "la",
+     "debut": 180.701,
+     "fin": 180.86
+    },
+    {
+     "mot": "double",
+     "debut": 180.86,
+     "fin": 181.178
+    },
+    {
+     "mot": "porte",
+     "debut": 181.178,
+     "fin": 181.495
+    },
+    {
+     "mot": "en",
+     "debut": 181.495,
+     "fin": 181.654
+    },
+    {
+     "mot": "bois",
+     "debut": 181.654,
+     "fin": 181.892
+    },
+    {
+     "mot": "avec",
+     "debut": 181.892,
+     "fin": 182.21
+    },
+    {
+     "mot": "des",
+     "debut": 182.21,
+     "fin": 182.369
+    },
+    {
+     "mot": "barrières",
+     "debut": 182.369,
+     "fin": 182.846
+    },
+    {
+     "mot": "de",
+     "debut": 182.846,
+     "fin": 183.005
+    },
+    {
+     "mot": "sécurité,",
+     "debut": 183.005,
+     "fin": 183.64
+    },
+    {
+     "mot": "en",
+     "debut": 183.64,
+     "fin": 183.851
+    },
+    {
+     "mot": "criant",
+     "debut": 183.851,
+     "fin": 184.38
+    },
+    {
+     "mot": ":",
+     "debut": 184.38,
+     "fin": 184.38
+    },
+    {
+     "mot": "«",
+     "debut": 184.38,
+     "fin": 184.38
+    },
+    {
+     "mot": "C'est",
+     "debut": 184.38,
+     "fin": 184.533
+    },
+    {
+     "mot": "la",
+     "debut": 184.533,
+     "fin": 184.686
+    },
+    {
+     "mot": "Révolution,",
+     "debut": 184.686,
+     "fin": 185.45
+    },
+    {
+     "mot": "on",
+     "debut": 185.45,
+     "fin": 185.595
+    },
+    {
+     "mot": "prend",
+     "debut": 185.595,
+     "fin": 185.885
+    },
+    {
+     "mot": "la",
+     "debut": 185.885,
+     "fin": 186.03
+    },
+    {
+     "mot": "Bastille.",
+     "debut": 186.03,
+     "fin": 186.465
+    },
+    {
+     "mot": "»",
+     "debut": 186.465,
+     "fin": 186.465
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "cle": "s5_hall",
+   "seq": 5,
+   "texte": "Dans le hall, un buste de Marianne est renversé et du mobilier est cassé ; les intrus sont dispersés par les forces de l'ordre.",
+   "phonemes": "dɑ̃ lə (en)hˈɔːl(fr), œ̃ bˈyst də maʁjˈan ɛ ʁɑ̃vɛʁsˈe e dy mobiljˈe ɛ kasˈe ; lez ɛ̃tʁˈy sˈɔ̃ dispɛʁsˈe paʁ le fˈɔʁs də lˈɔʁdʁ.",
+   "debut": 186.885,
+   "fin": 194.245,
+   "duree": 7.36,
+   "mots": [
+    {
+     "mot": "Dans",
+     "debut": 186.885,
+     "fin": 187.159
+    },
+    {
+     "mot": "le",
+     "debut": 187.159,
+     "fin": 187.341
+    },
+    {
+     "mot": "hall,",
+     "debut": 187.341,
+     "fin": 188.345
+    },
+    {
+     "mot": "un",
+     "debut": 188.345,
+     "fin": 188.523
+    },
+    {
+     "mot": "buste",
+     "debut": 188.523,
+     "fin": 188.879
+    },
+    {
+     "mot": "de",
+     "debut": 188.879,
+     "fin": 189.057
+    },
+    {
+     "mot": "Marianne",
+     "debut": 189.057,
+     "fin": 189.59
+    },
+    {
+     "mot": "est",
+     "debut": 189.59,
+     "fin": 189.679
+    },
+    {
+     "mot": "renversé",
+     "debut": 189.679,
+     "fin": 190.391
+    },
+    {
+     "mot": "et",
+     "debut": 190.391,
+     "fin": 190.48
+    },
+    {
+     "mot": "du",
+     "debut": 190.48,
+     "fin": 190.658
+    },
+    {
+     "mot": "mobilier",
+     "debut": 190.658,
+     "fin": 191.28
+    },
+    {
+     "mot": "est",
+     "debut": 191.28,
+     "fin": 191.369
+    },
+    {
+     "mot": "cassé",
+     "debut": 191.369,
+     "fin": 191.725
+    },
+    {
+     "mot": ";",
+     "debut": 191.725,
+     "fin": 191.725
+    },
+    {
+     "mot": "les",
+     "debut": 191.725,
+     "fin": 191.873
+    },
+    {
+     "mot": "intrus",
+     "debut": 191.873,
+     "fin": 192.244
+    },
+    {
+     "mot": "sont",
+     "debut": 192.244,
+     "fin": 192.466
+    },
+    {
+     "mot": "dispersés",
+     "debut": 192.466,
+     "fin": 193.059
+    },
+    {
+     "mot": "par",
+     "debut": 193.059,
+     "fin": 193.282
+    },
+    {
+     "mot": "les",
+     "debut": 193.282,
+     "fin": 193.43
+    },
+    {
+     "mot": "forces",
+     "debut": 193.43,
+     "fin": 193.726
+    },
+    {
+     "mot": "de",
+     "debut": 193.726,
+     "fin": 193.875
+    },
+    {
+     "mot": "l'ordre.",
+     "debut": 193.875,
+     "fin": 194.245
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "cle": "s5_heure",
+   "seq": 5,
+   "texte": "L'heure exacte n'a pas été publiée ; mais à 13 h 20, La Provence constate que la porte est ouverte, gardée par des CRS.",
+   "phonemes": "lˈœʁ ɛɡzˈakt na paz etˈe pybliˈe ; mɛz a tʁˈɛz ˈœʁ vˈɛ̃, la pʁovˈɑ̃s kɔ̃stˈat kə la pˈɔʁt ɛt uvˈɛʁt, ɡaʁdˈe paʁ de sˈe.ˈɛʁ.ˈɛs.",
+   "debut": 194.665,
+   "fin": 202.095,
+   "duree": 7.43,
+   "mots": [
+    {
+     "mot": "L'heure",
+     "debut": 194.665,
+     "fin": 194.975
+    },
+    {
+     "mot": "exacte",
+     "debut": 194.975,
+     "fin": 195.594
+    },
+    {
+     "mot": "n'a",
+     "debut": 195.594,
+     "fin": 195.8
+    },
+    {
+     "mot": "pas",
+     "debut": 195.8,
+     "fin": 196.006
+    },
+    {
+     "mot": "été",
+     "debut": 196.006,
+     "fin": 196.316
+    },
+    {
+     "mot": "publiée",
+     "debut": 196.316,
+     "fin": 196.935
+    },
+    {
+     "mot": ";",
+     "debut": 196.935,
+     "fin": 196.935
+    },
+    {
+     "mot": "mais",
+     "debut": 196.935,
+     "fin": 197.138
+    },
+    {
+     "mot": "à",
+     "debut": 197.138,
+     "fin": 197.24
+    },
+    {
+     "mot": "13",
+     "debut": 197.24,
+     "fin": 197.647
+    },
+    {
+     "mot": "h",
+     "debut": 197.647,
+     "fin": 197.85
+    },
+    {
+     "mot": "20,",
+     "debut": 197.85,
+     "fin": 198.155
+    },
+    {
+     "mot": "La",
+     "debut": 198.155,
+     "fin": 198.326
+    },
+    {
+     "mot": "Provence",
+     "debut": 198.326,
+     "fin": 198.926
+    },
+    {
+     "mot": "constate",
+     "debut": 198.926,
+     "fin": 199.525
+    },
+    {
+     "mot": "que",
+     "debut": 199.525,
+     "fin": 199.697
+    },
+    {
+     "mot": "la",
+     "debut": 199.697,
+     "fin": 199.868
+    },
+    {
+     "mot": "porte",
+     "debut": 199.868,
+     "fin": 200.211
+    },
+    {
+     "mot": "est",
+     "debut": 200.211,
+     "fin": 200.296
+    },
+    {
+     "mot": "ouverte,",
+     "debut": 200.296,
+     "fin": 200.724
+    },
+    {
+     "mot": "gardée",
+     "debut": 200.724,
+     "fin": 201.153
+    },
+    {
+     "mot": "par",
+     "debut": 201.153,
+     "fin": 201.41
+    },
+    {
+     "mot": "des",
+     "debut": 201.41,
+     "fin": 201.581
+    },
+    {
+     "mot": "CRS.",
+     "debut": 201.581,
+     "fin": 202.095
+    }
+   ]
+  },
+  {
+   "id": 29,
+   "cle": "s5_repli",
+   "seq": 5,
+   "texte": "Pour le maire, c'est un « mouvement de repli des CRS » qui a laissé la porte libre.",
+   "phonemes": "puʁ lə mˈɛʁ, sɛt ˈœ̃  muvmˈɑ̃ də ʁəplˈi de sˈe.ˈɛʁ.ˈɛs.  ki a lɛsˈe la pˈɔʁt lˈibʁ.",
+   "debut": 202.515,
+   "fin": 206.753,
+   "duree": 4.238,
+   "mots": [
+    {
+     "mot": "Pour",
+     "debut": 202.515,
+     "fin": 202.769
+    },
+    {
+     "mot": "le",
+     "debut": 202.769,
+     "fin": 202.939
+    },
+    {
+     "mot": "maire,",
+     "debut": 202.939,
+     "fin": 203.193
+    },
+    {
+     "mot": "c'est",
+     "debut": 203.193,
+     "fin": 203.363
+    },
+    {
+     "mot": "un",
+     "debut": 203.363,
+     "fin": 203.532
+    },
+    {
+     "mot": "«",
+     "debut": 203.532,
+     "fin": 203.532
+    },
+    {
+     "mot": "mouvement",
+     "debut": 203.532,
+     "fin": 204.041
+    },
+    {
+     "mot": "de",
+     "debut": 204.041,
+     "fin": 204.21
+    },
+    {
+     "mot": "repli",
+     "debut": 204.21,
+     "fin": 204.634
+    },
+    {
+     "mot": "des",
+     "debut": 204.634,
+     "fin": 204.804
+    },
+    {
+     "mot": "CRS",
+     "debut": 204.804,
+     "fin": 205.312
+    },
+    {
+     "mot": "»",
+     "debut": 205.312,
+     "fin": 205.312
+    },
+    {
+     "mot": "qui",
+     "debut": 205.312,
+     "fin": 205.482
+    },
+    {
+     "mot": "a",
+     "debut": 205.482,
+     "fin": 205.566
+    },
+    {
+     "mot": "laissé",
+     "debut": 205.566,
+     "fin": 205.905
+    },
+    {
+     "mot": "la",
+     "debut": 205.905,
+     "fin": 206.075
+    },
+    {
+     "mot": "porte",
+     "debut": 206.075,
+     "fin": 206.414
+    },
+    {
+     "mot": "libre.",
+     "debut": 206.414,
+     "fin": 206.753
+    }
+   ]
+  },
+  {
+   "id": 30,
+   "cle": "s6_14h",
+   "seq": 6,
+   "texte": "14 heures : c'est l'heure du rassemblement annoncé.",
+   "phonemes": "katˈɔʁz ˈœʁ : sɛ lˈœʁ dy ʁasɑ̃bləmˈɑ̃ anɔ̃sˈe.",
+   "debut": 208.053,
+   "fin": 210.522,
+   "duree": 2.47,
+   "mots": [
+    {
+     "mot": "14",
+     "debut": 208.053,
+     "fin": 208.72
+    },
+    {
+     "mot": "heures",
+     "debut": 208.72,
+     "fin": 208.943
+    },
+    {
+     "mot": ":",
+     "debut": 208.943,
+     "fin": 208.943
+    },
+    {
+     "mot": "c'est",
+     "debut": 208.943,
+     "fin": 209.075
+    },
+    {
+     "mot": "l'heure",
+     "debut": 209.075,
+     "fin": 209.272
+    },
+    {
+     "mot": "du",
+     "debut": 209.272,
+     "fin": 209.404
+    },
+    {
+     "mot": "rassemblement",
+     "debut": 209.404,
+     "fin": 210.128
+    },
+    {
+     "mot": "annoncé.",
+     "debut": 210.128,
+     "fin": 210.523
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "cle": "s6_face",
+   "seq": 6,
+   "texte": "Au Vieux-Port, il ne peut pas se tenir : selon Marsactu, CRS et manifestants s'y font face pendant près d'une heure.",
+   "phonemes": "o vjˈøpˈɔʁ, il nə pˈø pa sə tənˈiʁ : səlˈɔ̃ maʁsaktˈy, sˈe.ˈɛʁ.ˈɛs. e manifɛstˈɑ̃ si fˈɔ̃ fˈas pɑ̃dˈɑ̃ pʁɛ dyn ˈœʁ.",
+   "debut": 210.942,
+   "fin": 217.32,
+   "duree": 6.377,
+   "mots": [
+    {
+     "mot": "Au",
+     "debut": 210.942,
+     "fin": 211.071
+    },
+    {
+     "mot": "Vieux-Port,",
+     "debut": 211.071,
+     "fin": 211.842
+    },
+    {
+     "mot": "il",
+     "debut": 211.842,
+     "fin": 212.011
+    },
+    {
+     "mot": "ne",
+     "debut": 212.011,
+     "fin": 212.181
+    },
+    {
+     "mot": "peut",
+     "debut": 212.181,
+     "fin": 212.35
+    },
+    {
+     "mot": "pas",
+     "debut": 212.35,
+     "fin": 212.519
+    },
+    {
+     "mot": "se",
+     "debut": 212.519,
+     "fin": 212.689
+    },
+    {
+     "mot": "tenir",
+     "debut": 212.689,
+     "fin": 213.112
+    },
+    {
+     "mot": ":",
+     "debut": 213.112,
+     "fin": 213.112
+    },
+    {
+     "mot": "selon",
+     "debut": 213.112,
+     "fin": 213.377
+    },
+    {
+     "mot": "Marsactu,",
+     "debut": 213.377,
+     "fin": 213.802
+    },
+    {
+     "mot": "CRS",
+     "debut": 213.802,
+     "fin": 214.343
+    },
+    {
+     "mot": "et",
+     "debut": 214.343,
+     "fin": 214.433
+    },
+    {
+     "mot": "manifestants",
+     "debut": 214.433,
+     "fin": 215.335
+    },
+    {
+     "mot": "s'y",
+     "debut": 215.335,
+     "fin": 215.516
+    },
+    {
+     "mot": "font",
+     "debut": 215.516,
+     "fin": 215.786
+    },
+    {
+     "mot": "face",
+     "debut": 215.786,
+     "fin": 216.057
+    },
+    {
+     "mot": "pendant",
+     "debut": 216.057,
+     "fin": 216.598
+    },
+    {
+     "mot": "près",
+     "debut": 216.598,
+     "fin": 216.868
+    },
+    {
+     "mot": "d'une",
+     "debut": 216.868,
+     "fin": 217.139
+    },
+    {
+     "mot": "heure.",
+     "debut": 217.139,
+     "fin": 217.319
+    }
+   ]
+  },
+  {
+   "id": 32,
+   "cle": "s6_reformes",
+   "seq": 6,
+   "texte": "La manifestation a pourtant bien lieu : une heure plus tard, aux Réformés, rapporte La Provence.",
+   "phonemes": "la manifɛstasjˈɔ̃ a puʁtˌɑ̃ bjˈɛ̃ ljˈø : yn ˈœʁ ply tˈaʁ, o ʁefɔʁmˈe, ʁapˈɔʁt la pʁovˈɑ̃s.",
+   "debut": 217.74,
+   "fin": 222.746,
+   "duree": 5.007,
+   "mots": [
+    {
+     "mot": "La",
+     "debut": 217.74,
+     "fin": 217.889
+    },
+    {
+     "mot": "manifestation",
+     "debut": 217.889,
+     "fin": 218.857
+    },
+    {
+     "mot": "a",
+     "debut": 218.857,
+     "fin": 218.932
+    },
+    {
+     "mot": "pourtant",
+     "debut": 218.932,
+     "fin": 219.379
+    },
+    {
+     "mot": "bien",
+     "debut": 219.379,
+     "fin": 219.677
+    },
+    {
+     "mot": "lieu",
+     "debut": 219.677,
+     "fin": 219.9
+    },
+    {
+     "mot": ":",
+     "debut": 219.9,
+     "fin": 219.9
+    },
+    {
+     "mot": "une",
+     "debut": 219.9,
+     "fin": 220.09
+    },
+    {
+     "mot": "heure",
+     "debut": 220.09,
+     "fin": 220.28
+    },
+    {
+     "mot": "plus",
+     "debut": 220.28,
+     "fin": 220.565
+    },
+    {
+     "mot": "tard,",
+     "debut": 220.565,
+     "fin": 220.85
+    },
+    {
+     "mot": "aux",
+     "debut": 220.85,
+     "fin": 220.932
+    },
+    {
+     "mot": "Réformés,",
+     "debut": 220.932,
+     "fin": 221.51
+    },
+    {
+     "mot": "rapporte",
+     "debut": 221.51,
+     "fin": 222.004
+    },
+    {
+     "mot": "La",
+     "debut": 222.004,
+     "fin": 222.169
+    },
+    {
+     "mot": "Provence.",
+     "debut": 222.169,
+     "fin": 222.747
+    }
+   ]
+  },
+  {
+   "id": 33,
+   "cle": "s6_cortege",
+   "seq": 6,
+   "texte": "À 14 h 51, son direct décrit plusieurs milliers de manifestants qui remontent pacifiquement la Canebière.",
+   "phonemes": "a katˈɔʁz ˈœʁ sɛ̃kˈɑ̃t e ˈyn, sɔ̃ diʁˈɛkt dekʁˈi plyzjˌœʁ miljˈe də manifɛstˈɑ̃ ki ʁəmˈɔ̃t pasifikmˈɑ̃ la kanbjˈɛʁ.",
+   "debut": 223.166,
+   "fin": 229.775,
+   "duree": 6.609,
+   "mots": [
+    {
+     "mot": "À",
+     "debut": 223.166,
+     "fin": 223.274
+    },
+    {
+     "mot": "14",
+     "debut": 223.274,
+     "fin": 223.921
+    },
+    {
+     "mot": "h",
+     "debut": 223.921,
+     "fin": 224.137
+    },
+    {
+     "mot": "51,",
+     "debut": 224.137,
+     "fin": 225.216
+    },
+    {
+     "mot": "son",
+     "debut": 225.216,
+     "fin": 225.426
+    },
+    {
+     "mot": "direct",
+     "debut": 225.426,
+     "fin": 225.847
+    },
+    {
+     "mot": "décrit",
+     "debut": 225.847,
+     "fin": 226.198
+    },
+    {
+     "mot": "plusieurs",
+     "debut": 226.198,
+     "fin": 226.689
+    },
+    {
+     "mot": "milliers",
+     "debut": 226.689,
+     "fin": 227.04
+    },
+    {
+     "mot": "de",
+     "debut": 227.04,
+     "fin": 227.18
+    },
+    {
+     "mot": "manifestants",
+     "debut": 227.18,
+     "fin": 227.881
+    },
+    {
+     "mot": "qui",
+     "debut": 227.881,
+     "fin": 228.022
+    },
+    {
+     "mot": "remontent",
+     "debut": 228.022,
+     "fin": 228.442
+    },
+    {
+     "mot": "pacifiquement",
+     "debut": 228.442,
+     "fin": 229.144
+    },
+    {
+     "mot": "la",
+     "debut": 229.144,
+     "fin": 229.284
+    },
+    {
+     "mot": "Canebière.",
+     "debut": 229.284,
+     "fin": 229.775
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "cle": "s6_auditrice",
+   "seq": 6,
+   "texte": "Le lendemain, sur Europe 1, une auditrice gilet jaune résume : « À cause de tout ce chaos, on n'a pas pu lancer notre manifestation. »",
+   "phonemes": "lə lɑ̃dmˈɛ̃, syʁ øʁˈɔp ˈœ̃, yn oditʁˈis ʒilˈɛ ʒˈon ʁezˈym :  a kˈoz də tu sə kaˈo, ɔ̃ na pa pˈy lɑ̃sˈe notʁ manifɛstasjˈɔ̃.",
+   "debut": 230.195,
+   "fin": 237.129,
+   "duree": 6.933,
+   "mots": [
+    {
+     "mot": "Le",
+     "debut": 230.195,
+     "fin": 230.371
+    },
+    {
+     "mot": "lendemain,",
+     "debut": 230.371,
+     "fin": 230.985
+    },
+    {
+     "mot": "sur",
+     "debut": 230.985,
+     "fin": 231.285
+    },
+    {
+     "mot": "Europe",
+     "debut": 231.285,
+     "fin": 231.685
+    },
+    {
+     "mot": "1,",
+     "debut": 231.685,
+     "fin": 231.885
+    },
+    {
+     "mot": "une",
+     "debut": 231.885,
+     "fin": 232.06
+    },
+    {
+     "mot": "auditrice",
+     "debut": 232.06,
+     "fin": 232.674
+    },
+    {
+     "mot": "gilet",
+     "debut": 232.674,
+     "fin": 233.024
+    },
+    {
+     "mot": "jaune",
+     "debut": 233.024,
+     "fin": 233.287
+    },
+    {
+     "mot": "résume",
+     "debut": 233.287,
+     "fin": 233.725
+    },
+    {
+     "mot": ":",
+     "debut": 233.725,
+     "fin": 233.725
+    },
+    {
+     "mot": "«",
+     "debut": 233.725,
+     "fin": 233.725
+    },
+    {
+     "mot": "À",
+     "debut": 233.725,
+     "fin": 233.83
+    },
+    {
+     "mot": "cause",
+     "debut": 233.83,
+     "fin": 234.147
+    },
+    {
+     "mot": "de",
+     "debut": 234.147,
+     "fin": 234.357
+    },
+    {
+     "mot": "tout",
+     "debut": 234.357,
+     "fin": 234.568
+    },
+    {
+     "mot": "ce",
+     "debut": 234.568,
+     "fin": 234.779
+    },
+    {
+     "mot": "chaos,",
+     "debut": 234.779,
+     "fin": 235.095
+    },
+    {
+     "mot": "on",
+     "debut": 235.095,
+     "fin": 235.231
+    },
+    {
+     "mot": "n'a",
+     "debut": 235.231,
+     "fin": 235.366
+    },
+    {
+     "mot": "pas",
+     "debut": 235.366,
+     "fin": 235.502
+    },
+    {
+     "mot": "pu",
+     "debut": 235.502,
+     "fin": 235.637
+    },
+    {
+     "mot": "lancer",
+     "debut": 235.637,
+     "fin": 235.976
+    },
+    {
+     "mot": "notre",
+     "debut": 235.976,
+     "fin": 236.247
+    },
+    {
+     "mot": "manifestation.",
+     "debut": 236.247,
+     "fin": 237.128
+    },
+    {
+     "mot": "»",
+     "debut": 237.128,
+     "fin": 237.128
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "cle": "s7_1525",
+   "seq": 7,
+   "texte": "15 h 25.",
+   "phonemes": "kˈɛ̃z ˈœʁ vˈɛ̃tsˈɛ̃k.",
+   "debut": 238.429,
+   "fin": 239.588,
+   "duree": 1.159,
+   "mots": [
+    {
+     "mot": "15",
+     "debut": 238.429,
+     "fin": 238.76
+    },
+    {
+     "mot": "h",
+     "debut": 238.76,
+     "fin": 238.926
+    },
+    {
+     "mot": "25.",
+     "debut": 238.926,
+     "fin": 239.588
+    }
+   ]
+  },
+  {
+   "id": 36,
+   "cle": "s7_arret",
+   "seq": 7,
+   "texte": "Selon le site La Clé Publique, seul à donner cette heure, les transports en commun sont arrêtés sur décision du préfet.",
+   "phonemes": "səlˈɔ̃ lə sˈit la klˈe pyblˈik, sˈœl a dɔnˈe sɛt ˈœʁ, le tʁɑ̃spˈɔʁz ɑ̃ kɔmˈœ̃ sˈɔ̃t aʁɛtˈe syʁ desizjˈɔ̃ dy pʁefˈɛ.",
+   "debut": 240.388,
+   "fin": 246.806,
+   "duree": 6.418,
+   "mots": [
+    {
+     "mot": "Selon",
+     "debut": 240.388,
+     "fin": 240.824
+    },
+    {
+     "mot": "le",
+     "debut": 240.824,
+     "fin": 240.998
+    },
+    {
+     "mot": "site",
+     "debut": 240.998,
+     "fin": 241.259
+    },
+    {
+     "mot": "La",
+     "debut": 241.259,
+     "fin": 241.434
+    },
+    {
+     "mot": "Clé",
+     "debut": 241.434,
+     "fin": 241.695
+    },
+    {
+     "mot": "Publique,",
+     "debut": 241.695,
+     "fin": 242.218
+    },
+    {
+     "mot": "seul",
+     "debut": 242.218,
+     "fin": 242.557
+    },
+    {
+     "mot": "à",
+     "debut": 242.557,
+     "fin": 242.67
+    },
+    {
+     "mot": "donner",
+     "debut": 242.67,
+     "fin": 243.123
+    },
+    {
+     "mot": "cette",
+     "debut": 243.123,
+     "fin": 243.462
+    },
+    {
+     "mot": "heure,",
+     "debut": 243.462,
+     "fin": 243.688
+    },
+    {
+     "mot": "les",
+     "debut": 243.688,
+     "fin": 243.833
+    },
+    {
+     "mot": "transports",
+     "debut": 243.833,
+     "fin": 244.413
+    },
+    {
+     "mot": "en",
+     "debut": 244.413,
+     "fin": 244.558
+    },
+    {
+     "mot": "commun",
+     "debut": 244.558,
+     "fin": 244.921
+    },
+    {
+     "mot": "sont",
+     "debut": 244.921,
+     "fin": 245.138
+    },
+    {
+     "mot": "arrêtés",
+     "debut": 245.138,
+     "fin": 245.501
+    },
+    {
+     "mot": "sur",
+     "debut": 245.501,
+     "fin": 245.718
+    },
+    {
+     "mot": "décision",
+     "debut": 245.718,
+     "fin": 246.298
+    },
+    {
+     "mot": "du",
+     "debut": 246.298,
+     "fin": 246.443
+    },
+    {
+     "mot": "préfet.",
+     "debut": 246.443,
+     "fin": 246.806
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "cle": "s7_lp",
+   "seq": 7,
+   "texte": "À 16 h 03, La Provence confirme : métro et tram sont totalement à l'arrêt, à la demande du préfet.",
+   "phonemes": "a sˈɛz ˈœʁ zeʁˈo tʁwˈa, la pʁovˈɑ̃s kɔ̃fˈiʁm : metʁˈo e tʁˈam sˈɔ̃ totalmˈɑ̃ a laʁˈɛ, a la dəmˈɑ̃d dy pʁefˈɛ.",
+   "debut": 247.226,
+   "fin": 253.424,
+   "duree": 6.198,
+   "mots": [
+    {
+     "mot": "À",
+     "debut": 247.226,
+     "fin": 247.34
+    },
+    {
+     "mot": "16",
+     "debut": 247.34,
+     "fin": 247.68
+    },
+    {
+     "mot": "h",
+     "debut": 247.68,
+     "fin": 247.907
+    },
+    {
+     "mot": "03,",
+     "debut": 247.907,
+     "fin": 248.816
+    },
+    {
+     "mot": "La",
+     "debut": 248.816,
+     "fin": 248.99
+    },
+    {
+     "mot": "Provence",
+     "debut": 248.99,
+     "fin": 249.598
+    },
+    {
+     "mot": "confirme",
+     "debut": 249.598,
+     "fin": 250.206
+    },
+    {
+     "mot": ":",
+     "debut": 250.206,
+     "fin": 250.206
+    },
+    {
+     "mot": "métro",
+     "debut": 250.206,
+     "fin": 250.604
+    },
+    {
+     "mot": "et",
+     "debut": 250.604,
+     "fin": 250.684
+    },
+    {
+     "mot": "tram",
+     "debut": 250.684,
+     "fin": 251.002
+    },
+    {
+     "mot": "sont",
+     "debut": 251.002,
+     "fin": 251.241
+    },
+    {
+     "mot": "totalement",
+     "debut": 251.241,
+     "fin": 251.878
+    },
+    {
+     "mot": "à",
+     "debut": 251.878,
+     "fin": 251.958
+    },
+    {
+     "mot": "l'arrêt,",
+     "debut": 251.958,
+     "fin": 252.276
+    },
+    {
+     "mot": "à",
+     "debut": 252.276,
+     "fin": 252.348
+    },
+    {
+     "mot": "la",
+     "debut": 252.348,
+     "fin": 252.491
+    },
+    {
+     "mot": "demande",
+     "debut": 252.491,
+     "fin": 252.922
+    },
+    {
+     "mot": "du",
+     "debut": 252.922,
+     "fin": 253.065
+    },
+    {
+     "mot": "préfet.",
+     "debut": 253.065,
+     "fin": 253.424
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "cle": "s7_bus",
+   "seq": 7,
+   "texte": "Les bus suivent en fin de journée.",
+   "phonemes": "le bˈys syˈivt ɑ̃ fˈɛ̃ də ʒuʁnˈe.",
+   "debut": 253.844,
+   "fin": 255.424,
+   "duree": 1.58,
+   "mots": [
+    {
+     "mot": "Les",
+     "debut": 253.844,
+     "fin": 253.994
+    },
+    {
+     "mot": "bus",
+     "debut": 253.994,
+     "fin": 254.22
+    },
+    {
+     "mot": "suivent",
+     "debut": 254.22,
+     "fin": 254.521
+    },
+    {
+     "mot": "en",
+     "debut": 254.521,
+     "fin": 254.672
+    },
+    {
+     "mot": "fin",
+     "debut": 254.672,
+     "fin": 254.897
+    },
+    {
+     "mot": "de",
+     "debut": 254.897,
+     "fin": 255.048
+    },
+    {
+     "mot": "journée.",
+     "debut": 255.048,
+     "fin": 255.424
+    }
+   ]
+  },
+  {
+   "id": 39,
+   "cle": "s8_secteur",
+   "seq": 8,
+   "texte": "Dans l'après-midi, les pillages s'étendent au secteur commerçant situé au sud de la Canebière : rue Saint-Ferréol, rue Paradis, rue Grignan, rue Montgrand.",
+   "phonemes": "dɑ̃ lapʁˌɛmidˈi, le pijˈaʒ setˈɑ̃dt o sɛktˈœʁ kɔmɛʁsˈɑ̃ sityˈe o sˈyd də la kanbjˈɛʁ : ʁˈy sˈɛ̃fɛʁeˈɔl, ʁˈy paʁadˈi, ʁˈy ɡʁinjˈɑ̃, ʁˈy mɔ̃tɡʁˈɑ̃.",
+   "debut": 256.724,
+   "fin": 264.886,
+   "duree": 8.162,
+   "mots": [
+    {
+     "mot": "Dans",
+     "debut": 256.724,
+     "fin": 256.994
+    },
+    {
+     "mot": "l'après-midi,",
+     "debut": 256.994,
+     "fin": 257.804
+    },
+    {
+     "mot": "les",
+     "debut": 257.804,
+     "fin": 257.971
+    },
+    {
+     "mot": "pillages",
+     "debut": 257.971,
+     "fin": 258.387
+    },
+    {
+     "mot": "s'étendent",
+     "debut": 258.387,
+     "fin": 258.887
+    },
+    {
+     "mot": "au",
+     "debut": 258.887,
+     "fin": 258.971
+    },
+    {
+     "mot": "secteur",
+     "debut": 258.971,
+     "fin": 259.471
+    },
+    {
+     "mot": "commerçant",
+     "debut": 259.471,
+     "fin": 260.137
+    },
+    {
+     "mot": "situé",
+     "debut": 260.137,
+     "fin": 260.554
+    },
+    {
+     "mot": "au",
+     "debut": 260.554,
+     "fin": 260.637
+    },
+    {
+     "mot": "sud",
+     "debut": 260.637,
+     "fin": 260.887
+    },
+    {
+     "mot": "de",
+     "debut": 260.887,
+     "fin": 261.054
+    },
+    {
+     "mot": "la",
+     "debut": 261.054,
+     "fin": 261.221
+    },
+    {
+     "mot": "Canebière",
+     "debut": 261.221,
+     "fin": 261.804
+    },
+    {
+     "mot": ":",
+     "debut": 261.804,
+     "fin": 261.804
+    },
+    {
+     "mot": "rue",
+     "debut": 261.804,
+     "fin": 262.013
+    },
+    {
+     "mot": "Saint-Ferréol,",
+     "debut": 262.013,
+     "fin": 262.954
+    },
+    {
+     "mot": "rue",
+     "debut": 262.954,
+     "fin": 263.097
+    },
+    {
+     "mot": "Paradis,",
+     "debut": 263.097,
+     "fin": 263.526
+    },
+    {
+     "mot": "rue",
+     "debut": 263.526,
+     "fin": 263.67
+    },
+    {
+     "mot": "Grignan,",
+     "debut": 263.67,
+     "fin": 264.171
+    },
+    {
+     "mot": "rue",
+     "debut": 264.171,
+     "fin": 264.314
+    },
+    {
+     "mot": "Montgrand.",
+     "debut": 264.314,
+     "fin": 264.886
+    }
+   ]
+  },
+  {
+   "id": 40,
+   "cle": "s8_bourse",
+   "seq": 8,
+   "texte": "À 15 h 02, des dizaines de personnes forcent une grille du Centre Bourse ; des boutiques de luxe sont pillées rue Paradis et rue Grignan.",
+   "phonemes": "a kˈɛ̃z ˈœʁ zeʁˈo dˈø, de dizˈɛn də pɛʁsˈɔn fˈɔʁst yn ɡʁˈij dy sˈɑ̃tʁ bˈuʁs ; de butˈik də lˈyks sˈɔ̃ pijˈe ʁˈy paʁadˈi e ʁˈy ɡʁinjˈɑ̃.",
+   "debut": 265.306,
+   "fin": 272.795,
+   "duree": 7.489,
+   "mots": [
+    {
+     "mot": "À",
+     "debut": 265.306,
+     "fin": 265.424
+    },
+    {
+     "mot": "15",
+     "debut": 265.424,
+     "fin": 265.894
+    },
+    {
+     "mot": "h",
+     "debut": 265.894,
+     "fin": 266.13
+    },
+    {
+     "mot": "02,",
+     "debut": 266.13,
+     "fin": 266.836
+    },
+    {
+     "mot": "des",
+     "debut": 266.836,
+     "fin": 267.011
+    },
+    {
+     "mot": "dizaines",
+     "debut": 267.011,
+     "fin": 267.449
+    },
+    {
+     "mot": "de",
+     "debut": 267.449,
+     "fin": 267.623
+    },
+    {
+     "mot": "personnes",
+     "debut": 267.623,
+     "fin": 268.148
+    },
+    {
+     "mot": "forcent",
+     "debut": 268.148,
+     "fin": 268.498
+    },
+    {
+     "mot": "une",
+     "debut": 268.498,
+     "fin": 268.673
+    },
+    {
+     "mot": "grille",
+     "debut": 268.673,
+     "fin": 269.023
+    },
+    {
+     "mot": "du",
+     "debut": 269.023,
+     "fin": 269.198
+    },
+    {
+     "mot": "Centre",
+     "debut": 269.198,
+     "fin": 269.636
+    },
+    {
+     "mot": "Bourse",
+     "debut": 269.636,
+     "fin": 269.986
+    },
+    {
+     "mot": ";",
+     "debut": 269.986,
+     "fin": 269.986
+    },
+    {
+     "mot": "des",
+     "debut": 269.986,
+     "fin": 270.134
+    },
+    {
+     "mot": "boutiques",
+     "debut": 270.134,
+     "fin": 270.503
+    },
+    {
+     "mot": "de",
+     "debut": 270.503,
+     "fin": 270.651
+    },
+    {
+     "mot": "luxe",
+     "debut": 270.651,
+     "fin": 270.947
+    },
+    {
+     "mot": "sont",
+     "debut": 270.947,
+     "fin": 271.169
+    },
+    {
+     "mot": "pillées",
+     "debut": 271.169,
+     "fin": 271.464
+    },
+    {
+     "mot": "rue",
+     "debut": 271.464,
+     "fin": 271.612
+    },
+    {
+     "mot": "Paradis",
+     "debut": 271.612,
+     "fin": 272.056
+    },
+    {
+     "mot": "et",
+     "debut": 272.056,
+     "fin": 272.13
+    },
+    {
+     "mot": "rue",
+     "debut": 272.13,
+     "fin": 272.278
+    },
+    {
+     "mot": "Grignan.",
+     "debut": 272.278,
+     "fin": 272.795
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "cle": "s8_feu",
+   "seq": 8,
+   "texte": "À 15 h 39, un magasin de la rue Saint-Ferréol est incendié, et les flammes gagnent l'immeuble.",
+   "phonemes": "a kˈɛ̃z ˈœʁ tʁˈɑ̃tnˈœf, œ̃ maɡazˈɛ̃ də la ʁˈy sˈɛ̃fɛʁeˈɔl ɛt ɛ̃sɑ̃djˈe, e le flˈam ɡˈanj limˈøbl.",
+   "debut": 273.215,
+   "fin": 278.809,
+   "duree": 5.594,
+   "mots": [
+    {
+     "mot": "À",
+     "debut": 273.215,
+     "fin": 273.317
+    },
+    {
+     "mot": "15",
+     "debut": 273.317,
+     "fin": 273.725
+    },
+    {
+     "mot": "h",
+     "debut": 273.725,
+     "fin": 273.929
+    },
+    {
+     "mot": "39,",
+     "debut": 273.929,
+     "fin": 274.745
+    },
+    {
+     "mot": "un",
+     "debut": 274.745,
+     "fin": 274.905
+    },
+    {
+     "mot": "magasin",
+     "debut": 274.905,
+     "fin": 275.465
+    },
+    {
+     "mot": "de",
+     "debut": 275.465,
+     "fin": 275.625
+    },
+    {
+     "mot": "la",
+     "debut": 275.625,
+     "fin": 275.785
+    },
+    {
+     "mot": "rue",
+     "debut": 275.785,
+     "fin": 275.945
+    },
+    {
+     "mot": "Saint-Ferréol",
+     "debut": 275.945,
+     "fin": 276.665
+    },
+    {
+     "mot": "est",
+     "debut": 276.665,
+     "fin": 276.745
+    },
+    {
+     "mot": "incendié,",
+     "debut": 276.745,
+     "fin": 277.385
+    },
+    {
+     "mot": "et",
+     "debut": 277.385,
+     "fin": 277.469
+    },
+    {
+     "mot": "les",
+     "debut": 277.469,
+     "fin": 277.636
+    },
+    {
+     "mot": "flammes",
+     "debut": 277.636,
+     "fin": 277.971
+    },
+    {
+     "mot": "gagnent",
+     "debut": 277.971,
+     "fin": 278.306
+    },
+    {
+     "mot": "l'immeuble.",
+     "debut": 278.306,
+     "fin": 278.809
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "cle": "s8_acoups",
+   "seq": 8,
+   "texte": "Face aux pilleurs, la journaliste de Marsactu décrit quelques CRS « divisés en petits groupes », qui « interviennent par à-coups ».",
+   "phonemes": "fˈas o pijˈœʁ, la ʒuʁnalˈist də maʁsaktˈy dekʁˈi kˌɛlkə sˈe.ˈɛʁ.ˈɛs.  divizˈez ɑ̃ pətˈi ɡʁˈup , kˈi  ɛ̃tɛʁvjˈɛn paʁ akˈu .",
+   "debut": 279.229,
+   "fin": 286.073,
+   "duree": 6.844,
+   "mots": [
+    {
+     "mot": "Face",
+     "debut": 279.229,
+     "fin": 279.636
+    },
+    {
+     "mot": "aux",
+     "debut": 279.636,
+     "fin": 279.771
+    },
+    {
+     "mot": "pilleurs,",
+     "debut": 279.771,
+     "fin": 280.449
+    },
+    {
+     "mot": "la",
+     "debut": 280.449,
+     "fin": 280.613
+    },
+    {
+     "mot": "journaliste",
+     "debut": 280.613,
+     "fin": 281.352
+    },
+    {
+     "mot": "de",
+     "debut": 281.352,
+     "fin": 281.516
+    },
+    {
+     "mot": "Marsactu",
+     "debut": 281.516,
+     "fin": 282.173
+    },
+    {
+     "mot": "décrit",
+     "debut": 282.173,
+     "fin": 282.583
+    },
+    {
+     "mot": "quelques",
+     "debut": 282.583,
+     "fin": 282.993
+    },
+    {
+     "mot": "CRS",
+     "debut": 282.993,
+     "fin": 283.486
+    },
+    {
+     "mot": "«",
+     "debut": 283.486,
+     "fin": 283.486
+    },
+    {
+     "mot": "divisés",
+     "debut": 283.486,
+     "fin": 283.978
+    },
+    {
+     "mot": "en",
+     "debut": 283.978,
+     "fin": 284.142
+    },
+    {
+     "mot": "petits",
+     "debut": 284.142,
+     "fin": 284.471
+    },
+    {
+     "mot": "groupes",
+     "debut": 284.471,
+     "fin": 284.799
+    },
+    {
+     "mot": "»,",
+     "debut": 284.799,
+     "fin": 284.799
+    },
+    {
+     "mot": "qui",
+     "debut": 284.799,
+     "fin": 284.949
+    },
+    {
+     "mot": "«",
+     "debut": 284.949,
+     "fin": 284.949
+    },
+    {
+     "mot": "interviennent",
+     "debut": 284.949,
+     "fin": 285.623
+    },
+    {
+     "mot": "par",
+     "debut": 285.623,
+     "fin": 285.848
+    },
+    {
+     "mot": "à-coups",
+     "debut": 285.848,
+     "fin": 286.073
+    },
+    {
+     "mot": "».",
+     "debut": 286.073,
+     "fin": 286.073
+    }
+   ]
+  },
+  {
+   "id": 43,
+   "cle": "s8_temoin",
+   "seq": 8,
+   "texte": "Une habitante dira avoir vu les CRS « laisser faire » : un témoignage, pas un constat.",
+   "phonemes": "yn abitˈɑ̃t diʁˈa avwˈaʁ vˈy le sˈe.ˈɛʁ.ˈɛs.  lɛsˈe fˈɛʁ  : œ̃ temwanjˈaʒ, paz œ̃ kɔ̃stˈa.",
+   "debut": 286.493,
+   "fin": 291.461,
+   "duree": 4.968,
+   "mots": [
+    {
+     "mot": "Une",
+     "debut": 286.493,
+     "fin": 286.647
+    },
+    {
+     "mot": "habitante",
+     "debut": 286.647,
+     "fin": 287.185
+    },
+    {
+     "mot": "dira",
+     "debut": 287.185,
+     "fin": 287.492
+    },
+    {
+     "mot": "avoir",
+     "debut": 287.492,
+     "fin": 287.876
+    },
+    {
+     "mot": "vu",
+     "debut": 287.876,
+     "fin": 288.03
+    },
+    {
+     "mot": "les",
+     "debut": 288.03,
+     "fin": 288.184
+    },
+    {
+     "mot": "CRS",
+     "debut": 288.184,
+     "fin": 288.645
+    },
+    {
+     "mot": "«",
+     "debut": 288.645,
+     "fin": 288.645
+    },
+    {
+     "mot": "laisser",
+     "debut": 288.645,
+     "fin": 288.952
+    },
+    {
+     "mot": "faire",
+     "debut": 288.952,
+     "fin": 289.183
+    },
+    {
+     "mot": "»",
+     "debut": 289.183,
+     "fin": 289.183
+    },
+    {
+     "mot": ":",
+     "debut": 289.183,
+     "fin": 289.183
+    },
+    {
+     "mot": "un",
+     "debut": 289.183,
+     "fin": 289.4
+    },
+    {
+     "mot": "témoignage,",
+     "debut": 289.4,
+     "fin": 290.376
+    },
+    {
+     "mot": "pas",
+     "debut": 290.376,
+     "fin": 290.593
+    },
+    {
+     "mot": "un",
+     "debut": 290.593,
+     "fin": 290.81
+    },
+    {
+     "mot": "constat.",
+     "debut": 290.81,
+     "fin": 291.461
+    }
+   ]
+  },
+  {
+   "id": 44,
+   "cle": "s8_centaure",
+   "seq": 8,
+   "texte": "Côté renforts, deux blindés Centaure de la gendarmerie sont engagés à partir de 13 h 30, selon la préfecture.",
+   "phonemes": "kotˈe ʁɑ̃fˈɔʁ, dˈø blɛ̃dˈe sɑ̃tˈɔʁ də la ʒɑ̃daʁməʁˈi sˈɔ̃t ɑ̃ɡaʒˈez a paʁtˈiʁ də tʁˈɛz ˈœʁ tʁˈɑ̃t, səlˈɔ̃ la pʁefɛktˈyʁ.",
+   "debut": 291.881,
+   "fin": 298.703,
+   "duree": 6.821,
+   "mots": [
+    {
+     "mot": "Côté",
+     "debut": 291.881,
+     "fin": 292.353
+    },
+    {
+     "mot": "renforts,",
+     "debut": 292.353,
+     "fin": 293.061
+    },
+    {
+     "mot": "deux",
+     "debut": 293.061,
+     "fin": 293.22
+    },
+    {
+     "mot": "blindés",
+     "debut": 293.22,
+     "fin": 293.695
+    },
+    {
+     "mot": "Centaure",
+     "debut": 293.695,
+     "fin": 294.171
+    },
+    {
+     "mot": "de",
+     "debut": 294.171,
+     "fin": 294.33
+    },
+    {
+     "mot": "la",
+     "debut": 294.33,
+     "fin": 294.488
+    },
+    {
+     "mot": "gendarmerie",
+     "debut": 294.488,
+     "fin": 295.281
+    },
+    {
+     "mot": "sont",
+     "debut": 295.281,
+     "fin": 295.519
+    },
+    {
+     "mot": "engagés",
+     "debut": 295.519,
+     "fin": 295.995
+    },
+    {
+     "mot": "à",
+     "debut": 295.995,
+     "fin": 296.074
+    },
+    {
+     "mot": "partir",
+     "debut": 296.074,
+     "fin": 296.55
+    },
+    {
+     "mot": "de",
+     "debut": 296.55,
+     "fin": 296.709
+    },
+    {
+     "mot": "13",
+     "debut": 296.709,
+     "fin": 297.026
+    },
+    {
+     "mot": "h",
+     "debut": 297.026,
+     "fin": 297.185
+    },
+    {
+     "mot": "30,",
+     "debut": 297.185,
+     "fin": 297.581
+    },
+    {
+     "mot": "selon",
+     "debut": 297.581,
+     "fin": 297.931
+    },
+    {
+     "mot": "la",
+     "debut": 297.931,
+     "fin": 298.072
+    },
+    {
+     "mot": "préfecture.",
+     "debut": 298.072,
+     "fin": 298.702
+    }
+   ]
+  },
+  {
+   "id": 45,
+   "cle": "s9_point",
+   "seq": 9,
+   "texte": "Vers 17 heures, le préfet fait un premier point : il parle de 7 000 à 8 000 pilleurs, de 30 ou 40 magasins touchés, et de 29 blessés parmi les forces de l'ordre.",
+   "phonemes": "vɛʁ dˈisˈɛt ˈœʁ, lə pʁefˈɛ fˈɛt œ̃ pʁəmjˈe pwˈɛ̃ : il pˈaʁl də sˈɛt mˈil a yˈi mˈil pijˈœʁ, də tʁˈɑ̃t u kaʁˈɑ̃t maɡazˈɛ̃ tuʃˈe, e də vˈɛ̃tnˈœf blɛsˈe paʁmˌi le fˈɔʁs də lˈɔʁdʁ.",
+   "debut": 300.003,
+   "fin": 309.864,
+   "duree": 9.862,
+   "mots": [
+    {
+     "mot": "Vers",
+     "debut": 300.003,
+     "fin": 300.384
+    },
+    {
+     "mot": "17",
+     "debut": 300.384,
+     "fin": 301.019
+    },
+    {
+     "mot": "heures,",
+     "debut": 301.019,
+     "fin": 301.273
+    },
+    {
+     "mot": "le",
+     "debut": 301.273,
+     "fin": 301.441
+    },
+    {
+     "mot": "préfet",
+     "debut": 301.441,
+     "fin": 301.86
+    },
+    {
+     "mot": "fait",
+     "debut": 301.86,
+     "fin": 302.027
+    },
+    {
+     "mot": "un",
+     "debut": 302.027,
+     "fin": 302.195
+    },
+    {
+     "mot": "premier",
+     "debut": 302.195,
+     "fin": 302.698
+    },
+    {
+     "mot": "point",
+     "debut": 302.698,
+     "fin": 303.033
+    },
+    {
+     "mot": ":",
+     "debut": 303.033,
+     "fin": 303.033
+    },
+    {
+     "mot": "il",
+     "debut": 303.033,
+     "fin": 303.208
+    },
+    {
+     "mot": "parle",
+     "debut": 303.208,
+     "fin": 303.557
+    },
+    {
+     "mot": "de",
+     "debut": 303.557,
+     "fin": 303.731
+    },
+    {
+     "mot": "7",
+     "debut": 303.731,
+     "fin": 303.993
+    },
+    {
+     "mot": "000",
+     "debut": 303.993,
+     "fin": 304.255
+    },
+    {
+     "mot": "à",
+     "debut": 304.255,
+     "fin": 304.343
+    },
+    {
+     "mot": "8",
+     "debut": 304.343,
+     "fin": 304.605
+    },
+    {
+     "mot": "000",
+     "debut": 304.605,
+     "fin": 304.866
+    },
+    {
+     "mot": "pilleurs,",
+     "debut": 304.866,
+     "fin": 305.303
+    },
+    {
+     "mot": "de",
+     "debut": 305.303,
+     "fin": 305.475
+    },
+    {
+     "mot": "30",
+     "debut": 305.475,
+     "fin": 305.905
+    },
+    {
+     "mot": "ou",
+     "debut": 305.905,
+     "fin": 305.991
+    },
+    {
+     "mot": "40",
+     "debut": 305.991,
+     "fin": 306.507
+    },
+    {
+     "mot": "magasins",
+     "debut": 306.507,
+     "fin": 307.109
+    },
+    {
+     "mot": "touchés,",
+     "debut": 307.109,
+     "fin": 307.453
+    },
+    {
+     "mot": "et",
+     "debut": 307.453,
+     "fin": 307.526
+    },
+    {
+     "mot": "de",
+     "debut": 307.526,
+     "fin": 307.672
+    },
+    {
+     "mot": "29",
+     "debut": 307.672,
+     "fin": 308.184
+    },
+    {
+     "mot": "blessés",
+     "debut": 308.184,
+     "fin": 308.549
+    },
+    {
+     "mot": "parmi",
+     "debut": 308.549,
+     "fin": 308.915
+    },
+    {
+     "mot": "les",
+     "debut": 308.915,
+     "fin": 309.061
+    },
+    {
+     "mot": "forces",
+     "debut": 309.061,
+     "fin": 309.353
+    },
+    {
+     "mot": "de",
+     "debut": 309.353,
+     "fin": 309.499
+    },
+    {
+     "mot": "l'ordre.",
+     "debut": 309.499,
+     "fin": 309.865
+    }
+   ]
+  },
+  {
+   "id": 46,
+   "cle": "s9_18h",
+   "seq": 9,
+   "texte": "18 heures : selon Marsactu, le centre-ville est « plongé dans un chaos ».",
+   "phonemes": "dˈizyˈit ˈœʁ : səlˈɔ̃ maʁsaktˈy, lə sˈɑ̃tʁvˈil ˈɛ  plɔ̃ʒˈe dɑ̃z œ̃ kaˈo .",
+   "debut": 310.284,
+   "fin": 314.147,
+   "duree": 3.863,
+   "mots": [
+    {
+     "mot": "18",
+     "debut": 310.284,
+     "fin": 310.982
+    },
+    {
+     "mot": "heures",
+     "debut": 310.982,
+     "fin": 311.214
+    },
+    {
+     "mot": ":",
+     "debut": 311.214,
+     "fin": 311.214
+    },
+    {
+     "mot": "selon",
+     "debut": 311.214,
+     "fin": 311.622
+    },
+    {
+     "mot": "Marsactu,",
+     "debut": 311.622,
+     "fin": 312.274
+    },
+    {
+     "mot": "le",
+     "debut": 312.274,
+     "fin": 312.424
+    },
+    {
+     "mot": "centre-ville",
+     "debut": 312.424,
+     "fin": 313.023
+    },
+    {
+     "mot": "est",
+     "debut": 313.023,
+     "fin": 313.098
+    },
+    {
+     "mot": "«",
+     "debut": 313.098,
+     "fin": 313.098
+    },
+    {
+     "mot": "plongé",
+     "debut": 313.098,
+     "fin": 313.548
+    },
+    {
+     "mot": "dans",
+     "debut": 313.548,
+     "fin": 313.773
+    },
+    {
+     "mot": "un",
+     "debut": 313.773,
+     "fin": 313.922
+    },
+    {
+     "mot": "chaos",
+     "debut": 313.922,
+     "fin": 314.147
+    },
+    {
+     "mot": "».",
+     "debut": 314.147,
+     "fin": 314.147
+    }
+   ]
+  },
+  {
+   "id": 47,
+   "cle": "s9_gazent",
+   "seq": 9,
+   "texte": "La journaliste décrit des CRS qui « gazent souvent, font exploser des grenades de désencerclement de temps en temps, chargent rarement ».",
+   "phonemes": "la ʒuʁnalˈist dekʁˈi de sˈe.ˈɛʁ.ˈɛs. kˈi  ɡˈaz suvˈɑ̃, fˈɔ̃t ɛksplozˈe de ɡʁənˈad də dezɑ̃sɛʁkləmˈɑ̃ də tɑ̃zɑ̃tˈɑ̃, ʃˈaʁʒ ʁaʁmˈɑ̃ .",
+   "debut": 314.567,
+   "fin": 321.899,
+   "duree": 7.332,
+   "mots": [
+    {
+     "mot": "La",
+     "debut": 314.567,
+     "fin": 314.714
+    },
+    {
+     "mot": "journaliste",
+     "debut": 314.714,
+     "fin": 315.377
+    },
+    {
+     "mot": "décrit",
+     "debut": 315.377,
+     "fin": 315.743
+    },
+    {
+     "mot": "des",
+     "debut": 315.743,
+     "fin": 315.892
+    },
+    {
+     "mot": "CRS",
+     "debut": 315.892,
+     "fin": 316.332
+    },
+    {
+     "mot": "qui",
+     "debut": 316.332,
+     "fin": 316.479
+    },
+    {
+     "mot": "«",
+     "debut": 316.479,
+     "fin": 316.479
+    },
+    {
+     "mot": "gazent",
+     "debut": 316.479,
+     "fin": 316.7
+    },
+    {
+     "mot": "souvent,",
+     "debut": 316.7,
+     "fin": 317.067
+    },
+    {
+     "mot": "font",
+     "debut": 317.067,
+     "fin": 317.332
+    },
+    {
+     "mot": "exploser",
+     "debut": 317.332,
+     "fin": 318.041
+    },
+    {
+     "mot": "des",
+     "debut": 318.041,
+     "fin": 318.217
+    },
+    {
+     "mot": "grenades",
+     "debut": 318.217,
+     "fin": 318.748
+    },
+    {
+     "mot": "de",
+     "debut": 318.748,
+     "fin": 318.925
+    },
+    {
+     "mot": "désencerclement",
+     "debut": 318.925,
+     "fin": 320.163
+    },
+    {
+     "mot": "de",
+     "debut": 320.163,
+     "fin": 320.339
+    },
+    {
+     "mot": "temps",
+     "debut": 320.339,
+     "fin": 320.606
+    },
+    {
+     "mot": "en",
+     "debut": 320.606,
+     "fin": 320.782
+    },
+    {
+     "mot": "temps,",
+     "debut": 320.782,
+     "fin": 321.048
+    },
+    {
+     "mot": "chargent",
+     "debut": 321.048,
+     "fin": 321.389
+    },
+    {
+     "mot": "rarement",
+     "debut": 321.389,
+     "fin": 321.899
+    },
+    {
+     "mot": "».",
+     "debut": 321.899,
+     "fin": 321.899
+    }
+   ]
+  },
+  {
+   "id": 48,
+   "cle": "s9_nuit",
+   "seq": 9,
+   "texte": "À 19 h 09, alors que la nuit tombe, La Provence signale encore des commerces pillés rue Paradis ; vers 20 heures, selon Destimed, rue Saint-Ferréol.",
+   "phonemes": "a dˈiznˈœv ˈœʁ zeʁˈo nˈœf, alˌɔʁ kə la nyˈi tˈɔ̃b, la pʁovˈɑ̃s sinjˈal ɑ̃kˌɔʁ de kɔmˈɛʁs pijˈe ʁˈy paʁadˈi ; vɛʁ vˈɛ̃ ˈœʁ, səlˈɔ̃ (en)dˈɛstɪmd(fr), ʁˈy sˈɛ̃fɛʁeˈɔl.",
+   "debut": 322.319,
+   "fin": 331.52,
+   "duree": 9.201,
+   "mots": [
+    {
+     "mot": "À",
+     "debut": 322.319,
+     "fin": 322.425
+    },
+    {
+     "mot": "19",
+     "debut": 322.425,
+     "fin": 323.063
+    },
+    {
+     "mot": "h",
+     "debut": 323.063,
+     "fin": 323.275
+    },
+    {
+     "mot": "09,",
+     "debut": 323.275,
+     "fin": 324.019
+    },
+    {
+     "mot": "alors",
+     "debut": 324.019,
+     "fin": 324.216
+    },
+    {
+     "mot": "que",
+     "debut": 324.216,
+     "fin": 324.315
+    },
+    {
+     "mot": "la",
+     "debut": 324.315,
+     "fin": 324.414
+    },
+    {
+     "mot": "nuit",
+     "debut": 324.414,
+     "fin": 324.562
+    },
+    {
+     "mot": "tombe,",
+     "debut": 324.562,
+     "fin": 324.759
+    },
+    {
+     "mot": "La",
+     "debut": 324.759,
+     "fin": 324.942
+    },
+    {
+     "mot": "Provence",
+     "debut": 324.942,
+     "fin": 325.583
+    },
+    {
+     "mot": "signale",
+     "debut": 325.583,
+     "fin": 326.131
+    },
+    {
+     "mot": "encore",
+     "debut": 326.131,
+     "fin": 326.589
+    },
+    {
+     "mot": "des",
+     "debut": 326.589,
+     "fin": 326.772
+    },
+    {
+     "mot": "commerces",
+     "debut": 326.772,
+     "fin": 327.321
+    },
+    {
+     "mot": "pillés",
+     "debut": 327.321,
+     "fin": 327.687
+    },
+    {
+     "mot": "rue",
+     "debut": 327.687,
+     "fin": 327.87
+    },
+    {
+     "mot": "Paradis",
+     "debut": 327.87,
+     "fin": 328.419
+    },
+    {
+     "mot": ";",
+     "debut": 328.419,
+     "fin": 328.419
+    },
+    {
+     "mot": "vers",
+     "debut": 328.419,
+     "fin": 328.658
+    },
+    {
+     "mot": "20",
+     "debut": 328.658,
+     "fin": 328.896
+    },
+    {
+     "mot": "heures,",
+     "debut": 328.896,
+     "fin": 329.055
+    },
+    {
+     "mot": "selon",
+     "debut": 329.055,
+     "fin": 329.453
+    },
+    {
+     "mot": "Destimed,",
+     "debut": 329.453,
+     "fin": 330.645
+    },
+    {
+     "mot": "rue",
+     "debut": 330.645,
+     "fin": 330.804
+    },
+    {
+     "mot": "Saint-Ferréol.",
+     "debut": 330.804,
+     "fin": 331.52
+    }
+   ]
+  },
+  {
+   "id": 49,
+   "cle": "s9_107",
+   "seq": 9,
+   "texte": "Vers 22 heures, la préfecture annonce 107 policiers blessés.",
+   "phonemes": "vɛʁ vˈɛ̃tdˈøz ˈœʁ, la pʁefɛktˈyʁ anˈɔ̃s sˈɑ̃ sˈɛt polisjˈe blɛsˈe.",
+   "debut": 331.94,
+   "fin": 335.67,
+   "duree": 3.73,
+   "mots": [
+    {
+     "mot": "Vers",
+     "debut": 331.94,
+     "fin": 332.297
+    },
+    {
+     "mot": "22",
+     "debut": 332.297,
+     "fin": 333.012
+    },
+    {
+     "mot": "heures,",
+     "debut": 333.012,
+     "fin": 333.25
+    },
+    {
+     "mot": "la",
+     "debut": 333.25,
+     "fin": 333.392
+    },
+    {
+     "mot": "préfecture",
+     "debut": 333.392,
+     "fin": 334.033
+    },
+    {
+     "mot": "annonce",
+     "debut": 334.033,
+     "fin": 334.389
+    },
+    {
+     "mot": "107",
+     "debut": 334.389,
+     "fin": 334.816
+    },
+    {
+     "mot": "policiers",
+     "debut": 334.816,
+     "fin": 335.314
+    },
+    {
+     "mot": "blessés.",
+     "debut": 335.314,
+     "fin": 335.67
+    }
+   ]
+  },
+  {
+   "id": 50,
+   "cle": "s9_2h",
+   "seq": 9,
+   "texte": "Et la nuit n'arrête rien : vers 2 heures du matin, des commerces sont encore attaqués dans le centre-ville.",
+   "phonemes": "e la nyˈi naʁˈɛt ʁiˈɛ̃ : vɛʁ dˈøz ˈœʁ dy matˈɛ̃, de kɔmˈɛʁs sˈɔ̃t ɑ̃kˌɔʁ atakˈe dɑ̃ lə sˈɑ̃tʁvˈil.",
+   "debut": 336.09,
+   "fin": 341.306,
+   "duree": 5.216,
+   "mots": [
+    {
+     "mot": "Et",
+     "debut": 336.09,
+     "fin": 336.186
+    },
+    {
+     "mot": "la",
+     "debut": 336.186,
+     "fin": 336.378
+    },
+    {
+     "mot": "nuit",
+     "debut": 336.378,
+     "fin": 336.666
+    },
+    {
+     "mot": "n'arrête",
+     "debut": 336.666,
+     "fin": 337.146
+    },
+    {
+     "mot": "rien",
+     "debut": 337.146,
+     "fin": 337.53
+    },
+    {
+     "mot": ":",
+     "debut": 337.53,
+     "fin": 337.53
+    },
+    {
+     "mot": "vers",
+     "debut": 337.53,
+     "fin": 337.736
+    },
+    {
+     "mot": "2",
+     "debut": 337.736,
+     "fin": 337.873
+    },
+    {
+     "mot": "heures",
+     "debut": 337.873,
+     "fin": 338.01
+    },
+    {
+     "mot": "du",
+     "debut": 338.01,
+     "fin": 338.147
+    },
+    {
+     "mot": "matin,",
+     "debut": 338.147,
+     "fin": 338.49
+    },
+    {
+     "mot": "des",
+     "debut": 338.49,
+     "fin": 338.656
+    },
+    {
+     "mot": "commerces",
+     "debut": 338.656,
+     "fin": 339.153
+    },
+    {
+     "mot": "sont",
+     "debut": 339.153,
+     "fin": 339.401
+    },
+    {
+     "mot": "encore",
+     "debut": 339.401,
+     "fin": 339.815
+    },
+    {
+     "mot": "attaqués",
+     "debut": 339.815,
+     "fin": 340.229
+    },
+    {
+     "mot": "dans",
+     "debut": 340.229,
+     "fin": 340.478
+    },
+    {
+     "mot": "le",
+     "debut": 340.478,
+     "fin": 340.643
+    },
+    {
+     "mot": "centre-ville.",
+     "debut": 340.643,
+     "fin": 341.306
+    }
+   ]
+  },
+  {
+   "id": 51,
+   "cle": "s10_matin",
+   "seq": 10,
+   "texte": "Dimanche matin, Marseille découvre son centre-ville.",
+   "phonemes": "dimˈɑ̃ʃ matˈɛ̃, maʁsˈɛj dekˈuvʁ sɔ̃ sˈɑ̃tʁvˈil.",
+   "debut": 342.606,
+   "fin": 345.356,
+   "duree": 2.75,
+   "mots": [
+    {
+     "mot": "Dimanche",
+     "debut": 342.606,
+     "fin": 343.157
+    },
+    {
+     "mot": "matin,",
+     "debut": 343.157,
+     "fin": 343.616
+    },
+    {
+     "mot": "Marseille",
+     "debut": 343.616,
+     "fin": 344.07
+    },
+    {
+     "mot": "découvre",
+     "debut": 344.07,
+     "fin": 344.524
+    },
+    {
+     "mot": "son",
+     "debut": 344.524,
+     "fin": 344.751
+    },
+    {
+     "mot": "centre-ville.",
+     "debut": 344.751,
+     "fin": 345.356
+    }
+   ]
+  },
+  {
+   "id": 52,
+   "cle": "s10_constats",
+   "seq": 10,
+   "texte": "Vitrines éventrées, rideaux arrachés, magasins vidés : de la Canebière à la rue Montgrand, les constats se ressemblent.",
+   "phonemes": "vitʁˈinz evɑ̃tʁˈe, ʁidˈoz aʁaʃˈe, maɡazˈɛ̃ vidˈe : də la kanbjˈɛʁ a la ʁˈy mɔ̃tɡʁˈɑ̃, le kɔ̃stˈa sə ʁəsˈɑ̃bl.",
+   "debut": 345.776,
+   "fin": 352.093,
+   "duree": 6.317,
+   "mots": [
+    {
+     "mot": "Vitrines",
+     "debut": 345.776,
+     "fin": 346.381
+    },
+    {
+     "mot": "éventrées,",
+     "debut": 346.381,
+     "fin": 347.086
+    },
+    {
+     "mot": "rideaux",
+     "debut": 347.086,
+     "fin": 347.474
+    },
+    {
+     "mot": "arrachés,",
+     "debut": 347.474,
+     "fin": 347.959
+    },
+    {
+     "mot": "magasins",
+     "debut": 347.959,
+     "fin": 348.638
+    },
+    {
+     "mot": "vidés",
+     "debut": 348.638,
+     "fin": 349.026
+    },
+    {
+     "mot": ":",
+     "debut": 349.026,
+     "fin": 349.026
+    },
+    {
+     "mot": "de",
+     "debut": 349.026,
+     "fin": 349.169
+    },
+    {
+     "mot": "la",
+     "debut": 349.169,
+     "fin": 349.313
+    },
+    {
+     "mot": "Canebière",
+     "debut": 349.313,
+     "fin": 349.814
+    },
+    {
+     "mot": "à",
+     "debut": 349.814,
+     "fin": 349.886
+    },
+    {
+     "mot": "la",
+     "debut": 349.886,
+     "fin": 350.029
+    },
+    {
+     "mot": "rue",
+     "debut": 350.029,
+     "fin": 350.173
+    },
+    {
+     "mot": "Montgrand,",
+     "debut": 350.173,
+     "fin": 350.746
+    },
+    {
+     "mot": "les",
+     "debut": 350.746,
+     "fin": 350.905
+    },
+    {
+     "mot": "constats",
+     "debut": 350.905,
+     "fin": 351.38
+    },
+    {
+     "mot": "se",
+     "debut": 351.38,
+     "fin": 351.539
+    },
+    {
+     "mot": "ressemblent.",
+     "debut": 351.539,
+     "fin": 352.093
+    }
+   ]
+  },
+  {
+   "id": 53,
+   "cle": "s10_affiche",
+   "seq": 10,
+   "texte": "Rue Paradis, selon Le Parisien, une boutique de téléphonie affiche : « Entièrement vidée. Fermée pour trois mois. »",
+   "phonemes": "ʁˈy paʁadˈi, səlˈɔ̃ lə paʁizjˈɛ̃, yn butˈik də telefonˈi afˈiʃ :  ɑ̃tjɛʁmˈɑ̃ vidˈe. fɛʁmˈe puʁ tʁwˈa mwˈa.",
+   "debut": 352.513,
+   "fin": 358.372,
+   "duree": 5.859,
+   "mots": [
+    {
+     "mot": "Rue",
+     "debut": 352.513,
+     "fin": 352.676
+    },
+    {
+     "mot": "Paradis,",
+     "debut": 352.676,
+     "fin": 353.163
+    },
+    {
+     "mot": "selon",
+     "debut": 353.163,
+     "fin": 353.57
+    },
+    {
+     "mot": "Le",
+     "debut": 353.57,
+     "fin": 353.733
+    },
+    {
+     "mot": "Parisien,",
+     "debut": 353.733,
+     "fin": 354.383
+    },
+    {
+     "mot": "une",
+     "debut": 354.383,
+     "fin": 354.559
+    },
+    {
+     "mot": "boutique",
+     "debut": 354.559,
+     "fin": 355.0
+    },
+    {
+     "mot": "de",
+     "debut": 355.0,
+     "fin": 355.176
+    },
+    {
+     "mot": "téléphonie",
+     "debut": 355.176,
+     "fin": 355.881
+    },
+    {
+     "mot": "affiche",
+     "debut": 355.881,
+     "fin": 356.233
+    },
+    {
+     "mot": ":",
+     "debut": 356.233,
+     "fin": 356.233
+    },
+    {
+     "mot": "«",
+     "debut": 356.233,
+     "fin": 356.233
+    },
+    {
+     "mot": "Entièrement",
+     "debut": 356.233,
+     "fin": 356.921
+    },
+    {
+     "mot": "vidée.",
+     "debut": 356.921,
+     "fin": 357.226
+    },
+    {
+     "mot": "Fermée",
+     "debut": 357.226,
+     "fin": 357.608
+    },
+    {
+     "mot": "pour",
+     "debut": 357.608,
+     "fin": 357.837
+    },
+    {
+     "mot": "trois",
+     "debut": 357.837,
+     "fin": 358.143
+    },
+    {
+     "mot": "mois.",
+     "debut": 358.143,
+     "fin": 358.372
+    },
+    {
+     "mot": "»",
+     "debut": 358.372,
+     "fin": 358.372
+    }
+   ]
+  },
+  {
+   "id": 54,
+   "cle": "s10_bilans",
+   "seq": 10,
+   "texte": "Les bilans, eux, divergent.",
+   "phonemes": "le bilˈɑ̃, ˈø, divɛʁʒˈɑ̃.",
+   "debut": 358.792,
+   "fin": 360.104,
+   "duree": 1.311,
+   "mots": [
+    {
+     "mot": "Les",
+     "debut": 358.792,
+     "fin": 358.956
+    },
+    {
+     "mot": "bilans,",
+     "debut": 358.956,
+     "fin": 359.366
+    },
+    {
+     "mot": "eux,",
+     "debut": 359.366,
+     "fin": 359.448
+    },
+    {
+     "mot": "divergent.",
+     "debut": 359.448,
+     "fin": 360.103
+    }
+   ]
+  },
+  {
+   "id": 55,
+   "cle": "s10_cci",
+   "seq": 10,
+   "texte": "La chambre de commerce parle de plus de 600 commerces vandalisés.",
+   "phonemes": "la ʃˈɑ̃bʁ də kɔmˈɛʁs pˈaʁl də ply də sˈi sˈɑ̃ kɔmˈɛʁs vɑ̃dalizˈe.",
+   "debut": 360.524,
+   "fin": 364.353,
+   "duree": 3.83,
+   "mots": [
+    {
+     "mot": "La",
+     "debut": 360.524,
+     "fin": 360.691
+    },
+    {
+     "mot": "chambre",
+     "debut": 360.691,
+     "fin": 361.107
+    },
+    {
+     "mot": "de",
+     "debut": 361.107,
+     "fin": 361.273
+    },
+    {
+     "mot": "commerce",
+     "debut": 361.273,
+     "fin": 361.773
+    },
+    {
+     "mot": "parle",
+     "debut": 361.773,
+     "fin": 362.106
+    },
+    {
+     "mot": "de",
+     "debut": 362.106,
+     "fin": 362.272
+    },
+    {
+     "mot": "plus",
+     "debut": 362.272,
+     "fin": 362.522
+    },
+    {
+     "mot": "de",
+     "debut": 362.522,
+     "fin": 362.689
+    },
+    {
+     "mot": "600",
+     "debut": 362.689,
+     "fin": 363.105
+    },
+    {
+     "mot": "commerces",
+     "debut": 363.105,
+     "fin": 363.604
+    },
+    {
+     "mot": "vandalisés.",
+     "debut": 363.604,
+     "fin": 364.354
+    }
+   ]
+  },
+  {
+   "id": 56,
+   "cle": "s10_pref",
+   "seq": 10,
+   "texte": "En fin de journée, la préfecture de police annonce, « au plus fort des événements », 8 000 émeutiers et plus de 30 000 pilleurs.",
+   "phonemes": "ɑ̃ fˈɛ̃ də ʒuʁnˈe, la pʁefɛktˈyʁ də polˈis anˈɔ̃s,  o ply fˈɔʁ dez evenmˈɑ̃ , yˈi mˈil emøtjˈez e ply də tʁˈɑ̃t mˈil pijˈœʁ.",
+   "debut": 364.773,
+   "fin": 371.644,
+   "duree": 6.871,
+   "mots": [
+    {
+     "mot": "En",
+     "debut": 364.773,
+     "fin": 364.975
+    },
+    {
+     "mot": "fin",
+     "debut": 364.975,
+     "fin": 365.277
+    },
+    {
+     "mot": "de",
+     "debut": 365.277,
+     "fin": 365.479
+    },
+    {
+     "mot": "journée,",
+     "debut": 365.479,
+     "fin": 365.983
+    },
+    {
+     "mot": "la",
+     "debut": 365.983,
+     "fin": 366.142
+    },
+    {
+     "mot": "préfecture",
+     "debut": 366.142,
+     "fin": 366.858
+    },
+    {
+     "mot": "de",
+     "debut": 366.858,
+     "fin": 367.017
+    },
+    {
+     "mot": "police",
+     "debut": 367.017,
+     "fin": 367.415
+    },
+    {
+     "mot": "annonce,",
+     "debut": 367.415,
+     "fin": 367.813
+    },
+    {
+     "mot": "«",
+     "debut": 367.813,
+     "fin": 367.813
+    },
+    {
+     "mot": "au",
+     "debut": 367.813,
+     "fin": 367.905
+    },
+    {
+     "mot": "plus",
+     "debut": 367.905,
+     "fin": 368.18
+    },
+    {
+     "mot": "fort",
+     "debut": 368.18,
+     "fin": 368.456
+    },
+    {
+     "mot": "des",
+     "debut": 368.456,
+     "fin": 368.64
+    },
+    {
+     "mot": "événements",
+     "debut": 368.64,
+     "fin": 369.283
+    },
+    {
+     "mot": "»,",
+     "debut": 369.283,
+     "fin": 369.283
+    },
+    {
+     "mot": "8",
+     "debut": 369.283,
+     "fin": 369.511
+    },
+    {
+     "mot": "000",
+     "debut": 369.511,
+     "fin": 369.74
+    },
+    {
+     "mot": "émeutiers",
+     "debut": 369.74,
+     "fin": 370.197
+    },
+    {
+     "mot": "et",
+     "debut": 370.197,
+     "fin": 370.273
+    },
+    {
+     "mot": "plus",
+     "debut": 370.273,
+     "fin": 370.501
+    },
+    {
+     "mot": "de",
+     "debut": 370.501,
+     "fin": 370.654
+    },
+    {
+     "mot": "30",
+     "debut": 370.654,
+     "fin": 371.034
+    },
+    {
+     "mot": "000",
+     "debut": 371.034,
+     "fin": 371.263
+    },
+    {
+     "mot": "pilleurs.",
+     "debut": 371.263,
+     "fin": 371.644
+    }
+   ]
+  },
+  {
+   "id": 57,
+   "cle": "s10_gav",
+   "seq": 10,
+   "texte": "Elle compte 99 gardes à vue, et 118 blessés parmi les forces de l'ordre, dont trois hospitalisés.",
+   "phonemes": "ɛl kˈɔ̃t kˈatʁvˈɛ̃dˈiznˈœf ɡˈaʁdz a vˈy, e sˈɑ̃ dˈizyˈi blɛsˈe paʁmˌi le fˈɔʁs də lˈɔʁdʁ, dɔ̃ tʁwˈaz ɔspitalizˈe.",
+   "debut": 372.064,
+   "fin": 378.507,
+   "duree": 6.443,
+   "mots": [
+    {
+     "mot": "Elle",
+     "debut": 372.064,
+     "fin": 372.249
+    },
+    {
+     "mot": "compte",
+     "debut": 372.249,
+     "fin": 372.62
+    },
+    {
+     "mot": "99",
+     "debut": 372.62,
+     "fin": 373.916
+    },
+    {
+     "mot": "gardes",
+     "debut": 373.916,
+     "fin": 374.286
+    },
+    {
+     "mot": "à",
+     "debut": 374.286,
+     "fin": 374.379
+    },
+    {
+     "mot": "vue,",
+     "debut": 374.379,
+     "fin": 374.564
+    },
+    {
+     "mot": "et",
+     "debut": 374.564,
+     "fin": 374.644
+    },
+    {
+     "mot": "118",
+     "debut": 374.644,
+     "fin": 375.367
+    },
+    {
+     "mot": "blessés",
+     "debut": 375.367,
+     "fin": 375.769
+    },
+    {
+     "mot": "parmi",
+     "debut": 375.769,
+     "fin": 376.17
+    },
+    {
+     "mot": "les",
+     "debut": 376.17,
+     "fin": 376.331
+    },
+    {
+     "mot": "forces",
+     "debut": 376.331,
+     "fin": 376.652
+    },
+    {
+     "mot": "de",
+     "debut": 376.652,
+     "fin": 376.812
+    },
+    {
+     "mot": "l'ordre,",
+     "debut": 376.812,
+     "fin": 377.214
+    },
+    {
+     "mot": "dont",
+     "debut": 377.214,
+     "fin": 377.442
+    },
+    {
+     "mot": "trois",
+     "debut": 377.442,
+     "fin": 377.746
+    },
+    {
+     "mot": "hospitalisés.",
+     "debut": 377.746,
+     "fin": 378.507
+    }
+   ]
+  },
+  {
+   "id": 58,
+   "cle": "s11_inter",
+   "seq": 11,
+   "texte": "Lundi 19 octobre, sur France Inter, Benoît Payan juge la doctrine de maintien de l'ordre « inefficace ».",
+   "phonemes": "lœ̃dˈi diznˈœf ɔktˈɔbʁ, syʁ fʁˈɑ̃s ɛ̃tˈɛʁ, bənwˈa pɛjˈɑ̃ ʒˈyʒ la dɔktʁˈin də mɛ̃tjˈɛ̃ də lˈɔʁdʁ  inɛfikˈas .",
+   "debut": 379.807,
+   "fin": 386.096,
+   "duree": 6.29,
+   "mots": [
+    {
+     "mot": "Lundi",
+     "debut": 379.807,
+     "fin": 380.157
+    },
+    {
+     "mot": "19",
+     "debut": 380.157,
+     "fin": 380.577
+    },
+    {
+     "mot": "octobre,",
+     "debut": 380.577,
+     "fin": 380.997
+    },
+    {
+     "mot": "sur",
+     "debut": 380.997,
+     "fin": 381.431
+    },
+    {
+     "mot": "France",
+     "debut": 381.431,
+     "fin": 382.154
+    },
+    {
+     "mot": "Inter,",
+     "debut": 382.154,
+     "fin": 382.877
+    },
+    {
+     "mot": "Benoît",
+     "debut": 382.877,
+     "fin": 383.227
+    },
+    {
+     "mot": "Payan",
+     "debut": 383.227,
+     "fin": 383.577
+    },
+    {
+     "mot": "juge",
+     "debut": 383.577,
+     "fin": 383.787
+    },
+    {
+     "mot": "la",
+     "debut": 383.787,
+     "fin": 383.927
+    },
+    {
+     "mot": "doctrine",
+     "debut": 383.927,
+     "fin": 384.417
+    },
+    {
+     "mot": "de",
+     "debut": 384.417,
+     "fin": 384.557
+    },
+    {
+     "mot": "maintien",
+     "debut": 384.557,
+     "fin": 385.047
+    },
+    {
+     "mot": "de",
+     "debut": 385.047,
+     "fin": 385.187
+    },
+    {
+     "mot": "l'ordre",
+     "debut": 385.187,
+     "fin": 385.537
+    },
+    {
+     "mot": "«",
+     "debut": 385.537,
+     "fin": 385.537
+    },
+    {
+     "mot": "inefficace",
+     "debut": 385.537,
+     "fin": 386.097
+    },
+    {
+     "mot": "».",
+     "debut": 386.097,
+     "fin": 386.097
+    }
+   ]
+  },
+  {
+   "id": 59,
+   "cle": "s11_1500",
+   "seq": 11,
+   "texte": "Il conteste les 30 000 pilleurs : « des policiers et des gradés de la préfecture », dit-il, parlent de 1 500.",
+   "phonemes": "il kɔ̃tˈɛst le tʁˈɑ̃t mˈil pijˈœʁ :  de polisjˈez e de ɡʁadˈe də la pʁefɛktˈyʁ , dˈitˈil, pˈaʁl də mˈil sˈɛ̃k sˈɑ̃.",
+   "debut": 386.517,
+   "fin": 392.923,
+   "duree": 6.407,
+   "mots": [
+    {
+     "mot": "Il",
+     "debut": 386.517,
+     "fin": 386.653
+    },
+    {
+     "mot": "conteste",
+     "debut": 386.653,
+     "fin": 387.127
+    },
+    {
+     "mot": "les",
+     "debut": 387.127,
+     "fin": 387.264
+    },
+    {
+     "mot": "30",
+     "debut": 387.264,
+     "fin": 387.603
+    },
+    {
+     "mot": "000",
+     "debut": 387.603,
+     "fin": 388.418
+    },
+    {
+     "mot": "pilleurs",
+     "debut": 388.418,
+     "fin": 388.757
+    },
+    {
+     "mot": ":",
+     "debut": 388.757,
+     "fin": 388.757
+    },
+    {
+     "mot": "«",
+     "debut": 388.757,
+     "fin": 388.757
+    },
+    {
+     "mot": "des",
+     "debut": 388.757,
+     "fin": 388.954
+    },
+    {
+     "mot": "policiers",
+     "debut": 388.954,
+     "fin": 389.644
+    },
+    {
+     "mot": "et",
+     "debut": 389.644,
+     "fin": 389.743
+    },
+    {
+     "mot": "des",
+     "debut": 389.743,
+     "fin": 389.94
+    },
+    {
+     "mot": "gradés",
+     "debut": 389.94,
+     "fin": 390.433
+    },
+    {
+     "mot": "de",
+     "debut": 390.433,
+     "fin": 390.632
+    },
+    {
+     "mot": "la",
+     "debut": 390.632,
+     "fin": 390.829
+    },
+    {
+     "mot": "préfecture",
+     "debut": 390.829,
+     "fin": 391.716
+    },
+    {
+     "mot": "»,",
+     "debut": 391.716,
+     "fin": 391.716
+    },
+    {
+     "mot": "dit-il,",
+     "debut": 391.716,
+     "fin": 392.019
+    },
+    {
+     "mot": "parlent",
+     "debut": 392.019,
+     "fin": 392.26
+    },
+    {
+     "mot": "de",
+     "debut": 392.26,
+     "fin": 392.38
+    },
+    {
+     "mot": "1",
+     "debut": 392.38,
+     "fin": 392.5
+    },
+    {
+     "mot": "500.",
+     "debut": 392.5,
+     "fin": 392.923
+    }
+   ]
+  },
+  {
+   "id": 60,
+   "cle": "s11_10000",
+   "seq": 11,
+   "texte": "Des policiers cités par Europe 1 évoquent un chiffre plus proche de 10 000.",
+   "phonemes": "de polisjˈe sitˈe paʁ øʁˈɔp ˈœ̃ evˈokt œ̃ ʃˈifʁ ply pʁˈɔʃ də dˈi mˈil.",
+   "debut": 393.343,
+   "fin": 397.048,
+   "duree": 3.704,
+   "mots": [
+    {
+     "mot": "Des",
+     "debut": 393.343,
+     "fin": 393.501
+    },
+    {
+     "mot": "policiers",
+     "debut": 393.501,
+     "fin": 394.052
+    },
+    {
+     "mot": "cités",
+     "debut": 394.052,
+     "fin": 394.368
+    },
+    {
+     "mot": "par",
+     "debut": 394.368,
+     "fin": 394.604
+    },
+    {
+     "mot": "Europe",
+     "debut": 394.604,
+     "fin": 394.919
+    },
+    {
+     "mot": "1",
+     "debut": 394.919,
+     "fin": 395.077
+    },
+    {
+     "mot": "évoquent",
+     "debut": 395.077,
+     "fin": 395.392
+    },
+    {
+     "mot": "un",
+     "debut": 395.392,
+     "fin": 395.55
+    },
+    {
+     "mot": "chiffre",
+     "debut": 395.55,
+     "fin": 395.865
+    },
+    {
+     "mot": "plus",
+     "debut": 395.865,
+     "fin": 396.102
+    },
+    {
+     "mot": "proche",
+     "debut": 396.102,
+     "fin": 396.417
+    },
+    {
+     "mot": "de",
+     "debut": 396.417,
+     "fin": 396.575
+    },
+    {
+     "mot": "10",
+     "debut": 396.575,
+     "fin": 396.811
+    },
+    {
+     "mot": "000.",
+     "debut": 396.811,
+     "fin": 397.047
+    }
+   ]
+  },
+  {
+   "id": 61,
+   "cle": "s11_quatre",
+   "seq": 11,
+   "texte": "Quatre chiffres en trois jours, et aucun décompte indépendant.",
+   "phonemes": "kˈatʁ ʃˈifʁz ɑ̃ tʁwˈa ʒˈuʁ, e okˈœ̃ dekˈɔ̃t ɛ̃depɑ̃dˈɑ̃.",
+   "debut": 397.468,
+   "fin": 400.4,
+   "duree": 2.932,
+   "mots": [
+    {
+     "mot": "Quatre",
+     "debut": 397.468,
+     "fin": 397.819
+    },
+    {
+     "mot": "chiffres",
+     "debut": 397.819,
+     "fin": 398.169
+    },
+    {
+     "mot": "en",
+     "debut": 398.169,
+     "fin": 398.344
+    },
+    {
+     "mot": "trois",
+     "debut": 398.344,
+     "fin": 398.695
+    },
+    {
+     "mot": "jours,",
+     "debut": 398.695,
+     "fin": 398.958
+    },
+    {
+     "mot": "et",
+     "debut": 398.958,
+     "fin": 399.027
+    },
+    {
+     "mot": "aucun",
+     "debut": 399.027,
+     "fin": 399.301
+    },
+    {
+     "mot": "décompte",
+     "debut": 399.301,
+     "fin": 399.713
+    },
+    {
+     "mot": "indépendant.",
+     "debut": 399.713,
+     "fin": 400.4
+    }
+   ]
+  },
+  {
+   "id": 62,
+   "cle": "s11_centime",
+   "seq": 11,
+   "texte": "Le maire réclame une indemnisation des commerçants « au centime près ».",
+   "phonemes": "lə mˈɛʁ ʁeklˈam yn ɛ̃dɛmnizasjˈɔ̃ de kɔmɛʁsˈɑ̃  o sɑ̃tˈim pʁˈɛ .",
+   "debut": 400.82,
+   "fin": 404.373,
+   "duree": 3.554,
+   "mots": [
+    {
+     "mot": "Le",
+     "debut": 400.82,
+     "fin": 400.975
+    },
+    {
+     "mot": "maire",
+     "debut": 400.975,
+     "fin": 401.206
+    },
+    {
+     "mot": "réclame",
+     "debut": 401.206,
+     "fin": 401.67
+    },
+    {
+     "mot": "une",
+     "debut": 401.67,
+     "fin": 401.824
+    },
+    {
+     "mot": "indemnisation",
+     "debut": 401.824,
+     "fin": 402.829
+    },
+    {
+     "mot": "des",
+     "debut": 402.829,
+     "fin": 402.983
+    },
+    {
+     "mot": "commerçants",
+     "debut": 402.983,
+     "fin": 403.601
+    },
+    {
+     "mot": "«",
+     "debut": 403.601,
+     "fin": 403.601
+    },
+    {
+     "mot": "au",
+     "debut": 403.601,
+     "fin": 403.678
+    },
+    {
+     "mot": "centime",
+     "debut": 403.678,
+     "fin": 404.142
+    },
+    {
+     "mot": "près",
+     "debut": 404.142,
+     "fin": 404.374
+    },
+    {
+     "mot": "».",
+     "debut": 404.374,
+     "fin": 404.374
+    }
+   ]
+  },
+  {
+   "id": 63,
+   "cle": "s11_controle",
+   "seq": 11,
+   "texte": "Le même matin, sur France Inter, le ministre de l'Intérieur, Laurent Nuñez, admet : « Oui, il y a eu une perte de contrôle. »",
+   "phonemes": "lə mˈɛm matˈɛ̃, syʁ fʁˈɑ̃s ɛ̃tˈɛʁ, lə minˈistʁ də lɛ̃teʁjˈœʁ, loʁˈɑ̃ nyɲˈe, admˈɛ :  wˈi, il i a y yn pˈɛʁt də kɔ̃tʁˈoːl.",
+   "debut": 404.793,
+   "fin": 411.687,
+   "duree": 6.894,
+   "mots": [
+    {
+     "mot": "Le",
+     "debut": 404.793,
+     "fin": 404.989
+    },
+    {
+     "mot": "même",
+     "debut": 404.989,
+     "fin": 405.283
+    },
+    {
+     "mot": "matin,",
+     "debut": 405.283,
+     "fin": 405.773
+    },
+    {
+     "mot": "sur",
+     "debut": 405.773,
+     "fin": 406.045
+    },
+    {
+     "mot": "France",
+     "debut": 406.045,
+     "fin": 406.499
+    },
+    {
+     "mot": "Inter,",
+     "debut": 406.499,
+     "fin": 406.953
+    },
+    {
+     "mot": "le",
+     "debut": 406.953,
+     "fin": 407.11
+    },
+    {
+     "mot": "ministre",
+     "debut": 407.11,
+     "fin": 407.661
+    },
+    {
+     "mot": "de",
+     "debut": 407.661,
+     "fin": 407.818
+    },
+    {
+     "mot": "l'Intérieur,",
+     "debut": 407.818,
+     "fin": 408.525
+    },
+    {
+     "mot": "Laurent",
+     "debut": 408.525,
+     "fin": 408.919
+    },
+    {
+     "mot": "Nuñez,",
+     "debut": 408.919,
+     "fin": 409.233
+    },
+    {
+     "mot": "admet",
+     "debut": 409.233,
+     "fin": 410.133
+    },
+    {
+     "mot": ":",
+     "debut": 410.133,
+     "fin": 410.133
+    },
+    {
+     "mot": "«",
+     "debut": 410.133,
+     "fin": 410.133
+    },
+    {
+     "mot": "Oui,",
+     "debut": 410.133,
+     "fin": 410.253
+    },
+    {
+     "mot": "il",
+     "debut": 410.253,
+     "fin": 410.372
+    },
+    {
+     "mot": "y",
+     "debut": 410.372,
+     "fin": 410.671
+    },
+    {
+     "mot": "a",
+     "debut": 410.671,
+     "fin": 410.731
+    },
+    {
+     "mot": "eu",
+     "debut": 410.731,
+     "fin": 410.791
+    },
+    {
+     "mot": "une",
+     "debut": 410.791,
+     "fin": 410.91
+    },
+    {
+     "mot": "perte",
+     "debut": 410.91,
+     "fin": 411.149
+    },
+    {
+     "mot": "de",
+     "debut": 411.149,
+     "fin": 411.269
+    },
+    {
+     "mot": "contrôle.",
+     "debut": 411.269,
+     "fin": 411.687
+    },
+    {
+     "mot": "»",
+     "debut": 411.687,
+     "fin": 411.687
+    }
+   ]
+  },
+  {
+   "id": 64,
+   "cle": "s11_demission",
+   "seq": 11,
+   "texte": "L'Élysée refuse sa démission, au nom de « la nécessité d'un commandement continu des forces de l'ordre ».",
+   "phonemes": "lelizˈe ʁəfˈyz sa demisjˈɔ̃, o nˈɔ̃ də  la nesɛsitˈe dœ̃ kɔmɑ̃dmˈɑ̃ kɔ̃tinˈy de fˈɔʁs də lˈɔʁdʁ .",
+   "debut": 412.107,
+   "fin": 417.461,
+   "duree": 5.354,
+   "mots": [
+    {
+     "mot": "L'Élysée",
+     "debut": 412.107,
+     "fin": 412.661
+    },
+    {
+     "mot": "refuse",
+     "debut": 412.661,
+     "fin": 413.123
+    },
+    {
+     "mot": "sa",
+     "debut": 413.123,
+     "fin": 413.308
+    },
+    {
+     "mot": "démission,",
+     "debut": 413.308,
+     "fin": 414.047
+    },
+    {
+     "mot": "au",
+     "debut": 414.047,
+     "fin": 414.118
+    },
+    {
+     "mot": "nom",
+     "debut": 414.118,
+     "fin": 414.331
+    },
+    {
+     "mot": "de",
+     "debut": 414.331,
+     "fin": 414.474
+    },
+    {
+     "mot": "«",
+     "debut": 414.474,
+     "fin": 414.474
+    },
+    {
+     "mot": "la",
+     "debut": 414.474,
+     "fin": 414.616
+    },
+    {
+     "mot": "nécessité",
+     "debut": 414.616,
+     "fin": 415.185
+    },
+    {
+     "mot": "d'un",
+     "debut": 415.185,
+     "fin": 415.398
+    },
+    {
+     "mot": "commandement",
+     "debut": 415.398,
+     "fin": 416.038
+    },
+    {
+     "mot": "continu",
+     "debut": 416.038,
+     "fin": 416.536
+    },
+    {
+     "mot": "des",
+     "debut": 416.536,
+     "fin": 416.678
+    },
+    {
+     "mot": "forces",
+     "debut": 416.678,
+     "fin": 416.963
+    },
+    {
+     "mot": "de",
+     "debut": 416.963,
+     "fin": 417.105
+    },
+    {
+     "mot": "l'ordre",
+     "debut": 417.105,
+     "fin": 417.461
+    },
+    {
+     "mot": "».",
+     "debut": 417.461,
+     "fin": 417.461
+    }
+   ]
+  },
+  {
+   "id": 65,
+   "cle": "s11_interdit",
+   "seq": 11,
+   "texte": "À Marseille, les rassemblements sont interdits ce lundi, de midi à 20 heures, et la visite du ministre est reportée.",
+   "phonemes": "a maʁsˈɛj, le ʁasɑ̃bləmˈɑ̃ sˈɔ̃t ɛ̃tɛʁdˈi sə lœ̃dˈi, də midˈi a vˈɛ̃ ˈœʁ, e la vizˈit dy minˈistʁ ɛ ʁəpɔʁtˈe.",
+   "debut": 417.881,
+   "fin": 424.104,
+   "duree": 6.223,
+   "mots": [
+    {
+     "mot": "À",
+     "debut": 417.881,
+     "fin": 418.001
+    },
+    {
+     "mot": "Marseille,",
+     "debut": 418.001,
+     "fin": 418.721
+    },
+    {
+     "mot": "les",
+     "debut": 418.721,
+     "fin": 418.864
+    },
+    {
+     "mot": "rassemblements",
+     "debut": 418.864,
+     "fin": 419.648
+    },
+    {
+     "mot": "sont",
+     "debut": 419.648,
+     "fin": 419.862
+    },
+    {
+     "mot": "interdits",
+     "debut": 419.862,
+     "fin": 420.362
+    },
+    {
+     "mot": "ce",
+     "debut": 420.362,
+     "fin": 420.504
+    },
+    {
+     "mot": "lundi,",
+     "debut": 420.504,
+     "fin": 420.861
+    },
+    {
+     "mot": "de",
+     "debut": 420.861,
+     "fin": 421.093
+    },
+    {
+     "mot": "midi",
+     "debut": 421.093,
+     "fin": 421.556
+    },
+    {
+     "mot": "à",
+     "debut": 421.556,
+     "fin": 421.672
+    },
+    {
+     "mot": "20",
+     "debut": 421.672,
+     "fin": 422.019
+    },
+    {
+     "mot": "heures,",
+     "debut": 422.019,
+     "fin": 422.251
+    },
+    {
+     "mot": "et",
+     "debut": 422.251,
+     "fin": 422.325
+    },
+    {
+     "mot": "la",
+     "debut": 422.325,
+     "fin": 422.473
+    },
+    {
+     "mot": "visite",
+     "debut": 422.473,
+     "fin": 422.844
+    },
+    {
+     "mot": "du",
+     "debut": 422.844,
+     "fin": 422.992
+    },
+    {
+     "mot": "ministre",
+     "debut": 422.992,
+     "fin": 423.511
+    },
+    {
+     "mot": "est",
+     "debut": 423.511,
+     "fin": 423.585
+    },
+    {
+     "mot": "reportée.",
+     "debut": 423.585,
+     "fin": 424.104
+    }
+   ]
+  },
+  {
+   "id": 66,
+   "cle": "s12_sait",
+   "seq": 12,
+   "texte": "Ce que l'on sait : la journée a commencé tôt au Prado ; les premiers pillages ont été signalés avant midi, l'hôtel de ville a été forcé à la mi-journée, et des commerces étaient encore attaqués dans la nuit.",
+   "phonemes": "sə kə lɔ̃ sˈɛ : la ʒuʁnˈe a kɔmɑ̃sˈe tˈoː o pʁadˈo ; le pʁəmjˈe pijˈaʒz ˈɔ̃t etˈe sinjalˈez avˌɑ̃ midˈi, lotˈɛl də vˈil a etˈe fɔʁsˈe a la mˈiʒuʁnˈe, e de kɔmˈɛʁsz etˈɛt ɑ̃kˌɔʁ atakˈe dɑ̃ la nyˈi.",
+   "debut": 425.404,
+   "fin": 436.196,
+   "duree": 10.792,
+   "mots": [
+    {
+     "mot": "Ce",
+     "debut": 425.404,
+     "fin": 425.626
+    },
+    {
+     "mot": "que",
+     "debut": 425.626,
+     "fin": 425.848
+    },
+    {
+     "mot": "l'on",
+     "debut": 425.848,
+     "fin": 426.182
+    },
+    {
+     "mot": "sait",
+     "debut": 426.182,
+     "fin": 426.404
+    },
+    {
+     "mot": ":",
+     "debut": 426.404,
+     "fin": 426.404
+    },
+    {
+     "mot": "la",
+     "debut": 426.404,
+     "fin": 426.587
+    },
+    {
+     "mot": "journée",
+     "debut": 426.587,
+     "fin": 427.046
+    },
+    {
+     "mot": "a",
+     "debut": 427.046,
+     "fin": 427.138
+    },
+    {
+     "mot": "commencé",
+     "debut": 427.138,
+     "fin": 427.78
+    },
+    {
+     "mot": "tôt",
+     "debut": 427.78,
+     "fin": 427.964
+    },
+    {
+     "mot": "au",
+     "debut": 427.964,
+     "fin": 428.055
+    },
+    {
+     "mot": "Prado",
+     "debut": 428.055,
+     "fin": 428.514
+    },
+    {
+     "mot": ";",
+     "debut": 428.514,
+     "fin": 428.514
+    },
+    {
+     "mot": "les",
+     "debut": 428.514,
+     "fin": 428.686
+    },
+    {
+     "mot": "premiers",
+     "debut": 428.686,
+     "fin": 429.2
+    },
+    {
+     "mot": "pillages",
+     "debut": 429.2,
+     "fin": 429.629
+    },
+    {
+     "mot": "ont",
+     "debut": 429.629,
+     "fin": 429.8
+    },
+    {
+     "mot": "été",
+     "debut": 429.8,
+     "fin": 430.058
+    },
+    {
+     "mot": "signalés",
+     "debut": 430.058,
+     "fin": 430.658
+    },
+    {
+     "mot": "avant",
+     "debut": 430.658,
+     "fin": 431.001
+    },
+    {
+     "mot": "midi,",
+     "debut": 431.001,
+     "fin": 431.344
+    },
+    {
+     "mot": "l'hôtel",
+     "debut": 431.344,
+     "fin": 431.772
+    },
+    {
+     "mot": "de",
+     "debut": 431.772,
+     "fin": 431.943
+    },
+    {
+     "mot": "ville",
+     "debut": 431.943,
+     "fin": 432.199
+    },
+    {
+     "mot": "a",
+     "debut": 432.199,
+     "fin": 432.285
+    },
+    {
+     "mot": "été",
+     "debut": 432.285,
+     "fin": 432.541
+    },
+    {
+     "mot": "forcé",
+     "debut": 432.541,
+     "fin": 432.969
+    },
+    {
+     "mot": "à",
+     "debut": 432.969,
+     "fin": 433.054
+    },
+    {
+     "mot": "la",
+     "debut": 433.054,
+     "fin": 433.225
+    },
+    {
+     "mot": "mi-journée,",
+     "debut": 433.225,
+     "fin": 433.824
+    },
+    {
+     "mot": "et",
+     "debut": 433.824,
+     "fin": 433.903
+    },
+    {
+     "mot": "des",
+     "debut": 433.903,
+     "fin": 434.061
+    },
+    {
+     "mot": "commerces",
+     "debut": 434.061,
+     "fin": 434.536
+    },
+    {
+     "mot": "étaient",
+     "debut": 434.536,
+     "fin": 434.773
+    },
+    {
+     "mot": "encore",
+     "debut": 434.773,
+     "fin": 435.168
+    },
+    {
+     "mot": "attaqués",
+     "debut": 435.168,
+     "fin": 435.564
+    },
+    {
+     "mot": "dans",
+     "debut": 435.564,
+     "fin": 435.801
+    },
+    {
+     "mot": "la",
+     "debut": 435.801,
+     "fin": 435.959
+    },
+    {
+     "mot": "nuit.",
+     "debut": 435.959,
+     "fin": 436.196
+    }
+   ]
+  },
+  {
+   "id": 67,
+   "cle": "s12_incertain",
+   "seq": 12,
+   "texte": "Ce qui reste incertain : le nombre réel de pilleurs, le nombre de commerces touchés, les effectifs réellement engagés, et l'heure précise de plusieurs faits.",
+   "phonemes": "sə ki ʁˈɛst ɛ̃sɛʁtˈɛ̃ : lə nˈɔ̃bʁ ʁeˈɛl də pijˈœʁ, lə nˈɔ̃bʁ də kɔmˈɛʁs tuʃˈe, lez efɛktˈif ʁeɛlmˈɑ̃ ɑ̃ɡaʒˈe, e lˈœʁ pʁesˈiz də plyzjˌœʁ fˈɛ.",
+   "debut": 436.616,
+   "fin": 444.835,
+   "duree": 8.219,
+   "mots": [
+    {
+     "mot": "Ce",
+     "debut": 436.616,
+     "fin": 436.807
+    },
+    {
+     "mot": "qui",
+     "debut": 436.807,
+     "fin": 436.999
+    },
+    {
+     "mot": "reste",
+     "debut": 436.999,
+     "fin": 437.381
+    },
+    {
+     "mot": "incertain",
+     "debut": 437.381,
+     "fin": 438.146
+    },
+    {
+     "mot": ":",
+     "debut": 438.146,
+     "fin": 438.146
+    },
+    {
+     "mot": "le",
+     "debut": 438.146,
+     "fin": 438.327
+    },
+    {
+     "mot": "nombre",
+     "debut": 438.327,
+     "fin": 438.78
+    },
+    {
+     "mot": "réel",
+     "debut": 438.78,
+     "fin": 439.142
+    },
+    {
+     "mot": "de",
+     "debut": 439.142,
+     "fin": 439.323
+    },
+    {
+     "mot": "pilleurs,",
+     "debut": 439.323,
+     "fin": 439.776
+    },
+    {
+     "mot": "le",
+     "debut": 439.776,
+     "fin": 439.947
+    },
+    {
+     "mot": "nombre",
+     "debut": 439.947,
+     "fin": 440.373
+    },
+    {
+     "mot": "de",
+     "debut": 440.373,
+     "fin": 440.543
+    },
+    {
+     "mot": "commerces",
+     "debut": 440.543,
+     "fin": 441.055
+    },
+    {
+     "mot": "touchés,",
+     "debut": 441.055,
+     "fin": 441.396
+    },
+    {
+     "mot": "les",
+     "debut": 441.396,
+     "fin": 441.566
+    },
+    {
+     "mot": "effectifs",
+     "debut": 441.566,
+     "fin": 442.161
+    },
+    {
+     "mot": "réellement",
+     "debut": 442.161,
+     "fin": 442.756
+    },
+    {
+     "mot": "engagés,",
+     "debut": 442.756,
+     "fin": 443.266
+    },
+    {
+     "mot": "et",
+     "debut": 443.266,
+     "fin": 443.341
+    },
+    {
+     "mot": "l'heure",
+     "debut": 443.341,
+     "fin": 443.565
+    },
+    {
+     "mot": "précise",
+     "debut": 443.565,
+     "fin": 444.013
+    },
+    {
+     "mot": "de",
+     "debut": 444.013,
+     "fin": 444.163
+    },
+    {
+     "mot": "plusieurs",
+     "debut": 444.163,
+     "fin": 444.686
+    },
+    {
+     "mot": "faits.",
+     "debut": 444.686,
+     "fin": 444.835
+    }
+   ]
+  },
+  {
+   "id": 68,
+   "cle": "s12_question",
+   "seq": 12,
+   "texte": "Et une question reste ouverte : pourquoi le cœur commerçant de la deuxième ville de France a-t-il pu être pillé, de la fin de matinée jusque dans la nuit ?",
+   "phonemes": "e yn kɛstjˈɔ̃ ʁˈɛst uvˈɛʁt : puʁkwˌa lə kˈœʁ kɔmɛʁsˈɑ̃ də la døzjˈɛm vˈil də fʁˈɑ̃s atil pˈy ˈɛtʁ pijˈe, də la fˈɛ̃ də matinˈe ʒˈysk dɑ̃ la nyˈi ?",
+   "debut": 445.255,
+   "fin": 453.147,
+   "duree": 7.891,
+   "mots": [
+    {
+     "mot": "Et",
+     "debut": 445.255,
+     "fin": 445.348
+    },
+    {
+     "mot": "une",
+     "debut": 445.348,
+     "fin": 445.534
+    },
+    {
+     "mot": "question",
+     "debut": 445.534,
+     "fin": 446.187
+    },
+    {
+     "mot": "reste",
+     "debut": 446.187,
+     "fin": 446.559
+    },
+    {
+     "mot": "ouverte",
+     "debut": 446.559,
+     "fin": 447.025
+    },
+    {
+     "mot": ":",
+     "debut": 447.025,
+     "fin": 447.365
+    },
+    {
+     "mot": "pourquoi",
+     "debut": 447.365,
+     "fin": 447.808
+    },
+    {
+     "mot": "le",
+     "debut": 447.808,
+     "fin": 447.956
+    },
+    {
+     "mot": "cœur",
+     "debut": 447.956,
+     "fin": 448.177
+    },
+    {
+     "mot": "commerçant",
+     "debut": 448.177,
+     "fin": 448.768
+    },
+    {
+     "mot": "de",
+     "debut": 448.768,
+     "fin": 448.916
+    },
+    {
+     "mot": "la",
+     "debut": 448.916,
+     "fin": 449.063
+    },
+    {
+     "mot": "deuxième",
+     "debut": 449.063,
+     "fin": 449.507
+    },
+    {
+     "mot": "ville",
+     "debut": 449.507,
+     "fin": 449.728
+    },
+    {
+     "mot": "de",
+     "debut": 449.728,
+     "fin": 449.876
+    },
+    {
+     "mot": "France",
+     "debut": 449.876,
+     "fin": 450.245
+    },
+    {
+     "mot": "a-t-il",
+     "debut": 450.245,
+     "fin": 450.54
+    },
+    {
+     "mot": "pu",
+     "debut": 450.54,
+     "fin": 450.688
+    },
+    {
+     "mot": "être",
+     "debut": 450.688,
+     "fin": 450.91
+    },
+    {
+     "mot": "pillé,",
+     "debut": 450.91,
+     "fin": 451.205
+    },
+    {
+     "mot": "de",
+     "debut": 451.205,
+     "fin": 451.349
+    },
+    {
+     "mot": "la",
+     "debut": 451.349,
+     "fin": 451.493
+    },
+    {
+     "mot": "fin",
+     "debut": 451.493,
+     "fin": 451.708
+    },
+    {
+     "mot": "de",
+     "debut": 451.708,
+     "fin": 451.852
+    },
+    {
+     "mot": "matinée",
+     "debut": 451.852,
+     "fin": 452.284
+    },
+    {
+     "mot": "jusque",
+     "debut": 452.284,
+     "fin": 452.571
+    },
+    {
+     "mot": "dans",
+     "debut": 452.571,
+     "fin": 452.787
+    },
+    {
+     "mot": "la",
+     "debut": 452.787,
+     "fin": 452.931
+    },
+    {
+     "mot": "nuit",
+     "debut": 452.931,
+     "fin": 453.146
+    },
+    {
+     "mot": "?",
+     "debut": 453.146,
+     "fin": 453.146
+    }
+   ]
+  },
+  {
+   "id": 69,
+   "cle": "s12_macron",
+   "seq": 12,
+   "texte": "Dimanche soir, Emmanuel Macron a dit attendre « des réponses claires » sur le renseignement et l'anticipation.",
+   "phonemes": "dimˈɑ̃ʃ swˈaʁ, ɛmanyˈɛl makʁˈɔ̃ a dˈi atˈɑ̃dʁ  de ʁepˈɔ̃s klˈɛʁ  syʁ lə ʁɑ̃sɛɲəmˈɑ̃ e lɑ̃tisipasjˈɔ̃.",
+   "debut": 453.567,
+   "fin": 459.172,
+   "duree": 5.605,
+   "mots": [
+    {
+     "mot": "Dimanche",
+     "debut": 453.567,
+     "fin": 454.263
+    },
+    {
+     "mot": "soir,",
+     "debut": 454.263,
+     "fin": 454.727
+    },
+    {
+     "mot": "Emmanuel",
+     "debut": 454.727,
+     "fin": 455.221
+    },
+    {
+     "mot": "Macron",
+     "debut": 455.221,
+     "fin": 455.644
+    },
+    {
+     "mot": "a",
+     "debut": 455.644,
+     "fin": 455.715
+    },
+    {
+     "mot": "dit",
+     "debut": 455.715,
+     "fin": 455.856
+    },
+    {
+     "mot": "attendre",
+     "debut": 455.856,
+     "fin": 456.279
+    },
+    {
+     "mot": "«",
+     "debut": 456.279,
+     "fin": 456.279
+    },
+    {
+     "mot": "des",
+     "debut": 456.279,
+     "fin": 456.421
+    },
+    {
+     "mot": "réponses",
+     "debut": 456.421,
+     "fin": 456.844
+    },
+    {
+     "mot": "claires",
+     "debut": 456.844,
+     "fin": 457.126
+    },
+    {
+     "mot": "»",
+     "debut": 457.126,
+     "fin": 457.126
+    },
+    {
+     "mot": "sur",
+     "debut": 457.126,
+     "fin": 457.338
+    },
+    {
+     "mot": "le",
+     "debut": 457.338,
+     "fin": 457.479
+    },
+    {
+     "mot": "renseignement",
+     "debut": 457.479,
+     "fin": 458.185
+    },
+    {
+     "mot": "et",
+     "debut": 458.185,
+     "fin": 458.255
+    },
+    {
+     "mot": "l'anticipation.",
+     "debut": 458.255,
+     "fin": 459.172
+    }
+   ]
+  },
+  {
+   "id": 70,
+   "cle": "s12_fin",
+   "seq": 12,
+   "texte": "Au lundi 19 octobre, ces réponses n'ont pas été rendues publiques.",
+   "phonemes": "o lœ̃dˈi diznˈœf ɔktˈɔbʁ, se ʁepˈɔ̃s nɔ̃ paz etˈe ʁɑ̃dˈy pyblˈik.",
+   "debut": 459.592,
+   "fin": 463.357,
+   "duree": 3.765,
+   "mots": [
+    {
+     "mot": "Au",
+     "debut": 459.592,
+     "fin": 459.688
+    },
+    {
+     "mot": "lundi",
+     "debut": 459.688,
+     "fin": 460.169
+    },
+    {
+     "mot": "19",
+     "debut": 460.169,
+     "fin": 460.745
+    },
+    {
+     "mot": "octobre,",
+     "debut": 460.745,
+     "fin": 461.322
+    },
+    {
+     "mot": "ces",
+     "debut": 461.322,
+     "fin": 461.473
+    },
+    {
+     "mot": "réponses",
+     "debut": 461.473,
+     "fin": 461.925
+    },
+    {
+     "mot": "n'ont",
+     "debut": 461.925,
+     "fin": 462.151
+    },
+    {
+     "mot": "pas",
+     "debut": 462.151,
+     "fin": 462.302
+    },
+    {
+     "mot": "été",
+     "debut": 462.302,
+     "fin": 462.528
+    },
+    {
+     "mot": "rendues",
+     "debut": 462.528,
+     "fin": 462.905
+    },
+    {
+     "mot": "publiques.",
+     "debut": 462.905,
+     "fin": 463.357
+    }
+   ]
+  }
+ ]
+}

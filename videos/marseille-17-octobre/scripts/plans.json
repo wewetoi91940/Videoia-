@@ -1,0 +1,1982 @@
+{
+ "plans": [
+  {
+   "id": "P01",
+   "seq": 1,
+   "ancre": {
+    "phrase": "s1_date"
+   },
+   "type": "photo",
+   "photo": "canebiere",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.09,
+     -40,
+     0
+    ]
+   },
+   "cartouche": {
+    "lieu": "La Canebière",
+    "heure": "11 H 28",
+    "statut": "direct"
+   },
+   "repli": {
+    "type": "carte",
+    "vue": "canebiere",
+    "couches": [
+     {
+      "ligne": "canebiere",
+      "etat": "froid"
+     }
+    ]
+   }
+  },
+  {
+   "id": "P02",
+   "seq": 1,
+   "ancre": {
+    "phrase": "s1_poste",
+    "mot": "poste"
+   },
+   "type": "carte",
+   "vue": "canebiere",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.07,
+     0,
+     0
+    ]
+   },
+   "couches": [
+    {
+     "ligne": "canebiere",
+     "etat": "actif",
+     "etiquette": "La Canebière",
+     "pos": 0.45,
+     "dy": 26
+    }
+   ],
+   "cartouche": {
+    "lieu": "Poste de police municipale, sur la Canebière",
+    "heure": "11 H 28 → 11 H 47",
+    "statut": "direct"
+   }
+  },
+  {
+   "id": "P03",
+   "seq": 1,
+   "ancre": {
+    "phrase": "s1_ferreol"
+   },
+   "type": "carte",
+   "vue": "quadrilatere",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.07,
+     0,
+     0
+    ]
+   },
+   "couches": [
+    {
+     "ligne": "canebiere",
+     "etat": "passe",
+     "a": {
+      "phrase": "s1_ferreol"
+     }
+    },
+    {
+     "ligne": "saint_ferreol",
+     "etat": "actif",
+     "a": {
+      "phrase": "s1_ferreol",
+      "mot": "Saint-Ferréol,"
+     },
+     "etiquette": "Rue Saint-Ferréol",
+     "pos": 0.5
+    }
+   ],
+   "cartouche": {
+    "lieu": "Rue Saint-Ferréol : magasins fermés, fracturés et pillés",
+    "heure": "AVANT MIDI",
+    "statut": "periode"
+   }
+  },
+  {
+   "id": "P04",
+   "seq": 1,
+   "ancre": {
+    "phrase": "s1_midi"
+   },
+   "type": "constat",
+   "kicker": "Samedi 17 octobre",
+   "texte": "Il n'est pas encore midi.",
+   "ghost": "11 H",
+   "sous": "Le rassemblement prévu à 14 h n'a même pas commencé.",
+   "sous_a": {
+    "phrase": "s1_rdv"
+   }
+  },
+  {
+   "id": "P05",
+   "seq": 1,
+   "ancre": {
+    "phrase": "s1_question"
+   },
+   "type": "constat",
+   "kicker": "La question",
+   "texte": "Comment une journée de mobilisation contre la vie chère a-t-elle basculé dans le pillage ?",
+   "ghost": "?"
+  },
+  {
+   "id": "P06",
+   "seq": 1,
+   "ancre": {
+    "phrase": "s1_annonce",
+    "decalage": 0.25,
+    "apres": true
+   },
+   "type": "titre",
+   "kicker": "Marseille · 17 octobre 2026",
+   "titre": "Du Prado à Saint-Ferréol",
+   "sous_titre": "la journée où le centre-ville a basculé",
+   "note": "Reconstitution à partir d'articles publiés du 17 au 19 octobre 2026. Aucune image des événements : cartes OpenStreetMap et photos des lieux en temps normal.",
+   "musique": "impact"
+  },
+  {
+   "id": "P07",
+   "seq": 2,
+   "ancre": {
+    "phrase": "s2_journee"
+   },
+   "type": "photo",
+   "photo": "panorama",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.08,
+     0,
+     -20
+    ]
+   },
+   "cartouche": {
+    "lieu": "Marseille · journée nationale contre la vie chère"
+   },
+   "repli": {
+    "type": "constat",
+    "kicker": "Samedi 17 octobre",
+    "texte": "Journée nationale de mobilisation contre la vie chère"
+   }
+  },
+  {
+   "id": "P08",
+   "seq": 2,
+   "ancre": {
+    "phrase": "s2_programme"
+   },
+   "type": "carte",
+   "vue": "ensemble",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.05,
+     0,
+     0
+    ]
+   },
+   "colonne": {
+    "kicker": "Le programme annoncé",
+    "titre": "Samedi 17 octobre",
+    "lignes": [
+     "Dès 8 h : action au rond-point du Prado",
+     "14 h : rassemblement, Vieux-Port ou Canebière selon les sources"
+    ],
+    "a": [
+     {
+      "phrase": "s2_programme",
+      "mot": "Prado"
+     },
+     {
+      "phrase": "s2_programme",
+      "mot": "rassemblement"
+     }
+    ]
+   },
+   "couches": [
+    {
+     "point": "prado",
+     "a": {
+      "phrase": "s2_programme",
+      "mot": "Prado"
+     },
+     "etiquette": "Rond-point du Prado"
+    },
+    {
+     "point": "vieux_port",
+     "a": {
+      "phrase": "s2_programme",
+      "mot": "Vieux-Port"
+     },
+     "etiquette": "Vieux-Port",
+     "dx": -24
+    },
+    {
+     "ligne": "canebiere",
+     "etat": "froid",
+     "a": {
+      "phrase": "s2_programme",
+      "mot": "Canebière"
+     }
+    }
+   ]
+  },
+  {
+   "id": "P09",
+   "seq": 2,
+   "ancre": {
+    "phrase": "s2_prefet"
+   },
+   "type": "citation",
+   "texte": "C'est véritablement à Marseille que nous avons un point de préoccupation.",
+   "qui": "Jacques Witkowski, préfet des Bouches-du-Rhône, la veille",
+   "source": "Cité par La Provence, 18/10"
+  },
+  {
+   "id": "P10",
+   "seq": 2,
+   "ancre": {
+    "phrase": "s2_effectifs"
+   },
+   "type": "chiffres",
+   "kicker": "Les effectifs du matin",
+   "titre": "Deux versions",
+   "barres": false,
+   "lignes": [
+    {
+     "affiche": "1 compagnie",
+     "libelle": "de CRS, soit 80 policiers",
+     "source": "Benoît Payan, maire (La Provence, 18/10)",
+     "a": {
+      "phrase": "s2_effectifs",
+      "mot": "seule"
+     }
+    },
+    {
+     "affiche": "434 + 240",
+     "libelle": "policiers et CRS engagés dès 7 h",
+     "source": "Préfecture de police (bilan du 18/10)",
+     "a": {
+      "phrase": "s2_prefecture"
+     }
+    }
+   ]
+  },
+  {
+   "id": "P11",
+   "seq": 3,
+   "ancre": {
+    "phrase": "s3_methode"
+   },
+   "type": "constat",
+   "kicker": "Méthode",
+   "texte": "Aucune chronologie officielle n'a été publiée.",
+   "ghost": "?? H ??",
+   "sous": "Les heures citées sont celles où les journalistes ont signalé les faits, en direct : un fait a pu se produire un peu avant.",
+   "sous_a": {
+    "phrase": "s3_methode",
+    "mot": "heures"
+   }
+  },
+  {
+   "id": "P12",
+   "seq": 3,
+   "ancre": {
+    "phrase": "s3_prado"
+   },
+   "type": "carte",
+   "vue": "ensemble",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.18,
+     0,
+     0
+    ],
+    "foyer": "prado"
+   },
+   "colonne": {
+    "kicker": "Samedi · dès 8 h",
+    "titre": "Le rond-point du Prado",
+    "lignes": [
+     "Boulevard bloqué par des poubelles et des trottinettes (ICI)",
+     "À environ 3 km au sud du Vieux-Port"
+    ],
+    "a": [
+     {
+      "phrase": "s3_prado",
+      "mot": "poubelles"
+     },
+     {
+      "phrase": "s3_prado",
+      "mot": "trois"
+     }
+    ]
+   },
+   "couches": [
+    {
+     "point": "prado",
+     "etiquette": "Rond-point du Prado"
+    },
+    {
+     "point": "vieux_port",
+     "etat": "froid",
+     "a": {
+      "phrase": "s3_prado",
+      "mot": "Vieux-Port."
+     },
+     "etiquette": "Vieux-Port",
+     "dx": -24
+    }
+   ]
+  },
+  {
+   "id": "P13",
+   "seq": 3,
+   "ancre": {
+    "phrase": "s3_gaz"
+   },
+   "type": "heure",
+   "heure": "8 H 54",
+   "statut": "direct",
+   "evenement": "Premiers jets de gaz lacrymogène ; à 8 h 14, une vingtaine de jeunes et quelques gilets jaunes au rond-point (La Provence).",
+   "lieu": "Rond-point du Prado"
+  },
+  {
+   "id": "P14",
+   "seq": 3,
+   "ancre": {
+    "phrase": "s3_castellane"
+   },
+   "type": "carte",
+   "vue": "prado_castellane",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.07,
+     0,
+     0
+    ]
+   },
+   "colonne": {
+    "kicker": "9 h 20 · direct de La Provence",
+    "titre": "Vers la place Castellane",
+    "lignes": [
+     "Les gilets jaunes remontent l'avenue du Prado",
+     "9 h 20 : signalés place Castellane"
+    ],
+    "a": [
+     {
+      "phrase": "s3_castellane",
+      "mot": "remontent"
+     },
+     {
+      "phrase": "s3_castellane",
+      "mot": "signalés"
+     }
+    ]
+   },
+   "couches": [
+    {
+     "point": "prado",
+     "etat": "passe"
+    },
+    {
+     "ligne": "avenue_du_prado",
+     "etat": "actif",
+     "a": {
+      "phrase": "s3_castellane",
+      "mot": "avenue"
+     }
+    },
+    {
+     "point": "castellane",
+     "a": {
+      "phrase": "s3_castellane",
+      "mot": "Castellane."
+     },
+     "etiquette": "Place Castellane"
+    }
+   ]
+  },
+  {
+   "id": "P15",
+   "seq": 3,
+   "ancre": {
+    "phrase": "s3_reformes"
+   },
+   "type": "carte",
+   "vue": "matin",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.06,
+     0,
+     0
+    ]
+   },
+   "colonne": {
+    "kicker": "Matinée · entrées du direct de La Provence",
+    "titre": "Des groupes dans la ville",
+    "lignes": [
+     "9 h 34 : devant la préfecture",
+     "10 h 19 : gare Saint-Charles",
+     "10 h 43 : Réformés, « un bon millier »"
+    ],
+    "a": [
+     {
+      "phrase": "s3_reformes",
+      "mot": "préfecture,"
+     },
+     {
+      "phrase": "s3_reformes",
+      "mot": "Saint-Charles,"
+     },
+     {
+      "phrase": "s3_reformes",
+      "mot": "Réformés,"
+     }
+    ]
+   },
+   "couches": [
+    {
+     "point": "castellane",
+     "etat": "passe"
+    },
+    {
+     "point": "prefecture",
+     "a": {
+      "phrase": "s3_reformes",
+      "mot": "préfecture,"
+     },
+     "etiquette": "Préfecture",
+     "dx": -24
+    },
+    {
+     "point": "saint_charles",
+     "a": {
+      "phrase": "s3_reformes",
+      "mot": "Saint-Charles,"
+     },
+     "etiquette": "Gare Saint-Charles",
+     "dx": -24,
+     "dy": -50
+    },
+    {
+     "point": "reformes",
+     "a": {
+      "phrase": "s3_reformes",
+      "mot": "Réformés,"
+     },
+     "etiquette": "Les Réformés"
+    },
+    {
+     "ligne": "canebiere",
+     "etat": "froid",
+     "a": {
+      "phrase": "s3_reformes",
+      "mot": "Canebière"
+     }
+    }
+   ]
+  },
+  {
+   "id": "P16",
+   "seq": 4,
+   "ancre": {
+    "phrase": "s4_poste"
+   },
+   "type": "carte",
+   "vue": "canebiere",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.08,
+     0,
+     0
+    ]
+   },
+   "couches": [
+    {
+     "ligne": "canebiere",
+     "etat": "actif",
+     "etiquette": "La Canebière",
+     "pos": 0.45,
+     "dy": 26
+    },
+    {
+     "point": "reformes",
+     "etat": "passe"
+    }
+   ],
+   "cartouche": {
+    "lieu": "Poste de police municipale · « 42, La Canebière » selon le maire",
+    "heure": "11 H 28",
+    "statut": "direct"
+   }
+  },
+  {
+   "id": "P17",
+   "seq": 4,
+   "ancre": {
+    "phrase": "s4_molotov"
+   },
+   "type": "constat",
+   "kicker": "À vérifier",
+   "texte": "Des cocktails Molotov ?",
+   "ghost": "?",
+   "sous": "Ils circulent sur les réseaux sociaux. L'AFP, la préfecture et La Provence ne parlent que de fumigènes.",
+   "sous_a": {
+    "phrase": "s4_molotov",
+    "mot": "mais"
+   }
+  },
+  {
+   "id": "P18",
+   "seq": 4,
+   "ancre": {
+    "phrase": "s4_crs"
+   },
+   "type": "photo",
+   "photo": "canebiere",
+   "position": "50% 60%",
+   "camera": {
+    "de": [
+     1.12,
+     30,
+     0
+    ],
+    "a": [
+     1.04,
+     0,
+     0
+    ]
+   },
+   "cartouche": {
+    "lieu": "Des CRS postés juste au-dessus du poste (Marsactu)",
+    "heure": "FIN DE MATINÉE",
+    "statut": "periode"
+   },
+   "repli": {
+    "type": "constat",
+    "kicker": "Marsactu · fin de matinée",
+    "texte": "Des CRS postés juste au-dessus n'interviennent pas."
+   }
+  },
+  {
+   "id": "P19",
+   "seq": 4,
+   "ancre": {
+    "phrase": "s4_magasins"
+   },
+   "type": "heure",
+   "heure": "11 H 46",
+   "statut": "direct",
+   "evenement": "Pillage de la boutique SFR de la Canebière ; à 11 h 54, celui de JD Sports (La Provence).",
+   "lieu": "La Canebière"
+  },
+  {
+   "id": "P20",
+   "seq": 4,
+   "ancre": {
+    "phrase": "s4_prefet"
+   },
+   "type": "citation",
+   "texte": "Nous ne faisons pas face à une manifestation, mais véritablement à des pillages.",
+   "qui": "Le préfet, à propos de la situation depuis midi",
+   "source": "La Provence, direct, 17/10"
+  },
+  {
+   "id": "P21",
+   "seq": 5,
+   "ancre": {
+    "phrase": "s5_mairie"
+   },
+   "type": "carte",
+   "vue": "vieux_port",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.07,
+     0,
+     0
+    ]
+   },
+   "couches": [
+    {
+     "point": "hotel_de_ville",
+     "a": {
+      "phrase": "s5_mairie",
+      "mot": "l'hôtel"
+     },
+     "etiquette": "Hôtel de ville"
+    },
+    {
+     "ligne": "quai_du_port",
+     "etat": "passe",
+     "a": {
+      "phrase": "s5_mairie",
+      "mot": "quai"
+     },
+     "etiquette": "Quai du Port",
+     "pos": 0.3,
+     "dy": 24
+    }
+   ],
+   "cartouche": {
+    "lieu": "Hôtel de ville, quai du Port",
+    "heure": "MI-JOURNÉE",
+    "statut": "periode"
+   }
+  },
+  {
+   "id": "P22",
+   "seq": 5,
+   "ancre": {
+    "phrase": "s5_porte"
+   },
+   "type": "photo",
+   "photo": "hotel-de-ville",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.08,
+     0,
+     -10
+    ]
+   },
+   "cartouche": {
+    "lieu": "Hôtel de ville : la double porte en bois forcée (AFP)",
+    "heure": "MI-JOURNÉE",
+    "statut": "periode"
+   },
+   "repli": {
+    "type": "constat",
+    "kicker": "AFP · mi-journée",
+    "texte": "La double porte en bois est forcée avec des barrières de sécurité."
+   }
+  },
+  {
+   "id": "P23",
+   "seq": 5,
+   "ancre": {
+    "phrase": "s5_porte",
+    "mot": "criant"
+   },
+   "type": "citation",
+   "texte": "C'est la Révolution, on prend la Bastille.",
+   "qui": "Cris rapportés par un journaliste de l'AFP",
+   "source": "AFP, 17/10"
+  },
+  {
+   "id": "P24",
+   "seq": 5,
+   "ancre": {
+    "phrase": "s5_heure"
+   },
+   "type": "heure",
+   "heure": "13 H 20",
+   "statut": "direct",
+   "evenement": "La porte de l'hôtel de ville est ouverte, gardée par des CRS. L'heure de l'intrusion n'a pas été publiée.",
+   "lieu": "Hôtel de ville · quai du Port"
+  },
+  {
+   "id": "P25",
+   "seq": 5,
+   "ancre": {
+    "phrase": "s5_repli"
+   },
+   "type": "constat",
+   "kicker": "Le maire",
+   "texte": "« Un mouvement de repli des CRS »",
+   "ghost": "CRS",
+   "sous": "C'est, selon Benoît Payan, ce qui a laissé la porte libre."
+  },
+  {
+   "id": "P26",
+   "seq": 6,
+   "ancre": {
+    "phrase": "s6_14h"
+   },
+   "type": "heure",
+   "heure": "14 H",
+   "statut": "prevue",
+   "evenement": "Rassemblement annoncé, sur le Vieux-Port ou sur la Canebière selon les sources.",
+   "lieu": "Centre-ville",
+   "musique": "impact"
+  },
+  {
+   "id": "P27",
+   "seq": 6,
+   "ancre": {
+    "phrase": "s6_face"
+   },
+   "type": "photo",
+   "photo": "vieux-port",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.07,
+     20,
+     0
+    ]
+   },
+   "cartouche": {
+    "lieu": "Vieux-Port : face-à-face pendant près d'une heure (Marsactu)",
+    "heure": "APRÈS-MIDI",
+    "statut": "periode"
+   },
+   "repli": {
+    "type": "carte",
+    "vue": "vieux_port",
+    "couches": [
+     {
+      "point": "vieux_port",
+      "etiquette": "Vieux-Port"
+     }
+    ]
+   }
+  },
+  {
+   "id": "P28",
+   "seq": 6,
+   "ancre": {
+    "phrase": "s6_reformes"
+   },
+   "type": "carte",
+   "vue": "canebiere",
+   "camera": {
+    "de": [
+     1.08,
+     0,
+     0
+    ],
+    "a": [
+     1.0,
+     0,
+     0
+    ]
+   },
+   "couches": [
+    {
+     "point": "reformes",
+     "a": {
+      "phrase": "s6_reformes",
+      "mot": "Réformés,"
+     },
+     "etiquette": "Les Réformés",
+     "dx": -24
+    },
+    {
+     "ligne": "canebiere",
+     "etat": "froid",
+     "a": {
+      "phrase": "s6_cortege",
+      "mot": "remontent"
+     },
+     "etiquette": "Cortège sur la Canebière",
+     "pos": 0.45,
+     "dy": 26
+    }
+   ],
+   "cartouche": {
+    "lieu": "La manifestation a lieu aux Réformés (La Provence)",
+    "heure": "≈ 15 H",
+    "statut": "periode"
+   }
+  },
+  {
+   "id": "P29",
+   "seq": 6,
+   "ancre": {
+    "phrase": "s6_cortege"
+   },
+   "type": "heure",
+   "heure": "14 H 51",
+   "statut": "direct",
+   "evenement": "Plusieurs milliers de manifestants remontent pacifiquement la Canebière (La Provence).",
+   "lieu": "La Canebière"
+  },
+  {
+   "id": "P30",
+   "seq": 6,
+   "ancre": {
+    "phrase": "s6_auditrice"
+   },
+   "type": "citation",
+   "texte": "À cause de tout ce chaos, on n'a pas pu lancer notre manifestation.",
+   "qui": "Une auditrice gilet jaune",
+   "source": "Europe 1, 18/10"
+  },
+  {
+   "id": "P31",
+   "seq": 7,
+   "ancre": {
+    "phrase": "s7_1525"
+   },
+   "type": "heure",
+   "heure": "15 H 25",
+   "statut": "unique",
+   "evenement": "Transports en commun arrêtés sur décision du préfet (La Clé Publique).",
+   "lieu": "Réseau de la RTM",
+   "musique": "coupure"
+  },
+  {
+   "id": "P32",
+   "seq": 7,
+   "ancre": {
+    "phrase": "s7_lp"
+   },
+   "type": "photo",
+   "photo": "metro",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.06,
+     0,
+     0
+    ]
+   },
+   "cartouche": {
+    "lieu": "Métro et tram « totalement à l'arrêt » (La Provence)",
+    "heure": "16 H 03",
+    "statut": "direct"
+   },
+   "repli": {
+    "type": "constat",
+    "kicker": "16 h 03 · La Provence",
+    "texte": "Métro et tram totalement à l'arrêt, à la demande du préfet."
+   }
+  },
+  {
+   "id": "P33",
+   "seq": 8,
+   "ancre": {
+    "phrase": "s8_secteur"
+   },
+   "type": "carte",
+   "vue": "quadrilatere",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.06,
+     0,
+     0
+    ]
+   },
+   "couches": [
+    {
+     "ligne": "canebiere",
+     "etat": "passe",
+     "a": {
+      "phrase": "s8_secteur",
+      "mot": "Canebière"
+     }
+    },
+    {
+     "zone": "zone_rues",
+     "a": {
+      "phrase": "s8_secteur",
+      "mot": "secteur"
+     }
+    },
+    {
+     "ligne": "saint_ferreol",
+     "a": {
+      "phrase": "s8_secteur",
+      "mot": "Saint-Ferréol,"
+     },
+     "etiquette": "Saint-Ferréol",
+     "pos": 0.35
+    },
+    {
+     "ligne": "paradis",
+     "a": {
+      "phrase": "s8_secteur",
+      "mot": "Paradis,"
+     },
+     "etiquette": "Paradis",
+     "pos": 0.6
+    },
+    {
+     "ligne": "grignan",
+     "a": {
+      "phrase": "s8_secteur",
+      "mot": "Grignan,"
+     },
+     "etiquette": "Grignan",
+     "pos": 0.3,
+     "dy": -50
+    },
+    {
+     "ligne": "montgrand",
+     "a": {
+      "phrase": "s8_secteur",
+      "mot": "Montgrand."
+     },
+     "etiquette": "Montgrand",
+     "pos": 0.25,
+     "dy": 22
+    }
+   ],
+   "cartouche": {
+    "lieu": "Rues citées par la presse",
+    "heure": "APRÈS-MIDI",
+    "statut": "periode"
+   }
+  },
+  {
+   "id": "P34",
+   "seq": 8,
+   "ancre": {
+    "phrase": "s8_bourse"
+   },
+   "type": "heure",
+   "heure": "15 H 02",
+   "statut": "direct",
+   "evenement": "Des dizaines de personnes forcent une grille du Centre Bourse ; à 15 h 53, boutiques de luxe pillées rue Paradis et rue Grignan.",
+   "lieu": "Centre Bourse · rues Paradis et Grignan"
+  },
+  {
+   "id": "P35",
+   "seq": 8,
+   "ancre": {
+    "phrase": "s8_feu"
+   },
+   "type": "photo",
+   "photo": "saint-ferreol",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.08,
+     0,
+     10
+    ]
+   },
+   "cartouche": {
+    "lieu": "Rue Saint-Ferréol : un magasin incendié, le feu gagne l'immeuble",
+    "heure": "15 H 39",
+    "statut": "direct"
+   },
+   "repli": {
+    "type": "heure",
+    "heure": "15 H 39",
+    "statut": "direct",
+    "evenement": "Un magasin incendié rue Saint-Ferréol ; le feu gagne l'immeuble.",
+    "lieu": "Rue Saint-Ferréol"
+   }
+  },
+  {
+   "id": "P36",
+   "seq": 8,
+   "ancre": {
+    "phrase": "s8_acoups"
+   },
+   "type": "citation",
+   "texte": "Quelques CRS, retranchés dans des rues et divisés en petits groupes, interviennent par à-coups.",
+   "qui": "Une journaliste de Marsactu, sur place",
+   "source": "Marsactu, 17/10"
+  },
+  {
+   "id": "P37",
+   "seq": 8,
+   "ancre": {
+    "phrase": "s8_temoin"
+   },
+   "type": "constat",
+   "kicker": "Témoignage",
+   "texte": "Une habitante dit avoir vu les CRS « laisser faire ».",
+   "ghost": "« … »",
+   "sous": "Recueilli par ICI Provence : un témoignage, pas un constat.",
+   "sous_a": {
+    "phrase": "s8_temoin",
+    "mot": "témoignage,"
+   }
+  },
+  {
+   "id": "P38",
+   "seq": 8,
+   "ancre": {
+    "phrase": "s8_centaure"
+   },
+   "type": "chiffres",
+   "kicker": "Renforts",
+   "titre": "Ce que détaille la préfecture",
+   "barres": false,
+   "lignes": [
+    {
+     "affiche": "2",
+     "libelle": "blindés Centaure, avec 12 gendarmes, à partir de 13 h 30",
+     "source": "Préfecture de police (18/10)",
+     "a": {
+      "phrase": "s8_centaure",
+      "mot": "Centaure"
+     }
+    },
+    {
+     "affiche": "152",
+     "libelle": "gendarmes supplémentaires, à partir de 20 h seulement",
+     "source": "Préfecture de police (18/10)",
+     "a": {
+      "phrase": "s8_centaure",
+      "mot": "préfecture."
+     }
+    }
+   ]
+  },
+  {
+   "id": "P39",
+   "seq": 9,
+   "ancre": {
+    "phrase": "s9_point"
+   },
+   "type": "chiffres",
+   "kicker": "Vers 17 h · le préfet",
+   "titre": "Premier point",
+   "barres": false,
+   "lignes": [
+    {
+     "affiche": "7 000 – 8 000",
+     "libelle": "pilleurs",
+     "source": "Le préfet (La Provence, direct)",
+     "a": {
+      "phrase": "s9_point",
+      "mot": "pilleurs,"
+     }
+    },
+    {
+     "affiche": "30 ou 40",
+     "libelle": "magasins touchés",
+     "source": "Le préfet (La Provence, direct)",
+     "a": {
+      "phrase": "s9_point",
+      "mot": "magasins"
+     }
+    },
+    {
+     "affiche": "29",
+     "libelle": "blessés parmi les forces de l'ordre (17 h 15)",
+     "source": "Le préfet (La Provence, direct)",
+     "a": {
+      "phrase": "s9_point",
+      "mot": "blessés"
+     }
+    }
+   ]
+  },
+  {
+   "id": "P40",
+   "seq": 9,
+   "ancre": {
+    "phrase": "s9_18h"
+   },
+   "type": "heure",
+   "heure": "18 H",
+   "statut": "publiee",
+   "evenement": "« Le centre-ville de Marseille est plongé dans un chaos » (Marsactu).",
+   "lieu": "Centre-ville"
+  },
+  {
+   "id": "P41",
+   "seq": 9,
+   "ancre": {
+    "phrase": "s9_gazent"
+   },
+   "type": "citation",
+   "texte": "Ils gazent souvent, font exploser des grenades de désencerclement de temps en temps, chargent rarement.",
+   "qui": "Une journaliste de Marsactu, vers 18 h",
+   "source": "Marsactu, 17/10"
+  },
+  {
+   "id": "P42",
+   "seq": 9,
+   "ancre": {
+    "phrase": "s9_nuit"
+   },
+   "type": "carte",
+   "vue": "quadrilatere",
+   "camera": {
+    "de": [
+     1.08,
+     0,
+     0
+    ],
+    "a": [
+     1.0,
+     0,
+     0
+    ]
+   },
+   "couches": [
+    {
+     "zone": "zone_rues",
+     "a": {
+      "phrase": "s9_nuit"
+     }
+    },
+    {
+     "ligne": "paradis",
+     "a": {
+      "phrase": "s9_nuit",
+      "mot": "Paradis"
+     },
+     "etiquette": "Rue Paradis · 19 h 09",
+     "pos": 0.6
+    },
+    {
+     "ligne": "saint_ferreol",
+     "a": {
+      "phrase": "s9_nuit",
+      "mot": "Saint-Ferréol."
+     },
+     "etiquette": "Rue Saint-Ferréol · vers 20 h",
+     "pos": 0.35
+    }
+   ],
+   "cartouche": {
+    "lieu": "Pillages encore signalés à la tombée de la nuit",
+    "heure": "19 H 09 · VERS 20 H",
+    "statut": "direct"
+   }
+  },
+  {
+   "id": "P43",
+   "seq": 9,
+   "ancre": {
+    "phrase": "s9_107"
+   },
+   "type": "heure",
+   "prefixe": "Vers",
+   "heure": "22 H",
+   "statut": "periode",
+   "evenement": "La préfecture annonce 107 policiers blessés.",
+   "lieu": "Préfecture de police"
+  },
+  {
+   "id": "P44",
+   "seq": 9,
+   "ancre": {
+    "phrase": "s9_2h"
+   },
+   "type": "heure",
+   "prefixe": "Vers",
+   "heure": "2 H",
+   "statut": "periode",
+   "evenement": "Des commerces sont encore attaqués dans le centre-ville (Destimed).",
+   "lieu": "Nuit du 17 au 18 octobre"
+  },
+  {
+   "id": "P45",
+   "seq": 10,
+   "ancre": {
+    "phrase": "s10_matin"
+   },
+   "type": "photo",
+   "photo": "saint-ferreol",
+   "position": "50% 40%",
+   "camera": {
+    "de": [
+     1.1,
+     0,
+     0
+    ],
+    "a": [
+     1.0,
+     0,
+     0
+    ]
+   },
+   "cartouche": {
+    "lieu": "Rue Saint-Ferréol",
+    "heure": "DIMANCHE 18 OCTOBRE",
+    "statut": "jour"
+   },
+   "repli": {
+    "type": "constat",
+    "kicker": "Dimanche 18 octobre",
+    "texte": "Marseille découvre son centre-ville."
+   }
+  },
+  {
+   "id": "P46",
+   "seq": 10,
+   "ancre": {
+    "phrase": "s10_constats"
+   },
+   "type": "carte",
+   "vue": "quadrilatere",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.07,
+     0,
+     0
+    ]
+   },
+   "couches": [
+    {
+     "ligne": "canebiere",
+     "etat": "passe",
+     "a": {
+      "phrase": "s10_constats",
+      "mot": "Canebière"
+     }
+    },
+    {
+     "zone": "zone_rues",
+     "a": {
+      "phrase": "s10_constats",
+      "mot": "Canebière"
+     }
+    },
+    {
+     "ligne": "montgrand",
+     "etat": "passe",
+     "a": {
+      "phrase": "s10_constats",
+      "mot": "Montgrand,"
+     },
+     "etiquette": "Rue Montgrand",
+     "pos": 0.25,
+     "dy": 22
+    }
+   ],
+   "cartouche": {
+    "lieu": "De la Canebière à la rue Montgrand",
+    "heure": "DIMANCHE",
+    "statut": "jour"
+   }
+  },
+  {
+   "id": "P47",
+   "seq": 10,
+   "ancre": {
+    "phrase": "s10_affiche"
+   },
+   "type": "citation",
+   "texte": "Entièrement vidée. Fermée pour trois mois.",
+   "qui": "Affichette d'une boutique de téléphonie, rue Paradis",
+   "source": "Le Parisien, 18/10"
+  },
+  {
+   "id": "P48",
+   "seq": 10,
+   "ancre": {
+    "phrase": "s10_bilans"
+   },
+   "type": "chiffres",
+   "kicker": "Dimanche · les bilans",
+   "titre": "Les bilans divergent",
+   "barres": false,
+   "lignes": [
+    {
+     "affiche": "+ 600",
+     "libelle": "commerces vandalisés",
+     "source": "Chambre de commerce (ICI Provence)",
+     "a": {
+      "phrase": "s10_cci"
+     }
+    },
+    {
+     "affiche": "+ 30 000",
+     "libelle": "pilleurs, dont 8 000 « émeutiers », « au plus fort des événements »",
+     "source": "Préfecture de police",
+     "a": {
+      "phrase": "s10_pref"
+     }
+    },
+    {
+     "affiche": "99",
+     "libelle": "gardes à vue",
+     "source": "Préfecture de police",
+     "a": {
+      "phrase": "s10_gav"
+     }
+    },
+    {
+     "affiche": "118",
+     "libelle": "blessés parmi les forces de l'ordre, dont 3 hospitalisés",
+     "source": "Préfecture de police",
+     "a": {
+      "phrase": "s10_gav",
+      "mot": "118"
+     }
+    }
+   ]
+  },
+  {
+   "id": "P49",
+   "seq": 11,
+   "ancre": {
+    "phrase": "s11_inter"
+   },
+   "type": "constat",
+   "kicker": "Lundi 19 octobre · France Inter",
+   "texte": "Pour Benoît Payan, la doctrine de maintien de l'ordre est « inefficace ».",
+   "ghost": "19.10"
+  },
+  {
+   "id": "P50",
+   "seq": 11,
+   "ancre": {
+    "phrase": "s11_1500"
+   },
+   "type": "chiffres",
+   "kicker": "Combien de pilleurs ?",
+   "titre": "Quatre chiffres, aucun décompte indépendant",
+   "lignes": [
+    {
+     "affiche": "7 000 – 8 000",
+     "valeur": 7500,
+     "libelle": "le préfet, samedi vers 17 h",
+     "source": "La Provence, direct"
+    },
+    {
+     "affiche": "+ 30 000",
+     "valeur": 30000,
+     "libelle": "la préfecture de police, dimanche",
+     "source": "Made in Marseille, Gomet'"
+    },
+    {
+     "affiche": "1 500",
+     "valeur": 1500,
+     "libelle": "« des policiers et des gradés », selon le maire",
+     "source": "ICI Provence, 19/10",
+     "a": {
+      "phrase": "s11_1500",
+      "mot": "parlent"
+     }
+    },
+    {
+     "affiche": "≈ 10 000",
+     "valeur": 10000,
+     "libelle": "des policiers cités par Europe 1",
+     "source": "Europe 1, 19/10",
+     "a": {
+      "phrase": "s11_10000"
+     }
+    }
+   ],
+   "note": "Aucune méthode de comptage n'a été publiée.",
+   "note_a": {
+    "phrase": "s11_quatre"
+   }
+  },
+  {
+   "id": "P51",
+   "seq": 11,
+   "ancre": {
+    "phrase": "s11_centime"
+   },
+   "type": "constat",
+   "kicker": "Le maire",
+   "texte": "Indemniser les commerçants « au centime près ».",
+   "ghost": "€"
+  },
+  {
+   "id": "P52",
+   "seq": 11,
+   "ancre": {
+    "phrase": "s11_controle"
+   },
+   "type": "citation",
+   "texte": "Oui, il y a eu une perte de contrôle.",
+   "qui": "Laurent Nuñez, ministre de l'Intérieur",
+   "source": "France Inter, 19/10 (cité par ICI)"
+  },
+  {
+   "id": "P53",
+   "seq": 11,
+   "ancre": {
+    "phrase": "s11_demission"
+   },
+   "type": "constat",
+   "kicker": "Paris · Élysée",
+   "texte": "Démission de Laurent Nuñez refusée",
+   "ghost": "19.10",
+   "sous": "« La nécessité d'un commandement continu des forces de l'ordre »",
+   "sous_a": {
+    "phrase": "s11_demission",
+    "mot": "nécessité"
+   }
+  },
+  {
+   "id": "P54",
+   "seq": 11,
+   "ancre": {
+    "phrase": "s11_interdit"
+   },
+   "type": "constat",
+   "kicker": "Marseille · lundi 19 octobre",
+   "texte": "Rassemblements interdits de 12 h à 20 h",
+   "ghost": "12 → 20",
+   "sous": "La visite du ministre de l'Intérieur est reportée.",
+   "sous_a": {
+    "phrase": "s11_interdit",
+    "mot": "visite"
+   }
+  },
+  {
+   "id": "P55",
+   "seq": 12,
+   "ancre": {
+    "phrase": "s12_sait"
+   },
+   "type": "fin",
+   "colonnes": [
+    {
+     "titre": "Ce que l'on sait",
+     "a": {
+      "phrase": "s12_sait"
+     },
+     "lignes": [
+      "Dès 8 h : blocage au Prado",
+      "Avant midi : premiers pillages signalés",
+      "Mi-journée : l'hôtel de ville forcé",
+      "Vers 2 h : des commerces encore attaqués"
+     ],
+     "a_lignes": [
+      {
+       "phrase": "s12_sait",
+       "mot": "Prado"
+      },
+      {
+       "phrase": "s12_sait",
+       "mot": "pillages"
+      },
+      {
+       "phrase": "s12_sait",
+       "mot": "l'hôtel"
+      },
+      {
+       "phrase": "s12_sait",
+       "mot": "nuit."
+      }
+     ]
+    },
+    {
+     "titre": "Ce qui reste incertain",
+     "a": {
+      "phrase": "s12_incertain"
+     },
+     "lignes": [
+      "Le nombre réel de pilleurs",
+      "Le nombre de commerces touchés",
+      "Les effectifs réellement engagés",
+      "L'heure précise de plusieurs faits"
+     ],
+     "a_lignes": [
+      {
+       "phrase": "s12_incertain",
+       "mot": "pilleurs,"
+      },
+      {
+       "phrase": "s12_incertain",
+       "mot": "commerces"
+      },
+      {
+       "phrase": "s12_incertain",
+       "mot": "effectifs"
+      },
+      {
+       "phrase": "s12_incertain",
+       "mot": "l'heure"
+      }
+     ]
+    },
+    {
+     "titre": "La question ouverte",
+     "a": {
+      "phrase": "s12_question"
+     },
+     "lignes": [
+      "Pourquoi le centre a-t-il pu être pillé de la fin de matinée jusque dans la nuit ?",
+      "« Des réponses claires » attendues (Emmanuel Macron) ; non publiées au 19 octobre"
+     ],
+     "a_lignes": [
+      {
+       "phrase": "s12_question",
+       "mot": "pourquoi"
+      },
+      {
+       "phrase": "s12_macron"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P56",
+   "seq": 12,
+   "type": "credits",
+   "duree": 9.0,
+   "kicker": "Sources (lues entre le 17 et le 19 octobre 2026)",
+   "blocs": [
+    {
+     "titre": "Articles et directs",
+     "lignes": [
+      "La Provence, direct (17/10) — Manifestations du 17 octobre : suivez la journée de mobilisation en Provence (direct, 148 entrées horodatées)",
+      "ICI Provence, direct (17/10) — Les manifestations du 17 octobre dans les Bouches-du-Rhône, le Var et les Alpes du Sud (direct)",
+      "Marsactu (17/10) — 17 octobre à Marseille : entre revendications et pillages, la ville sens dessus dessous (Violette Artaud)",
+      "Marsactu (17/10) — Un 17 octobre marqué par des scènes d'émeutes dans le centre-ville de Marseille",
+      "AFP (Boursorama) (18/10) — Mobilisation du 17 octobre : des milliers de manifestants en région, de vives tensions à Paris et Marseille",
+      "Made in Marseille (16/10) — Gilets jaunes, lycéens, salariés... quelles perturbations à Marseille pour les manifestations du 17 octobre ?",
+      "La Provence (18/10) — « Des actes criminels » : comment les pilleurs ont-ils pu agir en toute impunité ?",
+      "La Provence (18/10) — « Je veux savoir quels ordres ont été donnés aux CRS », lance Benoît Payan",
+      "Made in Marseille (18/10) — Après les pillages à Marseille, les élus réclament des aides d'urgence pour les commerçants (bilan de la préfecture)",
+      "La Provence (17/10) — Des pillages de commerces, des dégradations multiples, la mairie attaquée... Marseille a vécu le chaos (entretien avec Benoît Payan)",
+      "Le Parisien / AFP (17/10) — Intrusion à la mairie de Marseille : le maire Benoît Payan « demande des comptes » sur le maintien de l'ordre",
+      "Police & Réalités (17/10) — Le poste de police municipale de la Canebière attaqué pendant les rassemblements du 17 octobre",
+      "AFP (Sud Radio) (17/10) — A Marseille, des manifestants ont pénétré brièvement dans le hall de la mairie (dépêche AFP)",
+      "La Provence (18/10) — Marseille : les images inédites du poste de police saccagé sur la Canebière",
+      "ICI Provence (19/10) — Violences du 17 octobre : le maire de Marseille attend des explications de la part de Laurent Nuñez",
+      "La Provence (17/10) — « On en a ras-le-bol et ce n'est que le début » : malgré les débordements, la manifestation a bien eu lieu à Marseille",
+      "Europe 1 (18/10) — Émeutes à Marseille : « À cause de tout ce chaos, on n'a pas pu lancer notre manifestation », déplore une auditrice gilet jaune"
+     ]
+    },
+    {
+     "titre": "",
+     "lignes": [
+      "La Clé Publique (17/10) — Marseille : transports arrêtés après les violences du 17 octobre",
+      "Destimed (18/10) — Marseille à terre",
+      "ICI Provence (19/10) — « La suite ? Gérer les prochaines émeutes », les Marseillais découvrent le centre-ville saccagé",
+      "Gomet' (18/10) — Violences à Marseille : 30 000 pilleurs dont 8 000 émeutiers (Préfecture)",
+      "mesinfos (17/10) — Marseille : le lourd bilan économique des émeutes du 17 octobre",
+      "Destimed (17/10) — Manifestations, pillages et violences, une journée de colère qui laisse la ville meurtrie",
+      "Police & Réalités (17/10) — Marseille : 107 policiers blessés pendant les pillages et les violences, dont trois sérieusement",
+      "La Provence (18/10) — 17 octobre : conteneurs calcinés, débris, commerces dévastés... le centre de Marseille porte les stigmates du chaos",
+      "Le Parisien (18/10) — « On nous a abandonnés » : dans les rues du centre-ville de Marseille livré à la prédation, un fort ressentiment règne",
+      "ICI Provence (18/10) — Le jour d'après à Marseille, où des centaines de commerces ont été pillés",
+      "Europe 1 (19/10) — Après les pillages du 17 octobre, Marseille se réveille dans le chaos",
+      "ICI (19/10) — Violences du 17 octobre : Laurent Nuñez admet « un manque d'anticipation »",
+      "ICI Provence (19/10) — Violences du 17 octobre : le ministre de l'Intérieur reporte son déplacement à Marseille",
+      "Destimed (19/10) — Emmanuel Macron refuse la démission de Laurent Nuñez",
+      "ICI Provence (19/10) — Violences du 17 octobre : rassemblements et manifestations interdits ce lundi à Marseille",
+      "Destimed (19/10) — Emmanuel Macron promet des sanctions et exige des réponses sur le maintien de l'ordre"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P57",
+   "seq": 12,
+   "type": "credits",
+   "duree": 8.0,
+   "kicker": "Fabrication",
+   "blocs": [
+    {
+     "titre": "Images",
+     "lignes": [
+      "Aucune image des événements du 17 octobre.",
+      "Cartes : © contributeurs d'OpenStreetMap (ODbL), données du 19/10/2026.",
+      "Photos des lieux en temps normal : Wikimedia Commons (auteurs et licences en description)."
+     ]
+    },
+    {
+     "titre": "Son",
+     "lignes": [
+      "Voix de synthèse : Google Gemini (TTS).",
+      "Musique composée par programme, libre de droits."
+     ]
+    },
+    {
+     "titre": "Méthode",
+     "lignes": [
+      "Heures « direct » : heure de mise en ligne d'une entrée de direct ; le fait peut être antérieur.",
+      "Chiffres attribués à leur source ; aucun n'est présenté comme établi.",
+      "Personne privée ni personne interpellée identifiable."
+     ]
+    }
+   ]
+  }
+ ],
+ "horloge": {
+  "debut": {
+   "phrase": "s3_prado"
+  },
+  "fin": {
+   "phrase": "s10_matin",
+   "decalage": -0.4
+  },
+  "marques": [
+   {
+    "de": "8:00",
+    "type": "publiee",
+    "revele": {
+     "phrase": "s3_prado"
+    }
+   },
+   {
+    "de": "8:14",
+    "type": "direct",
+    "revele": {
+     "phrase": "s3_gaz"
+    }
+   },
+   {
+    "de": "8:54",
+    "type": "direct",
+    "revele": {
+     "phrase": "s3_gaz",
+     "mot": "54,"
+    }
+   },
+   {
+    "de": "9:20",
+    "type": "direct",
+    "revele": {
+     "phrase": "s3_castellane",
+     "mot": "signalés"
+    }
+   },
+   {
+    "de": "9:34",
+    "type": "direct",
+    "revele": {
+     "phrase": "s3_reformes",
+     "mot": "préfecture,"
+    }
+   },
+   {
+    "de": "10:19",
+    "type": "direct",
+    "revele": {
+     "phrase": "s3_reformes",
+     "mot": "Saint-Charles,"
+    }
+   },
+   {
+    "de": "10:43",
+    "type": "direct",
+    "revele": {
+     "phrase": "s3_reformes",
+     "mot": "millier"
+    }
+   },
+   {
+    "de": "11:28",
+    "type": "direct",
+    "revele": {
+     "phrase": "s4_poste",
+     "mot": "attaqué"
+    }
+   },
+   {
+    "de": "11:46",
+    "type": "direct",
+    "revele": {
+     "phrase": "s4_magasins",
+     "mot": "46,"
+    }
+   },
+   {
+    "de": "11:54",
+    "type": "direct",
+    "revele": {
+     "phrase": "s4_magasins",
+     "mot": "54,"
+    }
+   },
+   {
+    "de": "12:00",
+    "a": "13:20",
+    "type": "periode",
+    "revele": {
+     "phrase": "s5_mairie",
+     "mot": "mi-journée,"
+    }
+   },
+   {
+    "de": "13:20",
+    "type": "direct",
+    "revele": {
+     "phrase": "s5_heure",
+     "mot": "20,"
+    }
+   },
+   {
+    "de": "14:00",
+    "type": "prevue",
+    "revele": {
+     "phrase": "s6_14h"
+    }
+   },
+   {
+    "de": "14:51",
+    "type": "direct",
+    "revele": {
+     "phrase": "s6_cortege"
+    }
+   },
+   {
+    "de": "15:02",
+    "type": "direct",
+    "revele": {
+     "phrase": "s8_bourse"
+    }
+   },
+   {
+    "de": "15:25",
+    "type": "publiee",
+    "revele": {
+     "phrase": "s7_1525"
+    }
+   },
+   {
+    "de": "15:39",
+    "type": "direct",
+    "revele": {
+     "phrase": "s8_feu"
+    }
+   },
+   {
+    "de": "16:03",
+    "type": "direct",
+    "revele": {
+     "phrase": "s7_lp"
+    }
+   },
+   {
+    "de": "16:45",
+    "a": "17:15",
+    "type": "periode",
+    "revele": {
+     "phrase": "s9_point"
+    }
+   },
+   {
+    "de": "18:00",
+    "type": "publiee",
+    "revele": {
+     "phrase": "s9_18h"
+    }
+   },
+   {
+    "de": "19:09",
+    "type": "direct",
+    "revele": {
+     "phrase": "s9_nuit"
+    }
+   },
+   {
+    "de": "19:45",
+    "a": "20:15",
+    "type": "periode",
+    "revele": {
+     "phrase": "s9_nuit",
+     "mot": "vers"
+    }
+   },
+   {
+    "de": "21:45",
+    "a": "22:15",
+    "type": "periode",
+    "revele": {
+     "phrase": "s9_107"
+    }
+   },
+   {
+    "de": "25:45",
+    "a": "26:15",
+    "type": "periode",
+    "revele": {
+     "phrase": "s9_2h",
+     "mot": "2"
+    }
+   }
+  ],
+  "curseur": [
+   {
+    "h": "8:00",
+    "a": {
+     "phrase": "s3_prado"
+    }
+   },
+   {
+    "h": "8:54",
+    "a": {
+     "phrase": "s3_gaz",
+     "mot": "54,"
+    }
+   },
+   {
+    "h": "9:20",
+    "a": {
+     "phrase": "s3_castellane",
+     "mot": "signalés"
+    }
+   },
+   {
+    "h": "10:43",
+    "a": {
+     "phrase": "s3_reformes",
+     "mot": "millier"
+    }
+   },
+   {
+    "h": "11:28",
+    "a": {
+     "phrase": "s4_poste",
+     "mot": "attaqué"
+    }
+   },
+   {
+    "h": "11:54",
+    "a": {
+     "phrase": "s4_magasins",
+     "mot": "54,"
+    }
+   },
+   {
+    "h": "13:20",
+    "a": {
+     "phrase": "s5_heure",
+     "mot": "20,"
+    }
+   },
+   {
+    "h": "14:00",
+    "a": {
+     "phrase": "s6_14h"
+    }
+   },
+   {
+    "h": "14:51",
+    "a": {
+     "phrase": "s6_cortege"
+    }
+   },
+   {
+    "h": "15:25",
+    "a": {
+     "phrase": "s7_1525"
+    }
+   },
+   {
+    "h": "16:03",
+    "a": {
+     "phrase": "s7_lp"
+    }
+   },
+   {
+    "h": "15:02",
+    "a": {
+     "phrase": "s8_bourse"
+    }
+   },
+   {
+    "h": "15:39",
+    "a": {
+     "phrase": "s8_feu"
+    }
+   },
+   {
+    "h": "17:00",
+    "a": {
+     "phrase": "s9_point"
+    }
+   },
+   {
+    "h": "18:00",
+    "a": {
+     "phrase": "s9_18h"
+    }
+   },
+   {
+    "h": "19:09",
+    "a": {
+     "phrase": "s9_nuit"
+    }
+   },
+   {
+    "h": "22:00",
+    "a": {
+     "phrase": "s9_107"
+    }
+   },
+   {
+    "h": "26:00",
+    "a": {
+     "phrase": "s9_2h",
+     "mot": "2"
+    }
+   }
+  ]
+ }
+}
