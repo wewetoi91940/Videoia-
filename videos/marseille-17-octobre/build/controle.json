@@ -1,0 +1,50 @@
+{
+ "Voix Google livrée": {
+  "conforme": false,
+  "detail": "moteur kokoro, voix ff_siwis, modèle kokoro-v1.0 — BROUILLON de calage, à remplacer"
+ },
+ "Durée 6 à 9 min 30": {
+  "conforme": true,
+  "detail": "481.4 s (8 min 01.4 s), voix seule 463.4 s"
+ },
+ "Loudness −14 LUFS ±0,5": {
+  "conforme": true,
+  "detail": "-14.03 LUFS"
+ },
+ "Crête vraie ≤ −1,5 dBTP": {
+  "conforme": true,
+  "detail": "-1.6 dBTP"
+ },
+ "Musique ≥ 15 dB sous la voix": {
+  "conforme": true,
+  "detail": "écart intégré 26.83 dB ; fenêtres de 400 ms : médiane 24.9 dB, 5e centile 22.7 dB, min 15.5 dB"
+ },
+ "Plans lisibles (≥ 2 s)": {
+  "conforme": true,
+  "detail": "58 plans ; plus court : P14 (2.37 s)"
+ },
+ "Chaque phrase chiffrée ou citée a une source": {
+  "conforme": true,
+  "detail": "toutes sourcées"
+ },
+ "Heures affichées présentes dans la narration ou les sources": {
+  "conforme": true,
+  "detail": "29 heures affichées ; affichées sans être dites (sourcées dans le direct de La Provence ou la préfecture) : 9 h 34, 10 h 19, 11 h 47, 15 h 00, 15 h 53, 17 h 15"
+ },
+ "Aucune source issue d'un site qui refuse Claude-User": {
+  "conforme": true,
+  "detail": "40 sources, 14 domaines"
+ },
+ "Photos sous licence libre, créditées": {
+  "conforme": true,
+  "detail": "11 photos créditées"
+ },
+ "hyperframes check sans erreur": {
+  "conforme": true,
+  "detail": "0 erreur(s), 0 avertissement(s) (tranches de 60 s)"
+ },
+ "Vidéo livrée": {
+  "conforme": false,
+  "detail": "livrables/marseille-17-octobre.mp4 absent"
+ }
+}

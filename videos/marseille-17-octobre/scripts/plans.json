@@ -232,7 +232,9 @@
       "phrase": "s2_programme",
       "mot": "Prado"
      },
-     "etiquette": "Rond-point du Prado"
+     "etiquette": "Rond-point du Prado",
+     "dx": -24,
+     "dy": -80
     },
     {
      "point": "vieux_port",
@@ -352,7 +354,9 @@
    "couches": [
     {
      "point": "prado",
-     "etiquette": "Rond-point du Prado"
+     "etiquette": "Rond-point du Prado",
+     "dx": -24,
+     "dy": -80
     },
     {
      "point": "vieux_port",
@@ -372,11 +376,32 @@
    "ancre": {
     "phrase": "s3_gaz"
    },
-   "type": "heure",
-   "heure": "8 H 54",
-   "statut": "direct",
-   "evenement": "Premiers jets de gaz lacrymogène ; à 8 h 14, une vingtaine de jeunes et quelques gilets jaunes au rond-point (La Provence).",
-   "lieu": "Rond-point du Prado"
+   "type": "photo",
+   "photo": "prado",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.08,
+     -20,
+     0
+    ]
+   },
+   "cartouche": {
+    "lieu": "Rond-point du Prado : une vingtaine de jeunes, puis les premiers gaz lacrymogènes",
+    "heure": "8 H 14 → 8 H 54",
+    "statut": "direct"
+   },
+   "repli": {
+    "type": "heure",
+    "heure": "8 H 54",
+    "statut": "direct",
+    "lieu": "Rond-point du Prado",
+    "evenement": "Premiers jets de gaz lacrymogène ; à 8 h 14, une vingtaine de jeunes et quelques gilets jaunes au rond-point (La Provence)."
+   }
   },
   {
    "id": "P14",
@@ -438,6 +463,33 @@
      "etiquette": "Place Castellane"
     }
    ]
+  },
+  {
+   "id": "P14b",
+   "seq": 3,
+   "ancre": {
+    "phrase": "s3_castellane",
+    "mot": "9"
+   },
+   "type": "photo",
+   "photo": "castellane",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.07,
+     0,
+     -10
+    ]
+   },
+   "cartouche": {
+    "lieu": "Place Castellane",
+    "heure": "9 H 20",
+    "statut": "direct"
+   }
   },
   {
    "id": "P15",
@@ -1217,12 +1269,33 @@
    "ancre": {
     "phrase": "s9_107"
    },
-   "type": "heure",
-   "prefixe": "Vers",
-   "heure": "22 H",
-   "statut": "periode",
-   "evenement": "La préfecture annonce 107 policiers blessés.",
-   "lieu": "Préfecture de police"
+   "type": "photo",
+   "photo": "prefecture",
+   "camera": {
+    "de": [
+     1.0,
+     0,
+     0
+    ],
+    "a": [
+     1.07,
+     0,
+     0
+    ]
+   },
+   "cartouche": {
+    "lieu": "La préfecture annonce 107 policiers blessés",
+    "heure": "VERS 22 H",
+    "statut": "periode"
+   },
+   "repli": {
+    "type": "heure",
+    "prefixe": "Vers",
+    "heure": "22 H",
+    "statut": "periode",
+    "evenement": "La préfecture annonce 107 policiers blessés.",
+    "lieu": "Préfecture de police"
+   }
   },
   {
    "id": "P44",
@@ -1244,8 +1317,7 @@
     "phrase": "s10_matin"
    },
    "type": "photo",
-   "photo": "saint-ferreol",
-   "position": "50% 40%",
+   "photo": "vieux-port-2",
    "camera": {
     "de": [
      1.1,
@@ -1259,7 +1331,7 @@
     ]
    },
    "cartouche": {
-    "lieu": "Rue Saint-Ferréol",
+    "lieu": "Marseille",
     "heure": "DIMANCHE 18 OCTOBRE",
     "statut": "jour"
    },

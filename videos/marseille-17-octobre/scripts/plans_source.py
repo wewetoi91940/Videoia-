@@ -70,7 +70,7 @@ plan("P08", 2, A("s2_programme"), "carte", vue="ensemble", camera={"de": [1.0, 0
               "lignes": ["Dès 8 h : action au rond-point du Prado",
                          "14 h : rassemblement, Vieux-Port ou Canebière selon les sources"],
               "a": [A("s2_programme", "Prado"), A("s2_programme", "rassemblement")]},
-     couches=[{"point": "prado", "a": A("s2_programme", "Prado"), "etiquette": "Rond-point du Prado"},
+     couches=[{"point": "prado", "a": A("s2_programme", "Prado"), "etiquette": "Rond-point du Prado", "dx": -24, "dy": -80},
               {"point": "vieux_port", "a": A("s2_programme", "Vieux-Port"), "etiquette": "Vieux-Port", "dx": -24},
               {"ligne": "canebiere", "etat": "froid", "a": A("s2_programme", "Canebière")}])
 plan("P09", 2, A("s2_prefet"), "citation", texte="C'est véritablement à Marseille que nous avons un point de préoccupation.",
@@ -90,11 +90,12 @@ plan("P12", 3, A("s3_prado"), "carte", vue="ensemble", camera={"de": [1.0, 0, 0]
               "lignes": ["Boulevard bloqué par des poubelles et des trottinettes (ICI)",
                          "À environ 3 km au sud du Vieux-Port"],
               "a": [A("s3_prado", "poubelles"), A("s3_prado", "trois")]},
-     couches=[{"point": "prado", "etiquette": "Rond-point du Prado"},
+     couches=[{"point": "prado", "etiquette": "Rond-point du Prado", "dx": -24, "dy": -80},
               {"point": "vieux_port", "etat": "froid", "a": A("s3_prado", "Vieux-Port."), "etiquette": "Vieux-Port", "dx": -24}])
-plan("P13", 3, A("s3_gaz"), "heure", heure="8 H 54", statut="direct",
-     evenement="Premiers jets de gaz lacrymogène ; à 8 h 14, une vingtaine de jeunes et quelques gilets jaunes au rond-point (La Provence).",
-     lieu="Rond-point du Prado")
+plan("P13", 3, A("s3_gaz"), "photo", photo="prado", camera={"de": [1.0, 0, 0], "a": [1.08, -20, 0]},
+     cartouche=cart("Rond-point du Prado : une vingtaine de jeunes, puis les premiers gaz lacrymogènes", "8 H 14 → 8 H 54", "direct"),
+     repli={"type": "heure", "heure": "8 H 54", "statut": "direct", "lieu": "Rond-point du Prado",
+            "evenement": "Premiers jets de gaz lacrymogène ; à 8 h 14, une vingtaine de jeunes et quelques gilets jaunes au rond-point (La Provence)."})
 plan("P14", 3, A("s3_castellane"), "carte", vue="prado_castellane", camera=ZOOM_IN,
      colonne={"kicker": "9 h 20 · direct de La Provence", "titre": "Vers la place Castellane",
               "lignes": ["Les gilets jaunes remontent l'avenue du Prado", "9 h 20 : signalés place Castellane"],
@@ -102,6 +103,8 @@ plan("P14", 3, A("s3_castellane"), "carte", vue="prado_castellane", camera=ZOOM_
      couches=[{"point": "prado", "etat": "passe"},
               {"ligne": "avenue_du_prado", "etat": "actif", "a": A("s3_castellane", "avenue")},
               {"point": "castellane", "a": A("s3_castellane", "Castellane."), "etiquette": "Place Castellane"}])
+plan("P14b", 3, A("s3_castellane", "9"), "photo", photo="castellane", camera={"de": [1.0, 0, 0], "a": [1.07, 0, -10]},
+     cartouche=cart("Place Castellane", "9 H 20", "direct"))
 plan("P15", 3, A("s3_reformes"), "carte", vue="matin", camera={"de": [1.0, 0, 0], "a": [1.06, 0, 0]},
      colonne={"kicker": "Matinée · entrées du direct de La Provence", "titre": "Des groupes dans la ville",
               "lignes": ["9 h 34 : devant la préfecture", "10 h 19 : gare Saint-Charles", "10 h 43 : Réformés, « un bon millier »"],
@@ -206,14 +209,16 @@ plan("P42", 9, A("s9_nuit"), "carte", vue="quadrilatere", camera=ZOOM_OUT,
               {"ligne": "paradis", "a": A("s9_nuit", "Paradis"), "etiquette": "Rue Paradis · 19 h 09", "pos": 0.6},
               {"ligne": "saint_ferreol", "a": A("s9_nuit", "Saint-Ferréol."), "etiquette": "Rue Saint-Ferréol · vers 20 h", "pos": 0.35}],
      cartouche=cart("Pillages encore signalés à la tombée de la nuit", "19 H 09 · VERS 20 H", "direct"))
-plan("P43", 9, A("s9_107"), "heure", prefixe="Vers", heure="22 H", statut="periode",
-     evenement="La préfecture annonce 107 policiers blessés.", lieu="Préfecture de police")
+plan("P43", 9, A("s9_107"), "photo", photo="prefecture", camera={"de": [1.0, 0, 0], "a": [1.07, 0, 0]},
+     cartouche=cart("La préfecture annonce 107 policiers blessés", "VERS 22 H", "periode"),
+     repli={"type": "heure", "prefixe": "Vers", "heure": "22 H", "statut": "periode",
+            "evenement": "La préfecture annonce 107 policiers blessés.", "lieu": "Préfecture de police"})
 plan("P44", 9, A("s9_2h"), "heure", prefixe="Vers", heure="2 H", statut="periode",
      evenement="Des commerces sont encore attaqués dans le centre-ville (Destimed).", lieu="Nuit du 17 au 18 octobre")
 
 # 10 — Dimanche ----------------------------------------------------------------------------------------
-plan("P45", 10, A("s10_matin"), "photo", photo="saint-ferreol", position="50% 40%", camera={"de": [1.1, 0, 0], "a": [1.0, 0, 0]},
-     cartouche=cart("Rue Saint-Ferréol", "DIMANCHE 18 OCTOBRE", "jour"),
+plan("P45", 10, A("s10_matin"), "photo", photo="vieux-port-2", camera={"de": [1.1, 0, 0], "a": [1.0, 0, 0]},
+     cartouche=cart("Marseille", "DIMANCHE 18 OCTOBRE", "jour"),
      repli={"type": "constat", "kicker": "Dimanche 18 octobre", "texte": "Marseille découvre son centre-ville."})
 plan("P46", 10, A("s10_constats"), "carte", vue="quadrilatere", camera=ZOOM_IN,
      couches=[{"ligne": "canebiere", "etat": "passe", "a": A("s10_constats", "Canebière")},

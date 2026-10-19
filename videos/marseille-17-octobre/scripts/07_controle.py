@@ -113,9 +113,10 @@ def main():
     err = warn = 0
     for f in sorted(glob.glob(str(BUILD / "hf_check_*.json"))):
         d = lire(f, {})
-        err += d.get("errorCount", 0)
-        warn += d.get("warningCount", 0)
-    point("hyperframes check sans erreur", err == 0, f"{err} erreur(s), {warn} avertissement(s) (tranches de 30 s)")
+        for k in ("lint", "runtime", "layout", "motion", "contrast"):
+            err += d.get(k, {}).get("errorCount", 0)
+            warn += d.get(k, {}).get("warningCount", 0)
+    point("hyperframes check sans erreur", err == 0, f"{err} erreur(s), {warn} avertissement(s) (tranches de 60 s)")
     # 10. Rendu
     mp4 = ROOT / "livrables/marseille-17-octobre.mp4"
     s = sonde(mp4) if mp4.exists() else None

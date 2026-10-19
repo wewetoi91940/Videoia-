@@ -14,12 +14,9 @@
       .mono { font-family: "IBM Plex Mono", monospace; }
 
       /* fonds des cartons : grille fine et halo ambré, pour la profondeur */
-      .fond-grille { position: absolute; inset: 0;
-        background-image: radial-gradient(ellipse 70% 60% at 12% 88%, rgba(233, 162, 59, 0.14), rgba(233, 162, 59, 0) 70%),
-          repeating-linear-gradient(90deg, rgba(236, 230, 218, 0.045) 0 1px, transparent 1px 120px),
-          repeating-linear-gradient(0deg, rgba(236, 230, 218, 0.045) 0 1px, transparent 1px 120px); }
-      .ghost { position: absolute; right: -40px; bottom: -150px; font-family: "Oswald"; font-weight: 700; font-size: 520px;
-               line-height: 1; color: rgba(236, 230, 218, 0.07); white-space: nowrap; letter-spacing: -0.02em; }
+      .fond-grille { position: absolute; inset: 0; background: url("assets/fond.png") 0 0 / 100% 100% no-repeat; }
+      .ghost { position: absolute; right: 60px; bottom: 40px; font-family: "Oswald"; font-weight: 700; font-size: 470px;
+               line-height: 0.78; color: rgba(236, 230, 218, 0.07); white-space: nowrap; letter-spacing: -0.02em; }
 
       /* cartes */
       .plateau { position: absolute; top: 0; overflow: hidden; background: var(--bg2); }
@@ -28,7 +25,7 @@
       .calque { position: absolute; left: 0; top: 0; overflow: visible; }
       .hl { fill: none; stroke-linecap: round; stroke-linejoin: round; }
       .hl-halo { stroke: rgba(233, 162, 59, 0.28); stroke-width: 30; }
-      .hl-actif { stroke: var(--acc); stroke-width: 11; filter: drop-shadow(0 0 9px rgba(233, 162, 59, 0.6)); }
+      .hl-actif { stroke: var(--acc); stroke-width: 11; }
       .hl-passe { stroke: rgba(233, 162, 59, 0.5); stroke-width: 7; }
       .hl-froid { stroke: rgba(236, 230, 218, 0.6); stroke-width: 7; }
       .zone { fill: rgba(233, 162, 59, 0.24); stroke: var(--acc); stroke-width: 2.5; stroke-dasharray: 9 7; }
@@ -38,15 +35,15 @@
       .etiq { position: absolute; font-family: "Oswald"; font-weight: 400; font-size: 30px; letter-spacing: 0.05em;
               text-transform: uppercase; color: var(--fg); background: rgba(10, 14, 19, 0.86); padding: 6px 14px 8px;
               border: 1.5px solid rgba(233, 162, 59, 0.7); white-space: nowrap; }
-      .vignette { position: absolute; inset: 0; pointer-events: none;
-                  background: radial-gradient(ellipse 75% 70% at 50% 45%, rgba(12, 16, 21, 0) 55%, rgba(12, 16, 21, 0.78) 100%); }
-      .echelle { position: absolute; right: 70px; bottom: 132px; font-family: "IBM Plex Mono"; font-size: 18px; color: var(--mut);
+      .vignette { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; background: url("assets/vignette.png") 0 0 / 100% 100% no-repeat; }
+      .echelle { position: absolute; right: 70px; bottom: 156px; font-family: "IBM Plex Mono"; font-size: 18px; color: var(--mut);
                  display: flex; align-items: center; gap: 12px; }
       .echelle span { display: block; height: 8px; border: 2px solid var(--mut); border-top: none; }
-      .nord { position: absolute; right: 70px; bottom: 172px; font-family: "Oswald"; font-size: 24px; color: var(--mut);
+      .nord { position: absolute; right: 70px; bottom: 196px; font-family: "Oswald"; font-size: 24px; color: var(--mut);
               width: 34px; height: 34px; border: 2px solid var(--mut); border-radius: 50%; display: flex;
               align-items: center; justify-content: center; }
-      .attrib { position: absolute; right: 70px; bottom: 100px; font-family: "IBM Plex Mono"; font-size: 16px; color: var(--mut); }
+      .mobilier { position: absolute; inset: 0; pointer-events: none; }
+      .attrib { position: absolute; right: 70px; bottom: 124px; font-family: "IBM Plex Mono"; font-size: 16px; color: var(--mut); }
       .colonne { position: absolute; left: 0; top: 0; width: 840px; height: 100%; padding: 190px 70px 0 80px; }
       .col-kicker { font-family: "IBM Plex Mono"; font-size: 21px; letter-spacing: 0.14em; color: var(--acc); text-transform: uppercase; }
       .colonne h2 { font-weight: 600; font-size: 60px; line-height: 1.08; margin: 18px 0 34px; }
@@ -55,10 +52,8 @@
 
       /* photos des lieux */
       .plan-photo .cam { inset: 0; width: 100%; height: 100%; }
-      .photo { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.82) contrast(1.04); }
-      .voile { position: absolute; inset: 0;
-               background: radial-gradient(ellipse 120% 80% at 50% 110%, rgba(12, 16, 21, 0.92) 0%, rgba(12, 16, 21, 0.35) 45%, rgba(12, 16, 21, 0) 70%),
-                           radial-gradient(ellipse 120% 60% at 50% -20%, rgba(12, 16, 21, 0.7) 0%, rgba(12, 16, 21, 0) 60%); }
+      .photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .voile { position: absolute; inset: 0; background: url("assets/voile.png") 0 0 / 100% 100% no-repeat; }
       .mention { position: absolute; left: 80px; top: 96px; font-family: "IBM Plex Mono"; font-size: 18px; letter-spacing: 0.08em;
                  color: var(--fg); background: rgba(10, 14, 19, 0.7); padding: 6px 12px; }
       .credit { position: absolute; left: 80px; bottom: 46px; font-family: "IBM Plex Mono"; font-size: 16px; color: #c3c9cf;
@@ -124,7 +119,8 @@
       .t-bloc h2 { font-style: italic; font-weight: 400; font-size: 66px; line-height: 1.1; color: var(--mut); margin-top: 18px; }
       .t-rule { width: 640px; height: 4px; background: var(--acc); margin: 44px 0 34px; }
       .t-note { font-family: "IBM Plex Mono"; font-size: 23px; line-height: 1.5; color: var(--mut); max-width: 1250px; }
-      .ghost-titre { bottom: -120px; }
+      .ghost-titre { bottom: 40px; }
+      .ghost::after { content: attr(data-t); }   /* décor : pseudo-élément, pas un texte à lire */
 
       /* sources de fin */
       .cr-page { position: absolute; inset: 0; padding: 120px 120px 80px; }

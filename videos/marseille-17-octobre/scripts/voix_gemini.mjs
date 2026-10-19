@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Synthèse Gemini phrase par phrase, via le module officiel du skill HyperFrames media-use
 // (.agents/skills/media-use/audio/scripts/lib/gemini-tts.mjs).
-// Clé lue dans l'environnement : GEMINI_API_KEY ou GOOGLE_API_KEY (jamais écrite dans un fichier ni affichée).
+// Clé : GEMINI_API_KEY / GOOGLE_API_KEY, ou network secret du proxy (jamais écrite dans un fichier ni affichée).
 //
 // Usage : node scripts/voix_gemini.mjs build/voix_gemini/travaux.json
 // travaux.json : { "modele", "voix", "jobs": [{ "id", "texte", "style", "wav" }] }
@@ -16,9 +16,19 @@ const lib = resolve(here, "../../../.agents/skills/media-use/audio/scripts/lib/g
 const { synthesizeGemini, GEMINI_TTS_MODELS } = await import(lib);
 
 const cfg = JSON.parse(readFileSync(process.argv[2], "utf8"));
+// Clé : variable d'environnement, ou « network secret » de l'environnement cloud. Dans ce second cas, la session
+// ne voit jamais la clé : le proxy l'ajoute lui-même aux requêtes vers generativelanguage.googleapis.com.
+// On le vérifie par une requête sans clé ; on n'envoie alors aucun en-tête (un en-tête factice serait refusé).
+let options = {};
 if (!process.env.GEMINI_API_KEY && !process.env.GOOGLE_API_KEY) {
-  console.error("Clé absente : définir GEMINI_API_KEY (ou GOOGLE_API_KEY) dans l'environnement.");
-  process.exit(2);
+  const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models?pageSize=1").catch(() => null);
+  if (!r || !r.ok) {
+    console.error("Clé absente : définir GEMINI_API_KEY dans l'environnement, ou un « network secret » "
+      + "(hôte generativelanguage.googleapis.com, en-tête x-goog-api-key). Réponse sans clé : HTTP " + (r ? r.status : "aucune"));
+    process.exit(2);
+  }
+  console.error("Clé fournie par le proxy (network secret) : aucune clé dans la session.");
+  options = { authenticate: () => ({ headers: {}, secret: "" }) };
 }
 if (!GEMINI_TTS_MODELS.includes(cfg.modele)) {
   console.error(`Modèle inconnu : ${cfg.modele}. Modèles acceptés : ${GEMINI_TTS_MODELS.join(", ")}`);
@@ -38,7 +48,7 @@ for (const job of cfg.jobs) {
   for (let essai = 1; essai <= 6; essai++) {
     res = await synthesizeGemini({
       text: job.texte, voiceId: cfg.voix, model: cfg.modele, style: job.style, wavAbs: resolve(job.wav),
-    });
+    }, options);
     if (res.ok) break;
     // 429 / 503 : quota par minute ou surcharge → attente croissante ; autre erreur → abandon immédiat.
     if (!/HTTP (429|500|503)/.test(res.error ?? "")) break;

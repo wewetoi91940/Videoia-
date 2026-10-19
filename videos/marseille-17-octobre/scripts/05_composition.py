@@ -158,19 +158,20 @@ def plan_carte(p: dict, pid: str, vues: dict, T: Temps, t0: float, tw: list) -> 
             ta = T(col["a"][k]) if col.get("a") else t0 + 0.7 + 0.35 * k
             tw.append(f'tl.fromTo("#{pid}-li{k}",{{opacity:0,y:16}},{{opacity:1,y:0,duration:0.6,ease:"power2.out"}},{ft(ta):.4f});')
     echelle = 200 * v["px_par_m"]
-    barre = (f'<div class="echelle"><span style="width:{echelle:.0f}px"></span>200 m</div>'
-             f'<div class="nord">N</div>')
+    barre = (f'<div id="{pid}-mob" class="mobilier"><div class="echelle"><span style="width:{echelle:.0f}px"></span>200 m</div>'
+             f'<div class="nord">N</div><div class="attrib">© contributeurs d’OpenStreetMap</div></div>')
+    # le mobilier de carte n'apparaît qu'après le fondu : pas de doublon avec celui de la carte précédente
+    tw.append(f'tl.fromTo("#{pid}-mob",{{opacity:0}},{{opacity:1,duration:0.4}},{ft(t0 + FONDU / 2 + 0.05):.4f});')
     return (f'<div class="plateau" style="{left}width:{w}px;height:{h}px">'
             f'<div id="{pid}-cam" class="cam" style="width:{w}px;height:{h}px">'
-            f'<img src="{v["image"]}" alt="" style="width:{w}px;height:{h}px">'
+            f'<img src="{v["image"]}" alt="" style="width:{w}px;height:{h}px"><div class="vignette"></div>'
             f'<svg class="calque" viewBox="0 0 {w} {h}" width="{w}" height="{h}">{"".join(svg)}</svg>'
-            f'{"".join(labels)}</div><div class="vignette"></div>{barre}'
-            f'<div class="attrib">© contributeurs d’OpenStreetMap</div></div>{gauche}')
+            f'{"".join(labels)}</div>{barre}</div>{gauche}')
 
 
 def plan_photo(p: dict, pid: str, photos: dict) -> str:
     ph = photos[p["photo"]]
-    credit = f'Photo : {ph["auteur"]} · {ph["licence"]} · Wikimedia Commons'
+    credit = f'Photo : {ph["auteur"]} · {ph["licence"]} · Wikimedia Commons' + (" · image modifiée (floutage)" if ph.get("modifications") else "")
     pos = p.get("position", "50% 50%")
     return (f'<div id="{pid}-cam" class="cam"><img class="photo" src="assets/photos/{ph["fichier"]}" alt="" '
             f'style="object-position:{pos}"></div><div class="voile"></div>'
@@ -180,7 +181,7 @@ def plan_photo(p: dict, pid: str, photos: dict) -> str:
 
 def plan_heure(p: dict, pid: str) -> str:
     pre = f'<div class="h-pre">{esc(p["prefixe"])}</div>' if p.get("prefixe") else ""
-    return (f'<div class="fond-grille"></div><div id="{pid}-ghost" class="ghost">{esc(p["heure"])}</div>'
+    return (f'<div class="fond-grille"></div><div id="{pid}-ghost" class="ghost" aria-hidden="true" data-t="{esc(p["heure"])}"></div>'
             f'<div class="h-bloc"><div id="{pid}-st" class="statut st-{p["statut"]}">{esc(STATUTS[p["statut"]])}</div>'
             f'{pre}<div id="{pid}-hm" class="h-main{" h-long" if len(p["heure"]) > 7 else ""}">{esc(p["heure"])}</div>'
             f'<div id="{pid}-rule" class="h-rule"></div>'
@@ -219,7 +220,7 @@ def plan_chiffres(p: dict, pid: str, T: Temps, t0: float, tw: list) -> str:
 
 def plan_constat(p: dict, pid: str) -> str:
     sous = f'<p id="{pid}-s" class="k-sous">{esc(p["sous"])}</p>' if p.get("sous") else ""
-    ghost = f'<div id="{pid}-ghost" class="ghost">{esc(p["ghost"])}</div>' if p.get("ghost") else ""
+    ghost = f'<div id="{pid}-ghost" class="ghost" aria-hidden="true" data-t="{esc(p["ghost"])}"></div>' if p.get("ghost") else ""
     return (f'<div class="fond-grille"></div>{ghost}<div class="k-bloc"><div class="k-kicker">{esc(p.get("kicker", ""))}</div>'
             f'<p id="{pid}-k" class="k-txt">{esc(p["texte"])}</p>{sous}</div>')
 
@@ -238,7 +239,7 @@ def plan_fin(p: dict, pid: str, T: Temps, t0: float, tw: list) -> str:
 
 
 def plan_titre(p: dict, pid: str) -> str:
-    return (f'<div class="fond-grille"></div><div id="{pid}-ghost" class="ghost ghost-titre">17.10</div>'
+    return (f'<div class="fond-grille"></div><div id="{pid}-ghost" class="ghost ghost-titre" aria-hidden="true" data-t="17.10"></div>'
             f'<div class="t-bloc"><div id="{pid}-k" class="t-kicker">{esc(p["kicker"])}</div>'
             f'<h1 id="{pid}-h1">{esc(p["titre"])}</h1><h2 id="{pid}-h2">{esc(p["sous_titre"])}</h2>'
             f'<div id="{pid}-rule" class="t-rule"></div><p id="{pid}-note" class="t-note">{esc(p["note"])}</p></div>')

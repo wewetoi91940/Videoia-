@@ -107,11 +107,15 @@ class Vue:
                 (self.h / 2 - (y - self.cy) * self.ppm) * densite)
 
 
-def ajuste(nom, points_latlon, marge_m, w=1920, h=1080):
+def ajuste(nom, points_latlon, marge_m, w=1920, h=1080, marge_bas_m=None):
+    """Cadre tous les points avec une marge ; marge_bas_m laisse de la place sous le point le plus au sud
+    (la bande basse de l'image porte le cartouche et les sources)."""
     pts = [proj(*p) for p in points_latlon]
     xs, ys = [p[0] for p in pts], [p[1] for p in pts]
-    larg = max(max(xs) - min(xs) + 2 * marge_m, (max(ys) - min(ys) + 2 * marge_m) * w / h)
-    cx, cy = (max(xs) + min(xs)) / 2, (max(ys) + min(ys)) / 2
+    bas = marge_m if marge_bas_m is None else marge_bas_m
+    haut_y, bas_y = max(ys) + marge_m, min(ys) - bas
+    larg = max(max(xs) - min(xs) + 2 * marge_m, (haut_y - bas_y) * w / h)
+    cx, cy = (max(xs) + min(xs)) / 2, (haut_y + bas_y) / 2
     lat, lon = LAT0 + cy / KY, LON0 + cx / KX
     return Vue(nom, (lat, lon), larg, w, h)
 
@@ -226,8 +230,8 @@ def main():
     latlon = {k: (LAT0 + p.y / KY, LON0 + p.x / KX) for k, p in points.items()}
 
     vues = [
-        ajuste("ensemble", [latlon["prado"], latlon["hotel_de_ville"], latlon["reformes"]], 260, 1080, 1080),
-        ajuste("prado_castellane", [latlon["prado"], latlon["castellane"]], 330, 1080, 1080),
+        ajuste("ensemble", [latlon["prado"], latlon["hotel_de_ville"], latlon["reformes"]], 170, 1080, 1080, marge_bas_m=500),
+        ajuste("prado_castellane", [latlon["prado"], latlon["castellane"]], 300, 1080, 1080, marge_bas_m=520),
         ajuste("matin", [latlon["castellane"], latlon["saint_charles"], latlon["prefecture"], latlon["reformes"]], 120,
                1080, 1080),
         ajuste("hypercentre", [latlon["hotel_de_ville"], latlon["reformes"], latlon["prefecture"]], 170),

@@ -4,7 +4,7 @@
  "plans": [
   {
    "id": "P01",
-   "type": "carte",
+   "type": "photo",
    "seq": 1,
    "debut": 0.6,
    "fin": 8.1666,
@@ -58,7 +58,7 @@
   },
   {
    "id": "P07",
-   "type": "constat",
+   "type": "photo",
    "seq": 2,
    "debut": 48.6666,
    "fin": 55.6666,
@@ -112,7 +112,7 @@
   },
   {
    "id": "P13",
-   "type": "heure",
+   "type": "photo",
    "seq": 3,
    "debut": 101.4,
    "fin": 111.1666,
@@ -124,8 +124,17 @@
    "type": "carte",
    "seq": 3,
    "debut": 111.1666,
+   "fin": 113.5333,
+   "duree": 2.367,
+   "musique": null
+  },
+  {
+   "id": "P14b",
+   "type": "photo",
+   "seq": 3,
+   "debut": 113.5333,
    "fin": 116.6333,
-   "duree": 5.467,
+   "duree": 3.1,
    "musique": null
   },
   {
@@ -157,7 +166,7 @@
   },
   {
    "id": "P18",
-   "type": "constat",
+   "type": "photo",
    "seq": 4,
    "debut": 147.2,
    "fin": 155.4,
@@ -193,7 +202,7 @@
   },
   {
    "id": "P22",
-   "type": "constat",
+   "type": "photo",
    "seq": 5,
    "debut": 177.6333,
    "fin": 183.8666,
@@ -238,7 +247,7 @@
   },
   {
    "id": "P27",
-   "type": "carte",
+   "type": "photo",
    "seq": 6,
    "debut": 210.9333,
    "fin": 217.7333,
@@ -283,7 +292,7 @@
   },
   {
    "id": "P32",
-   "type": "constat",
+   "type": "photo",
    "seq": 7,
    "debut": 247.2333,
    "fin": 256.7333,
@@ -310,7 +319,7 @@
   },
   {
    "id": "P35",
-   "type": "heure",
+   "type": "photo",
    "seq": 8,
    "debut": 273.2,
    "fin": 279.2333,
@@ -382,7 +391,7 @@
   },
   {
    "id": "P43",
-   "type": "heure",
+   "type": "photo",
    "seq": 9,
    "debut": 331.9333,
    "fin": 336.1,
@@ -400,7 +409,7 @@
   },
   {
    "id": "P45",
-   "type": "constat",
+   "type": "photo",
    "seq": 10,
    "debut": 342.6,
    "fin": 345.7666,

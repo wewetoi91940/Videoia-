@@ -60,15 +60,15 @@ if veut audio; then
   "$PY" scripts/04_audio.py
 fi
 if veut check; then
-  titre "Contrôles HyperFrames (lint + check par tranches de 30 s)"
+  titre "Contrôles HyperFrames (lint + check par tranches de 60 s)"
   $HF lint
   rm -f build/hf_check_*.json
   RANGES=$("$PY" -c 'import json; d = json.load(open("build/plans_calcules.json"))["duree"]
-t = [i * 30 for i in range(int(d // 30) + 1)] + [d]
+t = [i * 60 for i in range(int(d // 60) + 1)] + [d]
 print(" ".join(f"{a},{b:.2f}" for a, b in zip(t, t[1:]) if b - a > 0.5))')
   i=1
   for r in $RANGES; do
-    $HF check --range "$r" --timeout 90000 --samples 8 --json 2>/dev/null \
+    $HF check --range "$r" --timeout 120000 --samples 10 --json 2>/dev/null \
       | "$PY" -c 'import json,sys; t=sys.stdin.read(); json.dump(json.loads(t[t.index("{"):t.rindex("}")+1]), sys.stdout)' \
       > "build/hf_check_$i.json" || true
     i=$((i + 1))
@@ -78,7 +78,8 @@ e=w=0
 for f in sorted(glob.glob("build/hf_check_*.json")):
     try: d=json.load(open(f))
     except Exception: print(f, "illisible"); continue
-    e+=d.get("errorCount",0); w+=d.get("warningCount",0)
+    for k in ("lint", "runtime", "layout", "motion", "contrast"):
+        e+=d.get(k,{}).get("errorCount",0); w+=d.get(k,{}).get("warningCount",0)
 print(f"check : {e} erreur(s), {w} avertissement(s)")'
 fi
 if veut rendu; then

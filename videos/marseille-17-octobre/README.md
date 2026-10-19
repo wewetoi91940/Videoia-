@@ -45,9 +45,10 @@ réels ; le montage, les sous-titres et la musique suivent la voix réelle.
 La clé n'est **jamais** écrite dans un fichier ni collée dans une conversation. Deux façons de la fournir :
 
 1. **Network secret** de l'environnement cloud (recommandé) : *Edit cloud environment* → *Network secrets* → *Add secret*,
-   hôte `generativelanguage.googleapis.com`, en-tête `x-goog-api-key` sans préfixe. La clé reste hors de la session.
-   Lancer alors `GEMINI_API_KEY=proxy-injected PY=.venv/bin/python ./make.sh voix composition audio check rendu livrables controle`
-   (la valeur `proxy-injected` sert seulement à passer le contrôle de présence : le proxy remplace l'en-tête).
+   hôte `generativelanguage.googleapis.com`, en-tête `x-goog-api-key` sans préfixe. La clé reste hors de la session :
+   `scripts/voix_gemini.mjs` vérifie qu'une requête sans clé est acceptée (le proxy ajoute l'en-tête), puis n'envoie
+   aucun en-tête. Lancer `PY=.venv/bin/python ./make.sh voix composition audio check rendu livrables controle`.
+   Un secret ajouté pendant une session n'est parfois visible que dans une **nouvelle** session.
 2. Variable d'environnement `GEMINI_API_KEY` de l'environnement.
 
 `VOIX_BROUILLON=1 ./make.sh voix …` produit une voix Kokoro de **calage** (montage, durées) ; `make.sh livrables` refuse de la livrer.
