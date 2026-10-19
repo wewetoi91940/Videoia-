@@ -16,3 +16,6 @@ build/hf_check_*.json
 build/photos_originales/
 build/modeles/
 build/verif/
+build/*.log
+build/transcription/*/
+build/transcription/transcript.json
