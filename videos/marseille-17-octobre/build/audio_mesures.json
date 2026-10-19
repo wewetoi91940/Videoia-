@@ -1,15 +1,15 @@
 {
- "duree_s": 481.367,
- "loudness_integree_lufs": -14.03,
+ "duree_s": 509.3,
+ "loudness_integree_lufs": -14.17,
  "crete_vraie_dbtp": -1.6,
- "voix_pendant_parole_lufs": -13.92,
- "musique_pendant_parole_lufs": -40.75,
- "musique_dans_les_silences_lufs": -26.88,
- "ecart_voix_musique_db": 26.83,
+ "voix_pendant_parole_lufs": -14.11,
+ "musique_pendant_parole_lufs": -45.55,
+ "musique_dans_les_silences_lufs": -30.57,
+ "ecart_voix_musique_db": 31.44,
  "ecart_court_terme_db": {
-  "median": 24.9,
-  "p5": 22.7,
-  "min": 15.5,
-  "fenetres": 1991
+  "median": 29.8,
+  "p5": 25.3,
+  "min": 12.2,
+  "fenetres": 1973
  }
 }

@@ -16,17 +16,17 @@ Les heures « direct » sont les heures de mise en ligne d'une entrée de direct
 
 **Chapitres**
 0:00 Ouverture
-0:48 Le contexte
-1:25 Le matin, au Prado
+0:49 Le contexte
+1:22 Le matin, au Prado
 2:07 Avant midi, l'hypercentre
-2:52 L'hôtel de ville forcé
-3:28 14 h : le rassemblement empêché au Vieux-Port
-3:58 Les transports à l'arrêt
-4:16 L'après-midi des pillages
-5:00 Le soir, puis la nuit
-5:42 Dimanche : le jour d'après
-6:19 Lundi : la bataille des chiffres
-7:05 Ce que l'on sait, ce qui reste ouvert
+2:53 L'hôtel de ville forcé
+3:33 14 h : le rassemblement empêché au Vieux-Port
+4:01 Les transports à l'arrêt
+4:21 L'après-midi des pillages
+5:06 Le soir, puis la nuit
+5:51 Dimanche : le jour d'après
+6:32 Lundi : la bataille des chiffres
+7:27 Ce que l'on sait, ce qui reste ouvert
 
 **Sources**
 - La Provence, direct (17/10) — Manifestations du 17 octobre : suivez la journée de mobilisation en Provence (direct, 148 entrées horodatées) : https://www.laprovence.com/article/societe/3623246999963114/direct-laprovence-direct-manifestations-du-17-octobre-suivez-la-journee-de-mobilisation-en-provence
@@ -63,7 +63,7 @@ Les heures « direct » sont les heures de mise en ligne d'une entrée de direct
 - ICI Provence (19/10) — Violences du 17 octobre : rassemblements et manifestations interdits ce lundi à Marseille : https://www.ici.fr/provence-alpes-cote-d-azur/bouches-du-rhone-13/marseille/violences-du-17-octobre-les-rassemblement-interdits-ce-lundi-a-marseille-7186012
 - Destimed (19/10) — Emmanuel Macron promet des sanctions et exige des réponses sur le maintien de l'ordre : https://www.destimed.fr/violences-du-17-octobre-emmanuel-macron-promet-des-sanctions-et-exige-des-reponses-sur-le-maintien-de-lordre/
 
-**Fabrication** : voix de synthèse (kokoro / ff_siwis / kokoro-v1.0) · cartes © contributeurs d'OpenStreetMap (ODbL) ·
+**Fabrication** : voix de synthèse (gemini / Charon / gemini-3.1-flash-tts-preview) · cartes © contributeurs d'OpenStreetMap (ODbL) ·
 photos Wikimedia Commons (voir `assets/photos/credits.json`) · musique composée par programme.
 
 ## Mentions obligatoires à l'écran et en description

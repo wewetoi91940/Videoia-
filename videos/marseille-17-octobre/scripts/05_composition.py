@@ -412,7 +412,8 @@ def main() -> None:
             sys.exit(f"type de plan inconnu : {typ}")
         corps += cartouche(p.get("cartouche"), pid)
         sections.append(f'<section id="{pid}" class="clip plan plan-{typ}" data-start="{start:.4f}" '
-                        f'data-duration="{dur:.4f}" data-track-index="{1 + k % 2}"><div id="{pid}-in" class="inner">'
+                        f'data-duration="{dur:.4f}" data-track-index="{1 + k % 2}"><div id="{pid}-in" class="inner"'
+                        f'{" style=\"opacity:0\"" if fondu > 0 else ""}>'
                         f'{corps}</div></section>')
         if fondu > 0:
             tw.append(f'tl.fromTo("#{pid}-in",{{opacity:0}},{{opacity:1,duration:{fondu},ease:"sine.inOut"}},{start:.4f});')
