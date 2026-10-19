@@ -1,0 +1,560 @@
+[
+  {
+    "text": "Dimanche",
+    "start": 0.01,
+    "end": 0.62,
+    "id": "w0"
+  },
+  {
+    "text": "matin,",
+    "start": 0.62,
+    "end": 1.08,
+    "id": "w1"
+  },
+  {
+    "text": "Marseille",
+    "start": 1.2,
+    "end": 1.85,
+    "id": "w2"
+  },
+  {
+    "text": "découvre",
+    "start": 1.85,
+    "end": 2.45,
+    "id": "w3"
+  },
+  {
+    "text": "son",
+    "start": 2.51,
+    "end": 2.69,
+    "id": "w4"
+  },
+  {
+    "text": "centre-ville.",
+    "start": 2.69,
+    "end": 3.68,
+    "id": "w5"
+  },
+  {
+    "text": "Vitrine",
+    "start": 4.18,
+    "end": 4.69,
+    "id": "w6"
+  },
+  {
+    "text": "éventrée,",
+    "start": 4.69,
+    "end": 6,
+    "id": "w7"
+  },
+  {
+    "text": "rideau",
+    "start": 6,
+    "end": 6.55,
+    "id": "w8"
+  },
+  {
+    "text": "arraché,",
+    "start": 6.55,
+    "end": 7.4,
+    "id": "w9"
+  },
+  {
+    "text": "magasin",
+    "start": 7.4,
+    "end": 8.08,
+    "id": "w10"
+  },
+  {
+    "text": "vidé.",
+    "start": 8.35,
+    "end": 8.8,
+    "id": "w11"
+  },
+  {
+    "text": "De",
+    "start": 8.81,
+    "end": 8.96,
+    "id": "w12"
+  },
+  {
+    "text": "la",
+    "start": 8.96,
+    "end": 9.12,
+    "id": "w13"
+  },
+  {
+    "text": "Canébière",
+    "start": 9.25,
+    "end": 9.81,
+    "id": "w14"
+  },
+  {
+    "text": "à",
+    "start": 9.81,
+    "end": 9.88,
+    "id": "w15"
+  },
+  {
+    "text": "la",
+    "start": 10,
+    "end": 10.05,
+    "id": "w16"
+  },
+  {
+    "text": "rue",
+    "start": 10.05,
+    "end": 10.2,
+    "id": "w17"
+  },
+  {
+    "text": "Mont-Gran,",
+    "start": 10.6,
+    "end": 11.2,
+    "id": "w18"
+  },
+  {
+    "text": "les",
+    "start": 11.2,
+    "end": 11.32,
+    "id": "w19"
+  },
+  {
+    "text": "constats",
+    "start": 11.38,
+    "end": 11.83,
+    "id": "w20"
+  },
+  {
+    "text": "se",
+    "start": 11.83,
+    "end": 11.94,
+    "id": "w21"
+  },
+  {
+    "text": "ressemblent.",
+    "start": 11.94,
+    "end": 12.73,
+    "id": "w22"
+  },
+  {
+    "text": "Rue",
+    "start": 12.81,
+    "end": 13.1,
+    "id": "w23"
+  },
+  {
+    "text": "paradis,",
+    "start": 13.25,
+    "end": 14.01,
+    "id": "w24"
+  },
+  {
+    "text": "selon",
+    "start": 14.01,
+    "end": 14.2,
+    "id": "w25"
+  },
+  {
+    "text": "le",
+    "start": 14.6,
+    "end": 14.72,
+    "id": "w26"
+  },
+  {
+    "text": "parisien,",
+    "start": 14.72,
+    "end": 15.8,
+    "id": "w27"
+  },
+  {
+    "text": "une",
+    "start": 15.8,
+    "end": 15.98,
+    "id": "w28"
+  },
+  {
+    "text": "boutique",
+    "start": 15.98,
+    "end": 16.42,
+    "id": "w29"
+  },
+  {
+    "text": "de",
+    "start": 16.42,
+    "end": 16.48,
+    "id": "w30"
+  },
+  {
+    "text": "téléphonie",
+    "start": 16.58,
+    "end": 17.2,
+    "id": "w31"
+  },
+  {
+    "text": "affiche,",
+    "start": 17.35,
+    "end": 18.18,
+    "id": "w32"
+  },
+  {
+    "text": "entièrement",
+    "start": 18.19,
+    "end": 19.28,
+    "id": "w33"
+  },
+  {
+    "text": "vidée,",
+    "start": 19.28,
+    "end": 19.82,
+    "id": "w34"
+  },
+  {
+    "text": "fermée",
+    "start": 20.12,
+    "end": 20.24,
+    "id": "w35"
+  },
+  {
+    "text": "pour",
+    "start": 20.4,
+    "end": 20.62,
+    "id": "w36"
+  },
+  {
+    "text": "trois",
+    "start": 20.63,
+    "end": 21.11,
+    "id": "w37"
+  },
+  {
+    "text": "mois.",
+    "start": 21.11,
+    "end": 21.8,
+    "id": "w38"
+  },
+  {
+    "text": "Les",
+    "start": 21.81,
+    "end": 22.12,
+    "id": "w39"
+  },
+  {
+    "text": "bilans,",
+    "start": 22.25,
+    "end": 22.88,
+    "id": "w40"
+  },
+  {
+    "text": "eux,",
+    "start": 22.98,
+    "end": 23.5,
+    "id": "w41"
+  },
+  {
+    "text": "divergent.",
+    "start": 23.6,
+    "end": 24.8,
+    "id": "w42"
+  },
+  {
+    "text": "La",
+    "start": 24.81,
+    "end": 24.92,
+    "id": "w43"
+  },
+  {
+    "text": "Chambre",
+    "start": 24.92,
+    "end": 25.35,
+    "id": "w44"
+  },
+  {
+    "text": "de",
+    "start": 25.35,
+    "end": 25.47,
+    "id": "w45"
+  },
+  {
+    "text": "commerce",
+    "start": 25.47,
+    "end": 25.87,
+    "id": "w46"
+  },
+  {
+    "text": "parle",
+    "start": 25.98,
+    "end": 26.2,
+    "id": "w47"
+  },
+  {
+    "text": "de",
+    "start": 26.2,
+    "end": 26.6,
+    "id": "w48"
+  },
+  {
+    "text": "plus",
+    "start": 26.6,
+    "end": 26.65,
+    "id": "w49"
+  },
+  {
+    "text": "de",
+    "start": 26.65,
+    "end": 26.77,
+    "id": "w50"
+  },
+  {
+    "text": "600",
+    "start": 26.77,
+    "end": 27.32,
+    "id": "w51"
+  },
+  {
+    "text": "commerces",
+    "start": 27.38,
+    "end": 27.91,
+    "id": "w52"
+  },
+  {
+    "text": "vandalisés.",
+    "start": 27.91,
+    "end": 28.67,
+    "id": "w53"
+  },
+  {
+    "text": "En",
+    "start": 28.81,
+    "end": 28.93,
+    "id": "w54"
+  },
+  {
+    "text": "fin",
+    "start": 28.94,
+    "end": 29.13,
+    "id": "w55"
+  },
+  {
+    "text": "de",
+    "start": 29.25,
+    "end": 29.26,
+    "id": "w56"
+  },
+  {
+    "text": "journée,",
+    "start": 29.26,
+    "end": 29.85,
+    "id": "w57"
+  },
+  {
+    "text": "la",
+    "start": 29.85,
+    "end": 29.88,
+    "id": "w58"
+  },
+  {
+    "text": "préfecture",
+    "start": 30,
+    "end": 30.64,
+    "id": "w59"
+  },
+  {
+    "text": "de",
+    "start": 30.64,
+    "end": 30.77,
+    "id": "w60"
+  },
+  {
+    "text": "police",
+    "start": 30.77,
+    "end": 31.15,
+    "id": "w61"
+  },
+  {
+    "text": "annonce,",
+    "start": 31.16,
+    "end": 31.8,
+    "id": "w62"
+  },
+  {
+    "text": "au",
+    "start": 31.8,
+    "end": 31.94,
+    "id": "w63"
+  },
+  {
+    "text": "plus",
+    "start": 31.97,
+    "end": 32.27,
+    "id": "w64"
+  },
+  {
+    "text": "fort",
+    "start": 32.27,
+    "end": 32.46,
+    "id": "w65"
+  },
+  {
+    "text": "des",
+    "start": 32.57,
+    "end": 32.82,
+    "id": "w66"
+  },
+  {
+    "text": "événements,",
+    "start": 32.83,
+    "end": 33.8,
+    "id": "w67"
+  },
+  {
+    "text": "8000",
+    "start": 33.8,
+    "end": 34.43,
+    "id": "w68"
+  },
+  {
+    "text": "émeutiers",
+    "start": 34.64,
+    "end": 35.3,
+    "id": "w69"
+  },
+  {
+    "text": "et",
+    "start": 35.3,
+    "end": 35.44,
+    "id": "w70"
+  },
+  {
+    "text": "plus",
+    "start": 35.44,
+    "end": 35.73,
+    "id": "w71"
+  },
+  {
+    "text": "de",
+    "start": 35.73,
+    "end": 35.82,
+    "id": "w72"
+  },
+  {
+    "text": "30",
+    "start": 35.82,
+    "end": 36.4,
+    "id": "w73"
+  },
+  {
+    "text": "000",
+    "start": 36.4,
+    "end": 36.93,
+    "id": "w74"
+  },
+  {
+    "text": "pilleurs.",
+    "start": 37,
+    "end": 37.8,
+    "id": "w75"
+  },
+  {
+    "text": "Elle",
+    "start": 37.81,
+    "end": 38.09,
+    "id": "w76"
+  },
+  {
+    "text": "compte",
+    "start": 38.25,
+    "end": 38.53,
+    "id": "w77"
+  },
+  {
+    "text": "99",
+    "start": 38.53,
+    "end": 38.87,
+    "id": "w78"
+  },
+  {
+    "text": "gardes",
+    "start": 38.98,
+    "end": 39.4,
+    "id": "w79"
+  },
+  {
+    "text": "à",
+    "start": 39.4,
+    "end": 39.47,
+    "id": "w80"
+  },
+  {
+    "text": "vue",
+    "start": 39.6,
+    "end": 39.69,
+    "id": "w81"
+  },
+  {
+    "text": "et",
+    "start": 39.69,
+    "end": 39.79,
+    "id": "w82"
+  },
+  {
+    "text": "118",
+    "start": 39.85,
+    "end": 40.49,
+    "id": "w83"
+  },
+  {
+    "text": "blessés",
+    "start": 40.49,
+    "end": 40.98,
+    "id": "w84"
+  },
+  {
+    "text": "parmi",
+    "start": 41.03,
+    "end": 41.35,
+    "id": "w85"
+  },
+  {
+    "text": "les",
+    "start": 41.35,
+    "end": 41.46,
+    "id": "w86"
+  },
+  {
+    "text": "forces",
+    "start": 41.58,
+    "end": 42.02,
+    "id": "w87"
+  },
+  {
+    "text": "de",
+    "start": 42.02,
+    "end": 42.16,
+    "id": "w88"
+  },
+  {
+    "text": "l'ordre,",
+    "start": 42.16,
+    "end": 42.81,
+    "id": "w89"
+  },
+  {
+    "text": "dont",
+    "start": 42.81,
+    "end": 43.1,
+    "id": "w90"
+  },
+  {
+    "text": "trois",
+    "start": 43.1,
+    "end": 43.43,
+    "id": "w91"
+  },
+  {
+    "text": "hospitalisées.",
+    "start": 43.97,
+    "end": 44.8,
+    "id": "w92"
+  }
+]

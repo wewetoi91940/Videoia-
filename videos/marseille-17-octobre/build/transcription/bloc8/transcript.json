@@ -1,0 +1,692 @@
+[
+  {
+    "text": "Ce",
+    "start": 0.01,
+    "end": 0.03,
+    "id": "w0"
+  },
+  {
+    "text": "que",
+    "start": 0.35,
+    "end": 0.49,
+    "id": "w1"
+  },
+  {
+    "text": "l'on",
+    "start": 0.56,
+    "end": 0.88,
+    "id": "w2"
+  },
+  {
+    "text": "sait,",
+    "start": 0.88,
+    "end": 1.5,
+    "id": "w3"
+  },
+  {
+    "text": "la",
+    "start": 1.5,
+    "end": 1.77,
+    "id": "w4"
+  },
+  {
+    "text": "journée",
+    "start": 1.77,
+    "end": 2.24,
+    "id": "w5"
+  },
+  {
+    "text": "a",
+    "start": 2.24,
+    "end": 2.32,
+    "id": "w6"
+  },
+  {
+    "text": "commencé",
+    "start": 2.32,
+    "end": 2.83,
+    "id": "w7"
+  },
+  {
+    "text": "tôt",
+    "start": 2.99,
+    "end": 3.15,
+    "id": "w8"
+  },
+  {
+    "text": "au",
+    "start": 3.15,
+    "end": 3.45,
+    "id": "w9"
+  },
+  {
+    "text": "Prado,",
+    "start": 3.45,
+    "end": 3.93,
+    "id": "w10"
+  },
+  {
+    "text": "les",
+    "start": 3.93,
+    "end": 4.56,
+    "id": "w11"
+  },
+  {
+    "text": "premiers",
+    "start": 4.56,
+    "end": 4.95,
+    "id": "w12"
+  },
+  {
+    "text": "pillages",
+    "start": 4.95,
+    "end": 5.41,
+    "id": "w13"
+  },
+  {
+    "text": "ont",
+    "start": 5.41,
+    "end": 5.57,
+    "id": "w14"
+  },
+  {
+    "text": "été",
+    "start": 5.65,
+    "end": 5.71,
+    "id": "w15"
+  },
+  {
+    "text": "signalés",
+    "start": 6.11,
+    "end": 6.5,
+    "id": "w16"
+  },
+  {
+    "text": "avant",
+    "start": 6.5,
+    "end": 6.79,
+    "id": "w17"
+  },
+  {
+    "text": "midi,",
+    "start": 6.98,
+    "end": 7.51,
+    "id": "w18"
+  },
+  {
+    "text": "l'hôtel",
+    "start": 7.53,
+    "end": 8.12,
+    "id": "w19"
+  },
+  {
+    "text": "de",
+    "start": 8.2,
+    "end": 8.32,
+    "id": "w20"
+  },
+  {
+    "text": "ville",
+    "start": 8.32,
+    "end": 8.78,
+    "id": "w21"
+  },
+  {
+    "text": "a",
+    "start": 8.78,
+    "end": 8.87,
+    "id": "w22"
+  },
+  {
+    "text": "été",
+    "start": 8.87,
+    "end": 8.91,
+    "id": "w23"
+  },
+  {
+    "text": "forcé",
+    "start": 9.22,
+    "end": 9.61,
+    "id": "w24"
+  },
+  {
+    "text": "à",
+    "start": 9.61,
+    "end": 9.68,
+    "id": "w25"
+  },
+  {
+    "text": "la",
+    "start": 9.68,
+    "end": 9.88,
+    "id": "w26"
+  },
+  {
+    "text": "mi-journée",
+    "start": 9.88,
+    "end": 10.82,
+    "id": "w27"
+  },
+  {
+    "text": "et",
+    "start": 10.92,
+    "end": 11.01,
+    "id": "w28"
+  },
+  {
+    "text": "des",
+    "start": 11.01,
+    "end": 11.16,
+    "id": "w29"
+  },
+  {
+    "text": "commerces",
+    "start": 11.16,
+    "end": 11.64,
+    "id": "w30"
+  },
+  {
+    "text": "étaient",
+    "start": 11.91,
+    "end": 11.96,
+    "id": "w31"
+  },
+  {
+    "text": "encore",
+    "start": 12,
+    "end": 12.2,
+    "id": "w32"
+  },
+  {
+    "text": "attaqués",
+    "start": 12.23,
+    "end": 12.58,
+    "id": "w33"
+  },
+  {
+    "text": "dans",
+    "start": 12.58,
+    "end": 12.69,
+    "id": "w34"
+  },
+  {
+    "text": "la",
+    "start": 12.69,
+    "end": 12.86,
+    "id": "w35"
+  },
+  {
+    "text": "nuit.",
+    "start": 12.86,
+    "end": 13.2,
+    "id": "w36"
+  },
+  {
+    "text": "Ce",
+    "start": 13.21,
+    "end": 13.23,
+    "id": "w37"
+  },
+  {
+    "text": "qui",
+    "start": 13.55,
+    "end": 13.7,
+    "id": "w38"
+  },
+  {
+    "text": "reste",
+    "start": 13.76,
+    "end": 14.23,
+    "id": "w39"
+  },
+  {
+    "text": "incertain,",
+    "start": 14.23,
+    "end": 15.37,
+    "id": "w40"
+  },
+  {
+    "text": "le",
+    "start": 15.37,
+    "end": 15.55,
+    "id": "w41"
+  },
+  {
+    "text": "nombre",
+    "start": 15.64,
+    "end": 16.2,
+    "id": "w42"
+  },
+  {
+    "text": "réel",
+    "start": 16.2,
+    "end": 16.61,
+    "id": "w43"
+  },
+  {
+    "text": "de",
+    "start": 16.66,
+    "end": 16.82,
+    "id": "w44"
+  },
+  {
+    "text": "pilleurs,",
+    "start": 16.82,
+    "end": 17.85,
+    "id": "w45"
+  },
+  {
+    "text": "le",
+    "start": 17.85,
+    "end": 18.04,
+    "id": "w46"
+  },
+  {
+    "text": "nombre",
+    "start": 18.06,
+    "end": 18.65,
+    "id": "w47"
+  },
+  {
+    "text": "de",
+    "start": 18.68,
+    "end": 18.89,
+    "id": "w48"
+  },
+  {
+    "text": "commerces",
+    "start": 18.89,
+    "end": 19.82,
+    "id": "w49"
+  },
+  {
+    "text": "touchés,",
+    "start": 19.82,
+    "end": 20.76,
+    "id": "w50"
+  },
+  {
+    "text": "les",
+    "start": 20.77,
+    "end": 20.79,
+    "id": "w51"
+  },
+  {
+    "text": "effectifs",
+    "start": 21.11,
+    "end": 21.55,
+    "id": "w52"
+  },
+  {
+    "text": "réellement",
+    "start": 21.56,
+    "end": 22.22,
+    "id": "w53"
+  },
+  {
+    "text": "engagés",
+    "start": 22.53,
+    "end": 22.68,
+    "id": "w54"
+  },
+  {
+    "text": "et",
+    "start": 22.68,
+    "end": 22.81,
+    "id": "w55"
+  },
+  {
+    "text": "leur",
+    "start": 22.81,
+    "end": 23.07,
+    "id": "w56"
+  },
+  {
+    "text": "précise",
+    "start": 23.07,
+    "end": 23.52,
+    "id": "w57"
+  },
+  {
+    "text": "de",
+    "start": 23.52,
+    "end": 23.6,
+    "id": "w58"
+  },
+  {
+    "text": "plusieurs",
+    "start": 23.75,
+    "end": 24.26,
+    "id": "w59"
+  },
+  {
+    "text": "faits.",
+    "start": 24.26,
+    "end": 24.68,
+    "id": "w60"
+  },
+  {
+    "text": "Et",
+    "start": 24.85,
+    "end": 25.01,
+    "id": "w61"
+  },
+  {
+    "text": "une",
+    "start": 25.14,
+    "end": 25.27,
+    "id": "w62"
+  },
+  {
+    "text": "question",
+    "start": 25.27,
+    "end": 25.87,
+    "id": "w63"
+  },
+  {
+    "text": "reste",
+    "start": 25.87,
+    "end": 26.59,
+    "id": "w64"
+  },
+  {
+    "text": "ouverte,",
+    "start": 26.59,
+    "end": 27.19,
+    "id": "w65"
+  },
+  {
+    "text": "pourquoi",
+    "start": 27.19,
+    "end": 27.9,
+    "id": "w66"
+  },
+  {
+    "text": "le",
+    "start": 27.9,
+    "end": 27.99,
+    "id": "w67"
+  },
+  {
+    "text": "cœur",
+    "start": 28.29,
+    "end": 28.36,
+    "id": "w68"
+  },
+  {
+    "text": "commerçant",
+    "start": 28.42,
+    "end": 29.29,
+    "id": "w69"
+  },
+  {
+    "text": "de",
+    "start": 29.4,
+    "end": 29.46,
+    "id": "w70"
+  },
+  {
+    "text": "la",
+    "start": 29.46,
+    "end": 29.63,
+    "id": "w71"
+  },
+  {
+    "text": "2e",
+    "start": 29.67,
+    "end": 29.89,
+    "id": "w72"
+  },
+  {
+    "text": "ville",
+    "start": 30,
+    "end": 30.4,
+    "id": "w73"
+  },
+  {
+    "text": "de",
+    "start": 30.4,
+    "end": 30.55,
+    "id": "w74"
+  },
+  {
+    "text": "France",
+    "start": 30.62,
+    "end": 31.18,
+    "id": "w75"
+  },
+  {
+    "text": "a-t-il",
+    "start": 31.24,
+    "end": 31.61,
+    "id": "w76"
+  },
+  {
+    "text": "pu",
+    "start": 31.63,
+    "end": 31.73,
+    "id": "w77"
+  },
+  {
+    "text": "être",
+    "start": 31.8,
+    "end": 32.01,
+    "id": "w78"
+  },
+  {
+    "text": "pillé",
+    "start": 32.01,
+    "end": 32.29,
+    "id": "w79"
+  },
+  {
+    "text": "de",
+    "start": 32.29,
+    "end": 32.48,
+    "id": "w80"
+  },
+  {
+    "text": "la",
+    "start": 32.48,
+    "end": 32.59,
+    "id": "w81"
+  },
+  {
+    "text": "fin",
+    "start": 32.6,
+    "end": 32.8,
+    "id": "w82"
+  },
+  {
+    "text": "de",
+    "start": 32.8,
+    "end": 33.01,
+    "id": "w83"
+  },
+  {
+    "text": "matinée",
+    "start": 33.01,
+    "end": 33.39,
+    "id": "w84"
+  },
+  {
+    "text": "jusque",
+    "start": 33.39,
+    "end": 33.79,
+    "id": "w85"
+  },
+  {
+    "text": "dans",
+    "start": 33.79,
+    "end": 34.06,
+    "id": "w86"
+  },
+  {
+    "text": "la",
+    "start": 34.06,
+    "end": 34.08,
+    "id": "w87"
+  },
+  {
+    "text": "nuit?",
+    "start": 34.23,
+    "end": 34.76,
+    "id": "w88"
+  },
+  {
+    "text": "Dimanche",
+    "start": 35.03,
+    "end": 35.48,
+    "id": "w89"
+  },
+  {
+    "text": "soir,",
+    "start": 35.48,
+    "end": 35.87,
+    "id": "w90"
+  },
+  {
+    "text": "Emmanuel",
+    "start": 36.53,
+    "end": 36.75,
+    "id": "w91"
+  },
+  {
+    "text": "Macron",
+    "start": 36.77,
+    "end": 37.29,
+    "id": "w92"
+  },
+  {
+    "text": "a",
+    "start": 37.29,
+    "end": 37.39,
+    "id": "w93"
+  },
+  {
+    "text": "dit",
+    "start": 37.39,
+    "end": 37.6,
+    "id": "w94"
+  },
+  {
+    "text": "attendre",
+    "start": 37.75,
+    "end": 38.39,
+    "id": "w95"
+  },
+  {
+    "text": "des",
+    "start": 38.39,
+    "end": 38.66,
+    "id": "w96"
+  },
+  {
+    "text": "réponses",
+    "start": 38.66,
+    "end": 39.38,
+    "id": "w97"
+  },
+  {
+    "text": "claires",
+    "start": 39.38,
+    "end": 40.08,
+    "id": "w98"
+  },
+  {
+    "text": "sur",
+    "start": 40.08,
+    "end": 40.21,
+    "id": "w99"
+  },
+  {
+    "text": "le",
+    "start": 40.27,
+    "end": 40.33,
+    "id": "w100"
+  },
+  {
+    "text": "renseignement",
+    "start": 40.41,
+    "end": 41.1,
+    "id": "w101"
+  },
+  {
+    "text": "et",
+    "start": 41.24,
+    "end": 41.34,
+    "id": "w102"
+  },
+  {
+    "text": "l'anticipation.",
+    "start": 41.35,
+    "end": 42.24,
+    "id": "w103"
+  },
+  {
+    "text": "Au",
+    "start": 42.25,
+    "end": 42.38,
+    "id": "w104"
+  },
+  {
+    "text": "lundi",
+    "start": 42.48,
+    "end": 42.73,
+    "id": "w105"
+  },
+  {
+    "text": "19",
+    "start": 42.8,
+    "end": 43.27,
+    "id": "w106"
+  },
+  {
+    "text": "octobre,",
+    "start": 43.27,
+    "end": 44,
+    "id": "w107"
+  },
+  {
+    "text": "ces",
+    "start": 44.01,
+    "end": 44.22,
+    "id": "w108"
+  },
+  {
+    "text": "réponses",
+    "start": 44.26,
+    "end": 44.87,
+    "id": "w109"
+  },
+  {
+    "text": "n'ont",
+    "start": 44.88,
+    "end": 45.28,
+    "id": "w110"
+  },
+  {
+    "text": "pas",
+    "start": 45.28,
+    "end": 45.39,
+    "id": "w111"
+  },
+  {
+    "text": "été",
+    "start": 45.69,
+    "end": 45.76,
+    "id": "w112"
+  },
+  {
+    "text": "rendues",
+    "start": 45.76,
+    "end": 46.17,
+    "id": "w113"
+  },
+  {
+    "text": "publics.",
+    "start": 46.8,
+    "end": 46.92,
+    "id": "w114"
+  }
+]

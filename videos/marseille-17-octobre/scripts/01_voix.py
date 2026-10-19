@@ -162,19 +162,105 @@ def gemini_audio(cfg: dict, tok: Tokenizer) -> dict[int, tuple[np.ndarray, int]]
     for j, bl in zip(jobs, blocs):
         a, sr = sf.read(j["wav"], dtype="float32", always_2d=True)
         a = a.mean(axis=1)
-        weights = [max(1, len(re.findall(r"[aeiouyɛɔøœəɑ]", tok.phonemize(ph.get("dit", ph["texte"]), "fr-fr")))) for ph in bl]
-        cuts = split_block(a, sr, weights)
-        if cuts is None:
-            sys.exit(f"{j['id']} : impossible de retrouver les {len(bl)} phrases dans l'audio (silences ambigus). "
-                     "Régénérer ce bloc ou réduire « phrases_par_bloc ».")
+        # Bornes des phrases : alignement du texte sur la transcription Whisper du bloc (robuste aux longues pauses
+        # que Gemini marque à l'intérieur des phrases, qui trompaient un découpage fondé sur les seuls silences).
+        cuts = aligner(a, sr, [ph.get("dit", ph["texte"]) for ph in bl], transcrire(Path(j["wav"]), j["id"]))
         for ph, (t0, t1) in zip(bl, cuts):
             out[ph["id"]] = (a[int(t0 * sr):int(t1 * sr)], sr)
     return out
 
 
+def _normaliser(texte: str) -> str:
+    """Texte → lettres minuscules sans accents, nombres et heures écrits en toutes lettres (« 11h28 » → « onze heures vingt huit »)."""
+    import unicodedata
+    from num2words import num2words
+    t = texte.lower().replace("’", "'")
+    t = re.sub(r"(\d)\s*h\s*(\d{2})", r"\1 heures \2", t)
+    t = re.sub(r"(\d)\s*h\b", r"\1 heures", t)
+    t = re.sub(r"(\d)[\s\u202f\u00a0.](\d{3})\b", r"\1\2", t)        # 30 000 / 30.000 → 30000
+    t = re.sub(r"\d+", lambda m: " " + num2words(int(m.group()), lang="fr") + " ", t)
+    t = unicodedata.normalize("NFD", t)
+    t = "".join(ch for ch in t if unicodedata.category(ch) != "Mn")
+    t = re.sub(r"[^a-z]+", " ", t)
+    return " ".join(t.split())
+
+
+def transcrire(wav: Path, nom: str) -> list[dict]:
+    """Mots horodatés du bloc (Whisper « small », français) via `hyperframes transcribe` ; mis en cache."""
+    cache = BUILD / "transcription" / f"{nom}.json"
+    cle = BUILD / "transcription" / f"{nom}.cle"
+    signature = f"{wav.stat().st_size}-{wav.stat().st_mtime_ns}"
+    if cache.exists() and cle.exists() and cle.read_text() == signature:
+        return json.loads(cache.read_text())
+    travail = BUILD / "transcription" / nom
+    travail.mkdir(parents=True, exist_ok=True)
+    env = {**os.environ, "NODE_USE_ENV_PROXY": "1"}
+    r = subprocess.run(["npx", "--yes", "hyperframes@0.8.166", "transcribe", str(wav), "-l", "fr", "-m", "small", "-e", "whisper",
+                        "--json", "-d", str(travail)], capture_output=True, text=True, env=env)
+    if r.returncode != 0 or not (travail / "transcript.json").exists():
+        sys.exit(f"Transcription impossible pour {nom} : {r.stdout[-300:]} {r.stderr[-300:]}")
+    mots = json.loads((travail / "transcript.json").read_text())
+    cache.write_text(json.dumps(mots, ensure_ascii=False))
+    cle.write_text(signature)
+    return mots
+
+
+def aligner(a: np.ndarray, sr: int, textes: list[str], mots: list[dict]) -> list[tuple[float, float]]:
+    """Bornes de chaque phrase dans le bloc : le texte lu est aligné caractère par caractère sur la transcription,
+    puis chaque coupure est placée au centre du silence réel qui sépare la fin d'une phrase du début de la suivante."""
+    from difflib import SequenceMatcher
+    W, wi = [], []
+    for k, m in enumerate(mots):
+        n = _normaliser(m["text"])
+        if n:
+            W.append(n)
+            wi += [k] * len(n) + [k]
+    Wc = " ".join(W)
+    S, spans = "", []
+    for t in textes:
+        n = _normaliser(t)
+        spans.append((len(S), len(S) + len(n)))
+        S += n + " "
+    carte = {}
+    for b in SequenceMatcher(None, S, Wc, autojunk=False).get_matching_blocks():
+        for j in range(b.size):
+            carte[b.a + j] = b.b + j
+    debuts, fins = [], []
+    for (d0, d1), t in zip(spans, textes):
+        ok = [carte[c] for c in range(d0, d1) if c in carte]
+        if len(ok) < 0.6 * (d1 - d0):
+            sys.exit(f"Alignement incertain ({len(ok)}/{d1 - d0} caractères) pour : {t}")
+        debuts.append(mots[wi[ok[0]]]["start"])
+        fins.append(mots[wi[ok[-1]]]["end"])
+    hop = int(0.01 * sr)
+    rms = np.array([np.sqrt(np.mean(a[i * hop:(i + 1) * hop] ** 2) + 1e-12) for i in range(len(a) // hop)])
+    bas = rms < rms.max() * 10 ** (-38 / 20)
+    coupes = []
+    for k in range(len(textes) - 1):
+        f, d = fins[k], debuts[k + 1]
+        i0, i1 = int(max(0.0, min(f, d) - 0.25) * 100), int((max(f, d) + 0.25) * 100)
+        meilleur, cur = None, None
+        for i in range(i0, min(i1, len(bas))):     # plus long silence dans la zone de jonction
+            if bas[i] and cur is None:
+                cur = i
+            if (not bas[i] or i == i1 - 1) and cur is not None:
+                if meilleur is None or i - cur > meilleur[1] - meilleur[0]:
+                    meilleur = (cur, i)
+                cur = None
+        coupes.append((meilleur[0] + meilleur[1]) / 200 if meilleur else (f + d) / 2)
+    bornes = [max(0.0, debuts[0] - 0.15)] + coupes + [min(len(a) / sr, fins[-1] + 0.3)]
+    if any(b1 <= b0 for b0, b1 in zip(bornes, bornes[1:])):
+        sys.exit("Alignement incohérent : bornes non croissantes")
+    return list(zip(bornes, bornes[1:]))
+
+
 def split_block(a: np.ndarray, sr: int, weights: list[int]) -> list[tuple[float, float]] | None:
-    """Coupe un bloc lu d'une traite en len(weights) phrases : on choisit, par programmation dynamique, les silences
-    les plus longs situés près des frontières attendues (durée de chaque phrase ∝ son nombre de syllabes)."""
+    """Coupe un bloc lu d'une traite en len(weights) phrases.
+
+    Les frontières attendues sont placées en « temps de parole » (silences retirés) au prorata des syllabes :
+    les longues pauses que la voix Gemini marque à l'intérieur des phrases ne décalent plus le découpage.
+    Une programmation dynamique choisit, près de chaque frontière attendue, le silence le plus long ; puis chaque
+    phrase est validée sur sa durée de parole réelle (et non sur sa durée avec silences)."""
     n = len(weights)
     hop = int(0.01 * sr)
     frames = len(a) // hop
@@ -182,30 +268,32 @@ def split_block(a: np.ndarray, sr: int, weights: list[int]) -> list[tuple[float,
     low = rms < rms.max() * 10 ** (-38 / 20)
     voiced = np.where(~low)[0]
     s0, s1 = voiced[0], voiced[-1]
+    vcum = np.concatenate([[0], np.cumsum(~low)])          # trames parlées avant la trame i
     gaps, start = [], None
     for i in range(s0, s1 + 1):
         if low[i] and start is None:
             start = i
         if not low[i] and start is not None:
             if (i - start) * 0.01 >= 0.07:
-                gaps.append(((start + i) / 2 * 0.01, (i - start) * 0.01))
+                gaps.append(((start + i) / 2 * 0.01, (i - start) * 0.01, vcum[start]))
             start = None
+    T0, T1 = s0 * 0.01, (s1 + 1) * 0.01
     if n == 1:
-        return [(s0 * 0.01, (s1 + 1) * 0.01)]
+        return [(T0, T1)]
     if len(gaps) < n - 1:
         return None
-    T0, T1 = s0 * 0.01, (s1 + 1) * 0.01
+    Vtot = vcum[s1 + 1] - vcum[s0]
     cum = np.cumsum(weights) / sum(weights)
-    expected = [T0 + (T1 - T0) * c for c in cum[:-1]]
-    sigma = 0.3 * (T1 - T0) / n
+    attendu = [vcum[s0] + Vtot * c for c in cum[:-1]]        # en trames parlées
+    sigma = 0.3 * Vtot / n
     INF = float("inf")
     C = len(gaps)
     cost = [[INF] * C for _ in range(n - 1)]
     back = [[-1] * C for _ in range(n - 1)]
 
     def local(k, c):
-        t, g = gaps[c]
-        return ((t - expected[k]) / sigma) ** 2 - 2.5 * min(g, 0.9) / 0.3
+        _, g, v = gaps[c]
+        return ((v - attendu[k]) / sigma) ** 2 - 2.5 * min(g, 0.9) / 0.3
 
     for c in range(C):
         cost[0][c] = local(0, c)
@@ -221,15 +309,16 @@ def split_block(a: np.ndarray, sr: int, weights: list[int]) -> list[tuple[float,
     for k in range(n - 2, 0, -1):
         c = back[k][c]
         chosen.append(c)
+    chosen = chosen[::-1]
     if min(gaps[c][1] for c in chosen) < 0.18:      # une frontière de phrase doit être un vrai silence, pas une virgule
         return None
-    bounds = [T0] + [gaps[c][0] for c in reversed(chosen)] + [T1]
-    segs = list(zip(bounds, bounds[1:]))
-    for (t0, t1), w in zip(segs, weights):        # validation : chaque phrase a une durée plausible
-        ratio = (t1 - t0) / ((T1 - T0) * w / sum(weights))
-        if not 0.4 <= ratio <= 2.2 + 8 / w:            # une phrase très courte (« Fausse piste. ») peut être dite lentement
+    bornes_v = [vcum[s0]] + [gaps[c][2] for c in chosen] + [vcum[s1 + 1]]
+    for (v0, v1), w in zip(zip(bornes_v, bornes_v[1:]), weights):   # validation sur la parole réelle
+        ratio = (v1 - v0) / (Vtot * w / sum(weights))
+        if not 0.55 <= ratio <= 1.6 + 6 / w:
             return None
-    return segs
+    bounds = [T0] + [gaps[c][0] for c in chosen] + [T1]
+    return list(zip(bounds, bounds[1:]))
 
 
 def level(x: np.ndarray, sr: int, target_lufs: float = -20.0) -> np.ndarray:

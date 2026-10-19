@@ -10,3 +10,4 @@ pyloudnorm==0.2.0
 pillow==13.0.0
 shapely==2.2.0
 opencv-python-headless==5.0.0
+num2words==0.5.14

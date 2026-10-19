@@ -1,0 +1,1232 @@
+[
+  {
+    "text": "Samedi",
+    "start": 0,
+    "end": 0.56,
+    "id": "w0"
+  },
+  {
+    "text": "17",
+    "start": 0.56,
+    "end": 1.13,
+    "id": "w1"
+  },
+  {
+    "text": "octobre",
+    "start": 1.13,
+    "end": 1.8,
+    "id": "w2"
+  },
+  {
+    "text": "2026,",
+    "start": 1.81,
+    "end": 3.14,
+    "id": "w3"
+  },
+  {
+    "text": "11h28,",
+    "start": 3.27,
+    "end": 4.14,
+    "id": "w4"
+  },
+  {
+    "text": "sur",
+    "start": 4.16,
+    "end": 4.19,
+    "id": "w5"
+  },
+  {
+    "text": "Lacanbière,",
+    "start": 4.6,
+    "end": 5.36,
+    "id": "w6"
+  },
+  {
+    "text": "à",
+    "start": 5.36,
+    "end": 5.63,
+    "id": "w7"
+  },
+  {
+    "text": "Marseille.",
+    "start": 5.63,
+    "end": 6.16,
+    "id": "w8"
+  },
+  {
+    "text": "Le",
+    "start": 7.01,
+    "end": 7.18,
+    "id": "w9"
+  },
+  {
+    "text": "Direct",
+    "start": 7.34,
+    "end": 7.71,
+    "id": "w10"
+  },
+  {
+    "text": "de",
+    "start": 7.71,
+    "end": 7.88,
+    "id": "w11"
+  },
+  {
+    "text": "la",
+    "start": 7.89,
+    "end": 8.07,
+    "id": "w12"
+  },
+  {
+    "text": "Provence",
+    "start": 8.07,
+    "end": 8.79,
+    "id": "w13"
+  },
+  {
+    "text": "signale",
+    "start": 8.79,
+    "end": 9.27,
+    "id": "w14"
+  },
+  {
+    "text": "le",
+    "start": 9.27,
+    "end": 9.39,
+    "id": "w15"
+  },
+  {
+    "text": "poste",
+    "start": 9.39,
+    "end": 9.69,
+    "id": "w16"
+  },
+  {
+    "text": "de",
+    "start": 9.69,
+    "end": 9.98,
+    "id": "w17"
+  },
+  {
+    "text": "police",
+    "start": 9.98,
+    "end": 10.27,
+    "id": "w18"
+  },
+  {
+    "text": "municipale",
+    "start": 10.27,
+    "end": 10.89,
+    "id": "w19"
+  },
+  {
+    "text": "en",
+    "start": 11.02,
+    "end": 11.14,
+    "id": "w20"
+  },
+  {
+    "text": "cours",
+    "start": 11.56,
+    "end": 11.7,
+    "id": "w21"
+  },
+  {
+    "text": "de",
+    "start": 11.7,
+    "end": 11.9,
+    "id": "w22"
+  },
+  {
+    "text": "destruction.",
+    "start": 11.9,
+    "end": 13,
+    "id": "w23"
+  },
+  {
+    "text": "19",
+    "start": 13.33,
+    "end": 13.51,
+    "id": "w24"
+  },
+  {
+    "text": "minutes",
+    "start": 13.51,
+    "end": 14.11,
+    "id": "w25"
+  },
+  {
+    "text": "plus",
+    "start": 14.11,
+    "end": 14.35,
+    "id": "w26"
+  },
+  {
+    "text": "tard,",
+    "start": 14.51,
+    "end": 14.96,
+    "id": "w27"
+  },
+  {
+    "text": "ces",
+    "start": 14.96,
+    "end": 15.2,
+    "id": "w28"
+  },
+  {
+    "text": "vitres",
+    "start": 15.21,
+    "end": 15.64,
+    "id": "w29"
+  },
+  {
+    "text": "sont",
+    "start": 15.64,
+    "end": 16.27,
+    "id": "w30"
+  },
+  {
+    "text": "intégralement",
+    "start": 16.27,
+    "end": 17.08,
+    "id": "w31"
+  },
+  {
+    "text": "brisés.",
+    "start": 17.16,
+    "end": 18,
+    "id": "w32"
+  },
+  {
+    "text": "Selon",
+    "start": 18.21,
+    "end": 18.35,
+    "id": "w33"
+  },
+  {
+    "text": "la",
+    "start": 18.35,
+    "end": 18.49,
+    "id": "w34"
+  },
+  {
+    "text": "préfecture,",
+    "start": 18.49,
+    "end": 19.33,
+    "id": "w35"
+  },
+  {
+    "text": "des",
+    "start": 19.33,
+    "end": 19.54,
+    "id": "w36"
+  },
+  {
+    "text": "fumigènes",
+    "start": 19.54,
+    "end": 20.17,
+    "id": "w37"
+  },
+  {
+    "text": "ont",
+    "start": 20.17,
+    "end": 20.37,
+    "id": "w38"
+  },
+  {
+    "text": "été",
+    "start": 20.38,
+    "end": 20.59,
+    "id": "w39"
+  },
+  {
+    "text": "lancées",
+    "start": 20.59,
+    "end": 21.08,
+    "id": "w40"
+  },
+  {
+    "text": "à",
+    "start": 21.11,
+    "end": 21.15,
+    "id": "w41"
+  },
+  {
+    "text": "l'intérieur",
+    "start": 21.22,
+    "end": 21.88,
+    "id": "w42"
+  },
+  {
+    "text": "et",
+    "start": 22.02,
+    "end": 22.13,
+    "id": "w43"
+  },
+  {
+    "text": "personne",
+    "start": 22.6,
+    "end": 22.82,
+    "id": "w44"
+  },
+  {
+    "text": "n'est",
+    "start": 22.88,
+    "end": 23.21,
+    "id": "w45"
+  },
+  {
+    "text": "blessé.",
+    "start": 23.21,
+    "end": 24,
+    "id": "w46"
+  },
+  {
+    "text": "A",
+    "start": 24,
+    "end": 24.07,
+    "id": "w47"
+  },
+  {
+    "text": "quelques",
+    "start": 24.33,
+    "end": 24.67,
+    "id": "w48"
+  },
+  {
+    "text": "rues",
+    "start": 24.67,
+    "end": 24.96,
+    "id": "w49"
+  },
+  {
+    "text": "de",
+    "start": 24.96,
+    "end": 25.11,
+    "id": "w50"
+  },
+  {
+    "text": "là,",
+    "start": 25.11,
+    "end": 25.35,
+    "id": "w51"
+  },
+  {
+    "text": "rue",
+    "start": 25.51,
+    "end": 25.62,
+    "id": "w52"
+  },
+  {
+    "text": "Saint-Ferréole,",
+    "start": 25.63,
+    "end": 26.69,
+    "id": "w53"
+  },
+  {
+    "text": "des",
+    "start": 26.81,
+    "end": 26.95,
+    "id": "w54"
+  },
+  {
+    "text": "magasins",
+    "start": 27.25,
+    "end": 27.59,
+    "id": "w55"
+  },
+  {
+    "text": "fermés",
+    "start": 27.62,
+    "end": 28.07,
+    "id": "w56"
+  },
+  {
+    "text": "sur",
+    "start": 28.07,
+    "end": 28.19,
+    "id": "w57"
+  },
+  {
+    "text": "conseil",
+    "start": 28.56,
+    "end": 28.81,
+    "id": "w58"
+  },
+  {
+    "text": "de",
+    "start": 28.81,
+    "end": 28.95,
+    "id": "w59"
+  },
+  {
+    "text": "la",
+    "start": 28.96,
+    "end": 29.11,
+    "id": "w60"
+  },
+  {
+    "text": "préfecture",
+    "start": 29.11,
+    "end": 30,
+    "id": "w61"
+  },
+  {
+    "text": "sont",
+    "start": 30,
+    "end": 30.15,
+    "id": "w62"
+  },
+  {
+    "text": "déjà",
+    "start": 30.28,
+    "end": 30.55,
+    "id": "w63"
+  },
+  {
+    "text": "fracturés",
+    "start": 30.55,
+    "end": 31.19,
+    "id": "w64"
+  },
+  {
+    "text": "et",
+    "start": 31.19,
+    "end": 31.36,
+    "id": "w65"
+  },
+  {
+    "text": "pillés.",
+    "start": 31.36,
+    "end": 32,
+    "id": "w66"
+  },
+  {
+    "text": "Il",
+    "start": 32,
+    "end": 32.17,
+    "id": "w67"
+  },
+  {
+    "text": "n'est",
+    "start": 32.25,
+    "end": 32.59,
+    "id": "w68"
+  },
+  {
+    "text": "pas",
+    "start": 32.59,
+    "end": 32.84,
+    "id": "w69"
+  },
+  {
+    "text": "encore",
+    "start": 32.84,
+    "end": 33.35,
+    "id": "w70"
+  },
+  {
+    "text": "midi.",
+    "start": 33.51,
+    "end": 34,
+    "id": "w71"
+  },
+  {
+    "text": "Le",
+    "start": 34,
+    "end": 34.15,
+    "id": "w72"
+  },
+  {
+    "text": "rassemblement",
+    "start": 34.15,
+    "end": 35.21,
+    "id": "w73"
+  },
+  {
+    "text": "prévu",
+    "start": 35.27,
+    "end": 35.59,
+    "id": "w74"
+  },
+  {
+    "text": "à",
+    "start": 35.63,
+    "end": 35.69,
+    "id": "w75"
+  },
+  {
+    "text": "14h",
+    "start": 35.69,
+    "end": 36.19,
+    "id": "w76"
+  },
+  {
+    "text": "n'a",
+    "start": 36.33,
+    "end": 36.49,
+    "id": "w77"
+  },
+  {
+    "text": "même",
+    "start": 36.61,
+    "end": 36.81,
+    "id": "w78"
+  },
+  {
+    "text": "pas",
+    "start": 36.81,
+    "end": 37.04,
+    "id": "w79"
+  },
+  {
+    "text": "commencé.",
+    "start": 37.04,
+    "end": 38,
+    "id": "w80"
+  },
+  {
+    "text": "Comment",
+    "start": 38.32,
+    "end": 38.43,
+    "id": "w81"
+  },
+  {
+    "text": "une",
+    "start": 38.43,
+    "end": 38.61,
+    "id": "w82"
+  },
+  {
+    "text": "journée",
+    "start": 38.61,
+    "end": 39.04,
+    "id": "w83"
+  },
+  {
+    "text": "de",
+    "start": 39.04,
+    "end": 39.14,
+    "id": "w84"
+  },
+  {
+    "text": "mobilisation",
+    "start": 39.17,
+    "end": 39.9,
+    "id": "w85"
+  },
+  {
+    "text": "contre",
+    "start": 39.9,
+    "end": 40.27,
+    "id": "w86"
+  },
+  {
+    "text": "la",
+    "start": 40.27,
+    "end": 40.39,
+    "id": "w87"
+  },
+  {
+    "text": "vie",
+    "start": 40.39,
+    "end": 40.57,
+    "id": "w88"
+  },
+  {
+    "text": "chère",
+    "start": 40.57,
+    "end": 40.7,
+    "id": "w89"
+  },
+  {
+    "text": "a-t-elle",
+    "start": 40.85,
+    "end": 41.35,
+    "id": "w90"
+  },
+  {
+    "text": "basculé,",
+    "start": 41.35,
+    "end": 41.9,
+    "id": "w91"
+  },
+  {
+    "text": "rue",
+    "start": 42.02,
+    "end": 42.14,
+    "id": "w92"
+  },
+  {
+    "text": "après",
+    "start": 42.51,
+    "end": 42.52,
+    "id": "w93"
+  },
+  {
+    "text": "rue,",
+    "start": 42.61,
+    "end": 42.81,
+    "id": "w94"
+  },
+  {
+    "text": "dans",
+    "start": 42.88,
+    "end": 43.14,
+    "id": "w95"
+  },
+  {
+    "text": "le",
+    "start": 43.14,
+    "end": 43.27,
+    "id": "w96"
+  },
+  {
+    "text": "pillage?",
+    "start": 43.27,
+    "end": 44,
+    "id": "w97"
+  },
+  {
+    "text": "Voici",
+    "start": 44,
+    "end": 44.35,
+    "id": "w98"
+  },
+  {
+    "text": "ce",
+    "start": 44.35,
+    "end": 44.49,
+    "id": "w99"
+  },
+  {
+    "text": "que",
+    "start": 44.49,
+    "end": 44.67,
+    "id": "w100"
+  },
+  {
+    "text": "les",
+    "start": 44.69,
+    "end": 44.9,
+    "id": "w101"
+  },
+  {
+    "text": "sources",
+    "start": 44.91,
+    "end": 45.35,
+    "id": "w102"
+  },
+  {
+    "text": "permettent",
+    "start": 45.51,
+    "end": 46.14,
+    "id": "w103"
+  },
+  {
+    "text": "d'établir,",
+    "start": 46.14,
+    "end": 46.91,
+    "id": "w104"
+  },
+  {
+    "text": "moment",
+    "start": 47.27,
+    "end": 47.34,
+    "id": "w105"
+  },
+  {
+    "text": "par",
+    "start": 47.34,
+    "end": 47.54,
+    "id": "w106"
+  },
+  {
+    "text": "moment,",
+    "start": 47.54,
+    "end": 48.12,
+    "id": "w107"
+  },
+  {
+    "text": "et",
+    "start": 48.12,
+    "end": 48.19,
+    "id": "w108"
+  },
+  {
+    "text": "ce",
+    "start": 48.19,
+    "end": 48.55,
+    "id": "w109"
+  },
+  {
+    "text": "qui",
+    "start": 48.55,
+    "end": 48.61,
+    "id": "w110"
+  },
+  {
+    "text": "reste",
+    "start": 48.62,
+    "end": 48.97,
+    "id": "w111"
+  },
+  {
+    "text": "incertain.",
+    "start": 48.97,
+    "end": 50,
+    "id": "w112"
+  },
+  {
+    "text": "Ce",
+    "start": 50,
+    "end": 50.1,
+    "id": "w113"
+  },
+  {
+    "text": "samedi",
+    "start": 50.28,
+    "end": 50.45,
+    "id": "w114"
+  },
+  {
+    "text": "est",
+    "start": 50.45,
+    "end": 50.62,
+    "id": "w115"
+  },
+  {
+    "text": "une",
+    "start": 50.62,
+    "end": 50.79,
+    "id": "w116"
+  },
+  {
+    "text": "journée",
+    "start": 50.79,
+    "end": 51.19,
+    "id": "w117"
+  },
+  {
+    "text": "nationale",
+    "start": 51.19,
+    "end": 51.71,
+    "id": "w118"
+  },
+  {
+    "text": "de",
+    "start": 51.71,
+    "end": 51.81,
+    "id": "w119"
+  },
+  {
+    "text": "mobilisation",
+    "start": 51.82,
+    "end": 52.51,
+    "id": "w120"
+  },
+  {
+    "text": "contre",
+    "start": 52.51,
+    "end": 52.69,
+    "id": "w121"
+  },
+  {
+    "text": "la",
+    "start": 52.84,
+    "end": 52.95,
+    "id": "w122"
+  },
+  {
+    "text": "vie",
+    "start": 52.96,
+    "end": 53.13,
+    "id": "w123"
+  },
+  {
+    "text": "chère,",
+    "start": 53.24,
+    "end": 53.52,
+    "id": "w124"
+  },
+  {
+    "text": "lancée",
+    "start": 53.52,
+    "end": 53.84,
+    "id": "w125"
+  },
+  {
+    "text": "par",
+    "start": 53.84,
+    "end": 53.91,
+    "id": "w126"
+  },
+  {
+    "text": "des",
+    "start": 54.02,
+    "end": 54.18,
+    "id": "w127"
+  },
+  {
+    "text": "appels",
+    "start": 54.18,
+    "end": 54.53,
+    "id": "w128"
+  },
+  {
+    "text": "sur",
+    "start": 54.61,
+    "end": 54.7,
+    "id": "w129"
+  },
+  {
+    "text": "les",
+    "start": 54.7,
+    "end": 54.81,
+    "id": "w130"
+  },
+  {
+    "text": "réseaux",
+    "start": 54.88,
+    "end": 55.27,
+    "id": "w131"
+  },
+  {
+    "text": "sociaux.",
+    "start": 55.27,
+    "end": 56,
+    "id": "w132"
+  },
+  {
+    "text": "A",
+    "start": 56,
+    "end": 56.06,
+    "id": "w133"
+  },
+  {
+    "text": "Marseille,",
+    "start": 56.26,
+    "end": 56.78,
+    "id": "w134"
+  },
+  {
+    "text": "une",
+    "start": 56.78,
+    "end": 56.98,
+    "id": "w135"
+  },
+  {
+    "text": "action",
+    "start": 56.98,
+    "end": 57.35,
+    "id": "w136"
+  },
+  {
+    "text": "est",
+    "start": 57.5,
+    "end": 57.57,
+    "id": "w137"
+  },
+  {
+    "text": "annoncée",
+    "start": 57.57,
+    "end": 58.06,
+    "id": "w138"
+  },
+  {
+    "text": "au",
+    "start": 58.08,
+    "end": 58.2,
+    "id": "w139"
+  },
+  {
+    "text": "rond-point",
+    "start": 58.21,
+    "end": 58.69,
+    "id": "w140"
+  },
+  {
+    "text": "du",
+    "start": 58.85,
+    "end": 58.99,
+    "id": "w141"
+  },
+  {
+    "text": "prado",
+    "start": 59,
+    "end": 59.32,
+    "id": "w142"
+  },
+  {
+    "text": "dès",
+    "start": 59.32,
+    "end": 59.52,
+    "id": "w143"
+  },
+  {
+    "text": "8h,",
+    "start": 59.52,
+    "end": 59.9,
+    "id": "w144"
+  },
+  {
+    "text": "puis",
+    "start": 60.02,
+    "end": 60.14,
+    "id": "w145"
+  },
+  {
+    "text": "un",
+    "start": 60.14,
+    "end": 60.31,
+    "id": "w146"
+  },
+  {
+    "text": "rassemblement",
+    "start": 60.31,
+    "end": 61,
+    "id": "w147"
+  },
+  {
+    "text": "à",
+    "start": 61,
+    "end": 61.12,
+    "id": "w148"
+  },
+  {
+    "text": "14h,",
+    "start": 61.12,
+    "end": 62.12,
+    "id": "w149"
+  },
+  {
+    "text": "sur",
+    "start": 62.12,
+    "end": 62.17,
+    "id": "w150"
+  },
+  {
+    "text": "le",
+    "start": 62.17,
+    "end": 62.46,
+    "id": "w151"
+  },
+  {
+    "text": "vieux",
+    "start": 62.46,
+    "end": 62.79,
+    "id": "w152"
+  },
+  {
+    "text": "port",
+    "start": 62.79,
+    "end": 63.05,
+    "id": "w153"
+  },
+  {
+    "text": "ou",
+    "start": 63.05,
+    "end": 63.18,
+    "id": "w154"
+  },
+  {
+    "text": "Lacanbière,",
+    "start": 63.35,
+    "end": 64,
+    "id": "w155"
+  },
+  {
+    "text": "selon",
+    "start": 64,
+    "end": 64.27,
+    "id": "w156"
+  },
+  {
+    "text": "les",
+    "start": 64.27,
+    "end": 64.43,
+    "id": "w157"
+  },
+  {
+    "text": "sources.",
+    "start": 64.43,
+    "end": 65,
+    "id": "w158"
+  },
+  {
+    "text": "La",
+    "start": 65,
+    "end": 65.14,
+    "id": "w159"
+  },
+  {
+    "text": "veille,",
+    "start": 65.28,
+    "end": 65.66,
+    "id": "w160"
+  },
+  {
+    "text": "le",
+    "start": 65.7,
+    "end": 65.85,
+    "id": "w161"
+  },
+  {
+    "text": "préfet,",
+    "start": 65.85,
+    "end": 66.35,
+    "id": "w162"
+  },
+  {
+    "text": "Jacques",
+    "start": 66.51,
+    "end": 66.93,
+    "id": "w163"
+  },
+  {
+    "text": "Wittkowski,",
+    "start": 66.93,
+    "end": 67.69,
+    "id": "w164"
+  },
+  {
+    "text": "avait",
+    "start": 67.69,
+    "end": 68.27,
+    "id": "w165"
+  },
+  {
+    "text": "prévenu.",
+    "start": 68.27,
+    "end": 68.89,
+    "id": "w166"
+  },
+  {
+    "text": "C'est",
+    "start": 69.02,
+    "end": 69.19,
+    "id": "w167"
+  },
+  {
+    "text": "véritablement",
+    "start": 69.61,
+    "end": 70.09,
+    "id": "w168"
+  },
+  {
+    "text": "à",
+    "start": 70.09,
+    "end": 70.15,
+    "id": "w169"
+  },
+  {
+    "text": "Marseille",
+    "start": 70.15,
+    "end": 70.69,
+    "id": "w170"
+  },
+  {
+    "text": "que",
+    "start": 70.69,
+    "end": 70.87,
+    "id": "w171"
+  },
+  {
+    "text": "nous",
+    "start": 70.87,
+    "end": 71.07,
+    "id": "w172"
+  },
+  {
+    "text": "avons",
+    "start": 71.11,
+    "end": 71.16,
+    "id": "w173"
+  },
+  {
+    "text": "un",
+    "start": 71.4,
+    "end": 71.53,
+    "id": "w174"
+  },
+  {
+    "text": "point",
+    "start": 71.53,
+    "end": 71.83,
+    "id": "w175"
+  },
+  {
+    "text": "de",
+    "start": 71.83,
+    "end": 71.95,
+    "id": "w176"
+  },
+  {
+    "text": "préoccupation.",
+    "start": 71.95,
+    "end": 73,
+    "id": "w177"
+  },
+  {
+    "text": "Combien",
+    "start": 73.25,
+    "end": 73.44,
+    "id": "w178"
+  },
+  {
+    "text": "de",
+    "start": 73.44,
+    "end": 73.56,
+    "id": "w179"
+  },
+  {
+    "text": "policiers",
+    "start": 73.56,
+    "end": 74.13,
+    "id": "w180"
+  },
+  {
+    "text": "ce",
+    "start": 74.13,
+    "end": 74.22,
+    "id": "w181"
+  },
+  {
+    "text": "matin-là?",
+    "start": 74.3,
+    "end": 75,
+    "id": "w182"
+  },
+  {
+    "text": "Une",
+    "start": 75,
+    "end": 75.2,
+    "id": "w183"
+  },
+  {
+    "text": "seule",
+    "start": 75.2,
+    "end": 75.53,
+    "id": "w184"
+  },
+  {
+    "text": "compagnie",
+    "start": 75.53,
+    "end": 76.1,
+    "id": "w185"
+  },
+  {
+    "text": "de",
+    "start": 76.1,
+    "end": 76.27,
+    "id": "w186"
+  },
+  {
+    "text": "CRS,",
+    "start": 76.27,
+    "end": 76.55,
+    "id": "w187"
+  },
+  {
+    "text": "soit",
+    "start": 76.56,
+    "end": 76.72,
+    "id": "w188"
+  },
+  {
+    "text": "80",
+    "start": 76.77,
+    "end": 77.12,
+    "id": "w189"
+  },
+  {
+    "text": "policiers,",
+    "start": 77.51,
+    "end": 77.93,
+    "id": "w190"
+  },
+  {
+    "text": "selon",
+    "start": 77.93,
+    "end": 78.24,
+    "id": "w191"
+  },
+  {
+    "text": "le",
+    "start": 78.26,
+    "end": 78.35,
+    "id": "w192"
+  },
+  {
+    "text": "maire.",
+    "start": 78.39,
+    "end": 79,
+    "id": "w193"
+  },
+  {
+    "text": "434",
+    "start": 79.27,
+    "end": 79.81,
+    "id": "w194"
+  },
+  {
+    "text": "policiers",
+    "start": 79.81,
+    "end": 80.62,
+    "id": "w195"
+  },
+  {
+    "text": "et",
+    "start": 80.62,
+    "end": 80.79,
+    "id": "w196"
+  },
+  {
+    "text": "240",
+    "start": 80.79,
+    "end": 81.6,
+    "id": "w197"
+  },
+  {
+    "text": "CRS",
+    "start": 81.6,
+    "end": 81.88,
+    "id": "w198"
+  },
+  {
+    "text": "engagés",
+    "start": 82.27,
+    "end": 82.51,
+    "id": "w199"
+  },
+  {
+    "text": "dès",
+    "start": 82.51,
+    "end": 82.72,
+    "id": "w200"
+  },
+  {
+    "text": "7h,",
+    "start": 82.77,
+    "end": 83.19,
+    "id": "w201"
+  },
+  {
+    "text": "répond",
+    "start": 83.61,
+    "end": 83.82,
+    "id": "w202"
+  },
+  {
+    "text": "la",
+    "start": 83.88,
+    "end": 84.04,
+    "id": "w203"
+  },
+  {
+    "text": "préfecture.",
+    "start": 84.04,
+    "end": 85,
+    "id": "w204"
+  }
+]
