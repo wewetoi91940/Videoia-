@@ -23,3 +23,9 @@ build/transcription/transcript.json
 livrables/*.mp4
 livrables/pistes/
 build/passlog/
+# Version TikTok : sons, images témoins et rapports de contrôle régénérables
+build/tiktok/partie-*/mix_master.wav
+build/tiktok/snaps*/
+build/tiktok/hf_check_*.json
+build/tiktok/lint-*.txt
+build/tiktok/*.log

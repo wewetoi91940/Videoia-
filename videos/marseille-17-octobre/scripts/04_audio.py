@@ -239,7 +239,7 @@ def music(plans: list[dict], sequences: dict, chrono: dict, D: float) -> np.ndar
         debuts.setdefault(p["seq"], p["debut"])
     seqs = sorted(debuts)
     couches = {}
-    for amb in {sequences[s]["ambiance"] for s in seqs}:
+    for amb in sorted({sequences[s]["ambiance"] for s in seqs}):   # ordre fixe : graine de chaque nappe reproductible
         couches[amb] = pad_voice([NOTES[x] for x in ACCORDS[amb]], n, seed=len(couches))
     poids = {amb: np.zeros(n) for amb in couches}
     for k, s in enumerate(seqs):
@@ -297,22 +297,18 @@ def bruitages(plans: list[dict], D: float) -> np.ndarray:
     return fx
 
 
-def main() -> None:
-    chrono = json.loads((BUILD / "chronologie.json").read_text())
-    calc = json.loads((BUILD / "plans_calcules.json").read_text())
-    sequences = {s["n"]: s for s in json.loads((ROOT / "scripts/script.json").read_text())["sequences"]}
-    D = calc["duree"]
+def mixer(v: np.ndarray, chrono: dict, plans: list[dict], sequences: dict, D: float, dossier: Path,
+          avec_stems: bool = True) -> dict:
+    """Mixe la voix v (mono, SR) avec la musique et les bruitages du montage `plans` (durée D) ;
+    écrit dossier/mix_master.wav (et dossier/stems/) et renvoie les mesures. Sert aussi aux parties TikTok."""
     n = int(round(D * SR))
     meter = pyln.Meter(SR)
-
-    v, sr = sf.read(BUILD / "voix.wav", dtype="float64")
-    assert sr == SR
     v = np.pad(v, (0, max(0, n - len(v))))[:n]
     v = compress(hp(v, 75))
     mask = speech_mask(v, chrono)
     voice = np.stack([v, v], axis=1)
-    mus = music(calc["plans"], sequences, chrono, D)
-    fx = bruitages(calc["plans"], D)
+    mus = music(plans, sequences, chrono, D)
+    fx = bruitages(plans, D)
 
     v_lufs = meter.integrated_loudness(voice[mask])
     m_lufs = meter.integrated_loudness(mus[mask])
@@ -346,7 +342,10 @@ def main() -> None:
     wmin = window_min_gap(mus_d)
     mus_d *= 10 ** (min(gap - GAP_TARGET_DB, wmin - 15.5) / 20)
     if np.abs(fx).max() > 0:
-        fx_lufs = meter.integrated_loudness(fx[np.abs(fx).max(axis=1) > 1e-4])
+        actif = fx[np.abs(fx).max(axis=1) > 1e-4]
+        if len(actif) <= meter.block_size * SR:   # trop court pour la mesure (une seule carte d'heure) : on le répète
+            actif = np.tile(actif, (int(meter.block_size * SR) // len(actif) + 2, 1))
+        fx_lufs = meter.integrated_loudness(actif)
         fx = fx * 10 ** (((v_lufs - 14) - fx_lufs) / 20)
         fx_cap = (v_env - FX_GAP_DB - 2.0) - env_db(fx, 0.2)
         fx = fx * 10 ** (smooth_gain(np.where(hang, np.clip(fx_cap, -30.0, 0.0), 0.0), att=0.01, rel=0.25) / 20)[:, None]
@@ -360,10 +359,11 @@ def main() -> None:
         stems = {k: s * lim[:, None] for k, s in stems.items()}
         mix = sum(stems.values())
 
-    (BUILD / "stems").mkdir(parents=True, exist_ok=True)
-    for k, s in stems.items():
-        sf.write(BUILD / f"stems/{k}.wav", s, SR, subtype="PCM_24")
-    sf.write(BUILD / "mix_master.wav", mix, SR, subtype="PCM_24")
+    if avec_stems:
+        (dossier / "stems").mkdir(parents=True, exist_ok=True)
+        for k, s in stems.items():
+            sf.write(dossier / f"stems/{k}.wav", s, SR, subtype="PCM_24")
+    sf.write(dossier / "mix_master.wav", mix, SR, subtype="PCM_24")
 
     pauses = moyenne_glissante(mask, int(0.25 * SR)) < 1e-6
     res = {
@@ -381,6 +381,16 @@ def main() -> None:
                       for i in idx])
     res["ecart_court_terme_db"] = {"median": round(float(np.median(diffs)), 1), "p5": round(float(np.percentile(diffs, 5)), 1),
                                    "min": round(float(diffs.min()), 1), "fenetres": int(len(diffs))}
+    return res
+
+
+def main() -> None:
+    chrono = json.loads((BUILD / "chronologie.json").read_text())
+    calc = json.loads((BUILD / "plans_calcules.json").read_text())
+    sequences = {s["n"]: s for s in json.loads((ROOT / "scripts/script.json").read_text())["sequences"]}
+    v, sr = sf.read(BUILD / "voix.wav", dtype="float64")
+    assert sr == SR
+    res = mixer(v, chrono, calc["plans"], sequences, calc["duree"], BUILD)
     (BUILD / "audio_mesures.json").write_text(json.dumps(res, ensure_ascii=False, indent=1))
     print(json.dumps(res, ensure_ascii=False, indent=1))
 

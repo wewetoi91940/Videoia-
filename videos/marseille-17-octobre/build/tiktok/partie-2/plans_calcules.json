@@ -1,0 +1,242 @@
+{
+ "duree": 182.8333,
+ "voix_debut": 2.0,
+ "voix_fin": 178.33700000000002,
+ "decalage": -171.6,
+ "plans": [
+  {
+   "id": "T0",
+   "type": "partie",
+   "seq": 5,
+   "debut": 0.0,
+   "fin": 2.0,
+   "duree": 2.0,
+   "musique": "impact"
+  },
+  {
+   "id": "P21",
+   "type": "carte",
+   "seq": 5,
+   "debut": 2.0,
+   "fin": 8.8,
+   "duree": 6.8,
+   "musique": null
+  },
+  {
+   "id": "P22",
+   "type": "photo",
+   "seq": 5,
+   "debut": 8.8,
+   "fin": 16.5,
+   "duree": 7.7,
+   "musique": null
+  },
+  {
+   "id": "P23",
+   "type": "citation",
+   "seq": 5,
+   "debut": 16.5,
+   "fin": 27.6666,
+   "duree": 11.167,
+   "musique": null
+  },
+  {
+   "id": "P24",
+   "type": "heure",
+   "seq": 5,
+   "debut": 27.6666,
+   "fin": 35.7,
+   "duree": 8.033,
+   "musique": null
+  },
+  {
+   "id": "P25",
+   "type": "constat",
+   "seq": 5,
+   "debut": 35.7,
+   "fin": 41.4333,
+   "duree": 5.733,
+   "musique": null
+  },
+  {
+   "id": "P26",
+   "type": "heure",
+   "seq": 6,
+   "debut": 41.4333,
+   "fin": 44.4333,
+   "duree": 3.0,
+   "musique": "impact"
+  },
+  {
+   "id": "P27",
+   "type": "photo",
+   "seq": 6,
+   "debut": 44.4333,
+   "fin": 50.9333,
+   "duree": 6.5,
+   "musique": null
+  },
+  {
+   "id": "P28",
+   "type": "carte",
+   "seq": 6,
+   "debut": 50.9333,
+   "fin": 56.1666,
+   "duree": 5.233,
+   "musique": null
+  },
+  {
+   "id": "P29",
+   "type": "heure",
+   "seq": 6,
+   "debut": 56.1666,
+   "fin": 62.2,
+   "duree": 6.033,
+   "musique": null
+  },
+  {
+   "id": "P30",
+   "type": "citation",
+   "seq": 6,
+   "debut": 62.2,
+   "fin": 70.2333,
+   "duree": 8.033,
+   "musique": null
+  },
+  {
+   "id": "P31",
+   "type": "heure",
+   "seq": 7,
+   "debut": 70.2333,
+   "fin": 79.6,
+   "duree": 9.367,
+   "musique": "coupure"
+  },
+  {
+   "id": "P32",
+   "type": "photo",
+   "seq": 7,
+   "debut": 79.6,
+   "fin": 89.9666,
+   "duree": 10.367,
+   "musique": null
+  },
+  {
+   "id": "P33",
+   "type": "carte",
+   "seq": 8,
+   "debut": 89.9666,
+   "fin": 99.9,
+   "duree": 9.933,
+   "musique": null
+  },
+  {
+   "id": "P34",
+   "type": "heure",
+   "seq": 8,
+   "debut": 99.9,
+   "fin": 108.1666,
+   "duree": 8.267,
+   "musique": null
+  },
+  {
+   "id": "P35",
+   "type": "photo",
+   "seq": 8,
+   "debut": 108.1666,
+   "fin": 113.9333,
+   "duree": 5.767,
+   "musique": null
+  },
+  {
+   "id": "P36",
+   "type": "citation",
+   "seq": 8,
+   "debut": 113.9333,
+   "fin": 121.5333,
+   "duree": 7.6,
+   "musique": null
+  },
+  {
+   "id": "P37",
+   "type": "constat",
+   "seq": 8,
+   "debut": 121.5333,
+   "fin": 126.1666,
+   "duree": 4.633,
+   "musique": null
+  },
+  {
+   "id": "P38",
+   "type": "chiffres",
+   "seq": 8,
+   "debut": 126.1666,
+   "fin": 135.1666,
+   "duree": 9.0,
+   "musique": null
+  },
+  {
+   "id": "P39",
+   "type": "chiffres",
+   "seq": 9,
+   "debut": 135.1666,
+   "fin": 146.7666,
+   "duree": 11.6,
+   "musique": null
+  },
+  {
+   "id": "P40",
+   "type": "heure",
+   "seq": 9,
+   "debut": 146.7666,
+   "fin": 151.7333,
+   "duree": 4.967,
+   "musique": null
+  },
+  {
+   "id": "P41",
+   "type": "citation",
+   "seq": 9,
+   "debut": 151.7333,
+   "fin": 159.6,
+   "duree": 7.867,
+   "musique": null
+  },
+  {
+   "id": "P42",
+   "type": "carte",
+   "seq": 9,
+   "debut": 159.6,
+   "fin": 169.2,
+   "duree": 9.6,
+   "musique": null
+  },
+  {
+   "id": "P43",
+   "type": "photo",
+   "seq": 9,
+   "debut": 169.2,
+   "fin": 173.3333,
+   "duree": 4.133,
+   "musique": null
+  },
+  {
+   "id": "P44",
+   "type": "heure",
+   "seq": 9,
+   "debut": 173.3333,
+   "fin": 179.3333,
+   "duree": 6.0,
+   "musique": null
+  },
+  {
+   "id": "SUITE",
+   "type": "suite",
+   "seq": 9,
+   "debut": 179.3333,
+   "fin": 182.8333,
+   "duree": 3.5,
+   "musique": null
+  }
+ ]
+}

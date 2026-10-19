@@ -113,10 +113,10 @@ def plan_carte(p: dict, pid: str, vues: dict, T: Temps, t0: float, tw: list) -> 
                 if len(seg) < 2:
                     continue
                 d, L = chemin(seg)
-                for suf, cls in (("h", "halo"), ("", etat)):
+                for suf, cls in (("h", "halo"), ("", etat)):   # trait plus court que le blanc : aucun bout arrondi avant le tracé
                     svg.append(f'<path id="{cid}-{j}{suf}" class="hl hl-{cls}" d="{d}" '
-                               f'style="stroke-dasharray:{L:.0f};stroke-dashoffset:{L:.0f}"/>')
-                    tw.append(f'tl.fromTo("#{cid}-{j}{suf}",{{strokeDashoffset:{L:.0f}}},{{strokeDashoffset:0,duration:1.4,ease:"power2.inOut"}},{ft(ta):.4f});')
+                               f'style="stroke-dasharray:{L:.0f} {L + 60:.0f};stroke-dashoffset:{L + 30:.0f}"/>')
+                    tw.append(f'tl.fromTo("#{cid}-{j}{suf}",{{strokeDashoffset:{L + 30:.0f}}},{{strokeDashoffset:0,duration:1.4,ease:"power2.inOut"}},{ft(ta):.4f});')
         elif "zone" in c:
             for j, poly in enumerate(v["zone_rues"]):
                 d, _ = chemin(poly)
@@ -124,8 +124,10 @@ def plan_carte(p: dict, pid: str, vues: dict, T: Temps, t0: float, tw: list) -> 
                 tw.append(f'tl.fromTo("#{cid}-{j}",{{opacity:0}},{{opacity:1,duration:0.9,ease:"sine.out"}},{ft(ta):.4f});')
         elif "point" in c:
             x, y = v["points"][c["point"]]
-            svg.append(f'<g transform="translate({x:.1f},{y:.1f})"><circle id="{cid}-pu" class="pulse" r="12"/>'
-                       f'<circle id="{cid}" class="pt pt-{etat}" r="11"/></g>')
+            svg.append(f'<g transform="translate({x:.1f},{y:.1f})"><g id="{cid}-g" opacity="0"><circle id="{cid}-pu" class="pulse" r="12"/>'
+                       f'<circle id="{cid}" class="pt pt-{etat}" r="11"/></g></g>')
+            # le groupe reste caché jusqu'à l'apparition du point (sinon l'anneau de pulsation se voit avant)
+            tw.append(f'tl.fromTo("#{cid}-g",{{opacity:0}},{{opacity:1,duration:0.1}},{ft(ta):.4f});')
             tw.append(f'tl.fromTo("#{cid}",{{scale:0,transformOrigin:"50% 50%"}},{{scale:1,duration:0.5,ease:"back.out(2.2)"}},{ft(ta):.4f});')
             reps = max(0, int((p["_fin"] - ta) / 1.6) - 1)
             tw.append(f'tl.fromTo("#{cid}-pu",{{scale:1,opacity:0.75,transformOrigin:"50% 50%"}},'
@@ -289,30 +291,52 @@ def horloge(cfg: dict) -> str:
 # ------------------------------------------------------------------------------------------- sous-titres
 FAIBLES = set("le la les l' un une des de du d' et ou à au aux en par pour sur dans que qui ce cette ces son sa ses "
               "leur leurs ne n' se s' il elle ils on y est a avec sans selon".split())
+FERMANTS = {":", ";", "?", "!", "»", "».", "»,"}    # ponctuation détachée qui ne commence jamais un sous-titre
 
 
-def sous_titres(chrono: dict) -> list[dict]:
-    """Une ou deux lignes de 42 caractères au plus ; jamais de coupure après un mot-outil."""
+def sous_titres(chrono: dict, max_car: int = 84) -> list[dict]:
+    """Une ou deux lignes de 42 caractères au plus (max_car au total) ; jamais de coupure après un mot-outil."""
     out = []
     for p in chrono["phrases"]:
         mots = p["mots"]
         i = 0
         while i < len(mots):
             j, long = i, 0
-            while j < len(mots) and long + len(mots[j]["mot"]) + 1 <= 84:
+            while j < len(mots) and long + len(mots[j]["mot"]) + 1 <= max_car:
                 long += len(mots[j]["mot"]) + 1
                 j += 1
-            if j < len(mots):
-                k = j
-                while k - 1 > i + 2 and (norm(mots[k - 1]["mot"]) in FAIBLES or norm(mots[k]["mot"]) in ("?", ":", ";")):
-                    k -= 1
-                j = k
-            txt = " ".join(m["mot"] for m in mots[i:j])
-            out.append({"debut": mots[i]["debut"], "fin": mots[j - 1]["fin"], "texte": typo(txt)})
+            reste = sum(len(m["mot"]) + 1 for m in mots[j:])
+            if 0 < reste < 16:   # pas de mot orphelin en fin de phrase : couper au milieu de ce qui reste
+                moitie, long, j = (long + reste) / 2, 0, i
+                while long + len(mots[j]["mot"]) + 1 <= moitie:
+                    long += len(mots[j]["mot"]) + 1
+                    j += 1
+            while True:   # raccourcir tant que le texte ne tient pas sur deux lignes de max_car / 2
+                if j < len(mots):
+                    k = j
+                    while k - 1 > i + 2 and (norm(mots[k - 1]["mot"]) in FAIBLES or mots[k - 1]["mot"] == "«"
+                                             or mots[k]["mot"] in FERMANTS):
+                        k -= 1
+                    j = k
+                txt = typo(" ".join(m["mot"] for m in mots[i:j]))
+                if j - i <= 3 or max(map(len, deux_lignes(txt, max_car // 2))) <= max_car // 2:
+                    break
+                j -= 1
+            out.append({"debut": mots[i]["debut"], "fin": mots[j - 1]["fin"], "texte": txt})
             i = j
     for a, b in zip(out, out[1:]):
         a["fin"] = min(max(a["fin"] + 0.3, a["debut"] + 1.0), b["debut"] - 0.04)
     return out
+
+
+def deux_lignes(t: str, n: int = 42) -> list[str]:
+    """Deux lignes équilibrées : de préférence n caractères au plus, et pas de coupure après un mot-outil."""
+    mots = t.split(" ")     # espaces ordinaires seulement : les espaces insécables de typo() restent
+    if len(t) <= n or len(mots) < 2:
+        return [t]
+    a, b = min((max(len(a), len(b)) > n, norm(mots[k - 1]) in FAIBLES, abs(len(a) - len(b)), a, b)
+               for k in range(1, len(mots)) for a, b in [(" ".join(mots[:k]), " ".join(mots[k:]))])[3:]
+    return [a, b]
 
 
 def srt(subs: list[dict]) -> str:
@@ -320,18 +344,7 @@ def srt(subs: list[dict]) -> str:
         ms = int(round(t * 1000))
         return f"{ms // 3600000:02d}:{ms // 60000 % 60:02d}:{ms // 1000 % 60:02d},{ms % 1000:03d}"
 
-    def lignes(t):
-        if len(t) <= 42:
-            return t
-        mots, best = t.split(), None
-        for k in range(1, len(mots)):
-            a, b = " ".join(mots[:k]), " ".join(mots[k:])
-            if len(a) <= 42 and len(b) <= 42 and norm(mots[k - 1]) not in FAIBLES:
-                score = abs(len(a) - len(b))
-                best = min(best or (score, a, b), (score, a, b))
-        return f"{best[1]}\n{best[2]}" if best else t
-
-    return "\n".join(f"{k}\n{tc(s['debut'])} --> {tc(s['fin'])}\n{lignes(s['texte'])}\n"
+    return "\n".join(f"{k}\n{tc(s['debut'])} --> {tc(s['fin'])}\n{chr(10).join(deux_lignes(s['texte']))}\n"
                      for k, s in enumerate(subs, 1))
 
 

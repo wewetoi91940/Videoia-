@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Chaîne complète « marseille-17-octobre » : carte → voix → composition → audio → contrôles → rendu → livrables → contrôle qualité.
-# Usage : ./make.sh [étape...]   étapes : osm carte voix composition audio check rendu livrables controle (défaut : toutes sauf osm)
+# Usage : ./make.sh [étape...]   étapes : osm carte voix composition audio check rendu livrables controle (défaut : toutes sauf osm),
+#         plus, à la demande, tiktok tiktok_rendu (version verticale en 3 parties)
 # Python : PY=.venv/bin/python ./make.sh   (dépendances : requirements.txt ; ffmpeg et Node ≥ 22 requis)
 # Voix   : Google Gemini. Clé GEMINI_API_KEY dans l'environnement, ou « network secret » de l'environnement cloud
 #          (hôte generativelanguage.googleapis.com, en-tête x-goog-api-key) : la clé n'est alors jamais visible ici.
@@ -113,4 +114,30 @@ fi
 if veut controle; then
   titre "Contrôle qualité mesuré → docs/07_controle_qualite.md"
   "$PY" scripts/07_controle.py
+fi
+# Version TikTok, à la demande : ./make.sh tiktok tiktok_rendu (même voix, aucune nouvelle synthèse)
+if veut tiktok; then
+  titre "TikTok : 3 parties verticales (build/tiktok/partie-N), mixage, docs/08_tiktok.md"
+  "$PY" scripts/08_tiktok.py
+fi
+if veut tiktok_rendu; then
+  titre "TikTok : rendu des 3 parties (1080 × 1920, 30 i/s) et encodage pour l'envoi (≈ 70 Mo par partie)"
+  mkdir -p renders livrables build/passlog
+  for n in 1 2 3; do
+    (cd "build/tiktok/partie-$n" && $HF render -o "../../../renders/tiktok-partie-$n.mp4" -q delivery --fps 30 \
+      --workers 1 --browser-timeout 120 > "../rendu-$n.log" 2>&1) &
+  done
+  wait
+  for n in 1 2 3; do
+    src="renders/tiktok-partie-$n.mp4"; son="build/tiktok/partie-$n/mix_master.wav"
+    sortie="livrables/marseille-17-octobre_tiktok-partie-$n.mp4"
+    v=(-map 0:v:0 -c:v libx264 -preset slow -profile:v high -b:v 2800k -maxrate 4500k -bufsize 9000k -pix_fmt yuv420p -g 60)
+    ffmpeg -v error -y -i "$src" "${v[@]}" -pass 1 -passlogfile "build/passlog/tiktok-$n" -an -f mp4 /dev/null
+    ffmpeg -v error -y -i "$src" -i "$son" "${v[@]}" -map 1:a:0 -pass 2 -passlogfile "build/passlog/tiktok-$n" \
+      -c:a aac -b:a 192k -ar 48000 -ac 2 -movflags +faststart \
+      -metadata title="Marseille, 17 octobre — partie $n/3" \
+      -metadata comment="Voix de synthèse (Google Gemini). Cartes © contributeurs OpenStreetMap (ODbL). Photos : Wikimedia Commons. Aucune image des événements." \
+      "$sortie"
+    ls -l "$sortie"
+  done
 fi

@@ -45,3 +45,14 @@ haut = np.sqrt(((x - W / 2) / (1.2 * W)) ** 2 + ((y + 0.20 * H) / (0.60 * H)) **
 a_bas = np.interp(bas, [0, 0.45, 0.70], [0.92, 0.35, 0])
 a_haut = np.interp(haut, [0, 0.60], [0.70, 0])
 rgba(np.maximum(a_bas, a_haut)).save(A / "voile.png", optimize=True)
+
+# version verticale (TikTok, 1080 × 1920) du fond des cartons ; tirages après les autres : les images 16:9 ne changent pas
+VW, VH = 1080, 1920
+y, x = np.mgrid[0:VH, 0:VW].astype(np.float32)
+trame_v = rng.uniform(-0.5, 0.5, (VH, VW)).astype(np.float32)
+d = np.sqrt(((x - 0.15 * VW) / (0.90 * VW)) ** 2 + ((y - 0.70 * VH) / (0.45 * VH)) ** 2)
+halo = np.clip(1 - d / 0.7, 0, 1) ** 1.6 * 0.14
+img = bg + (acc - bg) * halo[..., None]
+grille = ((x % 120) < 1) | ((y % 120) < 1)
+img = np.where(grille[..., None], img + (np.array([236, 230, 218], np.float32) - img) * 0.045, img)
+Image.fromarray(np.clip(img + trame_v[..., None], 0, 255).astype(np.uint8), "RGB").save(A / "fond_v.png", optimize=True)

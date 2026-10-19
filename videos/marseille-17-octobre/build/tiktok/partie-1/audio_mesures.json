@@ -1,0 +1,15 @@
+{
+ "duree_s": 176.8,
+ "loudness_integree_lufs": -14.18,
+ "crete_vraie_dbtp": -1.6,
+ "voix_pendant_parole_lufs": -14.12,
+ "musique_pendant_parole_lufs": -43.29,
+ "musique_dans_les_silences_lufs": -30.3,
+ "ecart_voix_musique_db": 29.17,
+ "ecart_court_terme_db": {
+  "median": 27.6,
+  "p5": 23.2,
+  "min": 15.5,
+  "fenetres": 694
+ }
+}

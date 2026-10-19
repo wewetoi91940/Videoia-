@@ -1,0 +1,143 @@
+{
+ "duree": 164.0666,
+ "voix_debut": 2.0,
+ "voix_fin": 142.053,
+ "decalage": -349.237,
+ "plans": [
+  {
+   "id": "T0",
+   "type": "partie",
+   "seq": 10,
+   "debut": 0.0,
+   "fin": 2.0,
+   "duree": 2.0,
+   "musique": "impact"
+  },
+  {
+   "id": "P45",
+   "type": "photo",
+   "seq": 10,
+   "debut": 2.0,
+   "fin": 5.7333,
+   "duree": 3.733,
+   "musique": null
+  },
+  {
+   "id": "P46",
+   "type": "carte",
+   "seq": 10,
+   "debut": 5.7333,
+   "fin": 14.2,
+   "duree": 8.467,
+   "musique": null
+  },
+  {
+   "id": "P47",
+   "type": "citation",
+   "seq": 10,
+   "debut": 14.2,
+   "fin": 22.0333,
+   "duree": 7.833,
+   "musique": null
+  },
+  {
+   "id": "P48",
+   "type": "chiffres",
+   "seq": 10,
+   "debut": 22.0333,
+   "fin": 43.2,
+   "duree": 21.167,
+   "musique": null
+  },
+  {
+   "id": "P49",
+   "type": "constat",
+   "seq": 11,
+   "debut": 43.2,
+   "fin": 50.8333,
+   "duree": 7.633,
+   "musique": null
+  },
+  {
+   "id": "P50",
+   "type": "chiffres",
+   "seq": 11,
+   "debut": 50.8333,
+   "fin": 68.9333,
+   "duree": 18.1,
+   "musique": null
+  },
+  {
+   "id": "P51",
+   "type": "constat",
+   "seq": 11,
+   "debut": 68.9333,
+   "fin": 74.4,
+   "duree": 5.467,
+   "musique": null
+  },
+  {
+   "id": "P52",
+   "type": "citation",
+   "seq": 11,
+   "debut": 74.4,
+   "fin": 83.0666,
+   "duree": 8.667,
+   "musique": null
+  },
+  {
+   "id": "P53",
+   "type": "constat",
+   "seq": 11,
+   "debut": 83.0666,
+   "fin": 89.7666,
+   "duree": 6.7,
+   "musique": null
+  },
+  {
+   "id": "P54",
+   "type": "constat",
+   "seq": 11,
+   "debut": 89.7666,
+   "fin": 97.8666,
+   "duree": 8.1,
+   "musique": null
+  },
+  {
+   "id": "P55",
+   "type": "fin",
+   "seq": 12,
+   "debut": 97.8666,
+   "fin": 143.0666,
+   "duree": 45.2,
+   "musique": null
+  },
+  {
+   "id": "P56a",
+   "type": "credits",
+   "seq": 12,
+   "debut": 143.0666,
+   "fin": 150.0666,
+   "duree": 7.0,
+   "musique": null
+  },
+  {
+   "id": "P56b",
+   "type": "credits",
+   "seq": 12,
+   "debut": 150.0666,
+   "fin": 157.0666,
+   "duree": 7.0,
+   "musique": null
+  },
+  {
+   "id": "P57",
+   "type": "credits",
+   "seq": 12,
+   "debut": 157.0666,
+   "fin": 164.0666,
+   "duree": 7.0,
+   "musique": null
+  }
+ ]
+}

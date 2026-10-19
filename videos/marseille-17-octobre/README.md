@@ -22,6 +22,7 @@ Toute la vidéo est produite par une chaîne de scripts reproductible, sans imag
 | `scripts/script.json` | Texte de la voix off (70 phrases, 12 séquences), avec les sources de chaque phrase |
 | `scripts/01_voix.py` | Voix Google par blocs ; bornes des phrases alignées sur une transcription Whisper (`hyperframes transcribe`) |
 | `scripts/03b_floutage.py` | Floutage automatique des visages sur les photos (YuNet, OpenCV) |
+| `scripts/08_tiktok.py` | Version TikTok en 3 parties verticales (voir plus bas) |
 | `scripts/plans_source.py` → `scripts/plans.json` | Plan de montage : 57 plans ancrés sur des mots de la voix |
 | `docs/06_publication.md` | Titre, description, chapitres, sources, mentions IA |
 | `docs/07_controle_qualite.md` | Contrôle qualité **mesuré** |
@@ -65,8 +66,34 @@ La clé n'est **jamais** écrite dans un fichier ni collée dans une conversatio
 | `marseille-17-octobre.srt` | Sous-titres (2 lignes de 42 caractères au plus) |
 | `pistes/voix.flac` | Voix seule, au niveau du mix |
 
+| `marseille-17-octobre_tiktok-partie-1.mp4` … `-partie-3.mp4` | Version TikTok : 3 parties verticales 1080×1920 d'environ 3 min, sous-titres incrustés (≈ 70 Mo chacune) |
+
 Les MP4 et la piste FLAC dépassent la limite de GitHub (100 Mo par fichier) : ils ne sont pas versionnés.
 `./make.sh rendu livrables` les régénère à l'identique (le cache de la voix Google est versionné : aucune requête n'est relancée).
+
+## Version TikTok (3 parties verticales)
+
+```bash
+PY=.venv/bin/python ./make.sh tiktok tiktok_rendu
+```
+
+`scripts/08_tiktok.py` découpe le documentaire en trois parties de séquences entières, **sans nouvelle synthèse vocale** :
+la voix est coupée dans `build/voix.wav`, dans les silences entre séquences.
+
+| Partie | Séquences | Contenu | Durée |
+|---|---|---|---|
+| 1/3 | 1 à 4 | Avant midi : les premiers pillages | 2 min 57 s |
+| 2/3 | 5 à 9 | De l'hôtel de ville à la nuit | 3 min 03 s |
+| 3/3 | 10 à 12 | Le jour d'après : les bilans (puis les sources) | 2 min 44 s |
+
+- Mise en page 1080 × 1920 (`scripts/style_tiktok.css`) : bandeau du jour et horloge en haut, images au centre
+  (y 360 → 1220), sources puis **sous-titres incrustés** (deux lignes de 31 caractères, chiffres en couleur).
+  Rien d'essentiel au-dessus de 170 px, sous 1 470 px, ni à droite de 960 px dans la moitié basse (interface TikTok).
+- Cartes verticales `assets/carte/v_*.png` (même données OSM, recadrées) ; colonne de texte en bas à gauche.
+- Chaque partie est remixée par `04_audio.mixer` : −14 LUFS, crête vraie −1,6 dBTP, musique ≈ 29 dB sous la voix.
+- Parties 2 et 3 : carton « Partie N/3 » de 2 s ; parties 1 et 2 : carton « À suivre » ; partie 3 : sources et fabrication.
+- Projets HyperFrames dans `build/tiktok/partie-N/` (le dossier `assets` y est un lien vers celui du projet).
+- Légendes, sources et rappels pour la publication : `docs/08_tiktok.md` (étiquette « contenu généré par IA » à activer).
 
 ## Outils bloqués et solutions retenues
 

@@ -120,6 +120,18 @@ def ajuste(nom, points_latlon, marge_m, w=1920, h=1080, marge_bas_m=None):
     return Vue(nom, (lat, lon), larg, w, h)
 
 
+def cadre_vertical(nom, points_latlon, zone, w=1080, h=860):
+    """Version verticale (TikTok) : cadre les points dans le rectangle zone = (x0, y0, x1, y1), en pixels d'affichage,
+    d'une image w × h ; le reste de l'image porte la colonne de texte ou le cartouche."""
+    pts = [proj(*p) for p in points_latlon]
+    xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+    x0, y0, x1, y1 = zone
+    ppm = min((x1 - x0) / max(max(xs) - min(xs), 1), (y1 - y0) / max(max(ys) - min(ys), 1), 2.0)
+    cx = (max(xs) + min(xs)) / 2 - ((x0 + x1) / 2 - w / 2) / ppm
+    cy = (max(ys) + min(ys)) / 2 + ((y0 + y1) / 2 - h / 2) / ppm
+    return Vue(nom, (LAT0 + cy / KY, LON0 + cx / KX), w / ppm, w, h)
+
+
 def dessine(vue, couches):
     d = DENSITE * SURECH
     img = Image.new("RGB", (int(vue.w * d), int(vue.h * d)), PALETTE["terre"])
@@ -241,6 +253,22 @@ def main():
                [(LAT0 + y / KY, LON0 + x / KX) for g in zone.geoms for x, y in g.exterior.coords], 120),
         ajuste("vieux_port", [latlon["hotel_de_ville"], latlon["quai_des_belges"], (43.2935, 5.3650)], 140),
     ]
+    # Vues verticales (TikTok, scène de 1080 × 860). Les données OSM couvrent 3,7 km d'ouest en est : la vue d'ensemble
+    # ne cadre que le Prado et le Vieux-Port, sur toute la hauteur. Colonne de texte en bas à gauche (PANNEAU),
+    # cartouche en bas (CART) : les points sont cadrés hors de ces zones.
+    CART = (60, 80, 960, 560)
+    zone_latlon = [(LAT0 + y / KY, LON0 + x / KX) for g in getattr(zone, "geoms", [zone]) for x, y in g.exterior.coords]
+    vues += [
+        cadre_vertical("v_ensemble", [latlon["prado"], latlon["vieux_port"]], (60, 40, 1020, 830)),
+        cadre_vertical("v_prado_castellane", [latlon["prado"], latlon["castellane"]], (540, 60, 920, 800)),
+        cadre_vertical("v_matin", [latlon["castellane"], latlon["saint_charles"], latlon["prefecture"], latlon["reformes"]],
+                       (540, 60, 920, 800)),
+        cadre_vertical("v_canebiere", [latlon["quai_des_belges"], latlon["reformes"]], CART),
+        cadre_vertical("v_quadrilatere", zone_latlon, CART),
+        cadre_vertical("v_vieux_port", [latlon["hotel_de_ville"], latlon["quai_des_belges"], (43.2935, 5.3650)], CART),
+    ]
+    PANNEAU = {"v_ensemble": [30, 380], "v_prado_castellane": [30, 470], "v_matin": [30, 470]}   # x, largeur
+
     sortie = {"attribution": "© contributeurs d'OpenStreetMap (ODbL)",
               "osm_base": json.load(open(os.path.join(OSM, "routes.json")))["osm3s"]["timestamp_osm_base"],
               "vues": {}}
@@ -257,6 +285,8 @@ def main():
             "zone_rues": [enpx(g.exterior) for g in getattr(zone, "geoms", [zone])],
             "points": {k: [round(c, 1) for c in v.px(p.x, p.y)] for k, p in points.items()},
         }
+        if v.nom in PANNEAU:
+            sortie["vues"][v.nom]["panneau"] = PANNEAU[v.nom]
         print(f"{v.nom:18} {v.w}×{v.h}  {1 / v.ppm:5.2f} m/px  largeur {v.w / v.ppm:6.0f} m")
     json.dump(sortie, open(os.path.join(SORTIE, "vues.json"), "w"), ensure_ascii=False, indent=1)
 
