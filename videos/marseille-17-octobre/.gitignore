@@ -13,3 +13,6 @@ build/voix_gemini/resultats.json
 build/snaps*/
 build/photos_*/
 build/hf_check_*.json
+build/photos_originales/
+build/modeles/
+build/verif/

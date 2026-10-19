@@ -11,7 +11,8 @@
   "date_prise_de_vue": "2023-07-22 16:30",
   "largeur": 3000,
   "hauteur": 2250,
-  "remarques": "Vue dans l'axe de la Canebière vers le haut (vers l'est), depuis le bas de l'avenue : palais de la Bourse à gauche, clocher de l'église des Réformés au fond, chaussée pavée, platanes, ciel bleu sans nuage, plein soleil d'été. Passants à mi-distance (visages d'environ 10 px sur 3000 px de large) : non identifiables à l'écran, mais éviter un zoom serré sur les groupes de gauche et de droite. Format paysage 4:3. Téléchargé via la vignette standard de 3840 px (original 4032×3024), puis réduit à 3000 px."
+  "remarques": "Vue dans l'axe de la Canebière vers le haut (vers l'est), depuis le bas de l'avenue : palais de la Bourse à gauche, clocher de l'église des Réformés au fond, chaussée pavée, platanes, ciel bleu sans nuage, plein soleil d'été. Passants à mi-distance (visages d'environ 10 px sur 3000 px de large) : non identifiables à l'écran, mais éviter un zoom serré sur les groupes de gauche et de droite. Format paysage 4:3. Téléchargé via la vignette standard de 3840 px (original 4032×3024), puis réduit à 3000 px.",
+  "modifications": "image modifiée : visages floutés (80 détection(s) automatique(s))"
  },
  {
   "fichier": "saint-ferreol.jpg",
@@ -26,7 +27,7 @@
   "largeur": 1920,
   "hauteur": 1440,
   "remarques": "Rue Saint-Ferréol (piétonne) vue vers le sud ; le dôme de la préfecture est au fond. Enseignes visibles (Caisse d'Épargne, Salamander, Eurodif), lampions suspendus, ciel bleu, deux véhicules de livraison stationnés. Photo de 2011 : aucune vue récente de la rue, libre et exploitable, n'existe sur Commons (les autres photos montrent des façades, dont un immeuble incendié aux fenêtres condamnées, écarté). MODIFIÉE : nous avons flouté les visages de 13 passants à mi-distance (la passante au premier plan est de dos). Il faut donc l'indiquer dans le crédit (« image modifiée : floutage »), la licence CC BY-SA 3.0 restant la même. Plaques d'immatriculation lisibles. Résolution limitée : vignette de 1920×1440 (Wikimedia refuse le téléchargement de l'original de 3456×2592 avec une erreur 429). L'auteur s'affiche sous la forme tronquée du compte Panoramio de Patrick Nouhailler.",
-  "modifications": "image modifiée : visages et plaques d’immatriculation floutés"
+  "modifications": "image modifiée : visages et plaques d'immatriculation floutés (3 détection(s) automatique(s))"
  },
  {
   "fichier": "vieux-port.jpg",
@@ -40,7 +41,8 @@
   "date_prise_de_vue": "2024-05-11 13:12",
   "largeur": 3000,
   "hauteur": 2000,
-  "remarques": "Vue générale du Vieux-Port depuis le parc du palais du Pharo : fort Saint-Jean à gauche, entrée du port, bassin rempli de voiliers et quais, ville et collines au fond, ciel bleu avec cumulus, haie au premier plan. Aucun passant identifiable. Format 3:2, réduit à partir de la vignette de 3840 px (original 6000×4000)."
+  "remarques": "Vue générale du Vieux-Port depuis le parc du palais du Pharo : fort Saint-Jean à gauche, entrée du port, bassin rempli de voiliers et quais, ville et collines au fond, ciel bleu avec cumulus, haie au premier plan. Aucun passant identifiable. Format 3:2, réduit à partir de la vignette de 3840 px (original 6000×4000).",
+  "modifications": "image modifiée : visages floutés (2 détection(s) automatique(s))"
  },
  {
   "fichier": "vieux-port-2.jpg",
@@ -54,7 +56,8 @@
   "date_prise_de_vue": "2023-07-22 12:14",
   "largeur": 3000,
   "hauteur": 2250,
-  "remarques": "Seconde vue, au ras du quai : quai dallé et enrochement à gauche, bassin, voiliers, Notre-Dame-de-la-Garde sur la colline au fond, remparts à droite. Ciel bleu pâle, midi, aucun passant. Format 4:3. Profil couleur Display P3 converti en sRGB. Réduit à partir de la vignette de 3840 px (original 4032×3024)."
+  "remarques": "Seconde vue, au ras du quai : quai dallé et enrochement à gauche, bassin, voiliers, Notre-Dame-de-la-Garde sur la colline au fond, remparts à droite. Ciel bleu pâle, midi, aucun passant. Format 4:3. Profil couleur Display P3 converti en sRGB. Réduit à partir de la vignette de 3840 px (original 4032×3024).",
+  "modifications": "image modifiée : visages floutés (3 détection(s) automatique(s))"
  },
  {
   "fichier": "hotel-de-ville.jpg",
@@ -68,7 +71,8 @@
   "date_prise_de_vue": "2025-12-21 08:43",
   "largeur": 3000,
   "hauteur": 2250,
-  "remarques": "Façade principale de l'hôtel de ville, de face et en légère contre-plongée : drapeaux, porte centrale, ancre à gauche. Ciel nuageux clair, lumière du matin en hiver. Une seule passante, de profil, le visage caché par une capuche. Domaine public (CC0) : attribution facultative mais conseillée. Format 4:3, réduit à partir de la vignette de 3840 px (original 4080×3060)."
+  "remarques": "Façade principale de l'hôtel de ville, de face et en légère contre-plongée : drapeaux, porte centrale, ancre à gauche. Ciel nuageux clair, lumière du matin en hiver. Une seule passante, de profil, le visage caché par une capuche. Domaine public (CC0) : attribution facultative mais conseillée. Format 4:3, réduit à partir de la vignette de 3840 px (original 4080×3060).",
+  "modifications": "image modifiée : visages floutés (4 détection(s) automatique(s))"
  },
  {
   "fichier": "prado.jpg",
@@ -82,7 +86,8 @@
   "date_prise_de_vue": "2021-09-28 11:54",
   "largeur": 3000,
   "hauteur": 2148,
-  "remarques": "Rond-point du Prado (description Commons : « Prado Roundabout ») : immeuble d'angle à dôme rouge, arbres, feux et panneaux directionnels (« Rd Pt Prado », « Centre Cial Prado », « St Giniez », « Clinique Monticelli-Vélodrome »). Ciel bleu voilé. Au premier plan à gauche, une passante de dos (lunettes de soleil, masque) dont le visage n'est pas visible. Passants lointains, certains masqués (septembre 2021, période Covid). Le stade n'apparaît pas. Format 7:5, réduit à partir de la vignette de 3840 px (original 4542×3251)."
+  "remarques": "Rond-point du Prado (description Commons : « Prado Roundabout ») : immeuble d'angle à dôme rouge, arbres, feux et panneaux directionnels (« Rd Pt Prado », « Centre Cial Prado », « St Giniez », « Clinique Monticelli-Vélodrome »). Ciel bleu voilé. Au premier plan à gauche, une passante de dos (lunettes de soleil, masque) dont le visage n'est pas visible. Passants lointains, certains masqués (septembre 2021, période Covid). Le stade n'apparaît pas. Format 7:5, réduit à partir de la vignette de 3840 px (original 4542×3251).",
+  "modifications": "image modifiée : visages floutés (12 détection(s) automatique(s))"
  },
  {
   "fichier": "castellane.jpg",
@@ -110,7 +115,8 @@
   "date_prise_de_vue": "2010-03-08 07:33",
   "largeur": 3000,
   "hauteur": 1992,
-  "remarques": "Rue Grignan, entre le tribunal (à gauche) et le n° 88 (à droite) : rue calme, voitures garées (plaques lisibles), quelques petites devantures, ciel gris. Passants très lointains, non identifiables. PIS-ALLER : c'est la seule vue de rue disponible sur Commons pour la rue Grignan, et la rue Paradis n'offre qu'une photo en noir et blanc de 2009, écartée. La photo ne montre pas les commerces de luxe et date de mars 2010. Format 3:2, réduit à partir de la vignette de 3840 px (original 4288×2848, publié sur Flickr par Chloester et vérifié par Commons)."
+  "remarques": "Rue Grignan, entre le tribunal (à gauche) et le n° 88 (à droite) : rue calme, voitures garées (plaques lisibles), quelques petites devantures, ciel gris. Passants très lointains, non identifiables. PIS-ALLER : c'est la seule vue de rue disponible sur Commons pour la rue Grignan, et la rue Paradis n'offre qu'une photo en noir et blanc de 2009, écartée. La photo ne montre pas les commerces de luxe et date de mars 2010. Format 3:2, réduit à partir de la vignette de 3840 px (original 4288×2848, publié sur Flickr par Chloester et vérifié par Commons).",
+  "modifications": "image modifiée : visages floutés (1 détection(s) automatique(s))"
  },
  {
   "fichier": "prefecture.jpg",
@@ -138,7 +144,8 @@
   "date_prise_de_vue": "2026-03-05 14:56",
   "largeur": 3000,
   "hauteur": 2250,
-  "remarques": "Quais de la station Saint-Charles : panneau « Saint-Charles » à gauche, voies, signalétique « Sortie » et M1/M2. Voyageurs lointains, non identifiables. Tons chauds et léger effet grand-angle. Les photos libres de la station Vieux-Port ont été écartées, car les voyageurs y sont trop proches et identifiables. Licence CC BY 4.0, sans partage à l'identique. Format 4:3, réduit à partir de la vignette de 3840 px (original 4096×3072)."
+  "remarques": "Quais de la station Saint-Charles : panneau « Saint-Charles » à gauche, voies, signalétique « Sortie » et M1/M2. Voyageurs lointains, non identifiables. Tons chauds et léger effet grand-angle. Les photos libres de la station Vieux-Port ont été écartées, car les voyageurs y sont trop proches et identifiables. Licence CC BY 4.0, sans partage à l'identique. Format 4:3, réduit à partir de la vignette de 3840 px (original 4096×3072).",
+  "modifications": "image modifiée : visages floutés (17 détection(s) automatique(s))"
  },
  {
   "fichier": "panorama.jpg",
