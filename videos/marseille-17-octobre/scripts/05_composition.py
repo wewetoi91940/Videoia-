@@ -20,6 +20,7 @@ BUILD = ROOT / "build"
 FPS = 30
 W, H = 1920, 1080
 FONDU = 0.5          # durée du fondu enchaîné entre deux plans
+CREUX = 0.3          # entre deux cartons de texte : sortie puis entrée, 0,3 s chacune
 FIN_APRES_VOIX = 1.0
 
 STATUTS = {
@@ -372,13 +373,22 @@ def main() -> None:
         if b["_debut"] - a["_debut"] < 1.2:
             sys.exit(f"plan {a['id']} trop court ({b['_debut'] - a['_debut']:.2f} s)")
 
+    # Transitions : fondu enchaîné quand une image (carte, photo) est en jeu ; entre deux cartons de texte,
+    # bref passage par le fond (les deux textes ne se superposent jamais).
+    TEXTE = {"heure", "citation", "chiffres", "constat", "fin", "titre", "credits"}
+    for k, p in enumerate(plans):
+        p["_creux"] = k > 0 and p["type"] in TEXTE and plans[k - 1]["type"] in TEXTE
     tw, sections = [], []
     for k, p in enumerate(plans):
         pid = p["id"].lower()
         t0, t1 = p["_debut"], p["_fin"]
-        fondu = 0.0 if k == 0 else p.get("fondu", FONDU)
-        start = ft(max(0.0, t0 - fondu / 2))
-        dur = (t1 + (plans[k + 1].get("fondu", FONDU) / 2 if k + 1 < len(plans) else 0)) - start
+        suivant = plans[k + 1] if k + 1 < len(plans) else None
+        fondu = 0.0 if k == 0 else (CREUX if p["_creux"] else p.get("fondu", FONDU))
+        start = t0 if p["_creux"] else ft(max(0.0, t0 - fondu / 2))
+        fin_clip = t1 if (suivant is None or suivant["_creux"]) else t1 + suivant.get("fondu", FONDU) / 2
+        dur = fin_clip - start
+        if suivant is not None and suivant["_creux"]:
+            tw.append(f'tl.fromTo("#{pid}-in",{{opacity:1}},{{opacity:0,duration:{CREUX},ease:"sine.in"}},{ft(t1 - CREUX):.4f});')
         typ = p["type"]
         if typ == "carte":
             corps = plan_carte(p, pid, vues, T, t0, tw)

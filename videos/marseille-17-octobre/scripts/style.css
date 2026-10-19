@@ -132,10 +132,10 @@
       .jour { position: absolute; left: 80px; top: 46px; font-family: "Oswald"; font-size: 28px; letter-spacing: 0.18em;
               color: var(--fg); display: flex; align-items: center; gap: 14px; background: rgba(12, 16, 21, 0.72); padding: 4px 14px 6px 12px; }
       .j-dot { display: block; width: 12px; height: 12px; border-radius: 50%; background: var(--acc); }
-      .horloge { position: absolute; right: 60px; top: 22px; width: 852px; background: rgba(12, 16, 21, 0.8); padding: 6px 16px 10px; }
+      .horloge { position: absolute; right: 60px; top: 22px; width: 852px; background: rgba(12, 16, 21, 0.92); padding: 6px 16px 10px; }
       .hz { display: block; }
       .hz-axe, .hz-tick { stroke: rgba(236, 230, 218, 0.4); stroke-width: 2; }
-      .hz-txt { fill: var(--mut); font-family: "IBM Plex Mono"; font-size: 16px; text-anchor: middle; }
+      .hz-txt { fill: #b9c1ca; font-family: "IBM Plex Mono"; font-size: 16px; text-anchor: middle; }
       .hz-periode { fill: rgba(233, 162, 59, 0.32); stroke: var(--acc); stroke-width: 1.5; stroke-dasharray: 5 4; }
       .hz-publiee { fill: var(--acc); }
       .hz-prevue { fill: var(--bg); stroke: var(--fg); stroke-width: 3; }

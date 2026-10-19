@@ -65,7 +65,7 @@ if veut check; then
   rm -f build/hf_check_*.json
   RANGES=$("$PY" -c 'import json; d = json.load(open("build/plans_calcules.json"))["duree"]
 t = [i * 60 for i in range(int(d // 60) + 1)] + [d]
-print(" ".join(f"{a},{b:.2f}" for a, b in zip(t, t[1:]) if b - a > 0.5))')
+print(" ".join(f"{a},{int(b * 100) / 100:.2f}" for a, b in zip(t, t[1:]) if b - a > 0.5))')
   i=1
   for r in $RANGES; do
     $HF check --range "$r" --timeout 120000 --samples 10 --json 2>/dev/null \
