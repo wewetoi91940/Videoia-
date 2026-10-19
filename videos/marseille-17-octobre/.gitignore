@@ -22,3 +22,4 @@ build/transcription/transcript.json
 # Vidéos livrées : plus de 100 Mo (limite GitHub), transmises directement
 livrables/*.mp4
 livrables/pistes/
+build/passlog/
