@@ -387,8 +387,8 @@ def main() -> None:
         start = t0 if p["_creux"] else ft(max(0.0, t0 - fondu / 2))
         fin_clip = t1 if (suivant is None or suivant["_creux"]) else t1 + suivant.get("fondu", FONDU) / 2
         dur = fin_clip - start
-        if suivant is not None and suivant["_creux"]:
-            tw.append(f'tl.fromTo("#{pid}-in",{{opacity:1}},{{opacity:0,duration:{CREUX},ease:"sine.in"}},{ft(t1 - CREUX):.4f});')
+        sortie = (f'tl.fromTo("#{pid}-in",{{opacity:1}},{{opacity:0,duration:{CREUX},ease:"sine.in"}},{ft(t1 - CREUX):.4f});'
+                  if suivant is not None and suivant["_creux"] else None)
         typ = p["type"]
         if typ == "carte":
             corps = plan_carte(p, pid, vues, T, t0, tw)
@@ -416,6 +416,10 @@ def main() -> None:
                         f'{corps}</div></section>')
         if fondu > 0:
             tw.append(f'tl.fromTo("#{pid}-in",{{opacity:0}},{{opacity:1,duration:{fondu},ease:"sine.inOut"}},{start:.4f});')
+        else:
+            tw.append(f'tl.set("#{pid}-in",{{opacity:1}},{start:.4f});')
+        if sortie:   # après l'entrée : le premier tween d'opacité d'un plan est toujours son apparition
+            tw.append(sortie)
         cam = p.get("camera") or ({"de": [1.0, 0, 0], "a": [1.05, 0, 0]} if typ in ("carte", "photo") else None)
         if cam and typ in ("carte", "photo"):
             (s0, x0, y0), (s1, x1, y1) = cam["de"], cam["a"]
