@@ -60,3 +60,19 @@ test("on-screen blocks keep their role; the hook counts only its title", () => {
   const r = lint(good.replace(`on_screen: title "Paris sous l'eau"`, `on_screen: title "Paris sous l'eau" · label "JANVIER 1910 · PARIS · SEINE · CRUE"`));
   assert.doesNotMatch(r.warnings.join("\n"), /on-screen hook text/);
 });
+
+test("the emotion map: missing, unknown, flat and held emotions are warnings", () => {
+  assert.match(lint(good).warnings.join("\n"), /no `emotion:` on any frame/);
+  const flat = good.replace(/- beat_role: (\w+)/g, "- beat_role: $1\n- emotion: tension — rising water");
+  const w = lint(flat).warnings.join("\n");
+  assert.match(w, /"tension" held for more than 3 frames in a row/);
+  assert.match(w, /"tension" covers 100 % of the running time/);
+  const odd = lint(good.replace("- beat_role: hook", "- beat_role: hook\n- emotion: spooky")).warnings.join("\n");
+  assert.match(odd, /Frame 1: unknown emotion "spooky"/);
+  assert.match(odd, /Frame 2: no `emotion`/);
+  const arc = ["unease", "tension", "empathy", "warmth"];
+  let i = 0;
+  const varied = lint(good.replace(/- beat_role: (\w+)/g, (m) => `${m}\n- emotion: ${arc[i++]}`));
+  assert.doesNotMatch(varied.warnings.join("\n"), /emotion/);
+  assert.equal(varied.stats.emotions, 4);
+});

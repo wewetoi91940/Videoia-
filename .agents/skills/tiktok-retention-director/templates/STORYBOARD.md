@@ -6,7 +6,8 @@ arc: Hook → Context → Development → Turn → Reveal → Conclusion
 audience: <who>
 destination: tiktok
 language: fr
-music: <mood of the bed, or none>
+music: <how the score follows the emotion map, or none>
+emotion_arc: <unease → tension → … → connection>
 ---
 
 ## Frame 1 — Hook
@@ -14,6 +15,7 @@ music: <mood of the bed, or none>
 - duration: 2.5s
 - beat_role: hook
 - hook_type: curiosity
+- emotion: unease — <what the viewer feels, and the fact that causes it>
 - voiceover: "<≤ 12 words>"
 - new_info: <what the viewer learns or wonders>
 - open_loop: Q1 — <the question the video will answer>
@@ -34,6 +36,7 @@ keyMessage: <one sentence>
 
 - duration: 3.5s
 - beat_role: context
+- emotion: tension — <…>
 - voiceover: "<who / where / when, why it matters>"
 - new_info: <…>
 - image: <…>
@@ -53,6 +56,7 @@ keyMessage: …
 
 - duration: 5s
 - beat_role: reveal
+- emotion: awe — <…>
 - voiceover: "<the answer to Q1>"
 - new_info: <…>
 - closes: Q1

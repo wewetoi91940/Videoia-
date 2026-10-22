@@ -39,7 +39,11 @@ A claim with no source row is not used. Read the source itself (not a search sni
 - Check the licence on the file page itself; avoid NC/ND for a publication that may be monetised.
 - Wikimedia: read the `File:` page (author, date, source, licence), then download a standard thumbnail width
   (`…/thumb/<h>/<hh>/<name>/1280px-<name>`, or 960 / 500) with a descriptive User-Agent; originals and rapid series of
-  requests are refused with HTTP 429. Keep the page URL in `SOURCES.md`.
+  requests are refused with HTTP 429. When `upload.wikimedia.org` answers 429, the same path on
+  `https://thumb.wikimedia.org/wikipedia/commons/thumb/…` has worked; space requests out and keep the files. Keep the
+  page URL in `SOURCES.md`.
+- Text read inside an archive (a motto, a printed caption, a sign) can be shown verbatim with its translation and
+  source; a caption reported by a secondary source but absent from your copy of the image is not quoted.
 - Never present an image as showing an event it does not show. A photo of the place in another period is
   labelled ("le lieu aujourd'hui", "photo d'illustration"); a reconstruction or an AI image is labelled
   ("reconstitution", "image générée") and never imitates a real archive.

@@ -17,7 +17,8 @@ for a TikTok short and the caption spec for a 1080 × 1920 phone screen.
   (`huit mètres soixante-deux`, `mille neuf cent dix`), the display text keeps the digits.
 - Provider choice: a free local engine (`npx hyperframes tts`, Kokoro, French voice `ff_siwis`, `--lang fr-fr`;
   set `HYPERFRAMES_PYTHON` to a Python that has `kokoro-onnx` and `soundfile`; for French, speed ≈ 0.92 lands near
-  2.6 words/s) is always available; a paid or quota-limited provider (HeyGen, Gemini, ElevenLabs …) is used only after the user
+  2.6 words/s; vary it per line with the emotion, 0.85 for a quiet line, ≤ 0.9 for a dense one — at 0.95–1.0 a
+  dense French line runs at 3.6–4 words/s) is always available; a paid or quota-limited provider (HeyGen, Gemini, ElevenLabs …) is used only after the user
   agreed. Say which voice was used in the delivery note and the credits.
 - Get word timings (TTS timestamps or `npx hyperframes transcribe <audio> -l fr -m small -e whisper`) — captions,
   cuts and sound effects are placed on them. Read the transcript back: it is also a pronunciation check (homophones
@@ -66,5 +67,10 @@ Build options, in order of preference:
    TikTok-style word highlight. Mount it as a sub-composition (`/hyperframes-registry`).
 3. **Hand-built** — groups as timed clips with spans per line (`/media-use` `captions/authoring.md` gives the
    exit guarantee and the fit-text helper).
+
+Current short-form style (see `emotion-and-trends.md` § 3): groups of 1–3 words (≤ 20 characters), the whole group
+shown at once and centred, the word being said in the accent colour (scale ≤ 1.04 and `word-spacing: 0.14em`, or the
+scaled word covers the space). Pop-on captions that hide the words not yet said keep their layout reserved and look
+off-centre — avoid them.
 
 Always run the bottom-area and right-rail `check --caption-zone` passes after captions are in place.

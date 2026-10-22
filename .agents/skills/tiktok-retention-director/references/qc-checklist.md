@@ -8,6 +8,7 @@ Run in this order; fix, then re-run only the failed item. Log each result in `DI
 | Check | How | Pass |
 | --- | --- | --- |
 | Retention plan | `node scripts/retention_lint.mjs --storyboard STORYBOARD.md` | no error; warnings read and either fixed or explained |
+| Emotion map | the same lint (`emotion:` per frame) | ≥ 3 emotions from 30 s, none held > 3 frames or > 45 % of the time, a contrast in the second half |
 | Sources | every claim in narration and on screen has a `SOURCES.md` row | no orphan claim |
 | Hook honesty | `hooks.md` honesty test on the chosen hook | five yes |
 
@@ -16,6 +17,7 @@ Run in this order; fix, then re-run only the failed item. Log each result in `DI
 | Check | How | Pass |
 | --- | --- | --- |
 | Lint | `npx hyperframes lint` | 0 errors |
+| (long timelines) | a check that stops with "did not finish within its deadline" | rerun with `--timeout 30000` |
 | Layout, contrast, runtime | `npx hyperframes check --at-transitions` (samples every transition seam too) | 0 errors |
 | TikTok interface zones | the three passes from `node scripts/tiktok_qc.mjs --print-checks` | no `caption_zone_collision` on text that must be read |
 | Hook frames | `npx hyperframes snapshot --at 0,0.5,1.5` | the first frame shows the subject and the hook text; nothing under the top bar |

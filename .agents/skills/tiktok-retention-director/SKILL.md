@@ -5,8 +5,9 @@ description: >
   HyperFrames build: find the strongest true angle of the subject, write five typed hooks and keep the
   best honest one, script beat by beat for retention, write a shot-level direction table (duration,
   narration, image, camera, animation, on-screen text, sound effect, transition), plan voice, music and
-  captions inside TikTok's interface-safe area, then lint the plan and QC the render. Use for « vidéo
-  TikTok », « Reels », « Shorts », « hook », « accroche », « rétention », « format vertical », including
+  captions inside TikTok's interface-safe area, map the emotional arc frame by frame, then lint the plan and QC
+  the render. Use for « vidéo TikTok », « Reels », « Shorts », « hook », « accroche », « rétention », « format
+  vertical », « plus d'émotion », « à la mode », « tendance », including
   history and news topics (fact ledger, no invented sources or archives). It directs; the build runs in
   /faceless-explainer (invented visuals) or /general-video (real archives, maps, custom layout). Not for
   captioning existing footage (/embedded-captions) or overlays on a talking head (/talking-head-recut).
@@ -83,25 +84,29 @@ consequence; cut introductions, recaps, filler. Respect the word budget. Write t
 `STORYBOARD.md` and the locked lines into `SCRIPT.md`. **Gate:** every frame has `beat_role` and
 `new_info`; the word count fits the budget.
 
-### Step 4 — Retention plan
+### Step 4 — Retention plan and emotion map → `references/emotion-and-trends.md`
 
 Open loops (`open_loop: Q1 — …`) are each closed later (`closes: Q1`); re-hooks around one third and two
 thirds; a visual change every 2–4 s (`changes:` per frame), never a still frame longer than ~5 s unless it
 is a held beat before a reveal. Comprehension beats speed: a new name, date or number gets on-screen
-support; no cut lands inside a key word. **Gate:** `node scripts/retention_lint.mjs --storyboard
-STORYBOARD.md` reports no error.
+support; no cut lands inside a key word. Give every frame an `emotion:` (one word from the vocabulary + a
+note): at least three emotions from 30 s, none held more than three frames, a contrast in the second half, a
+quiet beat near the peak — each emotion carried by a sourced fact, never by an invented detail. **Gate:**
+`node scripts/retention_lint.mjs --storyboard STORYBOARD.md` reports no error and no emotion warning.
 
 ### Step 5 — Visual direction → `references/vertical-direction.md`
 
 Fill the shot table for every frame: duration, narration, image or video (with source and licence),
-camera, animation, on-screen text, sound effect, transition. Use HyperFrames vocabulary (keyframes,
+camera, animation, on-screen text, sound effect, transition — each chosen to carry the frame's emotion
+(carrier table in `references/emotion-and-trends.md`: colour, camera, type, transition). Use HyperFrames vocabulary (keyframes,
 animation rules, registry transitions) and place everything inside the TikTok safe layout. Search the
 registry (`npx hyperframes catalog --query …`) before hand-building any named look. **Gate:** no frame
 misses a column; every image has a source and a licence or is labelled as invented / reconstruction.
 
 ### Step 6 — Audio → `references/audio-captions.md` § Audio
 
-Clear narration (TTS through `/media-use`; ask before any paid provider), music bed well under the voice,
+Clear narration (TTS through `/media-use`; ask before any paid provider; speed and pause set per line from its
+emotion), a score that follows the emotion map, well under the voice,
 sound effects on the words they illustrate, mix to about −14 LUFS with true peak ≤ −1 dBTP
 (`/hyperframes-audio` for ducking). **Gate:** word timings exist (TTS timestamps or
 `npx hyperframes transcribe`).
@@ -152,12 +157,14 @@ node --test <SKILL_DIR>/scripts/*.test.mjs                           # the scrip
 | --- | --- |
 | `references/hooks.md` | Step 2 |
 | `references/retention-script.md` | Steps 3–4 |
+| `references/emotion-and-trends.md` | Steps 4–7: emotion map, carriers, current short-form grammar, honesty limits, measured build notes |
 | `references/vertical-direction.md` | Step 5, layout of every frame |
 | `references/audio-captions.md` | Steps 6–7 |
 | `references/qc-checklist.md` | Step 8 |
 | `references/reliability.md` | Steps 1 and 9, any history / news / number / quote |
 | `templates/` | starting `DIRECTION.md`, `STORYBOARD.md`, `SOURCES.md` |
 
-Worked example in this repository: `videos/crue-1910-tiktok/` (45 s, history, public-domain archives, local voice) —
+Worked examples in this repository: `videos/crue-1910-tiktok/` (45 s, history, public-domain archives, local voice) —
 its `DIRECTION.md` shows the five hooks, the retention map, the shot table and the QC log with every defect found
-and how it was fixed.
+and how it was fixed; `videos/crue-1910-v2/` (52 s, same subject) adds the emotion map, word-by-word captions,
+card-over-blur depth, colour by emotion, a scored soundtrack and a loop ending.

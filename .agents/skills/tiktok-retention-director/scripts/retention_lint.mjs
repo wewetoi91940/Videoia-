@@ -9,6 +9,8 @@
 //   new_info    what this beat adds              open_loop  Q1 — <question>   closes  Q1[, Q2]
 //   image · camera · animation · on_screen · sfx   (the shot table)
 //   changes     seconds from the frame start where the picture visibly changes: "0, 1.8, 3.4"
+//   emotion     the feeling of the beat, first word from EMOTIONS: "dread — the water keeps rising"
+//               (references/emotion-and-trends.md)
 //
 //   node retention_lint.mjs --storyboard STORYBOARD.md [--lang fr|en] [--target 45] [--json]
 //
@@ -21,6 +23,8 @@ import { isMainModule } from "../../faceless-explainer/scripts/lib/main-module.m
 export const HOOK_TYPES = ["curiosity", "contradiction", "surprising_fact", "suspense", "unexpected_consequence"];
 export const BEAT_ROLES = ["hook", "context", "development", "turn", "reveal", "conclusion"];
 export const SHOT_KEYS = ["image", "camera", "animation", "on_screen", "sfx"];
+export const EMOTIONS = ["curiosity", "unease", "tension", "shock", "dread", "sadness", "empathy", "warmth", "hope", "relief",
+  "pride", "awe", "wonder", "humor", "joy", "anger", "nostalgia", "gravity", "reflection", "connection"];
 export const LIMITS = {
   hookFrameMax: 3.0, // s — the hook line itself should end by ~2 s
   hookWords: { fr: 12, en: 10 },
@@ -36,6 +40,7 @@ export const LIMITS = {
   payoffShare: 0.25, // a reveal/conclusion starts in the last quarter
   maxOpenLoops: 2,
   repeatOverlap: 0.6,
+  emotion: { minAt: 30, minDistinct: 3, richAt: 55, richDistinct: 5, maxRun: 3, maxShare: 0.45 },
 };
 const FILLERS = {
   fr: ["dans cette vidéo", "aujourd'hui on va", "aujourd’hui on va", "bonjour", "salut à tous", "salut tout le monde",
@@ -186,9 +191,34 @@ export function lint(source, { lang = "fr", target } = {}) {
   if (total >= 30 && !rows.some((r) => r.x.beat_role === "turn")) warn(null, "no `turn` (re-hook) in a video of 30 s or more");
   if (tgt && Math.abs(total - tgt) / tgt > L.targetTolerance) warn(null, `total ${r1(total)} s vs target ${tgt} s (±${L.targetTolerance * 100} %)`);
 
+  // emotion map: an arc, not a flat line
+  const emo = rows.map((r) => String(r.x.emotion || "").trim().split(/[\s—–-]+/)[0].toLowerCase());
+  const felt = new Set(emo.filter(Boolean));
+  if (!felt.size) warn(null, "no `emotion:` on any frame: map the emotional arc (references/emotion-and-trends.md)");
+  else {
+    rows.forEach((r, i) => {
+      if (!emo[i]) warn(r.id, "no `emotion` (the other frames have one)");
+      else if (!EMOTIONS.includes(emo[i])) warn(r.id, `unknown emotion "${emo[i]}" (one of ${EMOTIONS.join(", ")})`);
+    });
+    const E = L.emotion;
+    const need = total >= E.richAt ? E.richDistinct : total >= E.minAt ? E.minDistinct : 1;
+    if (felt.size < need) warn(null, `flat emotional arc: ${felt.size} emotion(s) over ${r1(total)} s (aim for ≥ ${need})`);
+    let run = 1;
+    for (let i = 1; i < rows.length; i++) {
+      run = emo[i] && emo[i] === emo[i - 1] ? run + 1 : 1;
+      if (run === E.maxRun + 1) warn(rows[i].id, `"${emo[i]}" held for more than ${E.maxRun} frames in a row`);
+    }
+    const share = {};
+    rows.forEach((r, i) => { if (emo[i]) share[emo[i]] = (share[emo[i]] || 0) + r.dur; });
+    for (const [e, d] of Object.entries(share)) {
+      if (total && d / total > E.maxShare) warn(null, `"${e}" covers ${Math.round((d / total) * 100)} % of the running time (≤ ${E.maxShare * 100} %)`);
+    }
+  }
+
   const nWords = rows.reduce((a, r) => a + words(r.vo).length, 0);
   const stats = { frames: rows.length, total: r1(total), target: tgt ?? null, words: nWords,
-    wordsPerSecond: total ? r1(nWords / total) : 0, maxGapWithoutChange: r1(maxGap), loops: closedIds.size + open.size };
+    wordsPerSecond: total ? r1(nWords / total) : 0, maxGapWithoutChange: r1(maxGap), loops: closedIds.size + open.size,
+    emotions: felt.size };
   return { errors, warnings, stats, parserWarnings: sb.warnings.map((w) => w.message) };
 }
 
@@ -203,7 +233,7 @@ function main(argv) {
     console.log(JSON.stringify(res, null, 1));
   } else {
     const s = res.stats;
-    console.log(`retention_lint: ${s.frames} frames · ${s.total} s${s.target ? ` (target ${s.target} s)` : ""} · ${s.words} words · ${s.wordsPerSecond} words/s · longest still ${s.maxGapWithoutChange} s`);
+    console.log(`retention_lint: ${s.frames} frames · ${s.total} s${s.target ? ` (target ${s.target} s)` : ""} · ${s.words} words · ${s.wordsPerSecond} words/s · longest still ${s.maxGapWithoutChange} s · ${s.emotions} emotions`);
     for (const e of res.errors) console.log(`  ✗ ${e}`);
     for (const w of res.warnings) console.log(`  ⚠ ${w}`);
     for (const w of res.parserWarnings || []) console.log(`  ⚠ parser: ${w}`);

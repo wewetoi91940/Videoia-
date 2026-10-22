@@ -30,6 +30,11 @@ Destination: TikTok · 1080×1920 · <length> s · <language>
 | t (s) | Beat | New information | Loop opened / closed | Visual change |
 | --- | --- | --- | --- | --- |
 
+## Emotion map
+
+| Frame | Emotion | Caused by (sourced fact or real image) | Voice (speed, pause) | Music / SFX | Colour · camera · type |
+| --- | --- | --- | --- | --- | --- |
+
 ## Shot table
 
 | Frame | Duration | Narration | Image (source · licence) | Camera | Animation | On screen | SFX | Transition |
