@@ -224,7 +224,7 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: var(--bg);
       letter-spacing: -0.01em; word-spacing: 0.14em; color: #fff;
       text-shadow: 0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000, -3px -3px 0 #000, 0 4px 0 #000, 0 8px 26px rgba(0, 0, 0, 0.7); }
 .st .m { display: inline-block; }
-#flash { position: absolute; inset: 0; background: #fff; opacity: 0; pointer-events: none; }
+#flash { position: absolute; inset: 0; background: #fff; opacity: 0; pointer-events: none; }   /* dans la carte du plan 9, sous les textes */
 .grain { position: absolute; inset: 0; pointer-events: none; background-image: url("assets/grain.png"); opacity: 0.07; }
 """
 
@@ -512,6 +512,7 @@ def main():
             paraitre("#f8-dv", T(8, "passerelles"), dy=30, d=0.5)
         elif k == 9:
             scene = carte(pid, "plan-1910", (70, 420, 940, 672), "50% 50%", "« Les inondations à Paris », plan de 1910 · Héliotypie E. Le Deley · domaine public",
+                          contenu='<img src="build/img/plan-1910.jpg" alt=""><div id="flash"></div>',
                           extra=lab("f9-l1", "PONT D’AUSTERLITZ", 28, 560))
             texte = kick("LE SOMMET · 28 JANVIER", AMBRE) + '<div id="f9-n" class="nombre"><span id="f9-v">0,00</span><small>mètres</small></div>'
             tw += [f'tl.fromTo("#f9-cam",{{scale:1}},{{scale:2.5,transformOrigin:"8% 12%",duration:0.9,ease:"power3.inOut"}},{ft(t862 - 0.75):.4f});',
@@ -607,7 +608,6 @@ def main():
       {chr(10).join("      " + s for s in sec).lstrip()}
       {leak}
       {chr(10).join("      " + s for s in hud).lstrip()}
-      <div id="flash" data-layout-allow-occlusion></div>
       <div class="grain"></div>
       <audio id="mix" src="build/mix_master.wav" data-start="0" data-duration="{D:.4f}" data-track-index="20"></audio>
     </div>

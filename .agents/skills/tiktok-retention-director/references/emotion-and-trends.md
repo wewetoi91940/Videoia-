@@ -57,7 +57,7 @@ before a new series, they change fast.
 - **Depth without matting**: the archive as a rounded card over its own blurred, darkened copy; the background
   drifts slower than the card (parallax).
 - **Colour follows the emotion** (section 2), so the arc reads even without sound.
-- **One "impact" moment**: count-up number + white flash + 2-frame shake + sub hit, used once.
+- **One "impact" moment**: count-up number + white flash on the image (under the text layer) + 2-frame shake + sub hit, used once.
 - **Sound design as storytelling**: ticks, cut to silence, heartbeat, riser → impact, whoosh on transitions.
 - **Loop ending**: the last second returns to the first image/sound (the clock ticks again), so a replay feels
   continuous.
@@ -79,7 +79,9 @@ before a new series, they change fast.
 | `data-color-grading` (shader grade) on an `<img>` | a 2 s test took 3 min 23 s to render (44 s plain composition: 3 min 33 s) | for long pieces, bake the grade into the image files (duotone + contrast in Python), keep the shader for short pieces |
 | `npx hyperframes remove-background` on 1910 postcards | matte empty or a fragment (alpha coverage 0–5 %) | check the alpha coverage on a coloured plate before using a cutout; use card + blurred background instead |
 | registry `organic-light-leak-overlay` in 1080 × 1920 | authored 1920 × 1080: covered only the top of the frame | set the block's `data-width`/`data-height` and `html, body` size to 1080 × 1920; host `style="opacity:0.6"` for archives |
-| `check` on ~1 000 tweens | "Check did not finish within its deadline" | `npx hyperframes check --timeout 30000` |
+| `check` on ~1 000 tweens | "Check did not finish within its deadline" | `npx hyperframes check --timeout 30000`; for `--at-transitions`, run it in ranges of ~9 s (`--range 0,9`, `--range 9,18` …, the last range ending at or before the duration) |
+| a full-screen white flash over the texts | `text_occluded` errors; `data-layout-allow-occlusion` on the flash was not honoured by CLI 0.8.166 | put the flash under the text layer (inside the photo card): the image flashes, the number and captions stay readable |
+| a sample in the middle of a text fade-out | contrast warnings (1.8–2 : 1) at that single instant | expected while text leaves; log it, no fix needed if the settled text passes |
 | pop-on captions (words hidden until said) | layout reserved for hidden words: text looked off-centre | show the whole group, colour the active word |
 | active word scaled 1.08 | the scaled word covered the space ("compriméqui") | `word-spacing: 0.14em`, scale ≤ 1.04 |
 | a stamp over a text box | covered the word it stamped | put stamps beside or under the text, never on it |

@@ -17,7 +17,7 @@ Run in this order; fix, then re-run only the failed item. Log each result in `DI
 | Check | How | Pass |
 | --- | --- | --- |
 | Lint | `npx hyperframes lint` | 0 errors |
-| (long timelines) | a check that stops with "did not finish within its deadline" | rerun with `--timeout 30000` |
+| (long timelines) | a check that stops with "did not finish within its deadline" | rerun with `--timeout 30000`; `--at-transitions` in `--range` chunks of ~9 s |
 | Layout, contrast, runtime | `npx hyperframes check --at-transitions` (samples every transition seam too) | 0 errors |
 | TikTok interface zones | the three passes from `node scripts/tiktok_qc.mjs --print-checks` | no `caption_zone_collision` on text that must be read |
 | Hook frames | `npx hyperframes snapshot --at 0,0.5,1.5` | the first frame shows the subject and the hook text; nothing under the top bar |
