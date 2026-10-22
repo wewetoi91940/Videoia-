@@ -28,7 +28,9 @@ $HYPERFRAMES_PYTHON scripts/build.py
 node ../../.agents/skills/tiktok-retention-director/scripts/retention_lint.mjs --storyboard STORYBOARD.md
 npx --yes hyperframes@0.8.166 lint
 npx --yes hyperframes@0.8.166 check --timeout 30000
-npx --yes hyperframes@0.8.166 render -q delivery -o renders/crue-1910-v2-brut.mp4
+for r in 0,9 9,18 18,27 27,36 36,45 45,52.76; do npx --yes hyperframes@0.8.166 check --at-transitions --timeout 30000 --range $r; done
+npx --yes hyperframes@0.8.166 render -q delivery --fps 30 -o renders/crue-1910-v2-brut.mp4
+# livraison : ffmpeg deux passes, H.264 high 4 Mbit/s (6 max), AAC 192 kbit/s, +faststart → livrables/crue-1910-v2.mp4
 node ../../.agents/skills/tiktok-retention-director/scripts/tiktok_qc.mjs --video livrables/crue-1910-v2.mp4 --target 52 --sheet renders/qc-sheet.jpg
 ```
 

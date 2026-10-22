@@ -107,4 +107,19 @@ Contrast in the second half: dread (frames 4–6) → empathy (7) → warmth (8)
 
 | Item | Measured | Verdict | Fix |
 | --- | --- | --- | --- |
-| Retention lint | see below | — | — |
+| Retention lint (`retention_lint.mjs`) | 0 error, 5 warnings, 9 emotions, longest still 2.1 s | pass | accepted: hook frame 4.3 s (the ticking clock, the title and the date are on screen from 0 s; the hook line ends at 3.8 s); context ends at 9.8 s (date and place on screen from 0 s, said at 4.3 s); frames 4–5 at 3.3–3.4 words/s (urgency beat, voice already slowed to 0.88 / 0.85); the motto's translation is 10 words (a verbatim quote, on screen ~4 s) |
+| Retention lint, first runs | frames 4–5 at 3.6 words/s | fixed | line 4 shortened (« Et » removed, one sentence), voice 0.95 → 0.88 and 0.9 → 0.85 |
+| Emotion map (new lint check) | 9 emotions, none held > 3 frames, none > 45 % of the time | pass | V1 run through the same check: « no `emotion:` on any frame » — the flat arc the user noticed |
+| Hook honesty | 5/5 yes (hook #5) | pass | clock labelled ILLUSTRATION, date visible from 0 s |
+| Fact check of new claims | 23 January quays (MP2), risk lower but not zero (MP2), motto read on the cover (FNM for the translation) | pass | the *Petit Journal* caption quoted by Wikipédia is not visible in the available image: not quoted |
+| Pronunciation (Whisper read-back) | « cruse » (crue), « garces noirs » (gares se noient), « scène » (Seine) | pass after check | phonemes checked with espeak: `kʁy aʁɛt`, `ɡaʁ sə nwa` are right — Whisper mishears; the first wording « les gares et » made a liaison `ɡaʁz e` (heard « gardes ») → reordered to « le métro et les gares » |
+| `hyperframes lint` | 0 error, 17 warnings (nested structure, track density, file size, duplicate image src) | pass | first run: overlapping tweens on the flash and the shake → frame-aligned durations |
+| `hyperframes check` | first run: « did not finish within its deadline » | fixed | `--timeout 30000` (≈ 1 300 tweens) |
+| `hyperframes check --at-transitions` | six ranges of ~9 s: pass; 3 contrast warnings at 27.01 s | pass | first runs: one run for the whole video timed out → ranges; flash over the texts (`text_occluded`, waiver not honoured by CLI 0.8.166) → flash moved inside the map card, under the texts; the 3 warnings sample labels in the middle of their fade-out (accepted) |
+| Contrast (WCAG AA) | 37/37, 40/40, 36/36, 24/24, 36/36 text checks | pass | — |
+| TikTok zones (3 `check --caption-zone` passes) | 0 collision | pass | — |
+| Snapshots (22 moments) | stamp over « COMPRIMÉ »; ILLUSTRATION chip against the stamp; crooked air line; big numbers touching the card; « mais pas nul » spilling on the photo; light leak covering only the top (block authored 1920 × 1080); pop-on captions off-centre; active word covering the space (« compriméqui ») | fixed | stamp under the box, chip at the bottom left, straight dotted line; numbers 146 px; serif titles 80 px with a line break; block switched to 1080 × 1920 and host opacity 0.6; whole group shown, active word in amber; word-spacing 0.14em, scale 1.04 |
+| Render QC (`tiktok_qc.mjs`) | 1080×1920 · 30 fps · 52.78 s · −14 LUFS · true peak −1.5 dBFS · 0 silence · 0 freeze · 0 black | pass | — |
+| Mix | voice −13.8 LUFS, music under voice −36.5 LUFS (22.7 dB under; short-term p5 18.7 dB, min 15.5 dB), music in the pauses −27.4 LUFS | pass (≥ 15 dB) | music in the pauses raised from −30.6 LUFS (RISE_DB 11 → 15) |
+| QC sheet with TikTok zones | no text or face under the red zones; last frame = the hook clock (loop) | pass | — |
+| Final frames checked in the MP4 | light leak (31.6 s), flash + count-up (37.8 s), « 8,62 mètres » (38.7 s) | pass | — |
