@@ -607,7 +607,7 @@ def main():
       {chr(10).join("      " + s for s in sec).lstrip()}
       {leak}
       {chr(10).join("      " + s for s in hud).lstrip()}
-      <div id="flash"></div>
+      <div id="flash" data-layout-allow-occlusion></div>
       <div class="grain"></div>
       <audio id="mix" src="build/mix_master.wav" data-start="0" data-duration="{D:.4f}" data-track-index="20"></audio>
     </div>
