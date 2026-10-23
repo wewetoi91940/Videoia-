@@ -1,0 +1,106 @@
+# Marseille, 17 octobre : du Prado à Saint-Ferréol, la journée où le centre-ville a basculé
+
+Documentaire narré, 16:9 (1920 × 1080, 30 i/s), environ 8 à 9 minutes. État des connaissances : lundi 19 octobre 2026.
+Toute la vidéo est produite par une chaîne de scripts reproductible, sans image d'actualité sous droits.
+
+## Ce que montre la vidéo
+
+- **Cartes** du centre de Marseille construites depuis OpenStreetMap (`scripts/02_carte.py`) : rues et lieux pris par leur nom,
+  **aucun parcours inventé** (pas de flèches), la « zone » des pillages est l'union des tronçons des rues citées par la presse.
+- **Cartons d'heure** avec un statut explicite : heure publiée, heure d'une entrée de direct (le fait peut être antérieur),
+  période approximative, heure prévue, heure donnée par une seule source.
+- **Horloge du samedi** (6 h → 3 h) en haut à droite : seules des heures publiées y figurent.
+- **Sources à l'écran** pour chaque phrase (bas à droite), citations attribuées, chiffres contradictoires côte à côte.
+- **Photos libres des lieux** (Wikimedia Commons), toujours étiquetées « le lieu en temps normal ».
+
+## Recherche
+
+| Fichier | Contenu |
+|---|---|
+| `docs/00_dossier_initial.md` | Premier dossier (extraits de moteur de recherche) : historique, en partie corrigé |
+| `docs/01_verification_sources.md` | **Vérification fait par fait** sur plus de 60 articles lus en entier : sources, verdicts, contradictions, heures publiées |
+| `scripts/script.json` | Texte de la voix off (70 phrases, 12 séquences), avec les sources de chaque phrase |
+| `scripts/01_voix.py` | Voix Google par blocs ; bornes des phrases alignées sur une transcription Whisper (`hyperframes transcribe`) |
+| `scripts/03b_floutage.py` | Floutage automatique des visages sur les photos (YuNet, OpenCV) |
+| `scripts/08_tiktok.py` | Version TikTok en 3 parties verticales (voir plus bas) |
+| `scripts/plans_source.py` → `scripts/plans.json` | Plan de montage : 57 plans ancrés sur des mots de la voix |
+| `docs/06_publication.md` | Titre, description, chapitres, sources, mentions IA |
+| `docs/07_controle_qualite.md` | Contrôle qualité **mesuré** |
+
+Règles suivies : aucune heure inventée ; heure d'événement et heure de publication distinguées ; estimations officielles
+attribuées ; aucune personne privée identifiable ; robots.txt respecté (France 3, franceinfo, France 24, BFMTV, Le Monde,
+TF1 Info et Ouest-France refusent l'agent « Claude-User » : aucun de leurs articles n'est utilisé comme source).
+
+## Fabriquer la vidéo
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+PY=.venv/bin/python ./make.sh osm          # une fois : données OpenStreetMap (build/osm/, non versionné)
+PY=.venv/bin/python ./make.sh              # carte voix composition audio check rendu livrables controle
+```
+
+### Voix Google (Gemini TTS)
+
+La voix livrée est `Charon` (modèle `gemini-3.1-flash-tts-preview`), synthétisée **par séquences** : 8 requêtes en tout
+(le niveau gratuit en autorise environ 10 par jour et par modèle). Chaque bloc est ensuite redécoupé en phrases sur ses silences
+réels ; le montage, les sous-titres et la musique suivent la voix réelle.
+
+La clé n'est **jamais** écrite dans un fichier ni collée dans une conversation. Deux façons de la fournir :
+
+1. **Network secret** de l'environnement cloud (recommandé) : *Edit cloud environment* → *Network secrets* → *Add secret*,
+   hôte `generativelanguage.googleapis.com`, en-tête `x-goog-api-key` sans préfixe. La clé reste hors de la session :
+   `scripts/voix_gemini.mjs` vérifie qu'une requête sans clé est acceptée (le proxy ajoute l'en-tête), puis n'envoie
+   aucun en-tête. Lancer `PY=.venv/bin/python ./make.sh voix composition audio check rendu livrables controle`.
+   Un secret ajouté pendant une session n'est parfois visible que dans une **nouvelle** session.
+2. Variable d'environnement `GEMINI_API_KEY` de l'environnement.
+
+`VOIX_BROUILLON=1 ./make.sh voix …` produit une voix Kokoro de **calage** (montage, durées) ; `make.sh livrables` refuse de la livrer.
+
+## Livrables (`livrables/`)
+
+| Fichier | Contenu |
+|---|---|
+| `marseille-17-octobre.mp4` | Vidéo finale 1920×1080, 30 i/s, 8 min 29 s, H.264 + AAC, −14 LUFS, crête vraie ≤ −1,5 dBTP (≈ 540 Mo, qualité « master » pour YouTube) |
+| `marseille-17-octobre_telephone-720p.mp4` | Même vidéo en 1280×720, ≈ 85 Mo, pour le partage et le téléphone |
+| `marseille-17-octobre_sans-son.mp4` | Même image, sans son |
+| `marseille-17-octobre.srt` | Sous-titres (2 lignes de 42 caractères au plus) |
+| `pistes/voix.flac` | Voix seule, au niveau du mix |
+
+| `marseille-17-octobre_tiktok-partie-1.mp4` … `-partie-3.mp4` | Version TikTok : 3 parties verticales 1080×1920 d'environ 3 min, sous-titres incrustés (≈ 70 Mo chacune) |
+
+Les MP4 et la piste FLAC dépassent la limite de GitHub (100 Mo par fichier) : ils ne sont pas versionnés.
+`./make.sh rendu livrables` les régénère à l'identique (le cache de la voix Google est versionné : aucune requête n'est relancée).
+
+## Version TikTok (3 parties verticales)
+
+```bash
+PY=.venv/bin/python ./make.sh tiktok tiktok_rendu
+```
+
+`scripts/08_tiktok.py` découpe le documentaire en trois parties de séquences entières, **sans nouvelle synthèse vocale** :
+la voix est coupée dans `build/voix.wav`, dans les silences entre séquences.
+
+| Partie | Séquences | Contenu | Durée |
+|---|---|---|---|
+| 1/3 | 1 à 4 | Avant midi : les premiers pillages | 2 min 57 s |
+| 2/3 | 5 à 9 | De l'hôtel de ville à la nuit | 3 min 03 s |
+| 3/3 | 10 à 12 | Le jour d'après : les bilans (puis les sources) | 2 min 44 s |
+
+- Mise en page 1080 × 1920 (`scripts/style_tiktok.css`) : bandeau du jour et horloge en haut, images au centre
+  (y 360 → 1220), sources puis **sous-titres incrustés** (deux lignes de 31 caractères, chiffres en couleur).
+  Rien d'essentiel au-dessus de 170 px, sous 1 470 px, ni à droite de 960 px dans la moitié basse (interface TikTok).
+- Cartes verticales `assets/carte/v_*.png` (même données OSM, recadrées) ; colonne de texte en bas à gauche.
+- Chaque partie est remixée par `04_audio.mixer` : −14 LUFS, crête vraie −1,6 dBTP, musique ≈ 29 dB sous la voix.
+- Parties 2 et 3 : carton « Partie N/3 » de 2 s ; parties 1 et 2 : carton « À suivre » ; partie 3 : sources et fabrication.
+- Projets HyperFrames dans `build/tiktok/partie-N/` (le dossier `assets` y est un lien vers celui du projet).
+- Légendes, sources et rappels pour la publication : `docs/08_tiktok.md` (étiquette « contenu généré par IA » à activer).
+
+## Outils bloqués et solutions retenues
+
+| Blocage | Solution | Conséquence |
+|---|---|---|
+| WebFetch en panne dans l'environnement (DNS) | Lecture des pages par `curl` après vérification du robots.txt pour « Claude-User » | Sites qui refusent : extraits de recherche seulement, jamais utilisés comme source unique |
+| Overpass principal (overpass-api.de) injoignable | Miroir `maps.mail.ru` | Données OSM du 19/10/2026 |
+| Wikimedia Commons : `/w/api.php` interdit par robots.txt | Pages `/wiki/File:` et `upload.wikimedia.org` seulement | Recherche de photos plus lente |
+| Clé Gemini non transmise à la session | Chaîne prête ; voix de calage Kokoro pour le montage | La voix Google se génère dès que la clé est disponible |
+| Images d'actualité (AFP, BFMTV, France 3…) sous droits | Cartes, cartons, photos libres des lieux | Aucune image des événements |

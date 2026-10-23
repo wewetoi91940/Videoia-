@@ -1,0 +1,1043 @@
+{
+ "titre": "Marseille, 17 octobre : du Prado à Saint-Ferréol, la journée où le centre-ville a basculé",
+ "version": 1,
+ "etat_des_connaissances": "lundi 19 octobre 2026",
+ "voix": {
+  "moteur": "gemini",
+  "modele": "gemini-3.1-flash-tts-preview",
+  "voix": "Charon",
+  "style": "Narrateur français de documentaire d'enquête journalistique. Voix grave, posée, diction très claire, ton factuel et sobre, jamais dramatique ni sensationnel. Débit naturel et régulier. Marque une courte pause nette entre deux phrases. Lis les heures comme à la radio (« quinze heures vingt-cinq »).",
+  "debut_s": 0.6,
+  "pause_defaut": 0.42,
+  "pause_fin_sequence": 1.3,
+  "blocs": [
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    9
+   ],
+   [
+    10
+   ],
+   [
+    11
+   ],
+   [
+    12
+   ]
+  ],
+  "quota": "niveau gratuit : environ 10 requêtes par jour et par modèle → 8 blocs = 8 requêtes",
+  "repli_kokoro": {
+   "voix": "ff_siwis",
+   "langue": "fr-fr",
+   "vitesse": 1.05,
+   "usage": "brouillon de calage uniquement : jamais livré"
+  }
+ },
+ "sequences": [
+  {
+   "n": 1,
+   "titre": "Ouverture",
+   "jour": "SAMEDI 17 OCTOBRE 2026",
+   "ambiance": "ouverture"
+  },
+  {
+   "n": 2,
+   "titre": "Le contexte",
+   "jour": "SAMEDI 17 OCTOBRE 2026",
+   "ambiance": "contexte"
+  },
+  {
+   "n": 3,
+   "titre": "Le matin, au Prado",
+   "jour": "SAMEDI 17 OCTOBRE 2026",
+   "ambiance": "matin"
+  },
+  {
+   "n": 4,
+   "titre": "Avant midi, l'hypercentre",
+   "jour": "SAMEDI 17 OCTOBRE 2026",
+   "ambiance": "tension",
+   "pouls": true
+  },
+  {
+   "n": 5,
+   "titre": "L'hôtel de ville forcé",
+   "jour": "SAMEDI 17 OCTOBRE 2026",
+   "ambiance": "tension",
+   "pouls": true
+  },
+  {
+   "n": 6,
+   "titre": "14 h : le rassemblement empêché au Vieux-Port",
+   "jour": "SAMEDI 17 OCTOBRE 2026",
+   "ambiance": "tension"
+  },
+  {
+   "n": 7,
+   "titre": "Les transports à l'arrêt",
+   "jour": "SAMEDI 17 OCTOBRE 2026",
+   "ambiance": "arret"
+  },
+  {
+   "n": 8,
+   "titre": "L'après-midi des pillages",
+   "jour": "SAMEDI 17 OCTOBRE 2026",
+   "ambiance": "tension",
+   "pouls": true
+  },
+  {
+   "n": 9,
+   "titre": "Le soir, puis la nuit",
+   "jour": "SAMEDI 17 OCTOBRE 2026",
+   "ambiance": "nuit",
+   "pouls": true
+  },
+  {
+   "n": 10,
+   "titre": "Dimanche : le jour d'après",
+   "jour": "DIMANCHE 18 OCTOBRE 2026",
+   "ambiance": "apres"
+  },
+  {
+   "n": 11,
+   "titre": "Lundi : la bataille des chiffres",
+   "jour": "LUNDI 19 OCTOBRE 2026",
+   "ambiance": "chiffres"
+  },
+  {
+   "n": 12,
+   "titre": "Ce que l'on sait, ce qui reste ouvert",
+   "jour": "LUNDI 19 OCTOBRE 2026",
+   "ambiance": "fin"
+  }
+ ],
+ "sources": {
+  "LP-direct": {
+   "media": "La Provence, direct",
+   "date": "17/10",
+   "titre": "Manifestations du 17 octobre : suivez la journée de mobilisation en Provence (direct, 148 entrées horodatées)",
+   "url": "https://www.laprovence.com/article/societe/3623246999963114/direct-laprovence-direct-manifestations-du-17-octobre-suivez-la-journee-de-mobilisation-en-provence"
+  },
+  "LP-transports": {
+   "media": "La Provence",
+   "date": "17/10",
+   "titre": "Pagaille à Marseille dans les transports avec les manifestations en centre-ville",
+   "url": "https://www.laprovence.com/article/faits-divers-justice/10930010789866/manifestations-a-marseille-le-tram-t2-a-larret-les-t1-et-t3-fortement-perturbes-et-4-stations-de-metro-non-desservies"
+  },
+  "LP-manif": {
+   "media": "La Provence",
+   "date": "17/10",
+   "titre": "« On en a ras-le-bol et ce n'est que le début » : malgré les débordements, la manifestation a bien eu lieu à Marseille",
+   "url": "https://www.laprovence.com/article/societe/4061756886914214/on-en-a-ras-le-bol-et-ce-nest-que-le-debut-malgre-les-debordements-la-manifestation-a-bien-eu-lieu-a-marseille"
+  },
+  "LP-Payan17": {
+   "media": "La Provence",
+   "date": "17/10",
+   "titre": "Des pillages de commerces, des dégradations multiples, la mairie attaquée... Marseille a vécu le chaos (entretien avec Benoît Payan)",
+   "url": "https://www.laprovence.com/article/faits-divers-justice/4117494543471614/manifestations-a-marseille-on-a-laisse-la-ville-etre-livree-aux-casseurs-et-aux-pillages-regrette-benoit-payan"
+  },
+  "LP-impunite": {
+   "media": "La Provence",
+   "date": "18/10",
+   "titre": "« Des actes criminels » : comment les pilleurs ont-ils pu agir en toute impunité ?",
+   "url": "https://www.laprovence.com/article/faits-divers-justice/38424241523175/manifestations-a-marseille-comment-les-pilleurs-ont-ils-pu-agir-en-toute-impunite"
+  },
+  "LP-ordres": {
+   "media": "La Provence",
+   "date": "18/10",
+   "titre": "« Je veux savoir quels ordres ont été donnés aux CRS », lance Benoît Payan",
+   "url": "https://www.laprovence.com/article/region/496111826683114/violences-du-17-octobre-a-marseille-je-veux-savoir-quels-ordres-ont-ete-donnes-aux-crs-lance-benoit-payan"
+  },
+  "LP-poste": {
+   "media": "La Provence",
+   "date": "18/10",
+   "titre": "Marseille : les images inédites du poste de police saccagé sur la Canebière",
+   "url": "https://www.laprovence.com/article/faits-divers-justice/19749007208572/video-17-octobre-a-marseille-les-images-de-linterieur-du-poste-de-la-police-municipale-saccage-sur-la-canebiere"
+  },
+  "LP-stigmates": {
+   "media": "La Provence",
+   "date": "18/10",
+   "titre": "17 octobre : conteneurs calcinés, débris, commerces dévastés... le centre de Marseille porte les stigmates du chaos",
+   "url": "https://www.laprovence.com/article/faits-divers-justice/4558677826117514/17-octobre-a-marseille-de-la-journee-noire-ce-samedi-au-triste-constat-ce-dimanche-recit-et-etat-des-lieux"
+  },
+  "LP-PdC": {
+   "media": "La Provence",
+   "date": "18/10",
+   "titre": "Darty et un revendeur Apple pillés… la sécurité de Plan-de-Campagne renforcée",
+   "url": "https://www.laprovence.com/article/faits-divers-justice/47570990935614/apple-et-darty-pilles-une-dizaine-d-interpellations-la-securite-de-plan-de-campagne-renforcee-ce-dimanche-soir"
+  },
+  "ICI-direct": {
+   "media": "ICI Provence, direct",
+   "date": "17/10",
+   "titre": "Les manifestations du 17 octobre dans les Bouches-du-Rhône, le Var et les Alpes du Sud (direct)",
+   "url": "https://www.ici.fr/infos/economie-social/en-direct-les-manifestations-du-17-octobre-dans-les-bouches-du-rhone-le-var-et-les-alpes-du-sud-7759509"
+  },
+  "ICI-pillage": {
+   "media": "ICI Provence",
+   "date": "18/10",
+   "titre": "Violences du 17 octobre : des scènes de pillage hallucinantes à Marseille",
+   "url": "https://www.ici.fr/provence-alpes-cote-d-azur/bouches-du-rhone-13/marseille/scenes-de-pillage-hallucinantes-a-marseille-le-17-octobre-9561410"
+  },
+  "ICI-jour-apres": {
+   "media": "ICI Provence",
+   "date": "18/10",
+   "titre": "Le jour d'après à Marseille, où des centaines de commerces ont été pillés",
+   "url": "https://www.ici.fr/provence-alpes-cote-d-azur/bouches-du-rhone-13/marseille/le-jour-d-apres-a-marseille-des-commerces-piles-en-marge-des-mobilisations-du-17-octobre-2343123"
+  },
+  "ICI-suite": {
+   "media": "ICI Provence",
+   "date": "19/10",
+   "titre": "« La suite ? Gérer les prochaines émeutes », les Marseillais découvrent le centre-ville saccagé",
+   "url": "https://www.ici.fr/emissions/l-info-d-ici-ici-provence/la-suite-c-est-de-gerer-les-prochaines-emeutes-les-marseillais-decouvrent-le-centre-ville-saccage-6329379"
+  },
+  "ICI-Payan": {
+   "media": "ICI Provence",
+   "date": "19/10",
+   "titre": "Violences du 17 octobre : le maire de Marseille attend des explications de la part de Laurent Nuñez",
+   "url": "https://www.ici.fr/provence-alpes-cote-d-azur/bouches-du-rhone-13/marseille/violences-du-17-octobre-le-maire-de-marseille-attend-des-explications-de-la-part-de-laurent-nunez-9637984"
+  },
+  "ICI-anticipation": {
+   "media": "ICI",
+   "date": "19/10",
+   "titre": "Violences du 17 octobre : Laurent Nuñez admet « un manque d'anticipation »",
+   "url": "https://www.ici.fr/infos/faits-divers-justice/violences-du-17-octobre-laurent-nunez-admet-un-manque-d-anticipation-sebastien-lecornu-reunit-une-cellule-de-crise-1550904"
+  },
+  "ICI-visite": {
+   "media": "ICI Provence",
+   "date": "19/10",
+   "titre": "Violences du 17 octobre : le ministre de l'Intérieur reporte son déplacement à Marseille",
+   "url": "https://www.ici.fr/provence-alpes-cote-d-azur/bouches-du-rhone-13/marseille/apres-les-violences-et-les-pillages-le-ministre-de-l-interieur-attendu-a-marseille-ce-lundi-7814876"
+  },
+  "ICI-interdiction": {
+   "media": "ICI Provence",
+   "date": "19/10",
+   "titre": "Violences du 17 octobre : rassemblements et manifestations interdits ce lundi à Marseille",
+   "url": "https://www.ici.fr/provence-alpes-cote-d-azur/bouches-du-rhone-13/marseille/violences-du-17-octobre-les-rassemblement-interdits-ce-lundi-a-marseille-7186012"
+  },
+  "MA-long": {
+   "media": "Marsactu",
+   "date": "17/10",
+   "titre": "17 octobre à Marseille : entre revendications et pillages, la ville sens dessus dessous (Violette Artaud)",
+   "url": "https://marsactu.fr/17-octobre-a-marseille-entre-revendications-et-pillages-la-ville-sens-dessus-dessous/"
+  },
+  "MA-bref": {
+   "media": "Marsactu",
+   "date": "17/10",
+   "titre": "Un 17 octobre marqué par des scènes d'émeutes dans le centre-ville de Marseille",
+   "url": "https://marsactu.fr/bref/un-17-octobre-marque-par-des-scenes-demeutes-dans-le-centre-ville-de-marseille/"
+  },
+  "DM-journee": {
+   "media": "Destimed",
+   "date": "17/10",
+   "titre": "Manifestations, pillages et violences, une journée de colère qui laisse la ville meurtrie",
+   "url": "https://www.destimed.fr/marseille-manifestations-pillages-et-violences-une-journee-de-colere-qui-laisse-la-ville-meurtrie/"
+  },
+  "DM-terre": {
+   "media": "Destimed",
+   "date": "18/10",
+   "titre": "Marseille à terre",
+   "url": "https://www.destimed.fr/marseille-a-terre/"
+  },
+  "DM-Macron": {
+   "media": "Destimed",
+   "date": "19/10",
+   "titre": "Emmanuel Macron promet des sanctions et exige des réponses sur le maintien de l'ordre",
+   "url": "https://www.destimed.fr/violences-du-17-octobre-emmanuel-macron-promet-des-sanctions-et-exige-des-reponses-sur-le-maintien-de-lordre/"
+  },
+  "DM-demission": {
+   "media": "Destimed",
+   "date": "19/10",
+   "titre": "Emmanuel Macron refuse la démission de Laurent Nuñez",
+   "url": "https://www.destimed.fr/violences-urbaines-emmanuel-macron-refuse-la-demission-de-laurent-nunez/"
+  },
+  "DM-interdiction": {
+   "media": "Destimed",
+   "date": "19/10",
+   "titre": "Tous les rassemblements interdits ce lundi de 12 heures à 20 heures",
+   "url": "https://www.destimed.fr/marseille-tous-les-rassemblements-interdits-ce-lundi-de-12-heures-a-20-heures/"
+  },
+  "DM-Nunez": {
+   "media": "Destimed",
+   "date": "19/10",
+   "titre": "Laurent Nuñez reporte sa visite pour une réunion avec le Premier ministre",
+   "url": "https://www.destimed.fr/marseille-laurent-nunez-reporte-sa-visite-pour-une-reunion-avec-le-premier-ministre"
+  },
+  "MI-bilan": {
+   "media": "mesinfos",
+   "date": "17/10",
+   "titre": "Marseille : le lourd bilan économique des émeutes du 17 octobre",
+   "url": "https://mesinfos.fr/13000-marseille/marseille-le-lourd-bilan-economique-des-emeutes-du-17-octobre-341336.html"
+  },
+  "MIM-perturb": {
+   "media": "Made in Marseille",
+   "date": "16/10",
+   "titre": "Gilets jaunes, lycéens, salariés... quelles perturbations à Marseille pour les manifestations du 17 octobre ?",
+   "url": "https://madeinmarseille.net/actualite/212865-gilets-jaunes-lyceens-salaries-quelles-perturbations-a-marseille-pour-les-manifestations-du-17-octobre/"
+  },
+  "MIM-aides": {
+   "media": "Made in Marseille",
+   "date": "18/10",
+   "titre": "Après les pillages à Marseille, les élus réclament des aides d'urgence pour les commerçants (bilan de la préfecture)",
+   "url": "https://madeinmarseille.net/actualite/212931-apres-les-pillages-a-marseille-les-elus-reclament-des-aides-durgence-pour-les-commercants/"
+  },
+  "GOM-bilan": {
+   "media": "Gomet'",
+   "date": "18/10",
+   "titre": "Violences à Marseille : 30 000 pilleurs dont 8 000 émeutiers (Préfecture)",
+   "url": "https://gomet.net/violences-a-marseille-30-000-pilleurs-dont-8-000-emeutiers-prefecture/"
+  },
+  "LPA-mairie": {
+   "media": "Le Parisien / AFP",
+   "date": "17/10",
+   "titre": "Mobilisation du 17 octobre : la mairie de Marseille investie, des CRS et des blindés envoyés en renfort",
+   "url": "https://www.leparisien.fr/faits-divers/mobilisation-du-17-octobre-intrusion-et-degats-dans-la-mairie-de-marseille-17-10-2026-DDOY24X6EFBCTEAH762KBC6XUY.php"
+  },
+  "LPA-comptes": {
+   "media": "Le Parisien / AFP",
+   "date": "17/10",
+   "titre": "Intrusion à la mairie de Marseille : le maire Benoît Payan « demande des comptes » sur le maintien de l'ordre",
+   "url": "https://www.leparisien.fr/faits-divers/intrusion-a-la-mairie-de-marseille-le-maire-benoit-payan-demande-des-comptes-sur-le-maintien-de-lordre-17-10-2026-6DZ32A64EBCP7BVCAFIRFLPNVI.php"
+  },
+  "LPA-abandonnes": {
+   "media": "Le Parisien",
+   "date": "18/10",
+   "titre": "« On nous a abandonnés » : dans les rues du centre-ville de Marseille livré à la prédation, un fort ressentiment règne",
+   "url": "https://www.leparisien.fr/faits-divers/on-nous-a-abandonnes-dans-les-rues-du-centre-ville-de-marseille-livre-a-la-predation-un-fort-ressentiment-regne-18-10-2026-HWBZQB2CHJF4VKHPQ3B3T6EU24.php"
+  },
+  "SUD": {
+   "media": "AFP (Sud Radio)",
+   "date": "17/10",
+   "titre": "A Marseille, des manifestants ont pénétré brièvement dans le hall de la mairie (dépêche AFP)",
+   "url": "https://www.sudradio.fr/societe/a-marseille-des-manifestants-ont-penetre-brievement-dans-le-hall-de-la-mairie"
+  },
+  "AFP-Bourso1": {
+   "media": "AFP (Boursorama)",
+   "date": "18/10",
+   "titre": "Mobilisation du 17 octobre : des milliers de manifestants en région, de vives tensions à Paris et Marseille",
+   "url": "https://www.boursorama.com/actualite-economique/actualites/mobilisation-du-17-octobre-des-milliers-de-manifestants-en-region-de-vives-tensions-a-paris-et-marseille-6c81c009eb08e62545894471cf68724f"
+  },
+  "PR-poste": {
+   "media": "Police & Réalités",
+   "date": "17/10",
+   "titre": "Le poste de police municipale de la Canebière attaqué pendant les rassemblements du 17 octobre",
+   "url": "https://policeetrealites.com/2026/10/17/marseille-le-poste-de-police-municipale-de-la-canebiere-attaque-pendant-les-rassemblements-du-17-octobre-video/"
+  },
+  "PR-blesses": {
+   "media": "Police & Réalités",
+   "date": "17/10",
+   "titre": "Marseille : 107 policiers blessés pendant les pillages et les violences, dont trois sérieusement",
+   "url": "https://policeetrealites.com/2026/10/17/marseille-107-policiers-blesses-pendant-les-pillages-et-les-violences-dont-trois-serieusement/"
+  },
+  "CLE": {
+   "media": "La Clé Publique",
+   "date": "17/10",
+   "titre": "Marseille : transports arrêtés après les violences du 17 octobre",
+   "url": "https://laclepublique.fr/bouches-du-rhone/articles/2026/2026-10-17-marseille-heurts-transports-arretes/"
+  },
+  "E1-GJ": {
+   "media": "Europe 1",
+   "date": "18/10",
+   "titre": "Émeutes à Marseille : « À cause de tout ce chaos, on n'a pas pu lancer notre manifestation », déplore une auditrice gilet jaune",
+   "url": "https://www.europe1.fr/societe/emeutes-a-marseille-a-cause-de-tout-ce-chaos-on-na-pas-pu-lancer-notre-manifestation-deplore-une-auditrice-gilet-jaune-1159872"
+  },
+  "E1-reveil": {
+   "media": "Europe 1",
+   "date": "19/10",
+   "titre": "Après les pillages du 17 octobre, Marseille se réveille dans le chaos",
+   "url": "https://www.europe1.fr/societe/apres-les-pillages-du-17-octobre-marseille-se-reveille-dans-le-chaos-1162782"
+  },
+  "OSM": {
+   "media": "OpenStreetMap",
+   "date": "19/10",
+   "titre": "Géographie des rues (© contributeurs OSM, ODbL)",
+   "url": "https://www.openstreetmap.org/"
+  }
+ },
+ "phrases": [
+  {
+   "id": 1,
+   "cle": "s1_date",
+   "seq": 1,
+   "texte": "Samedi 17 octobre 2026, 11 h 28, sur la Canebière, à Marseille.",
+   "sources": [
+    "LP-direct"
+   ],
+   "dit": "Samedi 17 octobre 2026, onze heures vingt-huit, sur la Canebière, à Marseille."
+  },
+  {
+   "id": 2,
+   "cle": "s1_poste",
+   "seq": 1,
+   "texte": "Le direct de La Provence signale le poste de police municipale « en cours de destruction ».",
+   "sources": [
+    "LP-direct"
+   ]
+  },
+  {
+   "id": 3,
+   "cle": "s1_vitres",
+   "seq": 1,
+   "texte": "Dix-neuf minutes plus tard, ses vitres sont « intégralement brisées ».",
+   "sources": [
+    "LP-direct"
+   ]
+  },
+  {
+   "id": 4,
+   "cle": "s1_pref",
+   "seq": 1,
+   "texte": "Selon la préfecture, des fumigènes ont été lancés à l'intérieur, et personne n'est blessé.",
+   "sources": [
+    "LP-direct",
+    "ICI-direct"
+   ]
+  },
+  {
+   "id": 5,
+   "cle": "s1_ferreol",
+   "seq": 1,
+   "texte": "À quelques rues de là, rue Saint-Ferréol, des magasins fermés sur conseil de la préfecture sont déjà fracturés et pillés.",
+   "sources": [
+    "MA-long",
+    "ICI-direct"
+   ]
+  },
+  {
+   "id": 6,
+   "cle": "s1_midi",
+   "seq": 1,
+   "texte": "Il n'est pas encore midi.",
+   "sources": [
+    "MA-long"
+   ]
+  },
+  {
+   "id": 7,
+   "cle": "s1_rdv",
+   "seq": 1,
+   "texte": "Le rassemblement prévu à 14 heures n'a même pas commencé.",
+   "sources": [
+    "MA-bref"
+   ],
+   "dit": "Le rassemblement prévu à quatorze heures n'a même pas commencé."
+  },
+  {
+   "id": 8,
+   "cle": "s1_question",
+   "seq": 1,
+   "texte": "Comment une journée de mobilisation contre la vie chère a-t-elle basculé, rue après rue, dans le pillage ?",
+   "sources": []
+  },
+  {
+   "id": 9,
+   "cle": "s1_annonce",
+   "seq": 1,
+   "texte": "Voici ce que les sources permettent d'établir, moment par moment, et ce qui reste incertain.",
+   "sources": [],
+   "pause": 5.2
+  },
+  {
+   "id": 10,
+   "cle": "s2_journee",
+   "seq": 2,
+   "texte": "Ce samedi est une journée nationale de mobilisation contre la vie chère, lancée par des appels sur les réseaux sociaux.",
+   "sources": [
+    "AFP-Bourso1",
+    "LP-direct"
+   ]
+  },
+  {
+   "id": 11,
+   "cle": "s2_programme",
+   "seq": 2,
+   "texte": "À Marseille, une action est annoncée au rond-point du Prado dès 8 heures, puis un rassemblement à 14 heures, sur le Vieux-Port ou la Canebière selon les sources.",
+   "sources": [
+    "MIM-perturb",
+    "MA-bref"
+   ],
+   "dit": "À Marseille, une action est annoncée au rond-point du Prado dès huit heures, puis un rassemblement à quatorze heures, sur le Vieux-Port ou la Canebière selon les sources."
+  },
+  {
+   "id": 12,
+   "cle": "s2_prefet",
+   "seq": 2,
+   "texte": "La veille, le préfet, Jacques Witkowski, avait prévenu : « C'est véritablement à Marseille que nous avons un point de préoccupation. »",
+   "sources": [
+    "LP-impunite"
+   ]
+  },
+  {
+   "id": 13,
+   "cle": "s2_effectifs",
+   "seq": 2,
+   "texte": "Combien de policiers ce matin-là ? Une seule compagnie de CRS, soit 80 policiers, selon le maire.",
+   "sources": [
+    "LP-ordres"
+   ],
+   "dit": "Combien de policiers ce matin-là ? Une seule compagnie de C.R.S., soit quatre-vingts policiers, selon le maire."
+  },
+  {
+   "id": 14,
+   "cle": "s2_prefecture",
+   "seq": 2,
+   "texte": "434 policiers et 240 CRS engagés dès 7 heures, répond la préfecture.",
+   "sources": [
+    "MIM-aides"
+   ],
+   "dit": "Quatre cent trente-quatre policiers et deux cent quarante C.R.S. engagés dès sept heures, répond la préfecture."
+  },
+  {
+   "id": 15,
+   "cle": "s3_methode",
+   "seq": 3,
+   "texte": "Aucune chronologie officielle n'a été publiée : les heures qui suivent sont celles auxquelles les journalistes ont signalé les faits, en direct.",
+   "sources": []
+  },
+  {
+   "id": 16,
+   "cle": "s3_prado",
+   "seq": 3,
+   "texte": "Dès 8 heures, selon ICI, le boulevard du Prado est bloqué par des poubelles et des trottinettes, à environ trois kilomètres au sud du Vieux-Port.",
+   "sources": [
+    "ICI-direct",
+    "OSM"
+   ],
+   "dit": "Dès huit heures, selon ICI, le boulevard du Prado est bloqué par des poubelles et des trottinettes, à environ trois kilomètres au sud du Vieux-Port."
+  },
+  {
+   "id": 17,
+   "cle": "s3_gaz",
+   "seq": 3,
+   "texte": "À 8 h 14, La Provence y compte une vingtaine de jeunes et quelques gilets jaunes ; à 8 h 54, les premiers gaz lacrymogènes dégagent le passage.",
+   "sources": [
+    "LP-direct"
+   ],
+   "dit": "À huit heures quatorze, La Provence y compte une vingtaine de jeunes et quelques gilets jaunes ; à huit heures cinquante-quatre, les premiers gaz lacrymogènes dégagent le passage."
+  },
+  {
+   "id": 18,
+   "cle": "s3_castellane",
+   "seq": 3,
+   "texte": "Les gilets jaunes remontent l'avenue du Prado ; à 9 h 20, ils sont signalés place Castellane.",
+   "sources": [
+    "LP-direct"
+   ],
+   "dit": "Les gilets jaunes remontent l'avenue du Prado ; à neuf heures vingt, ils sont signalés place Castellane."
+  },
+  {
+   "id": 19,
+   "cle": "s3_reformes",
+   "seq": 3,
+   "texte": "Dans la matinée, des groupes sont signalés devant la préfecture, à la gare Saint-Charles, puis aux Réformés, en haut de la Canebière : « un bon millier de manifestants » à 10 h 43.",
+   "sources": [
+    "LP-direct"
+   ],
+   "dit": "Dans la matinée, des groupes sont signalés devant la préfecture, à la gare Saint-Charles, puis aux Réformés, en haut de la Canebière : « un bon millier de manifestants » à dix heures quarante-trois."
+  },
+  {
+   "id": 20,
+   "cle": "s4_poste",
+   "seq": 4,
+   "texte": "La tension descend ensuite la Canebière. Le poste de police municipale, au 42 selon le maire, est attaqué ; la veille au soir, Benoît Payan dit avoir demandé par écrit qu'il soit sécurisé.",
+   "sources": [
+    "LP-direct",
+    "LP-Payan17",
+    "LPA-comptes"
+   ],
+   "dit": "La tension descend ensuite la Canebière. Le poste de police municipale, au quarante-deux selon le maire, est attaqué ; la veille au soir, Benoît Payan dit avoir demandé par écrit qu'il soit sécurisé."
+  },
+  {
+   "id": 21,
+   "cle": "s4_molotov",
+   "seq": 4,
+   "texte": "Des cocktails Molotov ? Ils circulent sur les réseaux sociaux, mais l'AFP, la préfecture et La Provence ne parlent que de fumigènes.",
+   "sources": [
+    "PR-poste",
+    "SUD",
+    "LP-poste"
+   ]
+  },
+  {
+   "id": 22,
+   "cle": "s4_crs",
+   "seq": 4,
+   "texte": "Une journaliste de Marsactu note que des CRS, postés juste au-dessus sur la Canebière, n'interviennent pas pendant que le poste est pillé.",
+   "sources": [
+    "MA-long"
+   ],
+   "dit": "Une journaliste de Marsactu note que des C.R.S., postés juste au-dessus sur la Canebière, n'interviennent pas pendant que le poste est pillé."
+  },
+  {
+   "id": 23,
+   "cle": "s4_magasins",
+   "seq": 4,
+   "texte": "Au même moment, les premiers commerces tombent : à 11 h 46, la boutique SFR de la Canebière ; à 11 h 54, JD Sports.",
+   "sources": [
+    "LP-direct"
+   ],
+   "dit": "Au même moment, les premiers commerces tombent : à onze heures quarante-six, la boutique S.F.R. de la Canebière ; à onze heures cinquante-quatre, J.D. Sports."
+  },
+  {
+   "id": 24,
+   "cle": "s4_prefet",
+   "seq": 4,
+   "texte": "Le préfet le dira plus tard : depuis midi, « nous ne faisons pas face à une manifestation, mais véritablement à des pillages ».",
+   "sources": [
+    "LP-direct"
+   ]
+  },
+  {
+   "id": 25,
+   "cle": "s5_mairie",
+   "seq": 5,
+   "texte": "Direction le Vieux-Port. À la mi-journée, l'hôtel de ville, sur le quai du Port, est pris pour cible.",
+   "sources": [
+    "LP-direct"
+   ]
+  },
+  {
+   "id": 26,
+   "cle": "s5_porte",
+   "seq": 5,
+   "texte": "Selon un journaliste de l'AFP, des manifestants forcent la double porte en bois avec des barrières de sécurité, en criant : « C'est la Révolution, on prend la Bastille. »",
+   "sources": [
+    "SUD"
+   ]
+  },
+  {
+   "id": 27,
+   "cle": "s5_hall",
+   "seq": 5,
+   "texte": "Dans le hall, un buste de Marianne est renversé et du mobilier est cassé ; les intrus sont dispersés par les forces de l'ordre.",
+   "sources": [
+    "SUD"
+   ]
+  },
+  {
+   "id": 28,
+   "cle": "s5_heure",
+   "seq": 5,
+   "texte": "L'heure exacte n'a pas été publiée ; mais à 13 h 20, La Provence constate que la porte est ouverte, gardée par des CRS.",
+   "sources": [
+    "LP-direct"
+   ],
+   "dit": "L'heure exacte n'a pas été publiée ; mais à treize heures vingt, La Provence constate que la porte est ouverte, gardée par des C.R.S."
+  },
+  {
+   "id": 29,
+   "cle": "s5_repli",
+   "seq": 5,
+   "texte": "Pour le maire, c'est un « mouvement de repli des CRS » qui a laissé la porte libre.",
+   "sources": [
+    "ICI-Payan",
+    "LPA-comptes"
+   ],
+   "dit": "Pour le maire, c'est un « mouvement de repli des C.R.S. » qui a laissé la porte libre."
+  },
+  {
+   "id": 30,
+   "cle": "s6_14h",
+   "seq": 6,
+   "texte": "14 heures : c'est l'heure du rassemblement annoncé.",
+   "sources": [
+    "MA-bref"
+   ],
+   "dit": "Quatorze heures : c'est l'heure du rassemblement annoncé."
+  },
+  {
+   "id": 31,
+   "cle": "s6_face",
+   "seq": 6,
+   "texte": "Au Vieux-Port, il ne peut pas se tenir : selon Marsactu, CRS et manifestants s'y font face pendant près d'une heure.",
+   "sources": [
+    "MA-bref"
+   ],
+   "dit": "Au Vieux-Port, il ne peut pas se tenir : selon Marsactu, C.R.S. et manifestants s'y font face pendant près d'une heure."
+  },
+  {
+   "id": 32,
+   "cle": "s6_reformes",
+   "seq": 6,
+   "texte": "La manifestation a pourtant bien lieu : une heure plus tard, aux Réformés, rapporte La Provence.",
+   "sources": [
+    "LP-manif"
+   ]
+  },
+  {
+   "id": 33,
+   "cle": "s6_cortege",
+   "seq": 6,
+   "texte": "À 14 h 51, son direct décrit plusieurs milliers de manifestants qui remontent pacifiquement la Canebière.",
+   "sources": [
+    "LP-direct"
+   ],
+   "dit": "À quatorze heures cinquante et une, son direct décrit plusieurs milliers de manifestants qui remontent pacifiquement la Canebière."
+  },
+  {
+   "id": 34,
+   "cle": "s6_auditrice",
+   "seq": 6,
+   "texte": "Le lendemain, sur Europe 1, une auditrice gilet jaune résume : « À cause de tout ce chaos, on n'a pas pu lancer notre manifestation. »",
+   "sources": [
+    "E1-GJ"
+   ]
+  },
+  {
+   "id": 35,
+   "cle": "s7_1525",
+   "seq": 7,
+   "texte": "15 h 25.",
+   "sources": [
+    "CLE"
+   ],
+   "dit": "Quinze heures vingt-cinq.",
+   "pause": 0.8
+  },
+  {
+   "id": 36,
+   "cle": "s7_arret",
+   "seq": 7,
+   "texte": "Selon le site La Clé Publique, seul à donner cette heure, les transports en commun sont arrêtés sur décision du préfet.",
+   "sources": [
+    "CLE"
+   ]
+  },
+  {
+   "id": 37,
+   "cle": "s7_lp",
+   "seq": 7,
+   "texte": "À 16 h 03, La Provence confirme : métro et tram sont totalement à l'arrêt, à la demande du préfet.",
+   "sources": [
+    "LP-direct"
+   ],
+   "dit": "À seize heures zéro trois, La Provence confirme : métro et tram sont totalement à l'arrêt, à la demande du préfet."
+  },
+  {
+   "id": 38,
+   "cle": "s7_bus",
+   "seq": 7,
+   "texte": "Les bus suivent en fin de journée.",
+   "sources": [
+    "LP-direct"
+   ]
+  },
+  {
+   "id": 39,
+   "cle": "s8_secteur",
+   "seq": 8,
+   "texte": "Dans l'après-midi, les pillages s'étendent au secteur commerçant situé au sud de la Canebière : rue Saint-Ferréol, rue Paradis, rue Grignan, rue Montgrand.",
+   "sources": [
+    "LP-direct",
+    "DM-terre"
+   ]
+  },
+  {
+   "id": 40,
+   "cle": "s8_bourse",
+   "seq": 8,
+   "texte": "À 15 h 02, des dizaines de personnes forcent une grille du Centre Bourse ; des boutiques de luxe sont pillées rue Paradis et rue Grignan.",
+   "sources": [
+    "LP-direct"
+   ],
+   "dit": "À quinze heures zéro deux, des dizaines de personnes forcent une grille du Centre Bourse ; des boutiques de luxe sont pillées rue Paradis et rue Grignan."
+  },
+  {
+   "id": 41,
+   "cle": "s8_feu",
+   "seq": 8,
+   "texte": "À 15 h 39, un magasin de la rue Saint-Ferréol est incendié, et les flammes gagnent l'immeuble.",
+   "sources": [
+    "LP-direct"
+   ],
+   "dit": "À quinze heures trente-neuf, un magasin de la rue Saint-Ferréol est incendié, et les flammes gagnent l'immeuble."
+  },
+  {
+   "id": 42,
+   "cle": "s8_acoups",
+   "seq": 8,
+   "texte": "Face aux pilleurs, la journaliste de Marsactu décrit quelques CRS « divisés en petits groupes », qui « interviennent par à-coups ».",
+   "sources": [
+    "MA-long"
+   ],
+   "dit": "Face aux pilleurs, la journaliste de Marsactu décrit quelques C.R.S. « divisés en petits groupes », qui « interviennent par à-coups »."
+  },
+  {
+   "id": 43,
+   "cle": "s8_temoin",
+   "seq": 8,
+   "texte": "Une habitante dira avoir vu les CRS « laisser faire » : un témoignage, pas un constat.",
+   "sources": [
+    "ICI-suite"
+   ],
+   "dit": "Une habitante dira avoir vu les C.R.S. « laisser faire » : un témoignage, pas un constat."
+  },
+  {
+   "id": 44,
+   "cle": "s8_centaure",
+   "seq": 8,
+   "texte": "Côté renforts, deux blindés Centaure de la gendarmerie sont engagés à partir de 13 h 30, selon la préfecture.",
+   "sources": [
+    "MIM-aides",
+    "GOM-bilan"
+   ],
+   "dit": "Côté renforts, deux blindés Centaure de la gendarmerie sont engagés à partir de treize heures trente, selon la préfecture."
+  },
+  {
+   "id": 45,
+   "cle": "s9_point",
+   "seq": 9,
+   "texte": "Vers 17 heures, le préfet fait un premier point : il parle de 7 000 à 8 000 pilleurs, de 30 ou 40 magasins touchés, et de 29 blessés parmi les forces de l'ordre.",
+   "sources": [
+    "LP-direct",
+    "MI-bilan"
+   ],
+   "dit": "Vers dix-sept heures, le préfet fait un premier point : il parle de sept mille à huit mille pilleurs, de trente ou quarante magasins touchés, et de vingt-neuf blessés parmi les forces de l'ordre."
+  },
+  {
+   "id": 46,
+   "cle": "s9_18h",
+   "seq": 9,
+   "texte": "18 heures : selon Marsactu, le centre-ville est « plongé dans un chaos ».",
+   "sources": [
+    "MA-long"
+   ],
+   "dit": "Dix-huit heures : selon Marsactu, le centre-ville est « plongé dans un chaos »."
+  },
+  {
+   "id": 47,
+   "cle": "s9_gazent",
+   "seq": 9,
+   "texte": "La journaliste décrit des CRS qui « gazent souvent, font exploser des grenades de désencerclement de temps en temps, chargent rarement ».",
+   "sources": [
+    "MA-long"
+   ],
+   "dit": "La journaliste décrit des C.R.S. qui « gazent souvent, font exploser des grenades de désencerclement de temps en temps, chargent rarement »."
+  },
+  {
+   "id": 48,
+   "cle": "s9_nuit",
+   "seq": 9,
+   "texte": "À 19 h 09, alors que la nuit tombe, La Provence signale encore des commerces pillés rue Paradis ; vers 20 heures, selon Destimed, rue Saint-Ferréol.",
+   "sources": [
+    "LP-direct",
+    "DM-journee"
+   ],
+   "dit": "À dix-neuf heures zéro neuf, alors que la nuit tombe, La Provence signale encore des commerces pillés rue Paradis ; vers vingt heures, selon Destimed, rue Saint-Ferréol."
+  },
+  {
+   "id": 49,
+   "cle": "s9_107",
+   "seq": 9,
+   "texte": "Vers 22 heures, la préfecture annonce 107 policiers blessés.",
+   "sources": [
+    "LP-direct",
+    "PR-blesses"
+   ],
+   "dit": "Vers vingt-deux heures, la préfecture annonce cent sept policiers blessés."
+  },
+  {
+   "id": 50,
+   "cle": "s9_2h",
+   "seq": 9,
+   "texte": "Et la nuit n'arrête rien : vers 2 heures du matin, des commerces sont encore attaqués dans le centre-ville.",
+   "sources": [
+    "DM-terre"
+   ],
+   "dit": "Et la nuit n'arrête rien : vers deux heures du matin, des commerces sont encore attaqués dans le centre-ville."
+  },
+  {
+   "id": 51,
+   "cle": "s10_matin",
+   "seq": 10,
+   "texte": "Dimanche matin, Marseille découvre son centre-ville.",
+   "sources": [
+    "DM-terre"
+   ]
+  },
+  {
+   "id": 52,
+   "cle": "s10_constats",
+   "seq": 10,
+   "texte": "Vitrines éventrées, rideaux arrachés, magasins vidés : de la Canebière à la rue Montgrand, les constats se ressemblent.",
+   "sources": [
+    "DM-terre",
+    "LP-stigmates"
+   ]
+  },
+  {
+   "id": 53,
+   "cle": "s10_affiche",
+   "seq": 10,
+   "texte": "Rue Paradis, selon Le Parisien, une boutique de téléphonie affiche : « Entièrement vidée. Fermée pour trois mois. »",
+   "sources": [
+    "LPA-abandonnes"
+   ]
+  },
+  {
+   "id": 54,
+   "cle": "s10_bilans",
+   "seq": 10,
+   "texte": "Les bilans, eux, divergent.",
+   "sources": []
+  },
+  {
+   "id": 55,
+   "cle": "s10_cci",
+   "seq": 10,
+   "texte": "La chambre de commerce parle de plus de 600 commerces vandalisés.",
+   "sources": [
+    "ICI-jour-apres"
+   ],
+   "dit": "La chambre de commerce parle de plus de six cents commerces vandalisés."
+  },
+  {
+   "id": 56,
+   "cle": "s10_pref",
+   "seq": 10,
+   "texte": "En fin de journée, la préfecture de police annonce, « au plus fort des événements », 8 000 émeutiers et plus de 30 000 pilleurs.",
+   "sources": [
+    "MIM-aides",
+    "GOM-bilan"
+   ],
+   "dit": "En fin de journée, la préfecture de police annonce, « au plus fort des événements », huit mille émeutiers et plus de trente mille pilleurs."
+  },
+  {
+   "id": 57,
+   "cle": "s10_gav",
+   "seq": 10,
+   "texte": "Elle compte 99 gardes à vue, et 118 blessés parmi les forces de l'ordre, dont trois hospitalisés.",
+   "sources": [
+    "MIM-aides"
+   ],
+   "dit": "Elle compte quatre-vingt-dix-neuf gardes à vue, et cent dix-huit blessés parmi les forces de l'ordre, dont trois hospitalisés."
+  },
+  {
+   "id": 58,
+   "cle": "s11_inter",
+   "seq": 11,
+   "texte": "Lundi 19 octobre, sur France Inter, Benoît Payan juge la doctrine de maintien de l'ordre « inefficace ».",
+   "sources": [
+    "ICI-Payan"
+   ]
+  },
+  {
+   "id": 59,
+   "cle": "s11_1500",
+   "seq": 11,
+   "texte": "Il conteste les 30 000 pilleurs : « des policiers et des gradés de la préfecture », dit-il, parlent de 1 500.",
+   "sources": [
+    "ICI-Payan"
+   ],
+   "dit": "Il conteste les trente mille pilleurs : « des policiers et des gradés de la préfecture », dit-il, parlent de mille cinq cents."
+  },
+  {
+   "id": 60,
+   "cle": "s11_10000",
+   "seq": 11,
+   "texte": "Des policiers cités par Europe 1 évoquent un chiffre plus proche de 10 000.",
+   "sources": [
+    "E1-reveil"
+   ],
+   "dit": "Des policiers cités par Europe 1 évoquent un chiffre plus proche de dix mille."
+  },
+  {
+   "id": 61,
+   "cle": "s11_quatre",
+   "seq": 11,
+   "texte": "Quatre chiffres en trois jours, et aucun décompte indépendant.",
+   "sources": []
+  },
+  {
+   "id": 62,
+   "cle": "s11_centime",
+   "seq": 11,
+   "texte": "Le maire réclame une indemnisation des commerçants « au centime près ».",
+   "sources": [
+    "ICI-Payan"
+   ]
+  },
+  {
+   "id": 63,
+   "cle": "s11_controle",
+   "seq": 11,
+   "texte": "Le même matin, sur France Inter, le ministre de l'Intérieur, Laurent Nuñez, admet : « Oui, il y a eu une perte de contrôle. »",
+   "sources": [
+    "ICI-anticipation"
+   ]
+  },
+  {
+   "id": 64,
+   "cle": "s11_demission",
+   "seq": 11,
+   "texte": "L'Élysée refuse sa démission, au nom de « la nécessité d'un commandement continu des forces de l'ordre ».",
+   "sources": [
+    "ICI-visite",
+    "DM-demission"
+   ]
+  },
+  {
+   "id": 65,
+   "cle": "s11_interdit",
+   "seq": 11,
+   "texte": "À Marseille, les rassemblements sont interdits ce lundi, de midi à 20 heures, et la visite du ministre est reportée.",
+   "sources": [
+    "ICI-interdiction",
+    "ICI-visite"
+   ],
+   "dit": "À Marseille, les rassemblements sont interdits ce lundi, de midi à vingt heures, et la visite du ministre est reportée."
+  },
+  {
+   "id": 66,
+   "cle": "s12_sait",
+   "seq": 12,
+   "texte": "Ce que l'on sait : la journée a commencé tôt au Prado ; les premiers pillages ont été signalés avant midi, l'hôtel de ville a été forcé à la mi-journée, et des commerces étaient encore attaqués dans la nuit.",
+   "sources": []
+  },
+  {
+   "id": 67,
+   "cle": "s12_incertain",
+   "seq": 12,
+   "texte": "Ce qui reste incertain : le nombre réel de pilleurs, le nombre de commerces touchés, les effectifs réellement engagés, et l'heure précise de plusieurs faits.",
+   "sources": []
+  },
+  {
+   "id": 68,
+   "cle": "s12_question",
+   "seq": 12,
+   "texte": "Et une question reste ouverte : pourquoi le cœur commerçant de la deuxième ville de France a-t-il pu être pillé, de la fin de matinée jusque dans la nuit ?",
+   "sources": []
+  },
+  {
+   "id": 69,
+   "cle": "s12_macron",
+   "seq": 12,
+   "texte": "Dimanche soir, Emmanuel Macron a dit attendre « des réponses claires » sur le renseignement et l'anticipation.",
+   "sources": [
+    "DM-Macron"
+   ]
+  },
+  {
+   "id": 70,
+   "cle": "s12_fin",
+   "seq": 12,
+   "texte": "Au lundi 19 octobre, ces réponses n'ont pas été rendues publiques.",
+   "sources": [],
+   "pause": 0.0
+  }
+ ]
+}

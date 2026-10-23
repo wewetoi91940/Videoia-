@@ -1,0 +1,155 @@
+      @font-face { font-family: "Newsreader"; src: url("assets/fonts/Newsreader-400.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+      @font-face { font-family: "Newsreader"; src: url("assets/fonts/Newsreader-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+      @font-face { font-family: "Newsreader"; src: url("assets/fonts/Newsreader-600.woff2") format("woff2"); font-weight: 600; font-style: normal; }
+      @font-face { font-family: "Newsreader"; src: url("assets/fonts/Newsreader-800.woff2") format("woff2"); font-weight: 800; font-style: normal; }
+      @font-face { font-family: "Oswald"; src: url("assets/fonts/Oswald-Regular.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Oswald"; src: url("assets/fonts/Oswald-Bold.woff2") format("woff2"); font-weight: 700; }
+      :root { --bg: #11161c; --bg2: #0c1015; --fg: #ece6da; --mut: #a3acb6; --acc: #e9a23b; --acc-d: rgba(233, 162, 59, 0.45); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; overflow: hidden; background: var(--bg); }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--bg); color: var(--fg);
+              font-family: "Newsreader", serif; }
+      .plan { position: absolute; inset: 0; overflow: hidden; }
+      .inner { position: absolute; inset: 0; background: var(--bg); overflow: hidden; }
+      .mono { font-family: "IBM Plex Mono", monospace; }
+
+      /* fonds des cartons : grille fine et halo ambré, pour la profondeur */
+      .fond-grille { position: absolute; inset: 0; background: url("assets/fond.png") 0 0 / 100% 100% no-repeat; }
+      .ghost { position: absolute; right: 60px; bottom: 40px; font-family: "Oswald"; font-weight: 700; font-size: 470px;
+               line-height: 0.78; color: rgba(236, 230, 218, 0.07); white-space: nowrap; letter-spacing: -0.02em; }
+
+      /* cartes */
+      .plateau { position: absolute; top: 0; overflow: hidden; background: var(--bg2); }
+      .cam { position: absolute; left: 0; top: 0; }
+      .cam img { position: absolute; left: 0; top: 0; display: block; }
+      .calque { position: absolute; left: 0; top: 0; overflow: visible; }
+      .hl { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .hl-halo { stroke: rgba(233, 162, 59, 0.28); stroke-width: 30; }
+      .hl-actif { stroke: var(--acc); stroke-width: 11; }
+      .hl-passe { stroke: rgba(233, 162, 59, 0.5); stroke-width: 7; }
+      .hl-froid { stroke: rgba(236, 230, 218, 0.6); stroke-width: 7; }
+      .zone { fill: rgba(233, 162, 59, 0.24); stroke: var(--acc); stroke-width: 2.5; stroke-dasharray: 9 7; }
+      .pt { fill: var(--acc); stroke: var(--bg2); stroke-width: 4; }
+      .pt-froid { fill: var(--fg); }
+      .pulse { fill: none; stroke: var(--acc); stroke-width: 3; }
+      .etiq { position: absolute; font-family: "Oswald"; font-weight: 400; font-size: 30px; letter-spacing: 0.05em;
+              text-transform: uppercase; color: var(--fg); background: rgba(10, 14, 19, 0.86); padding: 6px 14px 8px;
+              border: 1.5px solid rgba(233, 162, 59, 0.7); white-space: nowrap; }
+      .vignette { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; background: url("assets/vignette.png") 0 0 / 100% 100% no-repeat; }
+      .echelle { position: absolute; right: 70px; bottom: 156px; font-family: "IBM Plex Mono"; font-size: 18px; color: var(--mut);
+                 display: flex; align-items: center; gap: 12px; }
+      .echelle span { display: block; height: 8px; border: 2px solid var(--mut); border-top: none; }
+      .nord { position: absolute; right: 70px; bottom: 196px; font-family: "Oswald"; font-size: 24px; color: var(--mut);
+              width: 34px; height: 34px; border: 2px solid var(--mut); border-radius: 50%; display: flex;
+              align-items: center; justify-content: center; }
+      .mobilier { position: absolute; inset: 0; pointer-events: none; }
+      .attrib { position: absolute; right: 70px; bottom: 124px; font-family: "IBM Plex Mono"; font-size: 16px; color: var(--mut); }
+      .colonne { position: absolute; left: 0; top: 0; width: 840px; height: 100%; padding: 190px 70px 0 80px; }
+      .col-kicker { font-family: "IBM Plex Mono"; font-size: 21px; letter-spacing: 0.14em; color: var(--acc); text-transform: uppercase; }
+      .colonne h2 { font-weight: 600; font-size: 60px; line-height: 1.08; margin: 18px 0 34px; }
+      .colonne li { list-style: none; font-size: 34px; line-height: 1.3; margin: 0 0 20px; padding-left: 34px; position: relative; color: var(--fg); }
+      .colonne li::before { content: ""; position: absolute; left: 0; top: 20px; width: 18px; height: 3px; background: var(--acc); }
+
+      /* photos des lieux */
+      .plan-photo .cam { inset: 0; width: 100%; height: 100%; }
+      .photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .voile { position: absolute; inset: 0; background: url("assets/voile.png") 0 0 / 100% 100% no-repeat; }
+      .mention { position: absolute; left: 80px; top: 96px; font-family: "IBM Plex Mono"; font-size: 18px; letter-spacing: 0.08em;
+                 color: var(--fg); background: rgba(10, 14, 19, 0.7); padding: 6px 12px; }
+      .credit { position: absolute; left: 80px; bottom: 46px; font-family: "IBM Plex Mono"; font-size: 16px; color: #c3c9cf;
+                max-width: 1100px; }
+
+      /* cartouche lieu / heure */
+      .cartouche { position: absolute; left: 80px; bottom: 100px; max-width: 1050px; background: rgba(12, 16, 21, 0.86);
+                   padding: 20px 30px 24px; border-top: 3px solid var(--acc); }
+      .c-heure { font-family: "Oswald"; font-weight: 700; font-size: 52px; line-height: 1.05; color: var(--acc); margin-top: 10px; }
+      .c-lieu { font-family: "Oswald"; font-size: 38px; line-height: 1.15; letter-spacing: 0.04em; text-transform: uppercase; margin-top: 4px; }
+      .statut { display: inline-block; font-family: "IBM Plex Mono"; font-size: 19px; letter-spacing: 0.06em; padding: 5px 12px; }
+      .st-publiee { background: var(--acc); color: #11161c; }
+      .st-periode, .st-jour { border: 2px dashed var(--acc); color: var(--acc); }
+      .st-prevue { border: 2px solid var(--fg); color: var(--fg); }
+      .st-depeche { border: 2px solid var(--mut); color: var(--mut); }
+      .st-direct { border: 2px solid var(--acc); color: var(--acc); }
+      .st-unique { border: 2px dashed var(--fg); color: var(--fg); }
+
+      /* cartons d'heure */
+      .h-bloc { position: absolute; left: 140px; top: 220px; width: 1500px; }
+      .h-pre { font-family: "Oswald"; font-size: 60px; letter-spacing: 0.06em; margin-top: 30px; color: var(--fg); }
+      .h-main { font-family: "Oswald"; font-weight: 700; font-size: 230px; line-height: 0.95; color: var(--acc); white-space: nowrap; }
+      .h-main.h-long { font-size: 150px; line-height: 1.05; }
+      .h-rule { width: 760px; height: 4px; background: var(--acc); margin: 26px 0 30px; }
+      .h-evt { font-size: 48px; line-height: 1.22; max-width: 1400px; }
+      .h-lieu { font-family: "Oswald"; font-size: 32px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mut); margin-top: 20px; }
+
+      /* citations */
+      .q-bloc { position: absolute; left: 160px; top: 200px; width: 1560px; }
+      .q-gl { font-weight: 800; font-size: 200px; line-height: 1; color: var(--acc); height: 150px; margin-bottom: 24px; }
+      .q-bloc blockquote { font-style: italic; font-size: 68px; line-height: 1.18; }
+      .q-who { font-family: "Oswald"; font-size: 34px; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 46px; color: var(--fg); }
+      .q-src { font-family: "IBM Plex Mono"; font-size: 22px; color: var(--mut); margin-top: 10px; }
+
+      /* chiffres */
+      .ch-bloc { position: absolute; left: 140px; top: 150px; width: 1640px; }
+      .ch-kicker, .k-kicker, .t-kicker, .cr-kicker { font-family: "IBM Plex Mono"; font-size: 22px; letter-spacing: 0.16em;
+                                                    text-transform: uppercase; color: var(--acc); }
+      .ch-bloc h2 { font-weight: 600; font-size: 58px; line-height: 1.1; margin: 14px 0 22px; }
+      .ligne { display: grid; grid-template-columns: 560px 1fr; gap: 44px; align-items: center; margin-top: 30px; }
+      .l-val.l-long { font-size: 70px; }
+      .l-val { font-family: "Oswald"; font-weight: 700; font-size: 92px; line-height: 1; color: var(--acc); text-align: right; white-space: nowrap; }
+      .l-lib { font-size: 36px; line-height: 1.2; }
+      .barre { height: 14px; background: rgba(236, 230, 218, 0.1); margin: 12px 0 10px; }
+      .barre span { display: block; height: 100%; background: var(--acc); }
+      .l-src { font-family: "IBM Plex Mono"; font-size: 20px; color: var(--mut); }
+      .ch-note { font-style: italic; font-size: 36px; color: var(--mut); margin-top: 44px; }
+
+      /* constats */
+      .k-bloc { position: absolute; left: 160px; top: 0; bottom: 0; width: 1500px; display: flex; flex-direction: column; justify-content: center; }
+      .k-txt { font-weight: 600; font-size: 78px; line-height: 1.12; margin-top: 18px; }
+      .k-sous { font-size: 42px; line-height: 1.25; color: var(--mut); margin-top: 30px; }
+
+      /* bilan final */
+      .f-bloc { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 64px; padding: 190px 110px 120px; }
+      .f-col h3 { font-family: "Oswald"; font-weight: 700; font-size: 42px; letter-spacing: 0.05em; color: var(--acc);
+                  border-top: 3px solid var(--acc); padding-top: 18px; text-transform: uppercase; }
+      .f-col li { list-style: none; font-size: 33px; line-height: 1.28; margin: 22px 0 0; }
+
+      /* titre */
+      .t-bloc { position: absolute; left: 140px; top: 240px; width: 1600px; }
+      .t-bloc h1 { font-weight: 800; font-size: 124px; line-height: 1.02; margin-top: 26px; }
+      .t-bloc h2 { font-style: italic; font-weight: 400; font-size: 66px; line-height: 1.1; color: var(--mut); margin-top: 18px; }
+      .t-rule { width: 640px; height: 4px; background: var(--acc); margin: 44px 0 34px; }
+      .t-note { font-family: "IBM Plex Mono"; font-size: 23px; line-height: 1.5; color: var(--mut); max-width: 1250px; }
+      .ghost-titre { bottom: 40px; }
+      .ghost::after { content: attr(data-t); }   /* décor : pseudo-élément, pas un texte à lire */
+
+      /* sources de fin */
+      .cr-page { position: absolute; inset: 0; padding: 120px 120px 80px; }
+      .cr-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 90px; margin-top: 34px; }
+      .cr-bloc h3 { font-family: "Oswald"; font-size: 30px; letter-spacing: 0.06em; color: var(--acc); text-transform: uppercase; margin-bottom: 8px; }
+      .cr-bloc p { font-family: "IBM Plex Mono"; font-size: 19px; line-height: 1.38; color: var(--fg); margin-bottom: 7px; }
+
+      /* habillage permanent */
+      .jour { position: absolute; left: 80px; top: 46px; font-family: "Oswald"; font-size: 28px; letter-spacing: 0.18em;
+              color: var(--fg); display: flex; align-items: center; gap: 14px; background: rgba(12, 16, 21, 0.72); padding: 4px 14px 6px 12px; }
+      .j-dot { display: block; width: 12px; height: 12px; border-radius: 50%; background: var(--acc); }
+      .horloge { position: absolute; right: 60px; top: 22px; width: 852px; background: rgba(12, 16, 21, 0.92); padding: 6px 16px 10px; }
+      .hz { display: block; }
+      .hz-axe, .hz-tick { stroke: rgba(236, 230, 218, 0.4); stroke-width: 2; }
+      .hz-txt { fill: #b9c1ca; font-family: "IBM Plex Mono"; font-size: 16px; text-anchor: middle; }
+      .hz-periode { fill: rgba(233, 162, 59, 0.32); stroke: var(--acc); stroke-width: 1.5; stroke-dasharray: 5 4; }
+      .hz-publiee { fill: var(--acc); }
+      .hz-prevue { fill: var(--bg); stroke: var(--fg); stroke-width: 3; }
+      .hz-direct { stroke: var(--acc); stroke-width: 3.5; }
+      .hz-cur { stroke: var(--fg); stroke-width: 2.5; }
+      .hz-curtri { fill: var(--fg); }
+      .hz-leg { font-family: "IBM Plex Mono"; font-size: 15px; color: var(--mut); display: flex; align-items: center; gap: 8px; padding-left: 12px; }
+      .lg { display: inline-block; width: 16px; height: 12px; margin-left: 14px; }
+      .lg:first-child { margin-left: 0; }
+      .lg-publiee { background: var(--acc); border-radius: 50%; width: 12px; }
+      .lg-periode { background: rgba(233, 162, 59, 0.32); border: 1.5px dashed var(--acc); }
+      .lg-prevue { border: 2.5px solid var(--fg); border-radius: 50%; width: 12px; }
+      .lg-direct { width: 4px; background: var(--acc); }
+      .sources { position: absolute; right: 70px; bottom: 44px; max-width: 980px; font-family: "IBM Plex Mono"; font-size: 19px;
+                 line-height: 1.35; color: var(--fg); background: rgba(12, 16, 21, 0.8); padding: 7px 14px; text-align: right; }
+      .s-k { color: var(--acc); letter-spacing: 0.12em; margin-right: 12px; }
+      .grain { position: absolute; inset: 0; pointer-events: none; background-image: url("assets/grain.png"); opacity: 0.07; }

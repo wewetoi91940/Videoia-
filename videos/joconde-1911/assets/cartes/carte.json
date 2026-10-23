@@ -1,0 +1,36 @@
+{
+ "source": "Natural Earth 1:50m (domaine public) via npm world-atlas@2.0.2, land-50m.json",
+ "projection": "Mercator",
+ "villes_lat_lon": {
+  "Paris": [
+   48.8566,
+   2.3522
+  ],
+  "Florence": [
+   43.7696,
+   11.2558
+  ]
+ },
+ "villes_px_cadre_1080x1920": {
+  "Paris": [
+   230.4,
+   556.5
+  ],
+  "Florence": [
+   855.3,
+   1073.9
+  ]
+ },
+ "villes_px_image_1242x2208": {
+  "Paris": [
+   265.0,
+   640.0
+  ],
+  "Florence": [
+   983.6,
+   1235.0
+  ]
+ },
+ "florence_x_cible_de_mise_en_page": 930,
+ "florence_x_projete_utilise": 983.6
+}

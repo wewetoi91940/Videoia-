@@ -1,0 +1,31 @@
+# Régénérables par make.sh (lourds)
+.venv/
+renders/
+.hyperframes/
+build/osm/
+build/voix/
+build/stems/
+build/*.wav
+build/pip.log
+__pycache__/
+build/voix_gemini/travaux.json
+build/voix_gemini/resultats.json
+build/snaps*/
+build/photos_*/
+build/hf_check_*.json
+build/photos_originales/
+build/modeles/
+build/verif/
+build/*.log
+build/transcription/*/
+build/transcription/transcript.json
+# Vidéos livrées : plus de 100 Mo (limite GitHub), transmises directement
+livrables/*.mp4
+livrables/pistes/
+build/passlog/
+# Version TikTok : sons, images témoins et rapports de contrôle régénérables
+build/tiktok/partie-*/mix_master.wav
+build/tiktok/snaps*/
+build/tiktok/hf_check_*.json
+build/tiktok/lint-*.txt
+build/tiktok/*.log

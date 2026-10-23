@@ -1,0 +1,10 @@
+# Python ≥ 3.11 — versions utilisées pour la production de « joconde-1911 »
+kokoro-onnx==0.6.1
+onnxruntime==1.31.0
+phonemizer==3.4.0
+espeakng-loader==0.2.4
+numpy==2.5.4
+scipy==1.18.1
+soundfile==0.14.0
+pyloudnorm==0.2.0
+pillow==13.0.0

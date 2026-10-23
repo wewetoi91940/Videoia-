@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Crue de 1910 · TikTok</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+@font-face { font-family: "Newsreader"; src: url("assets/fonts/Newsreader-400.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Newsreader"; src: url("assets/fonts/Newsreader-600.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "Newsreader"; src: url("assets/fonts/Newsreader-800.woff2") format("woff2"); font-weight: 800; }
+@font-face { font-family: "Oswald"; src: url("assets/fonts/Oswald-Regular.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Oswald"; src: url("assets/fonts/Oswald-Bold.woff2") format("woff2"); font-weight: 700; }
+:root { --bg: #0f0d0a; --fg: #f1e7d3; --mut: #b9ad97; --acc: #e3a93f; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: var(--bg); }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--bg); color: var(--fg); font-family: "Newsreader", serif; }
+.plan { position: absolute; inset: 0; overflow: hidden; }
+.inner { position: absolute; inset: 0; background: var(--bg); }
+.scene { position: absolute; left: 0; top: 360px; width: 1080px; height: 860px; overflow: hidden; background: #000; }
+.cam { position: absolute; inset: 0; }
+.cam img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.ombre { position: absolute; left: 0; right: 0; bottom: 0; height: 240px; background: rgba(8, 7, 5, 0.55); }
+.calque { position: absolute; inset: 0; }
+.puce { position: absolute; left: 40px; top: 24px; font-family: "Oswald"; font-size: 22px; letter-spacing: 0.16em; color: var(--bg);
+        background: var(--acc); padding: 3px 12px 5px; }
+.credit { position: absolute; left: 40px; bottom: 18px; max-width: 880px; font-family: "Oswald"; font-size: 19px; letter-spacing: 0.04em;
+          color: #f1e7d3; background: rgba(10, 9, 7, 0.78); padding: 3px 10px 4px; }
+.entete { position: absolute; left: 60px; top: 178px; width: 900px; }
+.kicker { font-family: "Oswald"; font-size: 26px; letter-spacing: 0.2em; color: var(--mut); }
+.titre { font-weight: 800; font-size: 62px; line-height: 1.02; margin-top: 4px; }
+.titre em { font-style: normal; color: var(--acc); }
+.tampon { font-family: "Oswald"; font-weight: 700; font-size: 84px; line-height: 1; color: var(--acc); margin-top: 6px; letter-spacing: 0.02em; }
+.etiquette { position: absolute; font-family: "Oswald"; font-size: 34px; letter-spacing: 0.05em; text-transform: uppercase;
+             color: var(--fg); background: rgba(12, 10, 7, 0.88); border: 1.5px solid rgba(227, 169, 63, 0.75); padding: 6px 16px 8px; }
+.chiffre { position: absolute; left: 40px; bottom: 60px; font-family: "Oswald"; font-weight: 700; font-size: 180px; line-height: 1;
+           color: var(--acc); }
+.chiffre small { display: block; font-size: 44px; font-weight: 400; color: var(--fg); letter-spacing: 0.04em; margin-top: 8px; }
+.document { position: absolute; left: 170px; top: 24px; width: 740px; height: 529px; background: #e9dfca; padding: 10px; }
+.document img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.horloge { position: absolute; left: 240px; top: 40px; width: 600px; height: 600px; }
+.schema { position: absolute; left: 60px; top: 680px; width: 900px; display: flex; align-items: center; gap: 24px; }
+.boite { font-family: "Oswald"; font-size: 32px; letter-spacing: 0.04em; color: var(--fg); border: 2px solid var(--acc); padding: 10px 18px 12px; }
+.fleche { font-family: "Oswald"; font-size: 44px; color: var(--acc); }
+.sources { position: absolute; left: 60px; top: 1232px; max-width: 880px; font-family: "Oswald"; font-size: 20px; letter-spacing: 0.04em;
+           color: var(--fg); background: rgba(12, 10, 7, 0.8); padding: 5px 12px; }
+.sources b { color: var(--acc); font-weight: 400; letter-spacing: 0.14em; margin-right: 10px; }
+.st { position: absolute; left: 50px; top: 1306px; width: 890px; text-align: center; }
+.st-r { display: block; margin-bottom: 6px; }
+.st-r span { font-weight: 600; font-size: 54px; line-height: 1.2; color: var(--fg); background: rgba(10, 9, 7, 0.9); padding: 2px 14px 6px;
+             -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.st-r .st-n { color: var(--acc); background: none; padding: 0; font-size: inherit; }
+.fin-carte { position: absolute; left: 0; right: 0; bottom: 0; height: 330px; background: rgba(12, 10, 7, 0.9); padding: 28px 40px; }
+.fc-titre { font-family: "Oswald"; font-weight: 700; font-size: 40px; color: var(--acc); letter-spacing: 0.04em; margin-bottom: 14px; }
+.fin-carte p { font-family: "Oswald"; font-size: 23px; line-height: 1.35; color: var(--fg); margin-bottom: 8px; }
+.fin-carte b { color: var(--acc); font-weight: 400; letter-spacing: 0.12em; margin-right: 8px; }
+.grain { position: absolute; inset: 0; pointer-events: none; background-image: url("assets/grain.png"); opacity: 0.06; }
+</style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="44.1666" data-fps="30" data-width="1080" data-height="1920">
+      <section id="f1" class="clip plan" data-start="0.0000" data-duration="2.7000" data-track-index="2"><div id="f1-in" class="inner"><div class="entete txt"><div class="kicker">PARIS · JANVIER 1910</div><div class="titre">La Seine arrête les <em id="f1-em">horloges</em></div></div><div class="scene"><div class="cam" id="f1-cam"><img src="assets/photos/saint-lazare.jpg" alt="" style="object-position:50% 50%"></div><div class="ombre"></div><div class="calque txt"><div class="puce">ARCHIVE · 1910</div><div class="credit">Gare Saint-Lazare, 28 janvier 1910 · Agence Rol · BnF · domaine public</div></div></div><div class="sources txt"><b>SOURCES</b>Wikipédia · Météo Paris</div></div></section>
+      <section id="f2" class="clip plan" data-start="2.3000" data-duration="6.1333" data-track-index="1"><div id="f2-in" class="inner" style="opacity:0"><div class="entete txt"><div class="kicker">PARIS</div><div id="f2-tp" class="tampon">JANVIER 1910</div></div><div class="scene"><div class="cam" id="f2-cam"><img src="assets/photos/panorama.jpg" alt="" style="object-position:0% 50%"></div><div class="ombre"></div><div class="calque txt"><div class="puce">ARCHIVE · 1910</div><div id="f2-e" class="etiquette" style="left:40px;top:80px">HIVER PLUVIEUX</div><div id="f2-s" class="etiquette" style="left:40px;top:150px">SOLS GORGÉS D’EAU</div><div class="credit">Vue depuis la tour de l’horloge de la gare de Lyon, 29 janvier 1910 · Héliotypie E. Le Deley · domaine public</div></div></div><div class="sources txt"><b>SOURCES</b>Wikipédia · Météo Paris · Paris Zigzag</div></div></section>
+      <section id="f3" class="clip plan" data-start="8.4333" data-duration="3.4333" data-track-index="2"><div id="f3-in" class="inner"><div class="entete txt"><div class="kicker">LA SEINE MONTE</div><div id="f3-tp" class="tampon">20 JANVIER</div></div><div class="scene"><div class="cam" id="f3-cam"><img src="assets/photos/saints-peres.jpg" alt="" style="object-position:50% 50%"></div><div class="ombre"></div><div class="calque txt"><div class="puce">ARCHIVE · 1910</div><div id="f3-e" class="etiquette" style="left:40px;top:80px">PONT DES SAINTS-PÈRES</div><div class="credit">Bateau coincé sous le pont des Saints-Pères, 21 janvier 1910 · Agence Rol · BnF · domaine public</div></div></div><div class="sources txt"><b>SOURCES</b>Wikipédia · Météo Paris</div></div></section>
+      <section id="f4" class="clip plan" data-start="11.4666" data-duration="6.8334" data-track-index="1"><div id="f4-in" class="inner" style="opacity:0"><div class="entete txt"><div class="kicker">LE LENDEMAIN</div><div id="f4-tp" class="tampon">21 JANVIER</div></div><div class="scene"><div class="cam" id="f4-cam"><svg class="horloge" viewBox="0 0 600 600" width="600" height="600"><circle cx="300" cy="300" r="290" fill="#efe5cf" stroke="#e3a93f" stroke-width="10"/><line x1="300" y1="30" x2="300" y2="66" stroke="#2a241b" stroke-width="7" transform="rotate(0 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(6 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(12 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(18 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(24 300 300)"/><line x1="300" y1="30" x2="300" y2="66" stroke="#2a241b" stroke-width="7" transform="rotate(30 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(36 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(42 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(48 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(54 300 300)"/><line x1="300" y1="30" x2="300" y2="66" stroke="#2a241b" stroke-width="7" transform="rotate(60 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(66 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(72 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(78 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(84 300 300)"/><line x1="300" y1="30" x2="300" y2="66" stroke="#2a241b" stroke-width="7" transform="rotate(90 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(96 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(102 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(108 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(114 300 300)"/><line x1="300" y1="30" x2="300" y2="66" stroke="#2a241b" stroke-width="7" transform="rotate(120 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(126 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(132 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(138 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(144 300 300)"/><line x1="300" y1="30" x2="300" y2="66" stroke="#2a241b" stroke-width="7" transform="rotate(150 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(156 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(162 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(168 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(174 300 300)"/><line x1="300" y1="30" x2="300" y2="66" stroke="#2a241b" stroke-width="7" transform="rotate(180 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(186 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(192 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(198 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(204 300 300)"/><line x1="300" y1="30" x2="300" y2="66" stroke="#2a241b" stroke-width="7" transform="rotate(210 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(216 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(222 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(228 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(234 300 300)"/><line x1="300" y1="30" x2="300" y2="66" stroke="#2a241b" stroke-width="7" transform="rotate(240 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(246 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(252 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(258 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(264 300 300)"/><line x1="300" y1="30" x2="300" y2="66" stroke="#2a241b" stroke-width="7" transform="rotate(270 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(276 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(282 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(288 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(294 300 300)"/><line x1="300" y1="30" x2="300" y2="66" stroke="#2a241b" stroke-width="7" transform="rotate(300 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(306 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(312 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(318 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(324 300 300)"/><line x1="300" y1="30" x2="300" y2="66" stroke="#2a241b" stroke-width="7" transform="rotate(330 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(336 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(342 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(348 300 300)"/><line x1="300" y1="30" x2="300" y2="44" stroke="#2a241b" stroke-width="3" transform="rotate(354 300 300)"/><line x1="300" y1="300" x2="300" y2="150" stroke="#2a241b" stroke-width="14" stroke-linecap="round" transform="rotate(300 300 300)"/><line x1="300" y1="300" x2="300" y2="90" stroke="#2a241b" stroke-width="9" stroke-linecap="round" transform="rotate(60 300 300)"/><g id="f4-sec"><line x1="300" y1="340" x2="300" y2="70" stroke="#b5481f" stroke-width="4"/><circle cx="300" cy="300" r="12" fill="#b5481f"/></g></svg><div class="schema"><div id="f4-b1" class="boite">USINE D’AIR COMPRIMÉ</div><div id="f4-fl" class="fleche">→</div><div id="f4-b2" class="boite">HORLOGES PUBLIQUES</div></div></div><div class="calque txt"><div class="puce">ILLUSTRATION</div></div></div><div class="sources txt"><b>SOURCES</b>Wikipédia · Météo Paris</div></div></section>
+      <section id="f5" class="clip plan" data-start="18.3000" data-duration="4.1666" data-track-index="2"><div id="f5-in" class="inner"><div class="entete txt"><div class="kicker">JANVIER 1910</div><div id="f5-tp" class="tampon">LA SEINE DÉBORDE</div></div><div class="scene"><div class="cam" id="f5-cam"><img src="assets/photos/rue-leblanc.jpg" alt="" style="object-position:50% 50%"></div><div class="ombre"></div><div class="calque txt"><div class="puce">ARCHIVE · 1910</div><div class="credit">Rue Leblanc (15e), janvier 1910 · Agence Rol · BnF · domaine public</div></div></div><div class="sources txt"><b>SOURCES</b>Wikipédia · Paris Zigzag</div></div></section>
+      <section id="f6" class="clip plan" data-start="22.0666" data-duration="6.2334" data-track-index="1"><div id="f6-in" class="inner" style="opacity:0"><div class="entete txt"><div class="kicker">PARIS INONDÉ</div><div id="f6-tp" class="tampon">EN BARQUE</div></div><div class="scene"><div class="cam" id="f6-cam"><img src="assets/photos/passy.jpg" alt="" style="object-position:100% 50%"></div><div class="ombre"></div><div class="calque txt"><div class="puce">ARCHIVE · 1910</div><div id="f6-ch" class="chiffre">20 000<small>IMMEUBLES TOUCHÉS</small></div><div id="f6-m" class="etiquette" style="left:40px;top:90px">MÉTRO INONDÉ</div><div id="f6-p" class="etiquette" style="left:40px;top:160px">PASSERELLES · QUAI DE PASSY</div><div class="credit">Passerelles au quai de Passy, janvier 1910 · carte postale ND Phot. · domaine public</div></div></div><div class="sources txt"><b>SOURCES</b>Wikipédia · Météo Paris</div></div></section>
+      <section id="f7" class="clip plan" data-start="28.3000" data-duration="7.4333" data-track-index="2"><div id="f7-in" class="inner"><div class="entete txt"><div class="kicker">LE SOMMET</div><div id="f7-tp" class="tampon">28 JANVIER</div></div><div class="scene"><div class="cam" id="f7-cam"><div class="document"><img src="assets/photos/plan-1910.jpg" alt=""></div></div><div class="calque txt"><div class="puce">ARCHIVE · 1910</div><div id="f7-ch" class="chiffre"><span id="f7-n">8,62 m</span><small>PONT D’AUSTERLITZ · 28 JANVIER</small></div><div id="f7-j" class="etiquette" style="right:150px;top:640px">45 JOURS DE CRUE</div><div class="credit">« Les inondations à Paris », plan de 1910 · Héliotypie E. Le Deley · domaine public</div></div></div><div class="sources txt"><b>SOURCES</b>Wikipédia · Paris Zigzag</div></div></section>
+      <section id="f8" class="clip plan" data-start="35.3333" data-duration="8.8333" data-track-index="1"><div id="f8-in" class="inner" style="opacity:0"><div class="entete txt"><div class="kicker">AUJOURD’HUI</div><div id="f8-t" class="titre">Cherchez « <em>1910</em> » sur les murs</div></div><div class="scene"><div class="cam" id="f8-cam"><img src="assets/photos/repere-celestins.jpg" alt="" style="object-position:50% 60%"></div><div class="ombre"></div><div class="calque txt"><div class="puce">AUJOURD’HUI</div><div id="f8-e" class="etiquette" style="left:40px;top:80px">PORT DES CÉLESTINS · PARIS 4E</div><div id="f8-fin" class="fin-carte"><div class="fc-titre">Crue de la Seine · janvier 1910</div><p><b>SOURCES</b> Wikipédia (« Crue de la Seine de 1910 ») · Météo Paris · Paris Zigzag</p><p><b>IMAGES</b> Agence Rol / BnF, E. Le Deley, ND Phot. (domaine public) · Mu (CC BY-SA 3.0)</p><p><b>VOIX</b> synthèse vocale (Kokoro)</p></div><div class="credit">Repère de crue, port des Célestins (Paris 4e) · photo Mu, 2010 · CC BY-SA 3.0 · Wikimedia Commons</div></div></div><div class="sources txt"><b>SOURCES</b>Wikipédia · Paris Zigzag</div></div></section>
+      <div id="st0" class="clip st" data-start="0.1333" data-duration="2.4000" data-track-index="8"><span class="st-r"><span>La Seine a arrêté</span></span><span class="st-r"><span>les horloges de Paris.</span></span></div>
+      <div id="st1" class="clip st" data-start="2.6000" data-duration="4.0666" data-track-index="8"><span class="st-r"><span>Janvier <span class="st-n">1910</span>. Après un hiver</span></span><span class="st-r"><span>pluvieux, les sols, gorgés</span></span></div>
+      <div id="st2" class="clip st" data-start="6.7000" data-duration="1.7666" data-track-index="8"><span class="st-r"><span>d’eau, n’absorbent plus rien.</span></span></div>
+      <div id="st3" class="clip st" data-start="8.5000" data-duration="2.9666" data-track-index="8"><span class="st-r"><span>Le <span class="st-n">20</span> janvier, les bateaux</span></span><span class="st-r"><span>ne passent plus sous les ponts.</span></span></div>
+      <div id="st4" class="clip st" data-start="11.7333" data-duration="3.0667" data-track-index="8"><span class="st-r"><span>Le lendemain, la crue arrête</span></span><span class="st-r"><span>l’usine d’air comprimé qui fait</span></span></div>
+      <div id="st5" class="clip st" data-start="14.8666" data-duration="1.8667" data-track-index="8"><span class="st-r"><span>marcher les horloges publiques.</span></span></div>
+      <div id="st6" class="clip st" data-start="16.7666" data-duration="1.5667" data-track-index="8"><span class="st-r"><span>Elles s’arrêtent en même temps.</span></span></div>
+      <div id="st7" class="clip st" data-start="18.3666" data-duration="2.7667" data-track-index="8"><span class="st-r"><span>Mais l’eau monte encore.</span></span><span class="st-r"><span>Elle passe par-dessus les quais</span></span></div>
+      <div id="st8" class="clip st" data-start="21.1666" data-duration="1.0000" data-track-index="8"><span class="st-r"><span>et envahit les rues.</span></span></div>
+      <div id="st9" class="clip st" data-start="22.3333" data-duration="3.2000" data-track-index="8"><span class="st-r"><span><span class="st-n">20 000</span> immeubles sont</span></span><span class="st-r"><span>touchés, le métro est inondé.</span></span></div>
+      <div id="st10" class="clip st" data-start="25.5666" data-duration="2.6000" data-track-index="8"><span class="st-r"><span>On circule en barque</span></span><span class="st-r"><span>et sur des passerelles.</span></span></div>
+      <div id="st11" class="clip st" data-start="28.3333" data-duration="3.4333" data-track-index="8"><span class="st-r"><span>Le <span class="st-n">28</span> janvier, l’échelle</span></span><span class="st-r"><span>du pont d’Austerlitz marque</span></span></div>
+      <div id="st12" class="clip st" data-start="31.8000" data-duration="3.5000" data-track-index="8"><span class="st-r"><span><span class="st-n">8,62</span> mètres. La crue</span></span><span class="st-r"><span>durera <span class="st-n">45</span> jours.</span></span></div>
+      <div id="st13" class="clip st" data-start="35.6000" data-duration="3.4000" data-track-index="8"><span class="st-r"><span>Ce niveau est encore gravé</span></span><span class="st-r"><span>dans Paris. Cherchez le trait</span></span></div>
+      <div id="st14" class="clip st" data-start="39.0666" data-duration="2.9000" data-track-index="8"><span class="st-r"><span>marqué <span class="st-n">1910</span> : c’est là</span></span><span class="st-r"><span>que l’eau s’est arrêtée.</span></span></div>
+      <div class="grain"></div>
+      <audio id="mix" src="build/mix_master.wav" data-start="0" data-duration="44.1666" data-track-index="20"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f1-em",{color:"#f1e7d3"},{color:"#e3a93f",duration:0.25},1.2666);
+      tl.fromTo("#f1-cam",{scale:1.0,transformOrigin:"50% 50%"},{scale:1.08,duration:2.700,ease:"sine.inOut"},0.0000);
+      tl.set("#f1-in",{opacity:1},0.0000);
+      tl.fromTo("#f2-tp",{opacity:0,y:14},{opacity:1,y:0,duration:0.45,ease:"power3.out"},2.6000);
+      tl.fromTo("#f2-e",{opacity:0,y:10},{opacity:1,y:0,duration:0.5},5.0333);
+      tl.fromTo("#f2-s",{opacity:0,y:10},{opacity:1,y:0,duration:0.5},6.4000);
+      tl.fromTo("#f2-cam img",{objectPosition:"0% 50%"},{objectPosition:"100% 50%",duration:6.333,ease:"none"},2.3000);
+      tl.fromTo("#f1-in .txt",{opacity:1},{opacity:0,duration:0.15,immediateRender:false},2.3000);
+      tl.fromTo("#f2-in .txt",{opacity:0},{opacity:1,duration:0.2},2.7000);
+      tl.fromTo("#f2-in",{opacity:0},{opacity:1,duration:0.4,ease:"sine.inOut"},2.3000);
+      tl.fromTo("#f3-tp",{opacity:0,y:14},{opacity:1,y:0,duration:0.45,ease:"power3.out"},8.5333);
+      tl.fromTo("#f3-e",{opacity:0,y:10},{opacity:1,y:0,duration:0.4},11.0333);
+      tl.fromTo("#f3-cam",{scale:1.0,transformOrigin:"50% 35%"},{scale:1.18,duration:3.433,ease:"sine.inOut"},8.4333);
+      tl.set("#f3-in",{opacity:1},8.4333);
+      tl.fromTo("#f4-tp",{opacity:0,y:14},{opacity:1,y:0,duration:0.45,ease:"power3.out"},11.7666);
+      tl.set("#f4-sec",{rotation:0,svgOrigin:"300 300"},11.6666);
+      tl.set("#f4-sec",{rotation:6,svgOrigin:"300 300"},12.6666);
+      tl.set("#f4-sec",{rotation:12,svgOrigin:"300 300"},13.6666);
+      tl.set("#f4-sec",{rotation:18,svgOrigin:"300 300"},14.6666);
+      tl.set("#f4-sec",{rotation:24,svgOrigin:"300 300"},15.6666);
+      tl.set("#f4-sec",{rotation:30,svgOrigin:"300 300"},16.6666);
+      tl.fromTo("#f4-b1",{opacity:0,x:-20},{opacity:1,x:0,duration:0.5},13.2666);
+      tl.fromTo("#f4-fl",{opacity:0},{opacity:1,duration:0.3},14.6333);
+      tl.fromTo("#f4-b2",{opacity:0,x:-20},{opacity:1,x:0,duration:0.5},15.4333);
+      tl.fromTo("#f4-cam",{scale:1},{scale:1.1,transformOrigin:"50% 32%",duration:1.2,ease:"power2.inOut"},16.8000);
+      tl.fromTo("#f3-in .txt",{opacity:1},{opacity:0,duration:0.15,immediateRender:false},11.4666);
+      tl.fromTo("#f4-in .txt",{opacity:0},{opacity:1,duration:0.2},11.8666);
+      tl.fromTo("#f4-in",{opacity:0,scale:1.08},{opacity:1,scale:1,duration:0.4,ease:"power2.out"},11.4666);
+      tl.fromTo("#f5-tp",{opacity:0,y:14},{opacity:1,y:0,duration:0.45,ease:"power3.out"},18.4000);
+      tl.fromTo("#f5-cam",{scale:1.12,transformOrigin:"50% 50%"},{scale:1.0,duration:4.167,ease:"sine.inOut"},18.3000);
+      tl.set("#f5-in",{opacity:1},18.3000);
+      tl.fromTo("#f6-tp",{opacity:0,y:14},{opacity:1,y:0,duration:0.45,ease:"power3.out"},22.3666);
+      tl.fromTo("#f6-ch",{opacity:0,y:30},{opacity:1,y:0,duration:0.5,ease:"power3.out"},22.3000);
+      tl.fromTo("#f6-m",{opacity:0},{opacity:1,duration:0.4},24.3000);
+      tl.fromTo("#f6-p",{opacity:0,y:10},{opacity:1,y:0,duration:0.4},27.2333);
+      tl.fromTo("#f6-cam",{scale:1.04,transformOrigin:"40% 40%"},{scale:1.12,duration:6.433,ease:"sine.inOut"},22.0666);
+      tl.fromTo("#f5-in .txt",{opacity:1},{opacity:0,duration:0.15,immediateRender:false},22.0666);
+      tl.fromTo("#f6-in .txt",{opacity:0},{opacity:1,duration:0.2},22.4666);
+      tl.fromTo("#f6-in",{opacity:0,x:160},{opacity:1,x:0,duration:0.4,ease:"power2.out"},22.0666);
+      tl.fromTo("#f7-tp",{opacity:0,y:14},{opacity:1,y:0,duration:0.45,ease:"power3.out"},28.4000);
+      tl.fromTo("#f7-ch",{opacity:0,y:30},{opacity:1,y:0,duration:0.5,ease:"power3.out"},31.7000);
+      tl.fromTo("#f7-j",{opacity:0},{opacity:1,duration:0.4},34.1333);
+      tl.fromTo("#f7-cam",{scale:1.0,transformOrigin:"50% 0%"},{scale:1.1,duration:7.433,ease:"sine.inOut"},28.3000);
+      tl.set("#f7-in",{opacity:1},28.3000);
+      tl.fromTo("#f8-t",{opacity:0,y:16},{opacity:1,y:0,duration:0.6,ease:"power3.out"},38.0666);
+      tl.fromTo("#f8-e",{opacity:0,y:10},{opacity:1,y:0,duration:0.4},39.4666);
+      tl.fromTo("#f8-fin",{opacity:0},{opacity:1,duration:0.5},42.1000);
+      tl.fromTo("#f8-cam",{scale:1.0,transformOrigin:"50% 62%"},{scale:1.22,duration:9.033,ease:"sine.inOut"},35.3333);
+      tl.fromTo("#f7-in .txt",{opacity:1},{opacity:0,duration:0.15,immediateRender:false},35.3333);
+      tl.fromTo("#f8-in .txt",{opacity:0},{opacity:1,duration:0.2},35.7333);
+      tl.fromTo("#f8-in",{opacity:0},{opacity:1,duration:0.4,ease:"sine.inOut"},35.3333);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

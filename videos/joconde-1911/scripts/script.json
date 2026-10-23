@@ -1,0 +1,250 @@
+{
+  "titre": "Le vol de la Joconde (1911)",
+  "version": 2,
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "duree_cible_s": 72,
+    "duree_min_s": 60,
+    "duree_max_s": 85
+  },
+  "voix": {
+    "moteur": "gemini",
+    "modele": "gemini-3.1-flash-tts-preview",
+    "voix": "Charon",
+    "style": "Narrateur français de documentaire historique pour TikTok. Voix grave, chaleureuse, diction très claire. Débit soutenu et dynamique, ton captivant de récit d'enquête, jamais lent ni monotone, pas de longues pauses à l'intérieur des phrases. Marque une courte pause nette entre deux phrases. Prononce les noms italiens à l'italienne.",
+    "debut_s": 0.1,
+    "repli_kokoro": {
+      "voix": "ff_siwis",
+      "langue": "fr-fr",
+      "vitesse": 1.0,
+      "usage": "brouillon de calage uniquement : jamais livré (voix jugée trop robotique)"
+    },
+    "phrases_par_bloc": 9,
+    "quota": "niveau gratuit : environ 10 requêtes par jour et par modèle → 3 blocs de 9 phrases = 3 requêtes",
+    "tempo_accroche": "phrases 1 à 3 accélérées ×1,1 (atempo, hauteur inchangée) pour poser la question avant 8 s"
+  },
+  "phrases": [
+    {
+      "id": 1,
+      "role": "accroche",
+      "pause": 0.2,
+      "texte": "Le 22 août 1911, au Louvre, il ne reste que quatre crochets.",
+      "lecture": "Posé, factuel, sans « bonjour ». Laisser tomber la voix sur « quatre crochets ».",
+      "tempo": 1.1
+    },
+    {
+      "id": 2,
+      "role": "question",
+      "pause": 0.12,
+      "texte": "La Joconde a disparu.",
+      "lecture": "Constat sec.",
+      "tempo": 1.1
+    },
+    {
+      "id": 3,
+      "role": "question",
+      "pause": 0.55,
+      "texte": "Qui a pu la sortir du musée ?",
+      "lecture": "Vraie question, montée sur « musée ».",
+      "style": "Vraie question, intrigante, intonation montante à la fin.",
+      "tempo": 1.1
+    },
+    {
+      "id": 4,
+      "role": "découverte",
+      "pause": 0.2,
+      "texte": "Ce matin-là, le peintre Louis Béroud vient la copier.",
+      "lecture": "Récit, on ouvre l'enquête."
+    },
+    {
+      "id": 5,
+      "role": "découverte",
+      "pause": 0.2,
+      "texte": "Les gardiens la croient chez le photographe.",
+      "lecture": "Léger sourire dans la voix."
+    },
+    {
+      "id": 6,
+      "role": "découverte",
+      "pause": 0.35,
+      "texte": "Mais dans un escalier, on retrouve son cadre vide.",
+      "lecture": "Bascule : appui sur « cadre vide »."
+    },
+    {
+      "id": 7,
+      "role": "découverte",
+      "pause": 0.5,
+      "texte": "Une semaine plus tard, la foule vient voir… le mur vide.",
+      "lecture": "Suspension avant « le mur vide »."
+    },
+    {
+      "id": 8,
+      "role": "révélation 1 (fausse piste)",
+      "pause": 0.2,
+      "texte": "Le 7 septembre, on emprisonne même le poète Apollinaire.",
+      "lecture": "Ton d'enquête, appui sur « même »."
+    },
+    {
+      "id": 9,
+      "role": "révélation 1 (fausse piste)",
+      "pause": 0.2,
+      "texte": "Il passe près d'une semaine à la Santé.",
+      "lecture": "Neutre."
+    },
+    {
+      "id": 10,
+      "role": "révélation 1 (fausse piste)",
+      "pause": 0.55,
+      "secours": "A",
+      "texte": "Fausse piste.",
+      "lecture": "Détaché, conclusif."
+    },
+    {
+      "id": 11,
+      "role": "révélation 2 (indice)",
+      "pause": 0.25,
+      "texte": "Pourtant, un indice reste sur la vitre : une empreinte de pouce.",
+      "lecture": "Ralentir sur « une empreinte de pouce »."
+    },
+    {
+      "id": 12,
+      "role": "révélation 2 (indice)",
+      "pause": 0.2,
+      "texte": "Le voleur est déjà fiché par la police.",
+      "lecture": "Appui sur « déjà »."
+    },
+    {
+      "id": 13,
+      "role": "révélation 2 (indice)",
+      "pause": 0.72,
+      "texte": "Personne ne fait le rapprochement.",
+      "lecture": "Retombée, pointe d'ironie."
+    },
+    {
+      "id": 14,
+      "role": "ellipse",
+      "pause": 0.2,
+      "secours": "B",
+      "texte": "Plus de deux ans passent.",
+      "lecture": "Plus lent, plus bas."
+    },
+    {
+      "id": 15,
+      "role": "ellipse",
+      "pause": 0.45,
+      "texte": "Le tableau dort dans une chambre parisienne.",
+      "lecture": "Calme, presque confidentiel."
+    },
+    {
+      "id": 16,
+      "role": "révélation 3 (Florence)",
+      "pause": 0.3,
+      "texte": "En décembre 1913, un homme le propose à un antiquaire de Florence.",
+      "lecture": "Relance, tempo plus vif."
+    },
+    {
+      "id": 17,
+      "role": "révélation 3 (Florence)",
+      "pause": 0.3,
+      "texte": "L'antiquaire fait venir le directeur des Offices : c'est bien la Joconde.",
+      "lecture": "Montée de tension jusqu'à « c'est bien la Joconde »."
+    },
+    {
+      "id": 18,
+      "role": "réponse",
+      "pause": 0.2,
+      "texte": "Le vendeur est arrêté.",
+      "lecture": "Sec, très court."
+    },
+    {
+      "id": 19,
+      "role": "réponse",
+      "pause": 0.4,
+      "texte": "Il s'appelle Vincenzo Peruggia, un vitrier italien.",
+      "lecture": "Articuler le nom à l'italienne : vin-TCHÈN-tso pé-ROU-dja.",
+      "tts_kokoro": "Il s'appelle Vinntchèntso Péroudja, un vitrier italien."
+    },
+    {
+      "id": 20,
+      "role": "réponse (retournement)",
+      "pause": 0.4,
+      "texte": "Au Louvre, il avait travaillé sur la vitrine de la Joconde.",
+      "lecture": "Révélation : appui sur « vitrine »."
+    },
+    {
+      "id": 21,
+      "role": "réponse (comment)",
+      "pause": 0.2,
+      "texte": "Un lundi de fermeture, en blouse d'ouvrier, il avait décroché le tableau.",
+      "lecture": "Récit, rythme régulier."
+    },
+    {
+      "id": 22,
+      "role": "réponse (comment)",
+      "pause": 0.5,
+      "secours": "C",
+      "texte": "Le cadre, il l'avait laissé dans l'escalier.",
+      "lecture": "Rappel de la découverte, ton complice."
+    },
+    {
+      "id": 23,
+      "role": "mobile",
+      "pause": 0.2,
+      "texte": "À son procès, il dit avoir voulu la rendre à l'Italie.",
+      "lecture": "Neutre : c'est sa version."
+    },
+    {
+      "id": 24,
+      "role": "mobile",
+      "pause": 0.35,
+      "texte": "Elle était pourtant en France depuis le seizième siècle.",
+      "lecture": "Appui léger sur « pourtant »."
+    },
+    {
+      "id": 25,
+      "role": "retour",
+      "pause": 0.5,
+      "texte": "Le 4 janvier 1914, la Joconde retrouve le Louvre.",
+      "lecture": "Lumineux, résolution."
+    },
+    {
+      "id": 26,
+      "role": "chute",
+      "pause": 0.35,
+      "texte": "Pour beaucoup d'historiens, ce vol l'a rendue célèbre dans le monde entier.",
+      "lecture": "Ample. « Pour beaucoup d'historiens » sans emphase : c'est une attribution."
+    },
+    {
+      "id": 27,
+      "role": "chute (boucle)",
+      "pause": 0.0,
+      "texte": "Tout est parti de quatre crochets sur un mur vide.",
+      "lecture": "Rappel de l'accroche, ralentir, finir en suspens (la vidéo boucle)."
+    }
+  ],
+  "prononciation": {
+    "Vincenzo Peruggia": "[vinˈtʃɛntso peˈrudʒa], à l'italienne",
+    "Louis Béroud": "[lwi beʁu], le « d » final est muet",
+    "22 août 1911": "« vingt-deux août mille neuf cent onze », liaison en [z] ; « août » [u] ou [ut]",
+    "1913 / 1914": "« mille neuf cent treize » / « mille neuf cent quatorze »",
+    "Offices": "[ɔfis] : la galerie des Offices (Uffizi) de Florence",
+    "Apollinaire": "[apɔlinɛʁ]",
+    "la Santé": "la prison de la Santé, à Paris"
+  },
+  "coupes_de_secours": {
+    "A": {
+      "gain_s": 1.4,
+      "action": "supprimer la phrase 10 « Fausse piste. »"
+    },
+    "B": {
+      "gain_s": 1.2,
+      "action": "fusionner 14 et 15 : « Plus de deux ans, le tableau dort dans une chambre parisienne. »"
+    },
+    "C": {
+      "gain_s": 2.8,
+      "action": "supprimer la phrase 22 (le cadre laissé dans l'escalier), déjà montré par l'image"
+    }
+  }
+}

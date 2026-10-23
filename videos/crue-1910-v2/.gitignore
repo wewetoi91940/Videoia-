@@ -1,0 +1,14 @@
+renders/
+build/voix/*.wav
+build/voix.wav
+build/mix_master.wav
+build/transcription/
+build/passlog/
+build/qc/snaps*/
+build/rendu.log
+.hyperframes/
+build/voix/*.log
+build/img/
+build/check*.log
+build/zone.log
+build/voix/lignes.tsv
